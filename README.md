@@ -3,51 +3,66 @@
  <img width=150px height=150px src="https://www.hackyourfuture.dk/static/logo-dark.svg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Boilerplate for Final projects
-</h3>
+<h3 align="center">Guide IT - a tool to help newcomers decide their IT path </h3>
+<h4 align="center">A collaboration between ReDI School and HackYourFuture - Copenhagen </h3>
 
----
+<p align="center">
+  <a href="" rel="noopener">
+    <img src="https://user-images.githubusercontent.com/6642037/112057889-250f2880-8b5a-11eb-85cc-1ec9ef42afbe.png" alt="Project Homepage"></a>
+</p>
+
 
 ## 📝 Table of Contents
 
-- [About](#about)
-  - [Setting up the boilerplate](/setting-up-instructions.md)
-  - [Plan the project](/planning.md)
-- [Project's Calendar](#-projects-calendar)
-- [Class Daily Agenda](#-class-daily-agenda-)
-- [The Customer](#-the-customer)
-  - [Business Glossary](/BusinessGlossary.md)
-  - [Database Model Diagram](#️-database-model-diagram)
-- [Process](#-process-)
-  - [Working with code](#-working-with-code)
-  - [Guidelines for building components](#-guidelines-for-building-components)
-  - [Code best practices](#-code-best-practices)
-  - [Working with GIT](/working-with-git.md)
-  - [Working with Heroku and Deployment](/deployment.md)
-  - [Working Knex and migrations](/knex-and-migrations.md)
-  - [Working with API Documentation - Swagger](#working-with-api-documentation---swagger)
-  - [Working with Storybook](#working-with-storybook)
-  - [Working with AWS - Amazon Services](#working-with-aws---amazon-services) - [Testing](#testing)
-- [Getting Started](#getting-started)
-  - [Installations](/installations.md) - [Code linting](#code-linting)
-- [Getting the certificate](/certificate.md)
-- [Authors](#authors)
-- [License](#license)
+- [📝 Table of Contents](#-table-of-contents)
+- [🧐 About <a name = "about"></a>](#-about-)
+- [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
+- [📅 Project's Calendar](#-projects-calendar)
+- [👩🏻‍💼💡👨🏽‍💼 The Customer](#-the-customer)
+  - [💼 Business Glossary](#-business-glossary)
+  - [🖼 Wireframes](#-wireframes)
+  - [🗄️ Database Model Diagram](#️-database-model-diagram)
+- [📈 Process 📉📈](#-process-)
+  - [💻 Working with code](#-working-with-code)
+  - [🧱 Guidelines for building components](#-guidelines-for-building-components)
+    - [A note about React Hooks](#a-note-about-react-hooks)
+    - [Proptypes](#proptypes)
+    - [Using Storybook](#using-storybook)
+    - [How to create a new story](#how-to-create-a-new-story)
+      - [Adding knobs (optional)](#adding-knobs-optional)
+    - [Breaking down components](#breaking-down-components)
+    - [Coding guidelines for components](#coding-guidelines-for-components)
+  - [🎨 Theming and global styling](#-theming-and-global-styling)
+  - [🧱 Component styling](#-component-styling)
+  - [📤 📥 Inline CSS vs Stylesheets](#--inline-css-vs-stylesheets)
+  - [👍🏽 Code best practices](#-code-best-practices)
+  - [<img width=20px height=20px src="/git-logo.png" alt="GitHub logo"></a> Working with GIT](#a-working-with-git)
+  - [<img width=15px height=30px src="/heroku-logo.svg" alt="Heroku logo"></a> Working with Heroku and Deployment](#a-working-with-heroku-and-deployment)
+  - [<img width=59x height=20px src="/knex-logo.png"  alt="Knex logo"></a> Working with Knex and Migrations](#a-working-with-knex-and-migrations)
+  - [<img width=25px height=25x src="/swagger-logo.png"  alt="Swagger logo"></a> Working with API Documentation - Swagger](#a-working-with-api-documentation---swagger)
+  - [<img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook](#a-working-with-storybook)
+  - [<img width=30px height=30x src="/aws.svg"  alt="AWS S3 logo"></a><img width=30px height=30x src="/s3.png"  alt="AWS S3 logo"></a> Working with AWS - Amazon Services](#aa-working-with-aws---amazon-services)
+  - [Testing](#testing)
+  - [Making authenticated requests through firebase (useFetch hook)](#making-authenticated-requests-through-firebase-usefetch-hook)
+    - [What is it?](#what-is-it)
+    - [Usage](#usage)
+- [🏁 Getting Started](#-getting-started)
+  - [💾 Installations](#-installations)
+    - [Errors](#errors)
+  - [Code linting](#code-linting)
+- [📜 Getting the HackYourFuture certificate](#-getting-the-hackyourfuture-certificate)
+- [👨🏾‍💻 Authors](#-authors)
+- [📝 License](#-license)
+
 
 ## 🧐 About <a name = "about"></a>
 
-This repository is a boilerplate and set-up instructions for the Final Project.
+This repository is for Class16 Final Project - Guide IT
 
-To setup the boilerplate for a New Final project you MUST read this first [HERE](/setting-up-instructions.md)
+Production website: https://guide-it-production.herokuapp.com/
 
-After the previous steps, you have new repository ready but you need plan the project,
-check [HERE](/planning.md) before you go more down.
+Staging website: https://guide-it-staging.herokuapp.com/
 
-🚨Delete the About Topic from you new repository README.MD file  
-🚨Delete the instructions files:
-
-- [Setting up Instructions](/setting-up-instructions.md)
-- [Planning](/planning.md)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -62,27 +77,29 @@ check [HERE](/planning.md) before you go more down.
 
 ## 📅 Project's Calendar
 
-_Add the dates for the project and study groups_
-_Class Dates_  
-_Study groups dates_
+The project will run between the 18/04 and the 30/05
 
 ## 🕛 Class Daily Agenda 🕓
 
-_Add the Class schedule for the project_
+Every Sunday and the setup will be roughly like this:
 
-- 12:00 - 13:30 - ...
-- 13:30 - 14:00 - ...
+- 12:00 - 13:30 - Project or Technical Presentation from Mentors or Demo Presentations from Students
+- 13:30 - 14:00 - Q&A on Breakout rooms
 - 14:00 - 14:30 - Lunch
-- 14:30 - 16:00 - ...
+- 14:30 - 16:00 - Q&A on Breakout rooms
 
 ## 👩🏻‍💼💡👨🏽‍💼 The Customer
 
-_Add here information about the customer/partner_
+This project is a collaboration between ReDI School and HYF and it's goal is to create a tool to help newcomers decide their IT path
 
 #### 💼 Business Glossary
 
 _Add here information about the Business Glossary_
 [Business Glossary](/BusinessGlossary.md)
+
+#### 🖼 Wirefames
+Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-18TH)
+
 
 #### 🗄️ Database Model Diagram
 
