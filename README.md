@@ -77,7 +77,7 @@ Staging website: https://guide-it-staging.herokuapp.com/
 
 ## 📅 Project's Calendar
 
-The project will run between the 18/04 and the 30/05
+The project will run between the 18/04 and the 01/06
 
 ## 🕛 Class Daily Agenda 🕓
 
