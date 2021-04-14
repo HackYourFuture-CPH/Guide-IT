@@ -103,7 +103,10 @@ Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-
 
 #### 🗄️ Database Model Diagram
 
-_Add here the DB Model Diagram_ - Use https://dbdiagram.io/
+https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
+
+<img width="578" alt="Screenshot 2021-04-14 at 09 36 48" src="https://user-images.githubusercontent.com/6642037/114672045-02110800-9d05-11eb-8093-184ad7fb4ae1.png">
+
 
 - [How to make changes on the diagram](/diagram.md)
 
