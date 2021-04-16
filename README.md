@@ -113,11 +113,17 @@ https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
 ## 📈 Process 📉📈
 
 ### 💻 Working with code
-
-- ALWAYS run code before a PR is made.
+- Take a story/task by assigning to you on the storyboard. Remember to update the status of your work when needed: in progress, blocked, waiting for review, etc.
+- Always create your branches from the develop branch. Do not interact with the master branch.
+- ALWAYS run code before a PR is made
+- Remember to go through the checklist for the PRs, and to make it easier for others, try to be as pedagogical as possible in your PRs by fx. adding pictures of your changes.
+- Test, test, test. Check the console before commiting, are there any errors/warnings?
 - No committing `console.log`
 - No committing merge conflicts!
 - Work in separate files! When you make a new feature, the first thing you do is create a new file for that (of course if it makes sense). Especially for components.
+- When working with components that are built using storybook, test them by adding them on a page. Do not commit those tests but there are errors that might not appear in storybook, but might show up outside of storybook.
+- [The mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) is very helpful to know the styles for the project, fonts, colors, typography, etc.
+- Remember to use each other and take advantage of the studyrooms (Zendesk and Elastic).
 
 ### 🧱 Guidelines for building components
 
@@ -250,6 +256,8 @@ For global styles (i.e. styles that shall affect all components) use `src/client
 
 For theming, use the file `src/client/theme.css`. Theming covers everything related to the visual presentation of the site that needs to be re-used often. That means colors, borders, paddings, shadows, etc.
 
+Remember to check [the mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) to extract the styles for the project.
+
 ### 🧱 Component styling
 
 Components should always have a unique CSS class to make it easy to apply styles and styles. For example the "label" component should have a class "label". To easily concatenate different classes or apply classes conditionally, use the `classnames` npm package. Example of a label component that has a class "label" and will receive additional classes as props:
@@ -263,6 +271,8 @@ Components should always have a unique CSS class to make it easy to apply styles
     ...
 
 Only put styling that is relevant to the individual component in the component CSS file. If it covers multiple components, put it in `theme.css` or `index.css`.
+
+Remember to check [the mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) to extract the styles for the project.
 
 ### 📤 📥 Inline CSS vs Stylesheets
 
