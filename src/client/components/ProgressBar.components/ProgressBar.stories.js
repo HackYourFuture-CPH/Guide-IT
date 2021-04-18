@@ -27,8 +27,8 @@ const Template = ({ level, backgroundColor, alphaLevel }) => {
   );
 };
 
-export const Prog = Template.bind({});
-Prog.args = {
+export const Progress = Template.bind({});
+Progress.args = {
   level: '20',
   backgroundColor: 'red',
   alphaLevel: '0.5',
