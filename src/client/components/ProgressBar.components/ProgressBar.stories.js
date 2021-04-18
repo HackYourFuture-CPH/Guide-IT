@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ProgressBar from './ProgressBar';
 
 export default {
@@ -32,4 +33,10 @@ Progress.args = {
   level: '20',
   backgroundColor: 'red',
   alphaLevel: '0.5',
+};
+
+Template.propTypes = {
+  level: PropTypes.number.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  alphaLevel: PropTypes.number.isRequired,
 };

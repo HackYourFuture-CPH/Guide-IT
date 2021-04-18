@@ -21,9 +21,15 @@ const ProgressBar = ({ level, backgroundColor, alphaLevel }) => {
 };
 
 ProgressBar.propTypes = {
-  level: PropTypes.number.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  alphaLevel: PropTypes.number.isRequired,
+  level: PropTypes.number,
+  backgroundColor: PropTypes.string,
+  alphaLevel: PropTypes.number,
+};
+
+ProgressBar.defaultProps = {
+  level: '20',
+  backgroundColor: 'red',
+  alphaLevel: '0.5',
 };
 
 export default ProgressBar;
