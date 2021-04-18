@@ -26,6 +26,7 @@ const Template = ({ level, backgroundColor, alphaLevel }) => {
     />
   );
 };
+
 export const Prog = Template.bind({});
 Prog.args = {
   level: '20',
