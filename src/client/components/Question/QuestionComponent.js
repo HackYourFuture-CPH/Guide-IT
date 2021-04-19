@@ -19,9 +19,7 @@ export default function QuestionComponent({
         className="question-box"
         style={{ backgroundImage: `url(${imageSrc})` }}
       >
-        <div className="question-box-filter">
-          <p className="question">{question}</p>
-        </div>
+        <p className="question">{question}</p>
       </div>
       {/* These next lines are the logic that controlls whether answer options are listed (multichoice) */}
       {/* If no options are given, it assumes an agree scale for the answer */}
