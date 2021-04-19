@@ -1,16 +1,15 @@
 .job-card-container {
+  font-family: 'Roboto Mono', monospace;
   background-color: transparent;
   width: 507px;
 }
 
 .job-card-container h1 {
-  font-family: 'Roboto Mono', monospace;
   font-size: 48px;
   margin: 30px 0;
 }
 
 .job-card-container p {
-  font-family: 'Roboto Mono', monospace;
   background-color: #f0f0f0;
   height: 420px;
   padding: 25px 20px;
