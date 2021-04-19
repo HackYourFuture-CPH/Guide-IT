@@ -3,6 +3,6 @@ import GoogleLoginButton from './GoogleLoginButton';
 
 export default { title: 'GoogleLoginButton' };
 
-export function login_with_google() {
+export function loginWithGoogle() {
   return <GoogleLoginButton />;
 }
