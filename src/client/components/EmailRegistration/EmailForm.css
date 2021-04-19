@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.email_form {
+  font-family: 'Roboto Mono', monospace;
+  padding: 10px 5px;
+}
+
+.email_form label {
+  display: block;
+  color: #535c75;
+  margin-bottom: 7px;
+}
+
+.email_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.email_form input[type='email'] {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 7px;
+  padding: 15px;
+  padding-left: 40px;
+  background-image: url('../../assets/images/envelop.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.warning_sign {
+  width: 25px;
+  height: 25px;
+  margin-left: -25px;
+  background-image: url('../../assets/images/warning-sign.png');
+  background-repeat: no-repeat;
+}
+
+.email_form input[type='email']:focus {
+  outline: none;
+  background-color: rgba(241, 223, 226, 0.4);
+  border: 2px solid #db643d;
+  color: black;
+}
+
+.email_form button {
+  width: 100%;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  padding: 15px;
+  margin: 25px auto 10px auto;
+}
+
+.error-message {
+  font-size: 12px;
+  font-weight: 500;
+  color: #db643d;
+  letter-spacing: 0.05em;
+}
