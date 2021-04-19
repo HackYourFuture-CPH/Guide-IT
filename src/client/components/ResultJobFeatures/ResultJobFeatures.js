@@ -3,25 +3,26 @@ import './ResultJobFeatures.styles.css';
 import PropTypes from 'prop-types';
 
 // import the 2 needed logos
-import hyfLogo from '/assets/images/hyf-logo.png';
-import rediLogo from '/assets/images/redi-logo.png';
+import hyfLogo from '../../assets/images/hyf-logo.png';
+import rediLogo from '../../assets/images/redi-logo.png';
 
-// how it works?
-// When this component is called, is called with one prop, the branchTitle,
-//it filters the array and returns the called branch name then store it in 'result'
-//to later display it depending of hte clicked bullet point
-
+/*
+How it works?
+When this component is called, is called with one prop, the branchTitle,
+it filters the array and returns the called branch name then store it in 'result'
+to later display it depending of hte clicked bullet point
+*/
 export default function ResultJobFeatures({ branchTitle }) {
-  //States that store the Bullet points content
+  // States that store the Bullet points content
   const [firstStyle, setFirstStyle] = useState('none');
   const [secondStyle, setSecondStyle] = useState('none');
   const [thirdStyle, setThirdStyle] = useState('none');
-  //   refs to store the reference to the each bullet point content
+  // refs to store the reference to the each bullet point content
   const firstRef = useRef();
   const secondRef = useRef();
   const thirdRef = useRef();
 
-  //State for the left arrow, to rotate down or to its inicial direction when clicked
+  // State for the left arrow, to rotate down or to its inicial direction when clicked
   const [firstRotate, setFirstRotate] = useState('0deg');
   const [secondRotate, setSecondRotate] = useState('0deg');
   const [thirdRotate, setThirdRotate] = useState('0deg');
@@ -91,7 +92,7 @@ export default function ResultJobFeatures({ branchTitle }) {
       },
     },
   ];
-  //result will store the filtered object that contains job branch info.
+  // Result will store the filtered object that contains job branch info.
   let result = [];
   const selectedObject = array.filter(
     (item) => item.branch.toLowerCase() === branchTitle.toLowerCase(),
@@ -104,7 +105,7 @@ export default function ResultJobFeatures({ branchTitle }) {
 
   const { jobTitle, branch, school, logoPath, links, skills, webSite } = result;
 
-  //hanles click on first bullet point
+  // Hanles click on first bullet point
   const handleFirstClick = () => {
     setFirstStyle(firstStyle === 'none' ? 'block' : 'none');
     setSecondStyle('none');
@@ -113,7 +114,7 @@ export default function ResultJobFeatures({ branchTitle }) {
     setSecondRotate('0deg');
     setThirdRotate('0deg');
   };
-  //hanles click on  second bullet point
+  // Hanles click on  second bullet point
   const handleSecondClick = () => {
     setSecondStyle(secondStyle === 'none' ? 'block' : 'none');
     setFirstStyle('none');
@@ -122,7 +123,7 @@ export default function ResultJobFeatures({ branchTitle }) {
     setFirstRotate('0deg');
     setThirdRotate('0deg');
   };
-  //hanles click on  third bullet point
+  // Hanles click on  third bullet point
   const handleThirdClick = () => {
     setThirdStyle(thirdStyle === 'none' ? 'block' : 'none');
     setFirstStyle('none');
@@ -134,7 +135,7 @@ export default function ResultJobFeatures({ branchTitle }) {
 
   return (
     <ul className="job-features-container">
-      {/* first bullet point */}
+      {/* First bullet point */}
       <li>
         <div className="bullet-point">
           <div
@@ -167,7 +168,7 @@ export default function ResultJobFeatures({ branchTitle }) {
         </div>
       </li>
 
-      {/* second bullet point */}
+      {/* Second bullet point */}
       <li>
         <div className="bullet-point">
           <div
@@ -197,7 +198,7 @@ export default function ResultJobFeatures({ branchTitle }) {
         </div>
       </li>
 
-      {/* third bullet point */}
+      {/* Third bullet point */}
       <li>
         <div className="bullet-point">
           <div
