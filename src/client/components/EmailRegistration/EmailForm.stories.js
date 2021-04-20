@@ -6,24 +6,25 @@ export default {
   title: 'EmailRegistration Form',
   component: EmailForm,
   argTypes: {
-    form_width: {
+    formWidth: {
       control: { type: 'range', min: 300, max: 1000, step: 50 },
     },
-    btn_bgcolor: {
+    btnBgcolor: {
       control: { type: 'color' },
     },
   },
 };
 
-const EmailFormTemplate = (args) => <EmailForm {...args} />;
-
+const EmailFormTemplate = ({ formWidth, btnBgcolor }) => {
+  return <EmailForm formWidth={formWidth} btnBgcolor={btnBgcolor} />;
+};
 export const EmailRegistrationForm = EmailFormTemplate.bind({});
 EmailRegistrationForm.args = {
-  form_width: 400,
-  btn_bgcolor: '#db643d',
+  formWidth: 400,
+  btnBgcolor: '#db643d',
 };
 
 EmailFormTemplate.propTypes = {
-  form_width: PropTypes.number.isRequired,
-  btn_bgcolor: PropTypes.string.isRequired,
+  formWidth: PropTypes.number.isRequired,
+  btnBgcolor: PropTypes.string.isRequired,
 };

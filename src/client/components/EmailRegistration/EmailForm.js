@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './EmailForm.css';
 
-export default function EmailRegistration({ form_width, btn_bgcolor }) {
+export default function EmailRegistration({ formWidth, btnBgcolor }) {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
-
+  // onchange function for input
   const handleEmailInput = (e) => {
     setEmail(e.target.value);
     setError('');
   };
-
+  // onSubmit function
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email === '') {
@@ -24,7 +24,7 @@ export default function EmailRegistration({ form_width, btn_bgcolor }) {
     <form
       onSubmit={handleSubmit}
       className="email_form"
-      style={{ width: `${form_width}px` }}
+      style={{ width: `${formWidth}px` }}
     >
       <label htmlFor="email">Email address</label>
       <div className="email_container">
@@ -36,14 +36,10 @@ export default function EmailRegistration({ form_width, btn_bgcolor }) {
           value={email}
           onChange={handleEmailInput}
         />
-        {(error !== '') & (email !== '') ? (
-          <div className="warning_sign"></div>
-        ) : (
-          ''
-        )}
+        {error !== '' && email !== '' ? <div className="warning_sign" /> : ''}
       </div>
       <div className="error-message">{error}</div>
-      <button type="submit" style={{ backgroundColor: `${btn_bgcolor}` }}>
+      <button type="submit" style={{ backgroundColor: `${btnBgcolor}` }}>
         Continue
       </button>
     </form>
@@ -51,51 +47,6 @@ export default function EmailRegistration({ form_width, btn_bgcolor }) {
 }
 
 EmailRegistration.propTypes = {
-  form_width: PropTypes.number.isRequired,
-  btn_bgcolor: PropTypes.string.isRequired,
+  formWidth: PropTypes.number.isRequired,
+  btnBgcolor: PropTypes.string.isRequired,
 };
-
-// import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-
-// export default function SignIn({ onSubmit }) {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const handleEmailInput = (e) => setEmail(e.target.value);
-//   const handlePasswordInput = (e) => setPassword(e.target.value);
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     onSubmit({ email, password });
-//   };
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label htmlFor="email">
-//         Email:{' '}
-//         <input
-//           type="email"
-//           name="email"
-//           placeholder="Write your email"
-//           value={email}
-//           onChange={handleEmailInput}
-//           required
-//         />
-//       </label>
-//       <label htmlFor="password">
-//         Password:{' '}
-//         <input
-//           type="password"
-//           name="password"
-//           placeholder="Write your password"
-//           value={password}
-//           onChange={handlePasswordInput}
-//           required
-//         />
-//       </label>
-//       <button type="submit">Sign in</button>
-//     </form>
-//   );
-// }
-
-// SignIn.propTypes = {
-//   onSubmit: PropTypes.func.isRequired,
-// };
