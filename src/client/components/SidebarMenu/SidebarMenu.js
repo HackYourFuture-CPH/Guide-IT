@@ -10,16 +10,16 @@ function SidebarMenu() {
         <div className="sidebar-title">GuideIT</div>
         <div className="create-account">
           <div>
-            <a href="#">Create account</a>
+            <a href="/">Create account</a>
           </div>
-          <div className="triangle"></div>
+          <div className="triangle" />
         </div>
 
         <div className="login">
           <div>
-            <a href="#">Login</a>
+            <a href="/">Login</a>
           </div>
-          <div className="triangle"></div>
+          <div className="triangle" />
         </div>
       </div>
       <div className="sidebar-footer">
