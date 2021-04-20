@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;600&display=swap');
+
+.sidebar-menu {
+  background-color: #0b5681;
+  width: 220px;
+  height: 1024px;
+  padding-left: 10px;
+}
+
+.sidebar-title {
+  padding-top: 47px;
+  padding-left: 0;
+  color: white;
+  font-family: 'Chakra Petch', monospace;
+  font-size: 33px;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  line-height: 43px;
+  text-align: center;
+  align-items: center;
+}
+
+.create-account {
+  display: flex;
+  align-items: center;
+  padding-top: 45px;
+  width: 200px;
+  height: 45px;
+  line-height: 29px;
+  letter-spacing: 0.9px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.create-account a {
+  color: white;
+  font-family: 'Chakra Petch', monospace;
+  padding-right: 1px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 16px solid rgb(230, 97, 20);
+  border-bottom: 8px solid transparent;
+  margin-left: 15px;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  padding-top: 57px;
+  width: 61px;
+  height: 45px;
+  line-height: 29px;
+  letter-spacing: 0.9px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.login a {
+  color: white;
+  font-family: 'Chakra Petch', monospace;
+}
+
+.sidebar-footer {
+  padding-top: 540px;
+  text-align: center;
+}
+
+.hyf-logo {
+  width: 260px;
+  height: 161px;
+}
+
+.redi-logo {
+  width: 100px;
+  height: 100px;
+}
