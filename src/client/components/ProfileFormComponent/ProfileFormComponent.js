@@ -30,7 +30,7 @@ const Avatar = ({ color, width }) => {
           </div>
           <div className="edit-Link">
             <a
-              href="#"
+              href="#dummy-Component"
               style={{
                 color: `${color}`,
               }}
@@ -40,6 +40,7 @@ const Avatar = ({ color, width }) => {
           </div>
         </form>
       </div>
+      <div id="dummy-Component" />
     </div>
   );
 };
