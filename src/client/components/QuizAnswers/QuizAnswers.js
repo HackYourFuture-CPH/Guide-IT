@@ -2,45 +2,44 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './QuizAnswers.styles.css';
 
-function QuizAnswers({ firstAnswer, secondAnswer, isAgreementQuestion }) {
+function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
   const [selected, setSelected] = useState('');
+  const handleSelectChange = (event) => {
+    const value = event.target.value;
+    setSelected(value);
+  };
+
   return (
     <form>
       {isAgreementQuestion ? (
         <div className="radio">
           <label className="radio_label" htmlFor="disagree">
             Disagree
+            <span className="radio_input">
+              <input
+                type="radio"
+                value="disagree"
+                checked={selected === 'disagree'}
+                onChange={(event) => handleSelectChange(event)}
+              ></input>
+            </span>
           </label>
-          <span className="radio_input">
-            <input
-              type="radio"
-              id="disagree"
-              name="answer"
-              value="disagree"
-              selected={selected}
-              onChange={setSelected}
-            ></input>
-          </span>
 
           <span className="radio_input small">
             <input
               type="radio"
-              id="neutral"
-              name="answer"
               value="neutral"
-              selected={selected}
-              onChange={setSelected}
+              checked={selected === 'neutral'}
+              onChange={(event) => handleSelectChange(event)}
             ></input>
           </span>
 
           <span className="radio_input">
             <input
               type="radio"
-              id="agree"
-              name="answer"
               value="agree"
-              selected={selected}
-              onChange={setSelected}
+              checked={selected === 'agree'}
+              onChange={(event) => handleSelectChange(event)}
             ></input>
           </span>
           <label className="radio_label" htmlFor="agree">
@@ -48,24 +47,28 @@ function QuizAnswers({ firstAnswer, secondAnswer, isAgreementQuestion }) {
           </label>
         </div>
       ) : (
-        <div className="multi_choice">
+        <div className="radio">
           <div>
-            <input
-              type="radio"
-              id="first_answer"
-              name="multi_choice"
-              value="first answer"
-            ></input>
-            <span>{firstAnswer}</span>
+            <span className="radio_input">
+              <input
+                type="radio"
+                value="first_answer"
+                checked={selected === 'first_answer'}
+                onChange={(event) => handleSelectChange(event)}
+              ></input>
+            </span>
+            <label className="radio_label">{firstAnswer}</label>
           </div>
           <div>
-            <input
-              type="radio"
-              id="second_answer"
-              name="multi_choice"
-              value="second answer"
-            ></input>
-            <span>{secondAnswer}</span>
+            <span className="radio_input">
+              <input
+                type="radio"
+                value="second_answer"
+                checked={selected === 'second_answer'}
+                onChange={(event) => handleSelectChange(event)}
+              ></input>
+            </span>
+            <label className="radio_label">{secondAnswer}</label>
           </div>
         </div>
       )}
@@ -74,9 +77,9 @@ function QuizAnswers({ firstAnswer, secondAnswer, isAgreementQuestion }) {
 }
 
 QuizAnswers.propTypes = {
-  firstAnswer: PropTypes.string.isRequired,
-  secondAnswer: PropTypes.string.isRequired,
   isAgreementQuestion: PropTypes.bool.isRequired,
+  firstAnswer: PropTypes.string,
+  secondAnswer: PropTypes.string,
 };
 
 export default QuizAnswers;

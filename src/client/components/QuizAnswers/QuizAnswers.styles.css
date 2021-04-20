@@ -6,17 +6,19 @@
   border-radius: 50%;
   margin: 0;
   padding: 0;
-  border: 0.1em solid transparent;
-  opacity: 1;
 }
 
 .radio_input {
-  margin: 1em 1em 0 1em;
   display: inline-block;
+  margin: 1em 1em 0 1em;
   width: 2em;
   height: 2em;
   border-radius: 50%;
   border: 0.1em solid #298f8a;
+}
+
+input:checked {
+  background: radial-gradient(currentColor 50%, rgba(255, 0, 0, 0) 51%);
 }
 
 .radio_label {
@@ -30,13 +32,4 @@
 .small {
   width: 1.25em;
   height: 1.25em;
-}
-
-.multi_choice {
-  font-family: 'Roboto Mono', monospace;
-  color: #298f8a;
-}
-
-.multi_choice input {
-  color: #298f8a;
 }
