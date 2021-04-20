@@ -16,7 +16,7 @@ export default {
   },
 };
 
-const Template = (args) => {
+const Template = ({ backgroundColor, width, fontFamily }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   function openModal() {
     setIsModalOpen(true);
@@ -41,7 +41,9 @@ const Template = (args) => {
         id="hover-to-show-modal"
         isModalOpen={isModalOpen}
         closeModal={closeModal}
-        {...args}
+        backgroundColor={backgroundColor}
+        width={width}
+        fontFamily={fontFamily}
       >
         <div>
           lore congue pharetra nibh. Nulla eu lobortis ante. Vivamus tortor

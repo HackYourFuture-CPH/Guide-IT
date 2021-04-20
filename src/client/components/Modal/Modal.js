@@ -12,7 +12,7 @@ export default function Modal({
   closeModal,
   children,
 }) {
-  if (isModalOpen) {
+  function closeModalonMouseLeave(event) {
     // get coordinates of element that has to hvoer over.
     const elementToHover = document.getElementById(id);
     const minY = elementToHover.offsetTop;
@@ -20,41 +20,30 @@ export default function Modal({
     const minX = elementToHover.offsetLeft;
     const maxX = elementToHover.offsetLeft + elementToHover.offsetWidth;
 
-    function tryToCloseModal(event) {
-      const x = event.clientX; // Get the horizontal coordinate of mouse
-      const y = event.clientY; // Get the vertical coordinate of mouse
-      // if mouse left the element that has to hvoer over then remove the Modal.
-      if (x < minX || x > maxX || minY > y || maxY < y) {
-        document.removeEventListener('mousemove', tryToCloseModal);
-        closeModal();
-      }
-    }
-    document.addEventListener('mousemove', tryToCloseModal);
+    const x = event.clientX; // Get the horizontal coordinate of mouse
+    const y = event.clientY; // Get the vertical coordinate of mouse
+    // if mouse left the element that has to hvoer over then remove the Modal.
+    if (x < minX || x > maxX || minY > y || maxY < y) closeModal();
+  }
+  const customStyles = {
+    width: `${width}%`,
+    backgroundColor: `${backgroundColor}`,
+    fontFamily: `${fontFamily}`,
+  };
 
-    const customStyles = {
-      width: `${width}%`,
-      backgroundColor: `${backgroundColor}`,
-      fontFamily: `${fontFamily}`,
-    };
-
-    return ReactDOM.createPortal(
-      <>
-        <div
-          className={`modal ${isModalOpen ? 'show' : ''}`}
-          onClick={closeModal}
-        >
-          <div
-            className="modal-content"
-            style={customStyles}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="modal-body">{children}</div>
-          </div>
+  return ReactDOM.createPortal(
+    <>
+      <div
+        className={`modal ${isModalOpen ? 'show' : ''}`}
+        onMouseMove={closeModalonMouseLeave}
+      >
+        <div className="modal-content" style={customStyles}>
+          <div className="modal-body">{children}</div>
         </div>
-      </>,
-      document.getElementById('root'),
-    );
-  } else return null;
+      </div>
+    </>,
+    document.getElementById('root'),
+  );
 }
 
 Modal.propTypes = {
