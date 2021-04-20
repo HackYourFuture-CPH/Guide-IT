@@ -22,7 +22,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'disagree'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control"></span>
+              <span className="radio_control" />
             </span>
           </label>
 
@@ -46,7 +46,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'agree'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control"></span>
+              <span className="radio_control" />
             </span>
             <span className="radio_label">Agree</span>
           </label>
@@ -61,7 +61,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'first_answer'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control"></span>
+              <span className="radio_control" />
             </span>
             <span className="radio_label">{firstAnswer}</span>
           </label>
@@ -74,7 +74,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'second_answer'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control"></span>
+              <span className="radio_control" />
             </span>
             <span className="radio_label">{secondAnswer}</span>
           </label>
