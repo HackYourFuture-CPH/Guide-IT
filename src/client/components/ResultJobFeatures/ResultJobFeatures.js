@@ -188,7 +188,7 @@ export default function ResultJobFeatures({ branchTitle }) {
           ref={secondRef}
           style={{ display: secondStyle }}
         >
-          <p>{`Interested in finding our what a ${jobTitle} does and how it looks like to be one?`}</p>
+          <p>{`Interested in finding out what a ${jobTitle} does and how it looks like to be one?`}</p>
 
           <div className="links-container">
             {links.map((link) => (
