@@ -6,7 +6,7 @@ export default { title: 'QuizAnswers', decorators: [withKnobs] };
 
 export const Quizanswers = () => (
   <QuizAnswers
-    isAgreementQuestion={boolean('Agreement question', false)}
+    isAgreementQuestion={boolean('Agreement question', true)}
     firstAnswer={text(
       'first answer',
       'How the website looks and how easy it is for the users',

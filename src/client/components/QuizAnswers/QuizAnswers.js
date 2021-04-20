@@ -12,10 +12,10 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
   return (
     <form>
       {isAgreementQuestion ? (
-        <div>
+        <div className="inline">
           <label className="radio radio_before">
+            <span className="radio_label">Disagree</span>
             <span className="radio_input">
-              <span className="radio_label">Disagree</span>
               <input
                 type="radio"
                 value="disagree"
@@ -26,7 +26,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
             </span>
           </label>
 
-          <label className="radio radio_before small">
+          <label className="radio radio_before margin_left">
             <span className="radio_input">
               <input
                 type="radio"
@@ -34,8 +34,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'neutral'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span class="radio_control"></span>
-              <span className="radio_label"></span>
+              <span class="radio_control small"></span>
             </span>
           </label>
 
@@ -48,13 +47,13 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 onChange={(event) => handleSelectChange(event)}
               />
               <span class="radio_control"></span>
-              <span className="radio_label">Agree</span>
             </span>
+            <span className="radio_label">Agree</span>
           </label>
         </div>
       ) : (
         <div>
-          <label className="radio radio_before">
+          <label className="radio radio_before block">
             <span className="radio_input">
               <input
                 type="radio"
@@ -62,13 +61,12 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'first_answer'}
                 onChange={(event) => handleSelectChange(event)}
               />
-
               <span class="radio_control"></span>
             </span>
             <span className="radio_label">{firstAnswer}</span>
           </label>
 
-          <label className="radio radio_before">
+          <label className="radio radio_before block">
             <span className="radio_input">
               <input
                 type="radio"
