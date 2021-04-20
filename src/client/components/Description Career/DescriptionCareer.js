@@ -13,7 +13,7 @@ function DescriptionCareer({ title, content, content2, time }) {
   );
 }
 
-export const Description = ({ exams = [] }) => (
+export const Description = ({ exams }) => (
   <div className="innerDiv">
     {exams.map((item) => (
       <div key={item.duration}>
@@ -27,6 +27,12 @@ export const Description = ({ exams = [] }) => (
     ))}
   </div>
 );
+
+Description.propTypes = {
+  exams: PropTypes.arrayOf([PropTypes.object]),
+};
+
+Description.defaultProps = { exams: [] };
 
 DescriptionCareer.propTypes = {
   title: PropTypes.string.isRequired,

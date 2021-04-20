@@ -1,6 +1,7 @@
 import React from 'react';
 import { Description } from './DescriptionCareer';
 import { object } from '@storybook/addon-knobs';
+
 export default { title: 'DescriptionCareer' };
 
 const arr = [
