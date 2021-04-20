@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 .email_form {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace !important;
   padding: 10px 5px;
 }
 
