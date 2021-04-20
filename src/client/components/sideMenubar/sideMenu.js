@@ -29,7 +29,7 @@ function SideMenu() {
           </li>
         </ul>
       </nav>
-      <div id="dummylink"></div>
+      <div id="dummylink" />
     </div>
   );
 }
