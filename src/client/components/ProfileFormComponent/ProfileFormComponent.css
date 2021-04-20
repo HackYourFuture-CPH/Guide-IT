@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600&family=Roboto:wght@300&display=swap');
+
+.avatar-Image img {
+  padding: 10px 40px;
+  display: flex;
+  margin: 40px auto;
+  justify-content: center;
+  width: 280px;
+  height: 150px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 20px;
+}
+
+.form-With-Avatar {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e9f4f4;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.form-Group {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.form-Group label {
+  display: block;
+}
+
+.form-Group input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 40px;
+}
+
+.form-Group input[type='password'] {
+  background-image: url('../../assets/images/lock.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.form-Group input[type='email'] {
+  background-image: url('../../assets/images/envelope.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+}
+
+.container .edit-Link {
+  margin-top: 150px;
+  text-align: center;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.container .edit-Link a {
+  text-decoration: none;
+  font-size: 20px;
+}
