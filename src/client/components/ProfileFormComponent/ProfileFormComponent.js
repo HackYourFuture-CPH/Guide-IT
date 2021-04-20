@@ -3,13 +3,14 @@ import avatarimage from '../../assets/images/avatar.png';
 import './ProfileFormComponent.css';
 import PropTypes from 'prop-types';
 
-const Avatar = ({ color, width }) => {
+const Avatar = ({ color, width, fontFamily }) => {
   return (
     <div
       className="form-With-Avatar"
       style={{
         color: `${color}`,
         width: `${width}px`,
+        fontFamily: `${fontFamily}`,
       }}
     >
       <div className="avatar-Image">
@@ -48,6 +49,7 @@ const Avatar = ({ color, width }) => {
 Avatar.propTypes = {
   color: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
+  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
 };
 
 export default Avatar;
