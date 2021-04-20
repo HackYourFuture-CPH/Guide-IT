@@ -1,5 +1,5 @@
 import React from 'react';
-import Description from '../../components/Description Career/DescriptionCareer';
+import { Description } from '../../components/Description Career/DescriptionCareer';
 
 export const Home = () => (
   <div>

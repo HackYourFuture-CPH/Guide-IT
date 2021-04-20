@@ -46,10 +46,10 @@ export const Description = () => (
 );
 
 DescriptionCareer.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string,
-  content2: PropTypes.string,
-  time: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  content2: PropTypes.string.isRequired,
+  time: PropTypes.number.isRequired,
 };
 
 export default DescriptionCareer;
