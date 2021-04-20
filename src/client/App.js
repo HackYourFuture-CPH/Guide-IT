@@ -10,7 +10,6 @@ import { useAuthentication } from './hooks/useAuthentication';
 import Header from './components/Navigation/Header';
 import Profile from './containers/Profile';
 import Loader from './components/Loader';
-import QuizAnswers from './components/QuizAnswers/QuizAnswers';
 
 function App() {
   const { isLoading } = useAuthentication();
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <Router>
-      <QuizAnswers />
       <Header />
       <Switch>
         {/* Home page */}
