@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import './Modal.css';
@@ -12,7 +12,7 @@ export default function Modal({
   closeModal,
   children,
 }) {
-  useEffect(() => {
+  if (isModalOpen) {
     // get coordinates of element that has to hvoer over.
     const elementToHover = document.getElementById(id);
     const minY = elementToHover.offsetTop;
@@ -24,37 +24,37 @@ export default function Modal({
       const x = event.clientX; // Get the horizontal coordinate of mouse
       const y = event.clientY; // Get the vertical coordinate of mouse
       // if mouse left the element that has to hvoer over then remove the Modal.
-      if (x < minX || x > maxX || minY > y || maxY < y) closeModal();
+      if (x < minX || x > maxX || minY > y || maxY < y) {
+        document.removeEventListener('mousemove', tryToCloseModal);
+        closeModal();
+      }
     }
     document.addEventListener('mousemove', tryToCloseModal);
 
-    return () => {
-      document.removeEventListener('mousemove', tryToCloseModal);
+    const customStyles = {
+      width: `${width}%`,
+      backgroundColor: `${backgroundColor}`,
+      fontFamily: `${fontFamily}`,
     };
-  }, []);
-  const customStyles = {
-    width: `${width}%`,
-    backgroundColor: `${backgroundColor}`,
-    fontFamily: `${fontFamily}`,
-  };
 
-  return ReactDOM.createPortal(
-    <>
-      <div
-        className={`modal ${isModalOpen ? 'show' : ''}`}
-        onClick={closeModal}
-      >
+    return ReactDOM.createPortal(
+      <>
         <div
-          className="modal-content"
-          style={customStyles}
-          onClick={(e) => e.stopPropagation()}
+          className={`modal ${isModalOpen ? 'show' : ''}`}
+          onClick={closeModal}
         >
-          <div className="modal-body">{children}</div>
+          <div
+            className="modal-content"
+            style={customStyles}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-body">{children}</div>
+          </div>
         </div>
-      </div>
-    </>,
-    document.getElementById('root'),
-  );
+      </>,
+      document.getElementById('root'),
+    );
+  } else return null;
 }
 
 Modal.propTypes = {
