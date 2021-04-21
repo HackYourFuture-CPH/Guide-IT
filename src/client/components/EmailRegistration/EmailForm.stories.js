@@ -12,19 +12,30 @@ export default {
     btnBgcolor: {
       control: { type: 'color' },
     },
+    fontFamily: {
+      control: { type: 'select', options: ['Roboto', 'Roboto mono'] },
+    },
   },
 };
 
-const EmailFormTemplate = ({ formWidth, btnBgcolor }) => {
-  return <EmailForm formWidth={formWidth} btnBgcolor={btnBgcolor} />;
+const EmailFormTemplate = ({ formWidth, btnBgcolor, fontFamily }) => {
+  return (
+    <EmailForm
+      formWidth={formWidth}
+      btnBgcolor={btnBgcolor}
+      fontFamily={fontFamily}
+    />
+  );
 };
 export const EmailRegistrationForm = EmailFormTemplate.bind({});
 EmailRegistrationForm.args = {
   formWidth: 400,
   btnBgcolor: '#db643d',
+  fontFamily: 'Roboto Mono',
 };
 
 EmailFormTemplate.propTypes = {
   formWidth: PropTypes.number.isRequired,
   btnBgcolor: PropTypes.string.isRequired,
+  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
 };

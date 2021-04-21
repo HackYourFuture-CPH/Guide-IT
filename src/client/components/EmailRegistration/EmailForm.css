@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 .email_form {
-  font-family: 'Roboto Mono', monospace !important;
   padding: 10px 5px;
 }
 
@@ -16,17 +16,27 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
-.email_form input[type='email'] {
+.email_container input {
   width: 100%;
   font-size: 14px;
   border-radius: 7px;
   padding: 15px;
   padding-left: 40px;
+}
+
+.email_container .input-icon {
   background-image: url('../../assets/images/envelop.png');
-  background-position: 10px 10px;
   background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  left: 8px;
+  margin: auto;
 }
 
 .warning_sign {
@@ -37,7 +47,7 @@
   background-repeat: no-repeat;
 }
 
-.email_form input[type='email']:focus {
+.email_container input:focus {
   outline: none;
   background-color: rgba(241, 223, 226, 0.4);
   border: 2px solid #db643d;
@@ -47,13 +57,14 @@
 .email_form button {
   width: 100%;
   color: #fff;
-  font-size: 1em;
+  font-size: 1.1em;
   text-align: center;
   border: none;
   outline: none;
   border-radius: 7px;
   padding: 15px;
   margin: 25px auto 10px auto;
+  letter-spacing: 0.05em;
 }
 
 .error-message {
