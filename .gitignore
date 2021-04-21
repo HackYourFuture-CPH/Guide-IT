@@ -31,7 +31,7 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
-
+.env.example
 
 # React build
 build
