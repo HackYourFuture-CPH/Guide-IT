@@ -37,5 +37,5 @@ EmailRegistrationForm.args = {
 EmailFormTemplate.propTypes = {
   formWidth: PropTypes.number.isRequired,
   btnBgcolor: PropTypes.string.isRequired,
-  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
+  fontFamily: PropTypes.string.isRequired,
 };

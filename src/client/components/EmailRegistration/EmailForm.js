@@ -38,7 +38,7 @@ export default function EmailRegistration({
     >
       <label htmlFor="email">Email address</label>
       <div className="email_container">
-        <span className="input-icon"></span>
+        <span className="input-icon" />
         <input
           type="text"
           id="email"
@@ -60,5 +60,5 @@ export default function EmailRegistration({
 EmailRegistration.propTypes = {
   formWidth: PropTypes.number.isRequired,
   btnBgcolor: PropTypes.string.isRequired,
-  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
+  fontFamily: PropTypes.string.isRequired,
 };
