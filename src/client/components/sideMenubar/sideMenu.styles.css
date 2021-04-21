@@ -1,11 +1,15 @@
 @import url('https://fonts.google.com/specimen/Chakra+Petch?preview.text=GuideIT&preview.text_type=custom');
 
+.side_menu_div {
+  width: 100px;
+}
+
 li {
   background-color: #298f8a;
-  width: 60px;
   text-align: center;
   padding-top: 3px;
   border-right: solid 5px transparent;
+  line-height: 0.8;
 }
 
 .side_menu_whiteborder:hover {
@@ -13,9 +17,9 @@ li {
 }
 
 .side_menu_ul {
+  width: 100%;
   list-style: none;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 10px auto;
 }
 
 a {
@@ -26,7 +30,7 @@ a {
 }
 
 .side_menu_spacebetween {
-  padding-bottom: 15px;
+  padding-bottom: 18px;
 }
 
 .home {
