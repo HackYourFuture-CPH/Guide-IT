@@ -30,10 +30,14 @@ Template.propTypes = {
   width: PropTypes.number.isRequired,
   fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
 };
+Template.defaultProps = {
+  color: '#535C75',
+  fontFamily: 'Roboto Mono',
+};
 
 export const AvatarForm = Template.bind({});
 AvatarForm.args = {
   color: '#535C75',
   width: 400,
-  fontFamily: 'Roboto',
+  fontFamily: 'Roboto Mono',
 };

@@ -47,9 +47,13 @@ const Avatar = ({ color, width, fontFamily }) => {
 };
 
 Avatar.propTypes = {
-  color: PropTypes.string.isRequired,
+  color: PropTypes.oneOf(['#DB643D', '#535C75', '#000000']),
   width: PropTypes.number.isRequired,
   fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
 };
 
+Avatar.defaultProps = {
+  color: '#535C75',
+  fontFamily: 'Roboto Mono',
+};
 export default Avatar;
