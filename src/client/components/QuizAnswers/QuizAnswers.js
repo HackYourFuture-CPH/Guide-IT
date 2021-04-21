@@ -5,7 +5,9 @@ import './QuizAnswers.styles.css';
 function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
   const [selected, setSelected] = useState('');
   const handleSelectChange = (event) => {
-    const value = event.target.value;
+    const {
+      target: { value },
+    } = event;
     setSelected(value);
   };
 
@@ -34,7 +36,7 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
                 checked={selected === 'neutral'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control small"></span>
+              <span className="radio_control small" />
             </span>
           </label>
 
