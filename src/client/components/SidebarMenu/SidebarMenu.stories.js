@@ -3,7 +3,7 @@ import SidebarMenu from './SidebarMenu';
 
 export default {
   title: 'SidebarMenu',
-  component: 'SidebarMenu',
+  component: SidebarMenu,
 };
 
 export const sidebar = () => {
