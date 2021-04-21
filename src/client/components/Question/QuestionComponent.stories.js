@@ -9,10 +9,6 @@ import QuestionComponent from './QuestionComponent';
 export default {
   title: 'Components / Question Component',
   component: QuestionComponent,
-  argTypes: {
-    onClick: { action: 'clicked' },
-  },
-  parameters: { actions: { argTypesRegex: '^on.*' } },
 };
 
 export const MultiChoice = () => (
@@ -27,7 +23,6 @@ export const MultiChoice = () => (
       'Logic behind how the website is built',
     ])}
     selectedOption={number('Selected Option', 0)}
-    onClick={action('You have clicked a button')}
   />
 );
 
@@ -40,6 +35,5 @@ export const AgreeScale = () => (
     imageSrc={text('imageSrc', image2)}
     options={array('Options', null)}
     selectedOption={number('Selected Option', 0)}
-    onClick={action('You have clicked a button')}
   />
 );

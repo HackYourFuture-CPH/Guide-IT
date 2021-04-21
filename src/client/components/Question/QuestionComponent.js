@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './QuestionComponent.styles.css';
-import BackButtonComponent from '../Buttons/BackButton/BackButtonComponent';
-import NextButtonComponent from '../Buttons/NextButton/NextButtonComponent';
 
 export default function QuestionComponent({
   question,
@@ -11,7 +9,6 @@ export default function QuestionComponent({
   selectedOption,
   onOptionChange,
   children,
-  onClick,
 }) {
   return (
     <div className="question-component">
@@ -73,10 +70,6 @@ export default function QuestionComponent({
       {/* Q1 will not have a back button */}
       {/* Last question will not have a next button */}
       {children}
-      <div className="buttons-box">
-        <BackButtonComponent onClick={onClick} />
-        <NextButtonComponent onClick={onClick} />
-      </div>
     </div>
   );
 }
@@ -88,12 +81,10 @@ QuestionComponent.propTypes = {
   selectedOption: PropTypes.number,
   onOptionChange: PropTypes.func,
   children: PropTypes.element.isRequired,
-  onClick: PropTypes.func,
 };
 
 QuestionComponent.defaultProps = {
   options: null,
   selectedOption: null,
   onOptionChange: null,
-  onClick: null,
 };
