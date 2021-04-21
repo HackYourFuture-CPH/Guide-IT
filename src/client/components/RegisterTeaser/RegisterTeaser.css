@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+.RegisterTeaser {
+  display: flex;
+  width: 50%;
+}
+
+.RegisterTeaserText p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #000;
+  margin-left: 3%;
+  text-align: left;
+}
+
+.RegisterTeaserText p a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #db643d;
+}
