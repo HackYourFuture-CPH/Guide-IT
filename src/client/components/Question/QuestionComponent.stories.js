@@ -1,5 +1,4 @@
 import { array, number, text } from '@storybook/addon-knobs';
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
 import image2 from '../../assets/images/questionBackgrounds/question2background.png';
