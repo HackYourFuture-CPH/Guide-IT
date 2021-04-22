@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './CardProfileResultComponent.styles.css';
-import CardProfileResultListItemsComponent from './CardProfileResultListItemsComponent';
 
 export default function CardProfileResultComponent({ title, results }) {
   return (
     <div className="card-profile-result-component">
       <h2>{title}</h2>
-      <CardProfileResultListItemsComponent results={results} />
+      <ul className="card-profile-result-list-items">
+        {results.map((result) => {
+          return <li className="card-profile-result-list-item">{result}</li>;
+        })}
+      </ul>
     </div>
   );
 }

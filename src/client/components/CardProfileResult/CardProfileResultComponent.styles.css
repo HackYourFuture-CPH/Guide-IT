@@ -1,5 +1,9 @@
+/* * {
+  border: 1px solid red !important;
+} */
+
 .card-profile-result-component {
-  background-color: #000;
+  background-color: transparent;
   width: 507px;
 }
 
@@ -7,4 +11,20 @@ h2 {
   font-family: 'Roboto Mono', monospace;
   font-size: 48px;
   margin: 30px 0;
+}
+
+.card-profile-result-list-items {
+  background-color: #f0f0f0;
+  width: 400px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
+}
+
+.card-profile-result-list-item {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.card-profile-result-list-item + .card-profile-result-list-item {
+  margin-top: 40px;
 }
