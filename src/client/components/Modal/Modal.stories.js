@@ -35,7 +35,7 @@ const Template = ({ backgroundColor, width, fontFamily }) => {
         }}
         onMouseEnter={openModal}
       >
-        Hvoer over here to View Modal
+        Hover over here to View Modal
       </div>
       <Modal
         id="hover-to-show-modal"
