@@ -8,35 +8,36 @@ import elevatorImg from '../../assets/images/elevator_sidemenu.png';
 function SideMenu({ highLigtItem }) {
   return (
     <div className="side_menu_div">
-      <nav>
+      <nav className="side_menu_spacebetween">
         <ul className="side_menu_ul">
           <li
-            className="side_menu_spacebetween side_menu_whiteborder"
+            className="side_menu_whiteborder"
             data-highlighted={highLigtItem === 0}
           >
             <a href={highLigtItem}>
               <img src={homeImg} alt="homeImg" />
             </a>
           </li>
-          <li className="side_menu_spacebetween">Home</li>
+          <span>Home</span>
+
           <li
-            className="side_menu_spacebetween side_menu_whiteborder"
+            className="side_menu_whiteborder"
             data-highlighted={highLigtItem === 1}
           >
             <a href={highLigtItem}>
               <img src={nextImg} alt="nextImg" />
             </a>
           </li>
-          <li className="side_menu_spacebetween">Next steps</li>
+          <span>Next steps</span>
           <li
-            className="side_menu_spacebetween side_menu_whiteborder"
+            className="side_menu_whiteborder"
             data-highlighted={highLigtItem === 2}
           >
             <a href={highLigtItem}>
               <img src={elevatorImg} alt="nextImg" />
             </a>
           </li>
-          <li className="side_menu_spacebetween">Elevator pitch</li>
+          <span>Elevator pitch</span>
         </ul>
       </nav>
     </div>

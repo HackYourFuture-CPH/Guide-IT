@@ -18,7 +18,7 @@ const SideMenuTemplate = ({ highLigtItem }) => {
 };
 export const SideBar = SideMenuTemplate.bind({});
 SideBar.args = {
-  highLigtItem: 1,
+  highLigtItem: 2,
 };
 SideMenuTemplate.propTypes = {
   highLigtItem: PropTypes.number.isRequired,
