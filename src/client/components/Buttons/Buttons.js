@@ -1,35 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Buttons.styles.css';
+import classNames from 'classnames';
 
 export default function Buttons({
   label,
-  width,
-  font,
-  color,
-  backgroundColor,
+  size, // it's either small or big
+  isMono, // if true the font is Roboto+Mono otherwise is Roboto
+  color, // it can be orange, grey or white
+  onClick,
 }) {
   return (
-    <div>
-      <button
-        type="submit"
-        className="buttons"
-        style={{
-          width: `${width}%`,
-          fontfamily: `${font}`,
-          color: `${color}`,
-          backgroundColor: `${backgroundColor}`,
-        }}
-      >
-        {label}
-      </button>
-    </div>
+    <button
+      type="submit"
+      className={classNames('buttons', color, size, {
+        mono: isMono === true,
+      })}
+      onClick={onClick}
+    >
+      {label}
+    </button>
   );
 }
 
+Buttons.defaultProps = {
+  size: 'small',
+  color: 'orange',
+};
+
 Buttons.propTypes = {
   label: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
-  font: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
+  size: PropTypes.oneOf(['small', 'big']),
+  isMono: PropTypes.bool.isRequired,
+  color: PropTypes.oneOf(['orange', 'grey', 'white']),
+  onClick: PropTypes.func.isRequired,
 };

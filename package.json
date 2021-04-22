@@ -41,6 +41,7 @@
     "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
     "circular-json": "^0.5.9",
+    "classnames": "^2.3.1",
     "clean-webpack-plugin": "^3.0.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",

@@ -1,34 +1,35 @@
 import React from 'react';
 import Buttons from './Buttons';
-import PropTypes from 'prop-types';
 
 export default {
   title: 'Buttons',
   component: Buttons,
   argTypes: {
-    width: {
-      control: { type: 'range', min: 0, max: 100, step: 1 },
+    label: {
+      control: { type: 'text' },
     },
-    font: {
-      control: { type: 'select', options: ['Roboto', 'Roboto mono'] },
+    size: {
+      control: { type: 'radio', options: ['small', 'big'] },
     },
-    backgroundColor: {
-      control: { type: 'select', options: ['#DB643D', '#535C75', '#FFFFFF'] },
+    isMono: {
+      control: { type: 'boolean' },
     },
+
     color: {
-      control: { type: 'select', options: ['#DB643D', '#535C75', '#FFFFFF'] },
+      control: { type: 'radio', options: ['orange', 'grey', 'white'] },
     },
   },
 };
 
-const Template = ({ label, width, font, color, backgroundColor }) => {
+// eslint-disable-next-line react/prop-types
+const Template = ({ label, size, isMono, color, onClick }) => {
   return (
     <Buttons
       label={label}
-      width={width}
-      font={font}
+      size={size}
+      isMono={isMono}
       color={color}
-      backgroundColor={backgroundColor}
+      onClick={onClick}
     />
   );
 };
@@ -37,16 +38,11 @@ export const Button = Template.bind({});
 
 Button.args = {
   label: 'Click me',
-  width: '15',
-  font: 'Roboto',
-  color: 'white',
-  backgroundColor: 'orange',
-};
-
-Template.propTypes = {
-  label: PropTypes.string.isRequired,
-  width: PropTypes.number.isRequired,
-  font: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
+  size: 'small',
+  isMono: false,
+  color: 'orange',
+  onClick: () => {
+    // eslint-disable-next-line no-console
+    console.log('I was clicked');
+  },
 };
