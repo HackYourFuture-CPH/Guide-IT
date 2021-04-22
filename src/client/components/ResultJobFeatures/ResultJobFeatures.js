@@ -1,10 +1,76 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './ResultJobFeatures.styles.css';
 import PropTypes from 'prop-types';
 
 // import the 2 needed logos
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
+
+// Information of each job branch stored in this array
+const array = [
+  {
+    jobTitle: 'Full stack developer',
+    branch: 'Full stack development',
+    school: 'HYF school',
+    webSite: 'https://www.hackyourfuture.dk/',
+    logoPath: hyfLogo,
+    links: ['https://www.youtube.com/watch?v=9GHtSbRX3dY'],
+    skills: {
+      title: 'Full stack developer needs to have a following skill set:',
+      ts: {
+        title: '-Technical skills',
+        skills:
+          '(HTML/CSS;Javascript;Git;Backend Languages:C#,Python,Ruby;Web Architecture;Databases)',
+      },
+      ss: {
+        title: '-Soft skills',
+        skills: '(critical thinking, detailed analysis, creativity)',
+      },
+    },
+  },
+  {
+    jobTitle: 'Data analyst',
+    branch: 'Data analysis',
+    school: 'ReDI school',
+    webSite: 'https://www.redi-school.org/',
+    logoPath: rediLogo,
+    links: ['https://www.youtube.com/watch?v=EeSvvtwdyDo'],
+    skills: {
+      title: 'Data analyst needs to have a following skill set:',
+      ts: {
+        title: '-Technical skills',
+        skills:
+          '(high level of mathematical ability;the ability to analyze, model and interpret data;accuracy and attention to detail)',
+      },
+      ss: {
+        title: '-Soft skills',
+        skills: '(critical thinking, communication and teamwork)',
+      },
+    },
+  },
+  {
+    jobTitle: 'UX designer',
+    branch: 'UX design',
+    school: 'ReDI school',
+    webSite: 'https://www.redi-school.org/',
+    logoPath: rediLogo,
+    links: [
+      'https://www.youtube.com/watch?v=O3EtKPG4OWE',
+      'https://www.youtube.com/watch?v=ORZlHuD22UQ',
+    ],
+    skills: {
+      title: 'UX designers need to have a very diverse skill set:',
+      ts: {
+        title: '-Technical and design skills',
+        skills: '(wireframing, prototyping, interpreting data)',
+      },
+      ss: {
+        title: '-Soft skills',
+        skills: '(adaptability, communication, empathy and teamwork)',
+      },
+    },
+  },
+];
 
 /*
 How it works?
@@ -17,81 +83,12 @@ export default function ResultJobFeatures({ branchTitle }) {
   const [firstStyle, setFirstStyle] = useState('none');
   const [secondStyle, setSecondStyle] = useState('none');
   const [thirdStyle, setThirdStyle] = useState('none');
-  // refs to store the reference to the each bullet point content
-  const firstRef = useRef();
-  const secondRef = useRef();
-  const thirdRef = useRef();
 
   // State for the left arrow, to rotate down or to its inicial direction when clicked
   const [firstRotate, setFirstRotate] = useState('0deg');
   const [secondRotate, setSecondRotate] = useState('0deg');
   const [thirdRotate, setThirdRotate] = useState('0deg');
 
-  // Information of each job branch stored in this array
-  const array = [
-    {
-      jobTitle: 'Full stack developer',
-      branch: 'Full stack development',
-      school: 'HYF school',
-      webSite: 'https://www.hackyourfuture.dk/',
-      logoPath: hyfLogo,
-      links: ['https://www.youtube.com/watch?v=9GHtSbRX3dY'],
-      skills: {
-        title: 'Full stack developer needs to have a following skill set:',
-        ts: {
-          title: '-Technical skills',
-          skills:
-            '(HTML/CSS;Javascript;Git;Backend Languages:C#,Python,Ruby;Web Architecture;Databases)',
-        },
-        ss: {
-          title: '-Soft skills',
-          skills: '(critical thinking, detailed analysis, creativity)',
-        },
-      },
-    },
-    {
-      jobTitle: 'Data analyst',
-      branch: 'Data analysis',
-      school: 'ReDI school',
-      webSite: 'https://www.redi-school.org/',
-      logoPath: rediLogo,
-      links: ['https://www.youtube.com/watch?v=EeSvvtwdyDo'],
-      skills: {
-        title: 'Data analyst needs to have a following skill set:',
-        ts: {
-          title: '-Technical skills',
-          skills:
-            '(high level of mathematical ability;the ability to analyze, model and interpret data;accuracy and attention to detail)',
-        },
-        ss: {
-          title: '-Soft skills',
-          skills: '(critical thinking, communication and teamwork)',
-        },
-      },
-    },
-    {
-      jobTitle: 'UX designer',
-      branch: 'UX design',
-      school: 'ReDI school',
-      webSite: 'https://www.redi-school.org/',
-      logoPath: rediLogo,
-      links: [
-        'https://www.youtube.com/watch?v=O3EtKPG4OWE',
-        'https://www.youtube.com/watch?v=ORZlHuD22UQ',
-      ],
-      skills: {
-        title: 'UX designers need to have a very diverse skill set:',
-        ts: {
-          title: '-Technical and design skills',
-          skills: '(wireframing, prototyping, interpreting data)',
-        },
-        ss: {
-          title: '-Soft skills',
-          skills: '(adaptability, communication, empathy and teamwork)',
-        },
-      },
-    },
-  ];
   // Result will store the filtered object that contains job branch info.
   let result = [];
   const selectedObject = array.filter(
@@ -146,14 +143,13 @@ export default function ResultJobFeatures({ branchTitle }) {
             className="job-features-title"
             role="button"
             tabIndex={0}
-            onClick={() => handleFirstClick(firstRef)}
-            onKeyDown={() => handleFirstClick(firstRef)}
+            onClick={() => handleFirstClick()}
+            onKeyDown={() => handleFirstClick()}
           >{`Become a ${jobTitle}`}</div>
         </div>
 
         <div
           className="job-features-description"
-          ref={firstRef}
           style={{ display: firstStyle }}
         >
           <p>{`${school} offers a course where you can learn basics of ${branch}.`}</p>
@@ -179,20 +175,21 @@ export default function ResultJobFeatures({ branchTitle }) {
             className="job-features-title"
             role="button"
             tabIndex={0}
-            onClick={() => handleSecondClick(secondRef)}
-            onKeyDown={() => handleSecondClick(secondRef)}
+            onClick={() => handleSecondClick()}
+            onKeyDown={() => handleSecondClick()}
           >{`A day in the life of a ${jobTitle}`}</div>
         </div>
         <div
           className="job-features-description"
-          ref={secondRef}
           style={{ display: secondStyle }}
         >
           <p>{`Interested in finding out what a ${jobTitle} does and how it looks like to be one?`}</p>
 
           <div className="links-container">
             {links.map((link) => (
-              <a href={link}>{link}</a>
+              <a key={link} href={link}>
+                {link}
+              </a>
             ))}
           </div>
         </div>
@@ -209,17 +206,13 @@ export default function ResultJobFeatures({ branchTitle }) {
             className="job-features-title"
             role="button"
             tabIndex={0}
-            onClick={() => handleThirdClick(thirdRef)}
-            onKeyDown={() => handleThirdClick(thirdRef)}
+            onClick={() => handleThirdClick()}
+            onKeyDown={() => handleThirdClick()}
           >
             Skills needed
           </div>
         </div>
-        <div
-          className="skills-container"
-          ref={thirdRef}
-          style={{ display: thirdStyle }}
-        >
+        <div className="skills-container" style={{ display: thirdStyle }}>
           <ul>
             <li>
               <p>{`${skills.title}`}</p>
