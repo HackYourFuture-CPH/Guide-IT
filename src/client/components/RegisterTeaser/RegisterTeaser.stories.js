@@ -7,4 +7,4 @@ export default {
   component: RegisterTeaser,
 };
 
-export const Teaser = () => <RegisterTeaser singInURL="#" />;
+export const Teaser = () => <RegisterTeaser signInURL="#" />;

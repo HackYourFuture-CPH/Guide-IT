@@ -3,7 +3,7 @@ import './RegisterTeaser.css';
 import PropTypes from 'prop-types';
 import robotLogo from '../../assets/images/robot_logo.png';
 
-export default function RegisterTeaser({ singInURL }) {
+export default function RegisterTeaser({ signInURL }) {
   return (
     <div className="RegisterTeaser">
       <div>
@@ -12,7 +12,7 @@ export default function RegisterTeaser({ singInURL }) {
       <div className="RegisterTeaserText">
         <p>
           Do you want to save your results?
-          <br /> <a href={singInURL}>Sign in</a> and check your results any
+          <br /> <a href={signInURL}>Sign in</a> and check your results any
           time.
         </p>
       </div>
@@ -20,5 +20,5 @@ export default function RegisterTeaser({ singInURL }) {
   );
 }
 RegisterTeaser.propTypes = {
-  singInURL: PropTypes.string.isRequired,
+  signInURL: PropTypes.string.isRequired,
 };
