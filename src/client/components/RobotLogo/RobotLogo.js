@@ -21,12 +21,9 @@ export default function RobotLogo({ handleOnclick }) {
   );
 }
 RobotLogo.propTypes = {
-  title: PropTypes.string.isRequired,
   handleOnclick: PropTypes.func,
-  children: PropTypes.node,
 };
 
 RobotLogo.defaultProps = {
   handleOnclick: null,
-  children: null,
 };
