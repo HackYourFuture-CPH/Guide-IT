@@ -5,7 +5,7 @@ export default function HomeDescription() {
   return (
     <div className="home-description">
       <p className="home-description-upper">
-        <b>GuideIT </b>
+        <strong>GuideIT </strong>
         is a tool created to help newcomers find their professional way in
         Denmark.
       </p>
