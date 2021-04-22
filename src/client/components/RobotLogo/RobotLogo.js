@@ -3,16 +3,16 @@ import Robot from '../../assets/images/robot_logo.png';
 import Arrow from '../../assets/images/arrow.png';
 import './RobotLogo.css';
 
-export default function RobotLogo() {
+export default function RobotLogo({ handleOnclick }) {
   return (
     <div className="RobotLogo">
-      <div className="RobotLogoDiv">
+      <button onClick={handleOnclick} type="submit" className="RobotLogoDiv">
         <img src={Robot} alt="RobotLogo" />
         <p>
-          CARRER FOR <br />
+          CAREER FOR <br />
           YOU IS
         </p>
-      </div>
+      </button>
       <div className="arrow">
         <img src={Arrow} alt="RobotArrow" />
       </div>
