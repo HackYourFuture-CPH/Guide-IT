@@ -1,5 +1,6 @@
 import React from 'react';
 import Avatar from './ProfileFormComponent';
+import avatarImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 
 export default {
@@ -21,8 +22,24 @@ export default {
   },
 };
 
-const Template = ({ color, width, fontFamily }) => (
-  <Avatar color={color} width={width} fontFamily={fontFamily} />
+const Template = ({
+  color,
+  width,
+  fontFamily,
+  userName,
+  userEmail,
+  userPassword,
+  userImage,
+}) => (
+  <Avatar
+    color={color}
+    width={width}
+    fontFamily={fontFamily}
+    userName={userName}
+    userEmail={userEmail}
+    userPassword={userPassword}
+    userImage={userImage}
+  />
 );
 
 Template.propTypes = {
@@ -40,4 +57,8 @@ AvatarForm.args = {
   color: '#535C75',
   width: 400,
   fontFamily: 'Roboto Mono',
+  userName: 'Anne',
+  userEmail: 'anne@gmail.com',
+  userPassword: 'xxxxxxxxxxxx',
+  userImage: avatarImage,
 };
