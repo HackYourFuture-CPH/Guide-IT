@@ -17,10 +17,6 @@ export const PersonalComponent = () => (
     results={array('Personal Results', [
       'extrovert',
       'detail-oriented',
-      //   'patient',
-      //   'communicative',
-      //   'critical-thinking',
-      //   'problem-solver',
       'super-planner (able to handle whole project development)',
     ])}
   />
@@ -30,11 +26,7 @@ export const ProfessionalComponent = () => (
   <CardProfileResultComponent
     title={text('Title', 'Your Professional Profile')}
     results={array('Professional Results', [
-      //   'design-oriented',
       'creative',
-      //   'problem-solver',
-      //   'proactive',
-      //   'good with debugging',
       'knows fundamental database concepts',
       'works well under pressure',
     ])}

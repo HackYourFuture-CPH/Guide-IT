@@ -5,7 +5,7 @@ import './CardProfileResultComponent.styles.css';
 export default function CardProfileResultComponent({ title, results }) {
   return (
     <div className="card-profile-result-component">
-      <h2>{title}</h2>
+      <h2 className="card-profile-result-title">{title}</h2>
       <ul className="card-profile-result-list-items">
         {results.map((result) => {
           return <li className="card-profile-result-list-item">{result}</li>;
