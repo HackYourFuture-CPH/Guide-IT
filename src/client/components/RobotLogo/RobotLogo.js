@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Robot from '../../assets/images/robot_logo.png';
 import Arrow from '../../assets/images/arrow.png';
 import './RobotLogo.css';
@@ -19,3 +20,13 @@ export default function RobotLogo({ handleOnclick }) {
     </div>
   );
 }
+RobotLogo.propTypes = {
+  title: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+  children: PropTypes.node,
+};
+
+RobotLogo.defaultProps = {
+  onClick: null,
+  children: null,
+};
