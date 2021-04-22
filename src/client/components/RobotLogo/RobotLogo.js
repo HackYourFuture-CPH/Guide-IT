@@ -23,3 +23,7 @@ export default function RobotLogo({ handleOnclick }) {
 RobotLogo.propTypes = {
   handleOnclick: PropTypes.func,
 };
+
+RobotLogo.defaultProps = {
+  handleOnclick: null,
+};
