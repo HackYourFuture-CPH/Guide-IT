@@ -4,10 +4,10 @@ import Robot from '../../assets/images/robot_logo.png';
 import Arrow from '../../assets/images/arrow.png';
 import './RobotLogo.css';
 
-export default function RobotLogo({ handleOnclick }) {
+export default function RobotLogo({ onClick }) {
   return (
     <div className="RobotLogo">
-      <button onClick={handleOnclick} type="submit" className="RobotLogoDiv">
+      <button onClick={onClick} type="submit" className="RobotLogoDiv">
         <img src={Robot} alt="RobotLogo" />
         <p>
           CAREER FOR <br />
@@ -21,9 +21,9 @@ export default function RobotLogo({ handleOnclick }) {
   );
 }
 RobotLogo.propTypes = {
-  handleOnclick: PropTypes.func,
+  onClick: PropTypes.func,
 };
 
 RobotLogo.defaultProps = {
-  handleOnclick: null,
+  onClick: null,
 };
