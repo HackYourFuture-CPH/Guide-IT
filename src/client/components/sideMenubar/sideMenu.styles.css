@@ -1,18 +1,26 @@
 @import url('https://fonts.google.com/specimen/Chakra+Petch?preview.text=GuideIT&preview.text_type=custom');
 
 .side_menu_div {
-  width: 100px;
+  width: 70px;
+  background-color: #298f8a;
+  margin-left: 50px;
 }
 
 li {
-  background-color: #298f8a;
   text-align: center;
-  padding-top: 3px;
+  padding: 3px 6px 0 6px;
   border-right: solid 5px transparent;
   line-height: 0.8;
+  color: #fff;
+  font-size: x-small;
+  font-family: 'Chakra Petch', monospace;
 }
 
 .side_menu_whiteborder:hover {
+  border-right-color: white;
+}
+
+.side_menu_whiteborder[data-highlighted='true'] {
   border-right-color: white;
 }
 
@@ -20,19 +28,15 @@ li {
   width: 100%;
   list-style: none;
   margin: 10px auto;
+  padding-left: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 a {
   text-decoration: none;
-  color: #fff;
-  font-size: x-small;
-  font-family: 'Chakra Petch', monospace;
 }
 
 .side_menu_spacebetween {
-  padding-bottom: 18px;
-}
-
-.home {
-  padding-top: 15px;
+  margin-bottom: 10px;
 }
