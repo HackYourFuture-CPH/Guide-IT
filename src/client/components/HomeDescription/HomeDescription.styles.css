@@ -1,0 +1,22 @@
+.home-description {
+  width: 793px;
+  height: 149px;
+  font-family: 'Robot Mono', 'Roboto', monospace;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5px;
+  color: #535c75;
+}
+
+.home-description p {
+  margin: 0 20px;
+}
+
+.home-description strong {
+  color: #db643d;
+}
