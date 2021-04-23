@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './EmailForm.css';
-
-export default function EmailRegistration({
-  formWidth,
-  btnBgcolor,
-  fontFamily,
-}) {
+export default function EmailRegistration({ formWidth, fontFamily }) {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   // onchange function for input
@@ -19,17 +14,19 @@ export default function EmailRegistration({
     const pattern = new RegExp(
       /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i,
     );
-    e.preventDefault();
-    if (email === '') {
-      setError('please enter your email');
-    } else if (!pattern.test(email)) {
-      setError("sorry,this email can't be registered.Let's try another one.");
+    // if enter key is pressed, validating user email.
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (email === '') {
+        setError('please enter your email');
+      } else if (!pattern.test(email)) {
+        setError("sorry,this email can't be registered.Let's try another one.");
+      }
     }
   };
 
   return (
     <form
-      onSubmit={handleSubmit}
       className="email_form"
       style={{
         width: `${formWidth}px`,
@@ -46,19 +43,16 @@ export default function EmailRegistration({
           placeholder="xyz@gmail.com"
           value={email}
           onChange={handleEmailInput}
+          onKeyPress={handleSubmit}
         />
-        {error !== '' ? <div className="warning_sign" /> : ''}
+        {error !== '' ? <span className="warning_sign" /> : ''}
       </div>
-      <div className="error-message">{error}</div>
-      <button type="submit" style={{ backgroundColor: `${btnBgcolor}` }}>
-        Continue
-      </button>
+      <div className="error_message">{error}</div>
     </form>
   );
 }
 
 EmailRegistration.propTypes = {
   formWidth: PropTypes.number.isRequired,
-  btnBgcolor: PropTypes.string.isRequired,
   fontFamily: PropTypes.string.isRequired,
 };
