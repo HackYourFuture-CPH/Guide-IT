@@ -23,7 +23,7 @@ function App() {
       <Switch>
         {/* Home page */}
         <Route exact path="/">
-          <Home />
+          {/** Home page */}
         </Route>
 
         {/* Anonymous pages */}

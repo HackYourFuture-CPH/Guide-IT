@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+
 import UserCreationSuccess from '../../components/Success/UserCreationSuccess';
 import SignUp from '../../components/Forms/SignUp';
 import Loader from '../../components/Loader';
+
 import { useFirebase } from '../../firebase/FirebaseContext';
 
 const getDoesPasswordsMatch = ({ password, passwordConfirm }) =>
