@@ -25,7 +25,7 @@
     url('../fonts/roboto-mono-v13-latin-regular.eot?#iefix')
     format('embedded-opentype'),
     url('../fonts/roboto-mono-v13-latin-regular.woff2') format('woff2'),
-    url('../fonts/roboto-mono-v13-lati    lar.woff') format('woff'),
+    url('../fonts/roboto-mono-v13-latin-regular.woff') format('woff'),
     url('../fonts/roboto-mono-v13-latin-regular.ttf') format('truetype'),
     url('../fonts/roboto-mono-v13-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
 }
@@ -41,7 +41,7 @@
     url('../fonts/chakra-petch-v4-latin-regular.eot?#iefix')
     format('embedded-opentype'),
     url('../fonts/chakra-petch-v4-latin-regular.woff2') format('woff2'),
-    url('../fonts/chakra-petch-v4-lati    lar.woff') format('woff'),
+    url('../fonts/chakra-petch-v4-latin-regular.woff') format('woff'),
     url('../fonts/chakra-petch-v4-latin-regular.ttf') format('truetype'),
-    url('../fonts/chakra-pet    latin-regular.svg#ChakraPetch') format('svg'); /* Legacy iOS */
+    url('../fonts/chakra-petch-v4-latin-regular.svg#ChakraPetch') format('svg'); /* Legacy iOS */
 }
