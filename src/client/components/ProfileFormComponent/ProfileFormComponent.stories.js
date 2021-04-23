@@ -54,9 +54,6 @@ Template.propTypes = {
 
 export const AnneForm = Template.bind({});
 AnneForm.args = {
-  // color: '#535C75',
-  // width: 400,
-  // fontFamily: 'Roboto Mono',
   userName: 'Anne',
   userEmail: 'anne@gmail.com',
   userPassword: 'xxxxxxxxxxxx',
