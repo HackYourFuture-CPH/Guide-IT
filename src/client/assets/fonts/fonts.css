@@ -12,13 +12,10 @@
     local(''),
     url('../fonts/roboto-v27-latin-regular.eot?#iefix')
     format('embedded-opentype'),
-     url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'),
-     url('../fonts/roboto-v27-latin-regular.woff')
-      format('woff'),
-     url('../fonts    o-v27-latin-regular.ttf')
-      format('truetype'),
-    
-      url('../fonts/roboto-v27    -regular.svg#Roboto') format('svg')    ; /* Legacy iOS */
+    url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-regular.woff') format('woff'),
+    url('../fonts/roboto-v27-latin-regular.ttf') format('truetype'),
+    url('../fonts/roboto-v27-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
 /* roboto-mono-regular - latin */
