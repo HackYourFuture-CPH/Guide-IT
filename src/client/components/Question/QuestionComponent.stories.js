@@ -1,4 +1,4 @@
-import { array, number, text } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import React from 'react';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
 
