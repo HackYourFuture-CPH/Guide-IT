@@ -43,20 +43,20 @@ const Template = ({
 );
 
 Template.propTypes = {
-  color: PropTypes.oneOf(['#DB643D', '#535C75', '#000000']),
+  color: PropTypes.oneOf(['#DB643D', '#535C75', '#000000']).isRequired,
   width: PropTypes.number.isRequired,
-  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
-};
-Template.defaultProps = {
-  color: '#535C75',
-  fontFamily: 'Roboto Mono',
+  fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']).isRequired,
+  userName: PropTypes.string.isRequired,
+  userImage: PropTypes.string.isRequired,
+  userEmail: PropTypes.string.isRequired,
+  userPassword: PropTypes.string.isRequired,
 };
 
-export const AvatarForm = Template.bind({});
-AvatarForm.args = {
-  color: '#535C75',
-  width: 400,
-  fontFamily: 'Roboto Mono',
+export const AnneForm = Template.bind({});
+AnneForm.args = {
+  // color: '#535C75',
+  // width: 400,
+  // fontFamily: 'Roboto Mono',
   userName: 'Anne',
   userEmail: 'anne@gmail.com',
   userPassword: 'xxxxxxxxxxxx',

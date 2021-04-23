@@ -9,8 +9,8 @@ const Avatar = ({
   userName,
   userEmail,
   userPassword,
-  onChange,
   userImage,
+  onChange,
 }) => {
   return (
     <div
@@ -66,12 +66,18 @@ const Avatar = ({
 
 Avatar.propTypes = {
   color: PropTypes.oneOf(['#DB643D', '#535C75', '#000000']),
-  width: PropTypes.number.isRequired,
+  width: PropTypes.number,
   fontFamily: PropTypes.oneOf(['Roboto', 'Roboto Mono']),
+  userName: PropTypes.string.isRequired,
+  userImage: PropTypes.string.isRequired,
+  userEmail: PropTypes.string.isRequired,
+  userPassword: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 Avatar.defaultProps = {
   color: '#535C75',
   fontFamily: 'Roboto Mono',
+  width: 400,
 };
 export default Avatar;
