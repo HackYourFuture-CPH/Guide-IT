@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import 'https://kit.fontawesome.com/a076d05399.js';
 
 .RobotLogo {
   display: flex;
@@ -32,8 +33,6 @@
   font-weight: bolder;
 }
 
-.arrow img {
+.arrow {
   padding-top: 105px;
-  width: 35px;
-  height: 125px;
 }

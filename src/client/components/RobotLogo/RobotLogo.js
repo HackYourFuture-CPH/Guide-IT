@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Robot from '../../assets/images/robot_logo.png';
-import Arrow from '../../assets/images/arrow.png';
+
 import './RobotLogo.css';
 
 export default function RobotLogo({ onClick }) {
@@ -15,7 +15,7 @@ export default function RobotLogo({ onClick }) {
         </p>
       </button>
       <div className="arrow">
-        <img src={Arrow} alt="RobotArrow" />
+        <span> &#10230; </span>
       </div>
     </div>
   );
