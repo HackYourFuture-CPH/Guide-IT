@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Buttons.styles.css';
-import classNames from 'classnames';
 
 export default function Buttons({
   label,
@@ -13,9 +12,7 @@ export default function Buttons({
   return (
     <button
       type="submit"
-      className={classNames('buttons', color, size, {
-        mono: isMono === true,
-      })}
+      className={`buttons ${color} ${size} ${isMono ? `mono` : ``}`}
       onClick={onClick}
     >
       {label}
