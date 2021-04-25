@@ -5,7 +5,7 @@ import robotLogo from '../../assets/images/robot_logo.png';
 
 export default function RegisterTeaser({ signInURL }) {
   return (
-    <div className="RegisterTeaser">
+    <div className="register-teaser">
       <div>
         <img src={robotLogo} alt="RobotLogo" />
       </div>
