@@ -9,7 +9,7 @@ export default function RegisterTeaser({ signInURL }) {
       <div>
         <img src={robotLogo} alt="RobotLogo" />
       </div>
-      <div className="RegisterTeaserText">
+      <div className="register-teaser-text">
         <p>
           Do you want to save your results?
           <br /> <a href={signInURL}>Sign in</a> and check your results any
