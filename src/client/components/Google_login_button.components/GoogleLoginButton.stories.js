@@ -5,6 +5,7 @@ export default {
   title: 'GoogleLoginButton',
   component: GoogleLoginButton,
 };
+
 export function loginWithGoogle() {
   return <GoogleLoginButton />;
 }
