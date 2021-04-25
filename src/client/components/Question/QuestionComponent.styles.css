@@ -1,0 +1,15 @@
+.question-box {
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  padding: 50px;
+  text-align: center;
+}
