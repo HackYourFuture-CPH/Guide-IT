@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;600&display=swap');
-
 .sidebar-menu {
   background-color: #0b5681;
   width: 220px;
@@ -11,7 +9,7 @@
   padding-top: 47px;
   padding-left: 0;
   color: white;
-  font-family: 'Chakra Petch', monospace;
+  font-family: 'Chakra Petch', sans-serif;
   font-size: 33px;
   letter-spacing: 0.4em;
   font-weight: bold;
@@ -34,7 +32,7 @@
 
 .create-account a {
   color: white;
-  font-family: 'Chakra Petch', monospace;
+  font-family: 'Chakra Petch', sans-serif;
   padding-right: 1px;
 }
 
@@ -61,7 +59,7 @@
 
 .login a {
   color: white;
-  font-family: 'Chakra Petch', monospace;
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 .sidebar-footer {
