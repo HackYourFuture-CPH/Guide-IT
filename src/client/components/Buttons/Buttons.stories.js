@@ -1,6 +1,8 @@
 import React from 'react';
 import Buttons from './Buttons';
 
+// The code starts
+
 export default {
   title: 'Buttons',
   component: Buttons,

@@ -7,7 +7,7 @@ export default function Buttons({
   size, // it's either small or big
   isMono, // if true the font is Roboto+Mono otherwise is Roboto
   color, // it can be orange, grey or white
-  onClick,
+  onClick, // the function
 }) {
   return (
     <button
