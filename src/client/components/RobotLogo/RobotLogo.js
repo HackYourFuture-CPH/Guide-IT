@@ -9,6 +9,7 @@ export default function RobotLogo({ onClick }) {
     <div className="robot-logo">
       <button onClick={onClick} type="submit" className="robot-logo-div">
         <img src={Robot} alt="robot-logo" />
+        <img src={Robot} alt="RobotLogo" />
         <p>
           CAREER FOR <br />
           YOU IS
