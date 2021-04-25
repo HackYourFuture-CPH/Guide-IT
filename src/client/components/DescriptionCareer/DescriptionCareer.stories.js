@@ -22,7 +22,7 @@ const arr = [
 ];
 
 export const DescriptionCareer = () => {
-  const exams = object('list of esxams', arr, 'props');
+  const exams = object('list of exams', arr, 'props');
 
   return <Description exams={exams} />;
 };
