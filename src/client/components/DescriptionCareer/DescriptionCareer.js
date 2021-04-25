@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './DescriptionCareer.css';
 
-//test
-
 function DescriptionCareer({ title, content, content2, time }) {
   return (
     <div className="descriptioncareer">
