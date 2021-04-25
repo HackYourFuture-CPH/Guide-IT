@@ -12,15 +12,17 @@ export default {
   },
 };
 
-const Template = ({ color, size }) => <Header color={color} size={size} />;
+const Template = ({ color, fontSize }) => (
+  <Header color={color} fontSize={fontSize} />
+);
 
 Template.propTypes = {
   color: PropTypes.string.isRequired,
-  size: PropTypes.number.isRequired,
+  fontSize: PropTypes.number.isRequired,
 };
 
 export const HeaderTitle = Template.bind({});
 HeaderTitle.args = {
   color: '#DB643D',
-  size: '25',
+  fontSize: '25',
 };
