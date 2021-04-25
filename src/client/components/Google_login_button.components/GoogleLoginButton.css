@@ -1,15 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
-
 .google_login_button {
   display: flex;
   align-items: center;
   height: 3em;
   color: #000;
   background-color: #fff;
-  border-color: transparent;
+  border: 1px solid #eaf4f3;
   border-radius: 6px;
-  font-size: 0.7rem;
+}
+
+.google_login_button span {
+  font-family: 'Roboto', 'Roboto Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: bolder;
 }
 
 .google_logo_img {
