@@ -1,0 +1,18 @@
+.register-teaser {
+  display: flex;
+  width: 50%;
+}
+
+.register-teaser-text p {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #000;
+  margin-left: 3%;
+  text-align: left;
+}
+
+.register-teaser-text p a {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #db643d;
+}
