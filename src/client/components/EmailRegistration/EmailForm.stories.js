@@ -9,22 +9,17 @@ export default {
     formWidth: {
       control: { type: 'range', min: 300, max: 1000, step: 50 },
     },
-    fontFamily: {
-      control: { type: 'select', options: ['Roboto', 'Roboto mono'] },
-    },
   },
 };
 
-const EmailFormTemplate = ({ formWidth, fontFamily }) => {
-  return <EmailForm formWidth={formWidth} fontFamily={fontFamily} />;
+const EmailFormTemplate = ({ formWidth }) => {
+  return <EmailForm formWidth={formWidth} />;
 };
 export const EmailRegistrationForm = EmailFormTemplate.bind({});
 EmailRegistrationForm.args = {
   formWidth: 400,
-  fontFamily: 'Roboto Mono',
 };
 
 EmailFormTemplate.propTypes = {
   formWidth: PropTypes.number.isRequired,
-  fontFamily: PropTypes.string.isRequired,
 };

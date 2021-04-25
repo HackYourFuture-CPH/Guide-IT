@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './EmailForm.css';
 
-export default function EmailRegistration({ formWidth, fontFamily }) {
+export default function EmailRegistration({ formWidth }) {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   // onchange function for input
@@ -31,7 +31,6 @@ export default function EmailRegistration({ formWidth, fontFamily }) {
       className="email_form"
       style={{
         width: `${formWidth}px`,
-        fontFamily: `${fontFamily}`,
       }}
     >
       <label htmlFor="email">Email address</label>
@@ -55,5 +54,4 @@ export default function EmailRegistration({ formWidth, fontFamily }) {
 
 EmailRegistration.propTypes = {
   formWidth: PropTypes.number.isRequired,
-  fontFamily: PropTypes.string.isRequired,
 };
