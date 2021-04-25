@@ -6,9 +6,9 @@ import './RobotLogo.css';
 
 export default function RobotLogo({ onClick }) {
   return (
-    <div className="RobotLogo">
-      <button onClick={onClick} type="submit" className="RobotLogoDiv">
-        <img src={Robot} alt="RobotLogo" />
+    <div className="robot-logo">
+      <button onClick={onClick} type="submit" className="robot-logo-div">
+        <img src={Robot} alt="robot-logo" />
         <p>
           CAREER FOR <br />
           YOU IS
