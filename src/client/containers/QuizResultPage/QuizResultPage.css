@@ -1,0 +1,45 @@
+.main-div {
+  width: 80%;
+  display: flex;
+}
+
+.left-div {
+  width: 600px;
+  display: flex;
+  margin-left: 50px;
+}
+
+.left-div-robot {
+  padding-top: 38px;
+  padding-right: 20px;
+}
+
+.left-div-robot p {
+  font-size: 15px;
+  color: #323334;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.left-div-card {
+  padding-left: 15px;
+}
+
+.left-div-register {
+  padding-left: 40px;
+  padding-top: 25px;
+}
+
+.left-div-register p {
+  padding: 0;
+}
+
+.right-div {
+  padding-left: 35px;
+}
+
+.rigt-div-logo {
+  padding-left: 255px;
+  padding-bottom: 15px;
+}
