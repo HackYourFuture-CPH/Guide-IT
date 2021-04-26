@@ -1,22 +1,22 @@
 .buttons {
   border: 0;
   font-size: 16px;
-  font-family: Roboto;
+  font-family: 'Roboto', monospace; /* changed */
 }
 
 .buttons.orange {
   background-color: #db643d;
-  color: #ffffff;
+  color: #fff;
 }
 
 .buttons.white {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #535c75;
 }
 
 .buttons.grey {
   background-color: #535c75;
-  color: #ffffff;
+  color: #fff;
 }
 
 .buttons.small {
@@ -30,5 +30,5 @@
 }
 
 .buttons.mono {
-  font-family: 'Roboto Mono';
+  font-family: 'Roboto Mono', monospace;
 }
