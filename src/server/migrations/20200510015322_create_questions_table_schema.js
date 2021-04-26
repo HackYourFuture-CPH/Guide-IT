@@ -1,5 +1,4 @@
 // This is a migration for questions table.
-
 exports.up = function (knex) {
   return knex.schema.createTable('questions', (table) => {
     table.increments();
