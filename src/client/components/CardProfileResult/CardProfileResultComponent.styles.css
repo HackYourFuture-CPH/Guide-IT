@@ -1,0 +1,45 @@
+.card-profile-result-component {
+  background-color: transparent;
+  width: 500px;
+}
+
+.card-profile-result-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 42px;
+  margin-bottom: 64px;
+  color: black;
+  line-height: 55px;
+}
+
+.card-profile-result-list-items {
+  background-color: #f0f0f0;
+  height: 420px;
+  width: 440px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 100px;
+  padding-left: 70px;
+  list-style: none; /* Need to remove default bullets in order to change their colour */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-profile-result-list-items li::before {
+  content: ' ';
+  width: 14px;
+  height: 14px;
+  background-color: #e95328;
+  display: block;
+  position: absolute;
+  border-radius: 9999px;
+  left: -40px;
+  top: calc(50% - 7px); /* 7px is half the height */
+}
+
+.card-profile-result-list-item {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  line-height: 32px;
+  position: relative;
+}
