@@ -1,0 +1,53 @@
+.header h1 {
+  margin-left: 3em;
+}
+
+.sidemenu_page {
+  padding: 28% 0 0 0;
+  width: 10%;
+}
+
+.question_page {
+  padding: 10% 0 0 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle_page {
+  display: flex;
+}
+
+.side_menu_div {
+  margin-left: 0%;
+}
+
+.button_page {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+.buttons.big {
+  width: 150px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.buttons {
+  font-size: 25px;
+}
+
+.question-box {
+  height: 400px;
+  margin-left: 8%;
+  margin-right: 16%;
+}
+
+.question {
+  padding: 0 20% 0 20%;
+}
+
+.radio {
+  font-size: 1.5em;
+}
