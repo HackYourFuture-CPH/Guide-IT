@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './JobCard.styles.css';
-import RobotLogo from '../../assets/images/robot_logo.png';
 
 const jobDetailsArray = [
   {
@@ -75,13 +74,12 @@ export default function JobCard({ jobTitle }) {
     [chosenJobDetail] = jobDetailsArray;
   }
 
-  const { branchTitle, title, contents } = chosenJobDetail;
   return (
     <div>
       <div className="job-card-container">
-        <h1>{title}</h1>
+        <h1>{chosenJobDetail.title}</h1>
         <div className="job-details-div">
-          {contents.map((content) => (
+          {chosenJobDetail.contents.map((content) => (
             <p>
               <strong>{content.contentHead}</strong>
               <span>{content.content}</span>
