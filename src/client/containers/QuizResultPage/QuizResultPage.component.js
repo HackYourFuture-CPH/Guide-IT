@@ -47,7 +47,7 @@ export const QuizResultPage = () => {
               <div className="left-div-card">
                 <CardProfileResultComponent
                   title="Your Personal Profile"
-                  results={resultpersnol}
+                  results={resultpersonal}
                 />
               </div>
             </div>
