@@ -6,18 +6,20 @@ import RobotLogo from '../../components/RobotLogo/RobotLogo';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResultComponent.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser';
 import PageHeader from '../../components/PageHeaderComponent/PageHeader';
-import { gray, greenBright } from 'chalk';
+
 export const QuizResultPage = () => {
   const result = [
     'creative',
     'knows fundamental database concepts',
     'works well under pressure',
   ];
+
   const resultpersnol = [
     'extrovert',
     'detail-oriented',
     'super-planner (able to handle whole project development)',
   ];
+
   return (
     <>
       <div
