@@ -13,7 +13,7 @@ export const QuizResultPage = () => {
     'knows fundamental database concepts',
     'works well under pressure',
   ];
-  const resultpersnol = [
+  const resultpersonal = [
     'extrovert',
     'detail-oriented',
     'super-planner (able to handle whole project development)',
