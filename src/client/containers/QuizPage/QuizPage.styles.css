@@ -1,3 +1,24 @@
+.main {
+  background-image: url(../../assets/images/Vector.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.main::before {
+  content: '';
+  opacity: 0.3;
+  background-color: #999;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  z-index: -1;
+}
+
 .header h1 {
   margin-left: 3em;
 }
@@ -24,8 +45,8 @@
 
 .button_page {
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 8%;
+  margin-top: 1%;
+  margin-bottom: 7%;
 }
 
 .buttons.big {
@@ -50,4 +71,10 @@
 
 .radio {
   font-size: 1.5em;
+}
+
+.progress-status {
+  background-color: #db643d;
+  border: 1px solid #db643d;
+  padding: 3px 0 4px 4px;
 }

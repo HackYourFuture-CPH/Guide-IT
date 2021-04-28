@@ -7,15 +7,16 @@ import SideMenu from '../../components/sideMenubar/sideMenu';
 import Buttons from '../../components/Buttons/Buttons';
 import ProgressBar from '../../components/ProgressBar.components/ProgressBar';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
+
 export const QuizPage = () => {
   return (
-    <>
+    <div className="main">
       <div>
         <PageHeader />
       </div>
       <div className="middle_page">
         <div className="sidemenu_page">
-          <SideMenu />
+          <SideMenu highLigtItem={3} />
         </div>
         <div className="question_page">
           <QuestionComponent
@@ -24,6 +25,7 @@ export const QuizPage = () => {
           />
           <div className="quizans_page">
             <QuizAnswers
+              isAgreementQuestion={false}
               firstAnswer="How the website looks and how easy it is for the users"
               secondAnswer="Logic behind how the website is built"
             />
@@ -31,11 +33,11 @@ export const QuizPage = () => {
         </div>
       </div>
       <div className="button_page">
-        <Buttons label="Next" size="big" isMono="false" />
+        <Buttons label="Next" size="big" isMono={false} />
       </div>
       <div className="progressbar_page">
-        <ProgressBar />
+        <ProgressBar level={14} backgroundColor="white" alphaLevel={0.5} />
       </div>
-    </>
+    </div>
   );
 };
