@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import JobCard from './JobCard';
+import QuizResultPage from './QuizResultPage.component';
 
 export default {
-  title: 'Components /Job Card',
-  component: JobCard,
+  title: 'QuizResultPage',
+  component: QuizResultPage,
   argTypes: {
     jobTitle: {
       control: {
@@ -15,11 +15,11 @@ export default {
   },
 };
 
-const Template = ({ jobTitle }) => <JobCard jobTitle={jobTitle} />;
+const Template = ({ jobTitle }) => <QuizResultPage jobTitle={jobTitle} />;
 
-export const jobCard = Template.bind({});
-jobCard.args = {
-  jobTitle: 'Full stack developer',
+export const QuizResult = Template.bind({});
+QuizResult.args = {
+  jobTitle: 'Job title',
 };
 
 Template.propTypes = {
