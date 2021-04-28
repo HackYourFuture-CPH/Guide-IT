@@ -11,7 +11,6 @@
     <img src="https://user-images.githubusercontent.com/6642037/112057889-250f2880-8b5a-11eb-85cc-1ec9ef42afbe.png" alt="Project Homepage"></a>
 </p>
 
-
 ## 📝 Table of Contents
 
 - [📝 Table of Contents](#-table-of-contents)
@@ -54,7 +53,6 @@
 - [👨🏾‍💻 Authors](#-authors)
 - [📝 License](#-license)
 
-
 ## 🧐 About <a name = "about"></a>
 
 This repository is for Class16 Final Project - Guide IT
@@ -62,7 +60,6 @@ This repository is for Class16 Final Project - Guide IT
 Production website: https://guide-it-production.herokuapp.com/
 
 Staging website: https://guide-it-staging.herokuapp.com/
-
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -98,8 +95,8 @@ _Add here information about the Business Glossary_
 [Business Glossary](/BusinessGlossary.md)
 
 #### 🖼 Wirefames
-Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-18TH)
 
+Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-18TH)
 
 #### 🗄️ Database Model Diagram
 
@@ -107,12 +104,12 @@ https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
 
 <img width="578" alt="Screenshot 2021-04-14 at 09 36 48" src="https://user-images.githubusercontent.com/6642037/114672045-02110800-9d05-11eb-8093-184ad7fb4ae1.png">
 
-
 - [How to make changes on the diagram](/diagram.md)
 
 ## 📈 Process 📉📈
 
 ### 💻 Working with code
+
 - Take a story/task by assigning to you on the storyboard. Remember to update the status of your work when needed: in progress, blocked, waiting for review, etc.
 - Always create your branches from the develop branch. Do not interact with the master branch.
 - ALWAYS run code before a PR is made
@@ -130,14 +127,14 @@ https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
 Generally there are 2 types of components: _presentational_ and _container_ components. Please review the differences below:
 
 |                       | Presentational components                           | Container components                                                                                                                                                      |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
 | Also known as         | "dumb" components, functional stateless components  | "smart" components, stateful components                                                                                                                                   |
 | Lives in this folder  | `/components`                                       | `/containers`                                                                                                                                                             |
 | Purpose               | Determines what a component looks like              | Determines how the applications works                                                                                                                                     |
 | Communication         | Can only communicate by receiving and passing props | Can communicate via props, can call APIs, can manipulate the DOM with REFs, etc.                                                                                          |
 | Markup                | Contains most of the markup for the application     | Should generally have as little markup as possible. A container `<div>` or an `<ul>` tag is ok, but if you need more, consider making a separate presentational component |
 | Storybook             | Can easily be mocked in Storybook                   | Cannot easily be mocked in Storybook, would require mocking API calls, etc.                                                                                               |
-| Can have side effects | No                                                  | Yes                                                                                                                                                                       |  |
+| Can have side effects | No                                                  | Yes                                                                                                                                                                       |     |
 
 #### A note about React Hooks
 
