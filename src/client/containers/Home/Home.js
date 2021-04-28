@@ -32,7 +32,7 @@ export const Home = () => {
       </div>
       <div className="home-main">
         <div>
-          <Header color={'#DB643D'} fontSize={'30'} />
+          <Header color="#DB643D" fontSize="30" />
         </div>
         <div className="home-description">
           <HomeDescription />
@@ -43,18 +43,18 @@ export const Home = () => {
         <div className="home-button">
           <div className="home-button-right">
             <Buttons
-              label={'Take the career quiz'}
-              size={'big'}
+              label="Take the career quiz"
+              size="big"
               isMono={true}
-              color={'orange'}
+              color="orange"
             />
           </div>
           <div className="home-button-left">
             <Buttons
-              label={'Visit the elevator'}
-              size={'big'}
+              label="Visit the elevator"
+              size="big"
               isMono={true}
-              color={'orange'}
+              color="orange"
             />
           </div>
         </div>
