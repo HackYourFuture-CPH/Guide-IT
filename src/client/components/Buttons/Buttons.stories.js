@@ -11,7 +11,7 @@ export default {
       control: { type: 'text' },
     },
     size: {
-      control: { type: 'radio', options: ['small', 'big'] },
+      control: { type: 'radio', options: ['small-button', 'big'] },
     },
     isMono: {
       control: { type: 'boolean' },
@@ -40,7 +40,7 @@ export const Button = Template.bind({});
 
 Button.args = {
   label: 'Click me',
-  size: 'small',
+  size: 'small-button',
   isMono: false,
   color: 'orange',
   onClick: () => {
