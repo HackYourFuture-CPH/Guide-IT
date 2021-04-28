@@ -92,7 +92,7 @@ export default function ResultJobFeatures({ branchTitle }) {
   // Result will store the filtered object that contains job branch info.
   let result = [];
   const selectedObject = array.filter(
-    (item) => item.branch.toLowerCase() === branchTitle.toLowerCase(),
+    (item) => item.jobTitle.toLowerCase() === branchTitle.toLowerCase(),
   );
   if (selectedObject.length >= 1) {
     [result] = selectedObject;
