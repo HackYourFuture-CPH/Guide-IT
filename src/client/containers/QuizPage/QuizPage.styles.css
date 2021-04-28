@@ -23,6 +23,10 @@
   margin-left: 3em;
 }
 
+.header_page {
+  padding: 0;
+}
+
 .sidemenu_page {
   padding: 28% 0 0 0;
   width: 10%;
@@ -77,4 +81,8 @@
   background-color: #db643d;
   border: 1px solid #db643d;
   padding: 3px 0 4px 4px;
+}
+
+.progressbar_page {
+  padding: 0;
 }
