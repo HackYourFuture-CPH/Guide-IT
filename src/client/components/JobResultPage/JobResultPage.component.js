@@ -54,24 +54,19 @@ const JobResultPage = ({ jobTitle }) => {
               {jobTitle === 'Job title'
                 ? ''
                 : alternateCareerArray
-                    .filter((option) => option.title === jobTitle)[0]
-                    .alternate.map((careerOption) => {
-                      if (careerOption !== undefined) {
-                        return (
-                          <div className="single-option-div">
-                            <h2>{careerOption}</h2>{' '}
-                            <span>
-                              <img
-                                className="arrow-image"
-                                src={ArrowImage}
-                                alt="Next_career"
-                              />
-                            </span>
-                          </div>
-                        );
-                      }
-                      return <div />;
-                    })}
+                    .find((option) => option.title === jobTitle)
+                    .alternate.map((careerOption, index) => (
+                      <div className="single-option-div">
+                        <h2>{careerOption}</h2>{' '}
+                        <span>
+                          <img
+                            className="arrow-image"
+                            src={ArrowImage}
+                            alt="Next_career"
+                          />
+                        </span>
+                      </div>
+                    ))}
             </div>
           </div>
           <div className="buttons-result-page">
