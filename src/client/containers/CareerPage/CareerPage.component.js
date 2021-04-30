@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PageHeader from '../PageHeaderComponent/PageHeader';
-import JobCard from '../JobCard/JobCard';
-import ResultJobFeatures from '../ResultJobFeatures/ResultJobFeatures';
-import Button from '../Buttons/Buttons';
+import PageHeader from '../../components/PageHeaderComponent/PageHeader';
+import JobCard from '../../components/JobCard/JobCard';
+import ResultJobFeatures from '../../components/ResultJobFeatures/ResultJobFeatures';
+import Button from '../../components/Buttons/Buttons';
 import CircuitBoardBackgroundImage from '../../assets/images/circuit_board_background_image.png';
 import RobotLogo from '../../assets/images/robot_logo.png';
 import ArrowImage from '../../assets/images/arrow_next.png';
-import './JobResultPage.css';
+import './CareerPage.css';
 
 const alternateCareerArray = [
   {
@@ -24,7 +24,7 @@ const alternateCareerArray = [
   },
 ];
 
-const JobResultPage = ({ jobTitle }) => {
+const CareerPage = ({ jobTitle }) => {
   return (
     <div style={{ backgroundImage: `url(${CircuitBoardBackgroundImage})` }}>
       <PageHeader />
@@ -82,8 +82,8 @@ const JobResultPage = ({ jobTitle }) => {
   );
 };
 
-export default JobResultPage;
+export default CareerPage;
 
-JobResultPage.propTypes = {
+CareerPage.propTypes = {
   jobTitle: PropTypes.string.isRequired,
 };

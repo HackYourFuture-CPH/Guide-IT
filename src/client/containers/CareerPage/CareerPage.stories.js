@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import JobResultPage from './JobResultPage.component';
+import CareerPage from './CareerPage.component';
 
 export default {
-  title: 'JobResultPage',
-  component: JobResultPage,
+  title: 'CareerPage',
+  component: CareerPage,
   argTypes: {
     jobTitle: {
       control: {
@@ -15,7 +15,7 @@ export default {
   },
 };
 
-const Template = ({ jobTitle }) => <JobResultPage jobTitle={jobTitle} />;
+const Template = ({ jobTitle }) => <CareerPage jobTitle={jobTitle} />;
 
 export const JobResult = Template.bind({});
 JobResult.args = {
