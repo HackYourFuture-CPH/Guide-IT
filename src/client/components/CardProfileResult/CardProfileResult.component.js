@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CardProfileResultComponent.styles.css';
+import './CardProfileResult.styles.css';
 
-export default function CardProfileResultComponent({ title, results }) {
+export default function CardProfileResult({ title, results }) {
   return (
     <div className="card-profile-result-component">
       <h2 className="card-profile-result-title">{title}</h2>
@@ -15,7 +15,7 @@ export default function CardProfileResultComponent({ title, results }) {
   );
 }
 
-CardProfileResultComponent.propTypes = {
+CardProfileResult.propTypes = {
   title: PropTypes.string.isRequired,
   results: PropTypes.PropTypes.arrayOf(PropTypes.string).isRequired,
 };

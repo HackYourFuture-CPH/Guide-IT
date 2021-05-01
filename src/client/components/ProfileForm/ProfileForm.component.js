@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProfileFormComponent.css';
+import './ProfileForm.styles.css';
 import PropTypes from 'prop-types';
 
 const Avatar = ({

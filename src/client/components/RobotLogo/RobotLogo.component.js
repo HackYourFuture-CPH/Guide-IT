@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Robot from '../../assets/images/robot_logo.png';
 
-import './RobotLogo.css';
+import './RobotLogo.styles.css';
 
 export default function RobotLogo({ onClick }) {
   return (

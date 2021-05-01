@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidebarMenu.css';
+import './SidebarMenu.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
 

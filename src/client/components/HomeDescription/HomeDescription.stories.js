@@ -1,5 +1,5 @@
 import React from 'react';
-import HomeDescription from './HomeDescription';
+import HomeDescription from './HomeDescription.component';
 
 export default {
   title: 'Components /Home description card',

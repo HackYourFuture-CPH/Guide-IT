@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ResultJobFeatures from './ResultJobFeatures';
+import ResultJobFeatures from './ResultJobFeatures.component';
 
 export default {
   title: 'Components /Result Job Features',

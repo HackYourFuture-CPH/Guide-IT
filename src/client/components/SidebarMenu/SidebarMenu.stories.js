@@ -1,5 +1,5 @@
 import React from 'react';
-import SidebarMenu from './SidebarMenu';
+import SidebarMenu from './SidebarMenu.component';
 
 export default {
   title: 'SidebarMenu',

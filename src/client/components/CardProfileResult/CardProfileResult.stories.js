@@ -1,10 +1,10 @@
 import { array, text } from '@storybook/addon-knobs';
 import React from 'react';
-import CardProfileResultComponent from './CardProfileResultComponent';
+import CardProfileResult from './CardProfileResult.component';
 
 export default {
   title: 'Components / Card Profile Result Component',
-  component: CardProfileResultComponent,
+  component: CardProfileResult,
   argTypes: {
     title: 'text',
     results: 'array',
@@ -12,7 +12,7 @@ export default {
 };
 
 export const PersonalComponent = () => (
-  <CardProfileResultComponent
+  <CardProfileResult
     title={text('Title', 'Your Personal Profile')}
     results={array('Personal Results', [
       'extrovert',
@@ -23,7 +23,7 @@ export const PersonalComponent = () => (
 );
 
 export const ProfessionalComponent = () => (
-  <CardProfileResultComponent
+  <CardProfileResult
     title={text('Title', 'Your Professional Profile')}
     results={array('Professional Results', [
       'creative',
