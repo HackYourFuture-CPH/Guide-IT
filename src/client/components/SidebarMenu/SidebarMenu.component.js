@@ -1,5 +1,5 @@
 import React from 'react';
-import './SideBarMenu.styles.css';
+import './SidebarMenu.styles.css';
 import PropTypes from 'prop-types';
 import homeImg from '../../assets/images/home_sidemenu.png';
 import nextImg from '../../assets/images/nextsteps_sidemenu.png';
