@@ -1,11 +1,25 @@
 import React from 'react';
-import SidebarMenu from './SidebarMenu.component';
+
+import SideMenu from './SideBarMenu.component';
+
+import PropTypes from 'prop-types';
 
 export default {
-  title: 'SidebarMenu',
-  component: SidebarMenu,
+  title: 'SideBarMenu',
+  component: SideMenu,
+  argTypes: {
+    highLigtItem: {
+      control: { type: 'select', options: [0, 1, 2] },
+    },
+  },
 };
-
-export const sidebar = () => {
-  return <SidebarMenu />;
+const SideMenuTemplate = ({ highLigtItem }) => {
+  return <SideMenu highLigtItem={highLigtItem} />;
+};
+export const SideBar = SideMenuTemplate.bind({});
+SideBar.args = {
+  highLigtItem: 2,
+};
+SideMenuTemplate.propTypes = {
+  highLigtItem: PropTypes.number.isRequired,
 };

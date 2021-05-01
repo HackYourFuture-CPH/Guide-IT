@@ -1,79 +1,46 @@
-.sidebar-menu {
-  background-color: #0b5681;
-  width: 220px;
-  height: 1024px;
-  padding-left: 10px;
+@import url('https://fonts.google.com/specimen/Chakra+Petch?preview.text=GuideIT&preview.text_type=custom');
+
+.side_menu_spacebetween {
+  text-align: center;
 }
 
-.sidebar-title {
-  padding-top: 47px;
+.side_menu_div {
+  width: 65px;
+  background-color: #298f8a;
+  margin-left: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: x-small;
+  font-family: 'Chakra Petch', monospace;
+}
+
+li {
+  text-align: center;
+  margin-top: 28px;
+  padding: 0 0 5px 5px;
+  border-right: solid 5px transparent;
+}
+
+li:first-of-type {
+  margin-top: 12px;
+}
+
+.side_menu_whiteborder:hover {
+  border-right-color: white;
+}
+
+.side_menu_whiteborder[data-highlighted='true'] {
+  border-right-color: white;
+}
+
+.side_menu_ul {
+  width: 100%;
+  list-style: none;
   padding-left: 0;
-  color: white;
-  font-family: 'Chakra Petch', sans-serif;
-  font-size: 33px;
-  letter-spacing: 0.4em;
-  font-weight: bold;
-  line-height: 43px;
-  text-align: center;
-  align-items: center;
+  padding-top: 3px;
+  padding-bottom: 10px;
 }
 
-.create-account {
-  display: flex;
-  align-items: center;
-  padding-top: 45px;
-  width: 200px;
-  height: 45px;
-  line-height: 29px;
-  letter-spacing: 0.9px;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.create-account a {
-  color: white;
-  font-family: 'Chakra Petch', sans-serif;
-  padding-right: 1px;
-}
-
-.triangle {
-  width: 0;
-  height: 0;
-  border-top: 8px solid transparent;
-  border-left: 16px solid rgb(230, 97, 20);
-  border-bottom: 8px solid transparent;
-  margin-left: 15px;
-}
-
-.login {
-  display: flex;
-  align-items: center;
-  padding-top: 57px;
-  width: 61px;
-  height: 45px;
-  line-height: 29px;
-  letter-spacing: 0.9px;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-.login a {
-  color: white;
-  font-family: 'Chakra Petch', sans-serif;
-}
-
-.sidebar-footer {
-  padding-top: 540px;
-  text-align: center;
-}
-
-.hyf-logo {
-  width: 260px;
-  height: 161px;
-  margin-left: -40px;
-}
-
-.redi-logo {
-  width: 100px;
-  height: 100px;
+a {
+  text-decoration: none;
 }

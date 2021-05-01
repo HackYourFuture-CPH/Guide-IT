@@ -1,33 +1,49 @@
 import React from 'react';
-import './SidebarMenu.styles.css';
-import hyfLogo from '../../assets/images/hyf-logo.png';
-import rediLogo from '../../assets/images/redi-logo.png';
+import './SideBarMenu.styles.css';
+import PropTypes from 'prop-types';
+import homeImg from '../../assets/images/home_sidemenu.png';
+import nextImg from '../../assets/images/nextsteps_sidemenu.png';
+import elevatorImg from '../../assets/images/elevator_sidemenu.png';
 
-function SidebarMenu() {
+function SideMenu({ highLigtItem }) {
   return (
-    <div className="sidebar-menu">
-      <div className="sidebar-header">
-        <div className="sidebar-title">GuideIT</div>
-        <div className="create-account">
-          <div>
-            <a href="/">Create account</a>
-          </div>
-          <div className="triangle" />
-        </div>
+    <div className="side_menu_div">
+      <nav className="side_menu_spacebetween">
+        <ul className="side_menu_ul">
+          <li
+            className="side_menu_whiteborder"
+            data-highlighted={highLigtItem === 0}
+          >
+            <a href={highLigtItem}>
+              <img src={homeImg} alt="homeImg" />
+            </a>
+          </li>
+          <span>Home</span>
 
-        <div className="login">
-          <div>
-            <a href="/">Login</a>
-          </div>
-          <div className="triangle" />
-        </div>
-      </div>
-      <div className="sidebar-footer">
-        <img src={hyfLogo} alt="HYF-logo" className="hyf-logo" />
-        <img src={rediLogo} alt="REDI-logo" className="redi-logo" />
-      </div>
+          <li
+            className="side_menu_whiteborder"
+            data-highlighted={highLigtItem === 1}
+          >
+            <a href={highLigtItem}>
+              <img src={nextImg} alt="nextImg" />
+            </a>
+          </li>
+          <span>Next steps</span>
+          <li
+            className="side_menu_whiteborder"
+            data-highlighted={highLigtItem === 2}
+          >
+            <a href={highLigtItem}>
+              <img src={elevatorImg} alt="nextImg" />
+            </a>
+          </li>
+          <span>Elevator pitch</span>
+        </ul>
+      </nav>
     </div>
   );
 }
-
-export default SidebarMenu;
+export default SideMenu;
+SideMenu.propTypes = {
+  highLigtItem: PropTypes.number.isRequired,
+};
