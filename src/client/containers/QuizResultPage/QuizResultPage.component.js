@@ -2,7 +2,7 @@ import React from 'react';
 import './QuizResultPage.css';
 import background from '../../assets/images/Vector.svg';
 import Robot from '../../assets/images/robot_logo.png';
-import RobotLogo from '../../components/RobotLogo/RobotLogo';
+import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResult.component.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
 import PageHeader from '../../components/PageHeaderComponent/PageHeader.component';
