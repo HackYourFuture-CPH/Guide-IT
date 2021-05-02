@@ -5,16 +5,16 @@ import homeImg from '../../assets/images/home_sidemenu.png';
 import nextImg from '../../assets/images/nextsteps_sidemenu.png';
 import elevatorImg from '../../assets/images/elevator_sidemenu.png';
 
-function SideMenu({ highLigtItem }) {
+function SideMenu({ highLightItem }) {
   return (
     <div className="side_menu_div">
       <nav className="side_menu_spacebetween">
         <ul className="side_menu_ul">
           <li
             className="side_menu_whiteborder"
-            data-highlighted={highLigtItem === 0}
+            data-highlighted={highLightItem === 0}
           >
-            <a href={highLigtItem}>
+            <a href={highLightItem}>
               <img src={homeImg} alt="homeImg" />
             </a>
           </li>
@@ -22,9 +22,9 @@ function SideMenu({ highLigtItem }) {
 
           <li
             className="side_menu_whiteborder"
-            data-highlighted={highLigtItem === 1}
+            data-highlighted={highLightItem === 1}
           >
-            <a href={highLigtItem}>
+            <a href={highLightItem}>
               <img src={nextImg} alt="nextImg" />
             </a>
           </li>
@@ -33,7 +33,7 @@ function SideMenu({ highLigtItem }) {
             className="side_menu_whiteborder"
             data-highlighted={highLigtItem === 2}
           >
-            <a href={highLigtItem}>
+            <a href={highLightItem}>
               <img src={elevatorImg} alt="nextImg" />
             </a>
           </li>
