@@ -25,7 +25,7 @@ export const QuizResultPage = () => {
       <div
         style={{
           backgroundImage: `url(${background})`,
-          border: '25px solid #d9e4e3',
+          width: '100%',
         }}
       >
         <PageHeader />

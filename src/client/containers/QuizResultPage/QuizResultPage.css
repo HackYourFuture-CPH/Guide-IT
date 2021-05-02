@@ -1,10 +1,8 @@
 .main-div {
-  width: 80%;
   display: flex;
 }
 
 .left-div {
-  width: 600px;
   display: flex;
   margin-left: 50px;
 }
@@ -31,15 +29,11 @@
   padding-top: 25px;
 }
 
-.left-div-register p {
-  padding: 0;
-}
-
 .right-div {
   padding-left: 35px;
 }
 
 .rigt-div-logo {
+  padding-bottom: 10px;
   padding-left: 255px;
-  padding-bottom: 15px;
 }
