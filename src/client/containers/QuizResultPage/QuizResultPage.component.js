@@ -1,5 +1,5 @@
 import React from 'react';
-import './QuizResultPage.css';
+import './QuizResultPage.styles.css';
 import background from '../../assets/images/Vector.svg';
 import Robot from '../../assets/images/robot_logo.png';
 import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
