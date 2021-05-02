@@ -308,8 +308,8 @@ read the specifications for the API.
 You can use your api token to authorize in Swagger and you will be able to
 perform test calls against the API directly from Swagger.
 
-If you need to make changes to the specification, this can be done via the
-[Swagger.json](/src/server/config/swagger.json) file.
+Use this example for the modules endpoints [Modules](src/server/api/routes/modules.router.js) and add your endpoint documentation in the router file for your endpoint. And then add the route [here](src/server/api/routes/api-router.js) under // Application routes
+
 
 ### <img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook
 
