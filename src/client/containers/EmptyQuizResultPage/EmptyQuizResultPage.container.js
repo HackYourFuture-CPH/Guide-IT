@@ -14,7 +14,7 @@ export const EmptyQuizResultPage = () => {
     <section>
       <div className="noresults_page">
         <div className="sidebar">
-          <SideMenu highLigtItem={3} />
+          <SideMenu highLightItem={3} />
         </div>
         <div className="noresults_container">
           <h2 className="noresults_text">No results!</h2>
