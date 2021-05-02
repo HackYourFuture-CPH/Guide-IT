@@ -4,7 +4,7 @@ import background from '../../assets/images/Vector.svg';
 import Robot from '../../assets/images/robot_logo.png';
 import RobotLogo from '../../components/RobotLogo/RobotLogo';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResultComponent.js';
-import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser';
+import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
 import PageHeader from '../../components/PageHeaderComponent/PageHeader';
 
 export const QuizResultPage = () => {
