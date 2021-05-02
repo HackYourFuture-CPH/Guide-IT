@@ -8,18 +8,18 @@ export default {
   title: 'sidebar',
   component: SideMenu,
   argTypes: {
-    highLigtItem: {
+    highLightItem: {
       control: { type: 'select', options: [0, 1, 2] },
     },
   },
 };
-const SideMenuTemplate = ({ highLigtItem }) => {
-  return <SideMenu highLigtItem={highLigtItem} />;
+const SideMenuTemplate = ({ highLightItem }) => {
+  return <SideMenu highLightItem={highLightItem} />;
 };
 export const SideBar = SideMenuTemplate.bind({});
 SideBar.args = {
-  highLigtItem: 2,
+  highLightItem: 2,
 };
 SideMenuTemplate.propTypes = {
-  highLigtItem: PropTypes.number.isRequired,
+  highLightItem: PropTypes.number.isRequired,
 };
