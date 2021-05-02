@@ -127,14 +127,14 @@ https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
 Generally there are 2 types of components: _presentational_ and _container_ components. Please review the differences below:
 
 |                       | Presentational components                           | Container components                                                                                                                                                      |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Also known as         | "dumb" components, functional stateless components  | "smart" components, stateful components                                                                                                                                   |
 | Lives in this folder  | `/components`                                       | `/containers`                                                                                                                                                             |
 | Purpose               | Determines what a component looks like              | Determines how the applications works                                                                                                                                     |
 | Communication         | Can only communicate by receiving and passing props | Can communicate via props, can call APIs, can manipulate the DOM with REFs, etc.                                                                                          |
 | Markup                | Contains most of the markup for the application     | Should generally have as little markup as possible. A container `<div>` or an `<ul>` tag is ok, but if you need more, consider making a separate presentational component |
 | Storybook             | Can easily be mocked in Storybook                   | Cannot easily be mocked in Storybook, would require mocking API calls, etc.                                                                                               |
-| Can have side effects | No                                                  | Yes                                                                                                                                                                       |     |
+| Can have side effects | No                                                  | Yes                                                                                                                                                                       |  |
 
 #### A note about React Hooks
 
