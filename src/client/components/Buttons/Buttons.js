@@ -19,7 +19,7 @@ export default function Buttons({
     </button>
   );
 }
-//  "small" changed to "small-button" due to conflicts with another CSS file
+
 Buttons.defaultProps = {
   size: 'small-button',
   color: 'orange',

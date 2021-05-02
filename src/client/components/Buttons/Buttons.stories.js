@@ -43,8 +43,7 @@ Button.args = {
   size: 'small-button',
   isMono: false,
   color: 'orange',
-  onClick: () => {
-    // eslint-disable-next-line no-console
-    console.log('I was clicked');
-  },
+  /* eslint-disable */
+  onClick: () => {},
+  /* eslint-enable */
 };
