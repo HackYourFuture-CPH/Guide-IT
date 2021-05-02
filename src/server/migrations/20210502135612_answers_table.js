@@ -7,6 +7,7 @@ exports.up = function (knex) {
     table.integer('dataanalyst_points').notNullable();
     table
       .integer('fk_question_id')
+      .unsigned()
       .notNullable()
       .references('id')
       .inTable('questions');
