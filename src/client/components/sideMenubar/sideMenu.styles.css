@@ -1,0 +1,44 @@
+.side_menu_spacebetween {
+  text-align: center;
+}
+
+.side_menu_div {
+  width: 65px;
+  background-color: #298f8a;
+  margin-left: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: x-small;
+  font-family: 'Chakra Petch', monospace;
+}
+
+li {
+  text-align: center;
+  margin-top: 28px;
+  padding: 0 0 5px 5px;
+  border-right: solid 5px transparent;
+}
+
+li:first-of-type {
+  margin-top: 12px;
+}
+
+.side_menu_whiteborder:hover {
+  border-right-color: white;
+}
+
+.side_menu_whiteborder[data-highlighted='true'] {
+  border-right-color: white;
+}
+
+.side_menu_ul {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}

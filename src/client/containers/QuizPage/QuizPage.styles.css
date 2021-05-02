@@ -1,0 +1,89 @@
+.main {
+  background-image: url(../../assets/images/Vector.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
+
+.main::before {
+  content: '';
+  opacity: 0.3;
+  background-color: #999;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  z-index: -1;
+}
+
+.header h1 {
+  margin-left: 3em;
+}
+
+.header_page {
+  padding: 0;
+}
+
+.sidemenu_page {
+  padding: 28% 0 0 0;
+  width: 10%;
+}
+
+.question_page {
+  padding: 10% 0 0 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.middle_page {
+  display: flex;
+}
+
+.side_menu_div {
+  margin-left: 0%;
+  background-color: #5088a8;
+}
+
+.button_page {
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 7%;
+}
+
+.buttons.big {
+  width: 150px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.buttons {
+  font-size: 25px;
+}
+
+.question-box {
+  height: 400px;
+  margin-left: 8%;
+  margin-right: 16%;
+}
+
+.question {
+  padding: 0 20% 0 20%;
+}
+
+.radio {
+  font-size: 1.5em;
+}
+
+.progress-status {
+  background-color: #db643d;
+  border: 1px solid #db643d;
+  padding: 3px 0 4px 4px;
+}
+
+.progressbar_page {
+  padding: 0;
+}

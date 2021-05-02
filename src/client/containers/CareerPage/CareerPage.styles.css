@@ -1,0 +1,104 @@
+.sections {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  justify-content: space-around;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.background-added-section {
+  padding: 3%;
+  background-color: #e9edec;
+  z-index: -1;
+}
+
+.career-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.bigger-robot-div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.bigger-robot-div img {
+  width: 4em;
+  margin: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.bigger-robot-div p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.alternate-career-div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-content: space-around;
+  padding: 3%;
+}
+
+.smaller-robot-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0.8rem;
+}
+
+.smaller-robot-div img {
+  width: 3em;
+  margin: 1rem 0 0.5rem 1.6rem;
+}
+
+.smaller-robot-div p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+
+.options-div {
+  position: relative;
+  bottom: 2.8rem;
+  padding: 3%;
+}
+
+.options-div div {
+  margin-bottom: -3rem;
+  padding: 3%;
+}
+
+.single-option-div {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+
+.single-option-div h2 {
+  padding: 0;
+  margin-right: -3rem;
+}
+
+.arrow-image {
+  font-size: 0.9rem;
+  position: relative;
+  top: 1.8em;
+}
+
+.buttons-result-page {
+  display: flex;
+  margin: auto 10% auto 30%;
+  justify-content: space-between;
+}
+
+.buttons-result-page button {
+  width: 8rem;
+}
+
+.buttons-result-page button:first-of-type {
+  background-color: #a09696;
+}
