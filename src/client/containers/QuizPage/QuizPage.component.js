@@ -17,7 +17,7 @@ export const QuizPage = () => {
         </div>
         <div className="middle_page">
           <div className="sidemenu_page">
-            <SideMenu highLigtItem={3} />
+            <SideMenu highLightItem={3} />
           </div>
           <div className="question_page">
             <QuestionComponent
