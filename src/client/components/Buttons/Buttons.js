@@ -21,13 +21,13 @@ export default function Buttons({
 }
 
 Buttons.defaultProps = {
-  size: 'small',
+  size: 'small-button',
   color: 'orange',
 };
 
 Buttons.propTypes = {
   label: PropTypes.string.isRequired,
-  size: PropTypes.oneOf(['small', 'big']),
+  size: PropTypes.oneOf(['small-button', 'big']),
   isMono: PropTypes.bool.isRequired,
   color: PropTypes.oneOf(['orange', 'grey', 'white']),
   onClick: PropTypes.func.isRequired,
