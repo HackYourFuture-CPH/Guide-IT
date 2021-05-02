@@ -7,7 +7,7 @@ import Button from '../../components/Buttons/Buttons';
 import CircuitBoardBackgroundImage from '../../assets/images/circuit_board_background_image.png';
 import RobotLogo from '../../assets/images/robot_logo.png';
 import ArrowImage from '../../assets/images/arrow_next.png';
-import './CareerPage.css';
+import './CareerPage.styles.css';
 
 const alternateCareerArray = [
   {
