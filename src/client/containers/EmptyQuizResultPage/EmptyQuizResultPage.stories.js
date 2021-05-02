@@ -1,5 +1,5 @@
 import React from 'react';
-import { EmptyQuizResultPage } from './EmptyQuizResultPage.component';
+import { EmptyQuizResultPage } from './EmptyQuizResultPage.container';
 
 export default {
   title: 'Containers /EmptyQuizResultPage',
