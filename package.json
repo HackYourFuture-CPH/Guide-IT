@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "webpack --mode production",
-    "start": "npm run db:migrate && npm run build && node ./src/server/bin/server",
+    "start": "npm run build && node ./src/server/bin/server",
+    "heroku-postbuild": "npm run db:migrate",
     "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon ./src/server/bin/server",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
