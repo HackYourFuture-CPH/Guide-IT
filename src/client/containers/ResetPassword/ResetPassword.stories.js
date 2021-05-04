@@ -1,5 +1,5 @@
 import React from 'react';
-import ResetPassword from './index';
+import ResetPassword from './ResetPassword.container';
 
 export default { title: 'Containers / Reset password' };
 

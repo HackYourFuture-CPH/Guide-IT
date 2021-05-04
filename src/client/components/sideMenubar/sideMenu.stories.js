@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SideMenu from './sideMenu';
+import SideMenu from './sideMenu.component';
 
 import PropTypes from 'prop-types';
 

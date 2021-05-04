@@ -2,15 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/fonts/fonts.css';
 
-import { Home } from './containers/Home/Home';
-import SignIn from './containers/SignIn';
-import SignUp from './containers/SignUp';
-import ResetPassword from './containers/ResetPassword';
-import AuthenticatedRoute from './components/Auth/AuthenticatedRoute';
+import { Home } from './containers/Home/Home.container';
+import SignIn from './containers/SignIn/SignIn.container';
+import SignUp from './containers/SignUp/SignUp.container';
+import ResetPassword from './containers/ResetPassword/ResetPassword.container';
+import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
 import { useAuthentication } from './hooks/useAuthentication';
-import Header from './components/Navigation/Header';
-import Profile from './containers/Profile';
-import Loader from './components/Loader';
+import Header from './components/Navigation/Navigation.component';
+import Profile from './containers/Profile/Profile.container';
+import Loader from './components/Loader/Loader.component';
 
 function App() {
   const { isLoading } = useAuthentication();

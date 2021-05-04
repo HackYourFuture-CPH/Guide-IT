@@ -2,7 +2,7 @@ import React from 'react';
 import './404Page.styles.css';
 import cable from '../../assets/images/cable.png';
 import sadrobot from '../../assets/images/sadrobot.png';
-import Buttons from '../../components/Buttons/Buttons';
+import Buttons from '../../components/Buttons/Buttons.component';
 
 function Error404Page() {
   return (
