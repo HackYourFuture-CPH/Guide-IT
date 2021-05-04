@@ -1,4 +1,5 @@
 const knex = require('../../config/db');
+const HttpError = require('../lib/utils/http-error');
 
 const getUsers = async () => {
   return knex('users').select(
@@ -8,6 +9,25 @@ const getUsers = async () => {
   );
 };
 
+const getUserById = async (id) => {
+  if (!id) {
+    throw new HttpError('Id should be a number', 400);
+  }
+
+  try {
+    const users = await knex('users')
+      .select('users.id as id', 'full_name', 'firebase_token')
+      .where({ id });
+    if (users.length === 0) {
+      throw new Error(`incorrect entry with the id of ${id}`, 404);
+    }
+    return users;
+  } catch (error) {
+    return error.message;
+  }
+};
+
 module.exports = {
   getUsers,
+  getUserById,
 };

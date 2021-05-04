@@ -28,4 +28,35 @@ router.get('/', (req, res, next) => {
     .catch(next);
 });
 
+/**
+ * @swagger
+ * /users/{ID}:
+ *  get:
+ *    tags:
+ *    - users
+ *    summary: Get user by ID
+ *    description:
+ *      Will return single user with a matching ID.
+ *    produces: application/json
+ *    parameters:
+ *     - in: path
+ *       name: ID
+ *       schema:
+ *         type: integer
+ *         required: true
+ *         description: The ID of the user to get
+ *
+ *    responses:
+ *      200:
+ *        description: Successful request
+ *      5XX:
+ *        description: Unexpected error.
+ */
+router.get('/:id', (req, res, next) => {
+  usersController
+    .getUserById(req.params.id)
+    .then((result) => res.json(result))
+    .catch(next);
+});
+
 module.exports = router;
