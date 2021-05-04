@@ -31,7 +31,7 @@ function SideMenu({ highLightItem }) {
           <span>Next steps</span>
           <li
             className="side_menu_whiteborder"
-            data-highlighted={highLigtItem === 2}
+            data-highlighted={highLightItem === 2}
           >
             <a href={highLightItem}>
               <img src={elevatorImg} alt="nextImg" />
@@ -45,5 +45,5 @@ function SideMenu({ highLightItem }) {
 }
 export default SideMenu;
 SideMenu.propTypes = {
-  highLigtItem: PropTypes.number.isRequired,
+  highLightItem: PropTypes.number.isRequired,
 };

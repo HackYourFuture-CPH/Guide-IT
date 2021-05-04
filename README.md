@@ -310,7 +310,6 @@ perform test calls against the API directly from Swagger.
 
 Use this example for the modules endpoints [Modules](src/server/api/routes/modules.router.js) and add your endpoint documentation in the router file for your endpoint. And then add the route [here](src/server/api/routes/api-router.js) under // Application routes
 
-
 ### <img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook
 
 Tool for developing UI components in isolation
