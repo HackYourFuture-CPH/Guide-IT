@@ -1,5 +1,5 @@
 import React from 'react';
-import SidebarMenu from '../../components/SidebarMenu/SidebarMenu.component';
+import SidebarMenu from '../../components/LeftBlueBar/LeftBlueBar.component';
 import Header from '../../components/HomepageHeader/Header.component';
 import HomeDescription from '../../components/HomeDescription/HomeDescription.component';
 import { Description } from '../../components/DecriptionHome/DescriptionCareer.component';
