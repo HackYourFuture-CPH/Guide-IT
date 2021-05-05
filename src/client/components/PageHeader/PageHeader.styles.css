@@ -1,3 +1,5 @@
+@import '../../assets/fonts/fonts.css';
+
 .header h1 {
   font-family: 'Chakra Petch', sans-serif;
   letter-spacing: 7px;
