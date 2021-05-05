@@ -3,6 +3,7 @@ import SideMenu from '../../components/sideMenubar/sideMenu';
 import Buttons from '../../components/Buttons/Buttons';
 import girlImg from '../../assets/images/girl.png';
 import sadrobot from '../../assets/images/sadrobot.png';
+import { Link } from 'react-router-dom';
 import './EmptyQuizResultPage.styles.css';
 
 export const EmptyQuizResultPage = () => {
@@ -27,7 +28,14 @@ export const EmptyQuizResultPage = () => {
               <p>You`ve skipped too many questions</p>
             </div>
           </div>
-          <Buttons label="Go Home" size="big" isMono={true} onClick={onClick} />
+          <Link to="/">
+            <Buttons
+              label="Go Home"
+              size="big"
+              isMono={true}
+              onClick={onClick}
+            />
+          </Link>
         </div>
       </div>
     </section>
