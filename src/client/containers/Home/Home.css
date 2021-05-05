@@ -1,0 +1,79 @@
+.home-container {
+  display: flex;
+  background-image: url('../../../client/assets/images/Vector.svg');
+}
+
+.home-description {
+  margin-bottom: 10px;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-button {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.home-button-right {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.home-button-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+/** Description career **/
+
+.descriptioncareer {
+  padding: 5px;
+  padding-left: 20px;
+  margin: 5px;
+  min-height: 330px;
+}
+
+.innerDiv {
+  margin: 0 60px;
+}
+
+.descriptioncareer .title {
+  font-size: 24px;
+}
+
+.descriptioncareer .content {
+  font-size: 22px;
+  height: 90px;
+}
+
+.descriptioncareer .content2 {
+  font-size: 22px;
+}
+
+.descriptioncareer .time {
+  font-size: 18px;
+}
+
+/** Sidebar Menu component */
+
+.sidebar-menu {
+  height: 720px;
+}
+
+.sidebar-footer {
+  padding-top: 250px;
+}
+
+/* homepage header */
+
+.robot-image {
+  width: 150px;
+  height: 150px;
+}

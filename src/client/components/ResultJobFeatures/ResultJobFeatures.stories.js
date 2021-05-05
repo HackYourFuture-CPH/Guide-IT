@@ -7,8 +7,10 @@ export default {
   component: ResultJobFeatures,
   argTypes: {
     branchTitle: {
-      name: 'Job branch',
-      type: { name: 'string', required: true },
+      control: {
+        type: 'select',
+        options: ['Full stack developer', 'Data analyst', 'UX designer'],
+      },
     },
   },
 };
@@ -19,7 +21,7 @@ const Template = ({ branchTitle }) => {
 export const JobFeatures = Template.bind({});
 
 JobFeatures.args = {
-  branchTitle: 'Full stack development',
+  branchTitle: 'Job title',
 };
 Template.propTypes = {
   branchTitle: PropTypes.string.isRequired,

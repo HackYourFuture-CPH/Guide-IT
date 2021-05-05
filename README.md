@@ -127,14 +127,14 @@ https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
 Generally there are 2 types of components: _presentational_ and _container_ components. Please review the differences below:
 
 |                       | Presentational components                           | Container components                                                                                                                                                      |
-| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| --------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Also known as         | "dumb" components, functional stateless components  | "smart" components, stateful components                                                                                                                                   |
 | Lives in this folder  | `/components`                                       | `/containers`                                                                                                                                                             |
 | Purpose               | Determines what a component looks like              | Determines how the applications works                                                                                                                                     |
 | Communication         | Can only communicate by receiving and passing props | Can communicate via props, can call APIs, can manipulate the DOM with REFs, etc.                                                                                          |
 | Markup                | Contains most of the markup for the application     | Should generally have as little markup as possible. A container `<div>` or an `<ul>` tag is ok, but if you need more, consider making a separate presentational component |
 | Storybook             | Can easily be mocked in Storybook                   | Cannot easily be mocked in Storybook, would require mocking API calls, etc.                                                                                               |
-| Can have side effects | No                                                  | Yes                                                                                                                                                                       |     |
+| Can have side effects | No                                                  | Yes                                                                                                                                                                       |  |
 
 #### A note about React Hooks
 
@@ -308,8 +308,8 @@ read the specifications for the API.
 You can use your api token to authorize in Swagger and you will be able to
 perform test calls against the API directly from Swagger.
 
-If you need to make changes to the specification, this can be done via the
-[Swagger.json](/src/server/config/swagger.json) file.
+Use this example for the modules endpoints [Modules](src/server/api/routes/modules.router.js) and add your endpoint documentation in the router file for your endpoint. And then add the route [here](src/server/api/routes/api-router.js) under // Application routes
+
 
 ### <img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook
 
