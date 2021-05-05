@@ -1,6 +1,5 @@
 .card-profile-result-component {
   background-color: transparent;
-  width: 500px;
 }
 
 .card-profile-result-title {
@@ -13,8 +12,8 @@
 
 .card-profile-result-list-items {
   background-color: #f0f0f0;
-  height: 420px;
-  width: 440px;
+  min-height: 420px;
+  max-width: 440px;
   padding-top: 30px;
   padding-bottom: 30px;
   padding-right: 100px;
