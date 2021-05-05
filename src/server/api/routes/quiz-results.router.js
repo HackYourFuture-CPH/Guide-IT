@@ -33,8 +33,8 @@ const quizResultsController = require('../controllers/quiz-results.controller');
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  const answerId = req.query.answerId;
-  const userId = req.query.userId;
+  const [answerId, userId] = [req.query.answerId, req.query.userId];
+
   quizResultsController
     .getQuizResults(answerId, userId)
     .then((result) => res.json(result))
