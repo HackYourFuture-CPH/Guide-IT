@@ -4,7 +4,7 @@ import Header from '../../components/HomepageHeader/Header';
 import HomeDescription from '../../components/HomeDescription/HomeDescription';
 import { Description } from '../../components/DecriptionHome/DescriptionCareer';
 import Buttons from '../../components/Buttons/Buttons';
-
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const arr = [
@@ -42,20 +42,25 @@ export const Home = () => {
         </div>
         <div className="home-button">
           <div className="home-button-right">
-            <Buttons
-              label="Take the career quiz"
-              size="big"
-              isMono={true}
-              color="orange"
-            />
+            <Link to={'/CareerPage'}>
+              <Buttons
+                label="Take the career quiz"
+                size="big"
+                isMono={true}
+                color="orange"
+              />
+            </Link>
           </div>
+
           <div className="home-button-left">
-            <Buttons
-              label="Visit the elevator"
-              size="big"
-              isMono={true}
-              color="orange"
-            />
+            <Link to={'/ElevatorPitchPage'}>
+              <Buttons
+                label="Visit the elevator"
+                size="big"
+                isMono={true}
+                color="orange"
+              />
+            </Link>
           </div>
         </div>
       </div>
