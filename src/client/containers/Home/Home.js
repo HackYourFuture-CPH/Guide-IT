@@ -42,7 +42,7 @@ export const Home = () => {
         </div>
         <div className="home-button">
           <div className="home-button-right">
-            <Link to={'/CareerPage'}>
+            <Link to="/CareerPage">
               <Buttons
                 label="Take the career quiz"
                 size="big"
@@ -53,7 +53,7 @@ export const Home = () => {
           </div>
 
           <div className="home-button-left">
-            <Link to={'/ElevatorPitchPage'}>
+            <Link to="/ElevatorPitchPage">
               <Buttons
                 label="Visit the elevator"
                 size="big"
