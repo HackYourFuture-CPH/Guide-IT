@@ -3,7 +3,7 @@ import './QuizPage.styles.css';
 import PageHeader from '../../components/PageHeader/PageHeader.component';
 import QuestionComponent from '../../components/Question/Question.component';
 import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
-import SideMenu from '../../components/sideMenubar/sideMenu.component';
+import SideMenu from '../../components/SideMenubar/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
