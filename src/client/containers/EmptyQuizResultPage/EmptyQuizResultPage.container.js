@@ -1,6 +1,6 @@
 import React from 'react';
-import SideMenu from '../../components/sideMenubar/sideMenu';
-import Buttons from '../../components/Buttons/Buttons';
+import SideMenu from '../../components/sideMenubar/sideMenu.component';
+import Buttons from '../../components/Buttons/Buttons.component';
 import girlImg from '../../assets/images/girl.png';
 import sadrobot from '../../assets/images/sadrobot.png';
 import { Link } from 'react-router-dom';
