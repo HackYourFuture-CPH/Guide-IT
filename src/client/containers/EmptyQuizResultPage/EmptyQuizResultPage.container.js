@@ -1,5 +1,5 @@
 import React from 'react';
-import SideMenu from '../../components/sideMenubar/sideMenu.component';
+import SideMenu from '../../components/SideMenubar/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import girlImg from '../../assets/images/girl.png';
 import sadrobot from '../../assets/images/sadrobot.png';
