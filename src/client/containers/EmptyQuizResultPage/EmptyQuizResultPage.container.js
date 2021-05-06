@@ -24,9 +24,9 @@ export const EmptyQuizResultPage = () => {
             <div className="sadrobo">
               <img src={sadrobot} alt="disappointed robo face" />
             </div>
-            <div className="sadrobo_text">
-              <p>You`ve skipped too many questions</p>
-            </div>
+            {/* <div  */}
+            <p className="sadrobo_text">You`ve skipped too many questions</p>
+            {/* </div> */}
           </div>
           <Link to="/">
             <Buttons

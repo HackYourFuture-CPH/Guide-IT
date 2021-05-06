@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import homeImg from '../../assets/images/home_sidemenu.png';
 import nextImg from '../../assets/images/nextsteps_sidemenu.png';
 import elevatorImg from '../../assets/images/elevator_sidemenu.png';
+import { Link } from 'react-router-dom';
 
 function SideMenu({ highLightItem }) {
   return (
@@ -14,28 +15,33 @@ function SideMenu({ highLightItem }) {
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 0}
           >
-            <a href={highLightItem}>
-              <img src={homeImg} alt="homeImg" />
-            </a>
+            <Link to="/">
+              <a href={highLightItem}>
+                <img src={homeImg} alt="homeImg" />
+              </a>
+            </Link>
           </li>
           <span>Home</span>
-
           <li
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 1}
           >
-            <a href={highLightItem}>
-              <img src={nextImg} alt="nextImg" />
-            </a>
+            <Link to="/nextsteps">
+              <a href={highLightItem}>
+                <img src={nextImg} alt="nextImg" />
+              </a>
+            </Link>
           </li>
           <span>Next steps</span>
           <li
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 2}
           >
-            <a href={highLightItem}>
-              <img src={elevatorImg} alt="nextImg" />
-            </a>
+            <Link to="/elevatorpitch">
+              <a href={highLightItem}>
+                <img src={elevatorImg} alt="nextImg" />
+              </a>
+            </Link>
           </li>
           <span>Elevator pitch</span>
         </ul>
