@@ -2,7 +2,7 @@ const knex = require('../../config/db');
 const HttpError = require('../lib/utils/http-error');
 
 const getAnswers = async () => {
-  return knex('answers').select('answers.id', 'answers.answer');
+  return knex('answers');
 };
 
 const getAnswerById = async (id) => {
