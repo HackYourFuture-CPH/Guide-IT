@@ -3,7 +3,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
   width: 100%;
 }
 
@@ -49,15 +48,34 @@
 }
 
 .button_page {
-  text-align: center;
+  /* text-align: center;
   margin-top: 1%;
-  margin-bottom: 7%;
+  margin-bottom: 7%; */
+  width: 35%;
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
 .buttons.big {
-  width: 150px;
+  /* width: 150px;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 0; */
+  min-width: 150px;
+  padding: 0.2em 2em;
+  margin-top: 120px;
+}
+
+.buttons.grey {
+  background-color: #a09696 !important;
+}
+
+/* .next_button, */
+
+.results {
+  margin: 0 auto;
 }
 
 .buttons {
@@ -65,7 +83,7 @@
 }
 
 .question-box {
-  height: 400px;
+  height: 80%;
   margin-left: 8%;
   margin-right: 16%;
 }
@@ -75,7 +93,19 @@
 }
 
 .radio {
-  font-size: 1.5em;
+  font-size: 1.8em;
+}
+
+.inline {
+  padding-top: 20px;
+  width: 50%;
+
+  /* padding-right: 5%; */
+  margin-top: 50px;
+  margin-left: 17.44%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .progress-status {
@@ -85,5 +115,7 @@
 }
 
 .progressbar_page {
+  margin-top: 8%;
   padding: 0;
+  bottom: 0;
 }
