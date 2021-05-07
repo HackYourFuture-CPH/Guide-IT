@@ -12,6 +12,7 @@ import image4 from '../../assets/images/questionBackgrounds/question4background.
 import image5 from '../../assets/images/questionBackgrounds/question5background.png';
 import PropTypes from 'prop-types';
 import './QuizPage.styles.css';
+
 const QuizQuestions = [
   {
     question: 'When visiting a website,what is that you are most intrested in?',
@@ -56,7 +57,7 @@ const QuizQuestions = [
     level: 100,
   },
 ];
-export const QuizPage = (getResults) => {
+export const QuizPage = () => {
   const [currentOn, setCurrentOn] = useState(0);
   const handleQuestions = () => {
     setCurrentOn((prev) => prev + 1);
@@ -133,7 +134,4 @@ export const QuizPage = (getResults) => {
       </div>
     </div>
   );
-};
-QuizPage.propTypes = {
-  getResults: PropTypes.func.isRequired,
 };
