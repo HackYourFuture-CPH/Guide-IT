@@ -119,7 +119,7 @@ export const QuizPage = () => {
                 label="See My Results"
                 size="big"
                 isMono={false}
-                onClick={getResults}
+                onClick={handleQuestions}
               />
             </span>
           )}

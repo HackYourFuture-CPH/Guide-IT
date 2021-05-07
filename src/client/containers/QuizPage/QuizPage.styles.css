@@ -48,9 +48,6 @@
 }
 
 .button_page {
-  /* text-align: center;
-  margin-top: 1%;
-  margin-bottom: 7%; */
   width: 35%;
   margin: 5px auto;
   display: flex;
@@ -60,9 +57,6 @@
 }
 
 .buttons.big {
-  /* width: 150px;
-  padding-top: 0;
-  padding-bottom: 0; */
   min-width: 150px;
   padding: 0.2em 2em;
   margin-top: 120px;
@@ -71,8 +65,6 @@
 .buttons.grey {
   background-color: #a09696 !important;
 }
-
-/* .next_button, */
 
 .results {
   margin: 0 auto;
