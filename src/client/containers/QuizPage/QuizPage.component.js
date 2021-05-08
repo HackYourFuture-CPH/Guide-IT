@@ -64,7 +64,6 @@ export const QuizPage = () => {
   const goToPrevious = () => {
     setCurrentOn((prev) => prev - 1);
   };
-  console.log(currentOn, QuizQuestions.length - 1);
   return (
     <div>
       <div className="main">
@@ -114,12 +113,9 @@ export const QuizPage = () => {
             </span>
           ) : (
             <span className="results">
-              <Buttons
-                label="See My Results"
-                size="big"
-                isMono={false}
-                onClick={handleQuestions}
-              />
+              <link to="resultPage">
+                <Buttons label="See My Results" size="big" isMono={false} />
+              </link>
             </span>
           )}
         </div>
