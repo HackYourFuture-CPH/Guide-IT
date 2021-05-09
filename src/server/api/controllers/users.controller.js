@@ -15,13 +15,14 @@ const getUserById = async (id) => {
   }
 
   try {
-    const users = await knex('users')
+    const result = await knex('users')
       .select('users.id as id', 'full_name', 'firebase_token')
       .where({ id });
-    if (users.length === 0) {
+    const user = result.length !== 0 ? result[0] : '';
+    if (!user) {
       throw new Error(`incorrect entry with the id of ${id}`, 404);
     }
-    return users;
+    return user;
   } catch (error) {
     return error.message;
   }
