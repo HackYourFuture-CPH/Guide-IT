@@ -10,7 +10,6 @@ import image2 from '../../assets/images/questionBackgrounds/question2background.
 import image3 from '../../assets/images/questionBackgrounds/question3background.png';
 import image4 from '../../assets/images/questionBackgrounds/question4background.png';
 import image5 from '../../assets/images/questionBackgrounds/question5background.png';
-import { Link } from 'react-router-dom';
 import './QuizPage.styles.css';
 
 const QuizQuestions = [
