@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router({ mergeParams: true });
 
 // controllers
@@ -57,7 +58,9 @@ router.get('/:id', (req, res, next) => {
     .getUserById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
-
+});
+/**
+ * @swagger
  *  post:
  *    tags:
  *    - Users
@@ -94,7 +97,6 @@ router.post('/', (req, res) => {
 
       res.status(400).send('Bad request').end();
     });
-
 });
 
 module.exports = router;

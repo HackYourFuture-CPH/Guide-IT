@@ -41,4 +41,45 @@ router.get('/', (req, res, next) => {
     .catch(next);
 });
 
+/**
+ * @swagger
+ * /quiz-results:
+ *  post:
+ *    tags:
+ *    - Quiz Results
+ *    summary: Create a quiz result
+ *    description:
+ *      Will insert a quiz result entry.
+ *    produces: application/json
+ *    parameters:
+ *      - in: body
+ *        name: Quiz Results
+ *        description: The quiz result to create.
+ *        schema:
+ *          type: object
+ *          required:
+ *            - fk_answer_id
+ *            - fk_user_id
+ *          properties:
+ *            fk_answer_id:
+ *              type: integer
+ *            fk_user_id:
+ *              type: integer
+ *    responses:
+ *      201:
+ *        description: Quiz results created
+ *      5XX:
+ *        description: Unexpected error.
+ */
+
+router.post('/', (req, res) => {
+  quizResultsController
+    .createQuizResults(req.body)
+    .then((result) => res.json(result))
+    .catch((error) => {
+      console.log(error);
+      res.status(400).send('Bad request').end();
+    });
+});
+
 module.exports = router;
