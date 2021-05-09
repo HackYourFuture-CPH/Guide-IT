@@ -40,8 +40,6 @@ router.post('/', (req, res) => {
     .createQuestion(req.body)
     .then((result) => res.json(result))
     .catch((error) => {
-      console.log(error);
-
       res.status(400).send('Bad request').end();
     });
 });
