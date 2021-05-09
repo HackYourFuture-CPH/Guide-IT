@@ -3,17 +3,18 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const questionsController = require('../controllers/questions.controller');
+const usersController = require('../controllers/users.controller');
 
 /**
  * @swagger
- * /questions:
+ * /users:
+
  *  get:
  *    tags:
- *    - Questions
- *    summary: Get all questions
+ *    - users
+ *    summary: Get all users
  *    description:
- *      Will return all questions.
+ *      Will return all users.
  *    produces: application/json
  *    responses:
  *      200:
@@ -22,21 +23,21 @@ const questionsController = require('../controllers/questions.controller');
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  questionsController
-    .getQuestions()
+  usersController
+    .getUsers()
     .then((result) => res.json(result))
     .catch(next);
 });
 
 /**
  * @swagger
- * /questions/{ID}:
+ * /users/{ID}:
  *  get:
  *    tags:
- *    - Questions
- *    summary: Get question by ID
+ *    - users
+ *    summary: Get user by ID
  *    description:
- *      Will return single question with a matching ID.
+ *      Will return single user with a matching ID.
  *    produces: application/json
  *    parameters:
  *     - in: path
@@ -44,7 +45,7 @@ router.get('/', (req, res, next) => {
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question to get
+ *         description: The ID of the user to get
  *
  *    responses:
  *      200:
@@ -53,46 +54,48 @@ router.get('/', (req, res, next) => {
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  questionsController
-    .getQuestionById(req.params.id)
+  usersController
+    .getUserById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
 /**
  * @swagger
- * /questions:
+ * /users/{ID}:
  *  post:
  *    tags:
- *    - Questions
- *    summary: Create a question
+ *    - Users
+ *    summary: Create a user
  *    description:
- *      Will create a question.
+ *      Will create a user.
  *    produces: application/json
  *    parameters:
  *      - in: body
- *        name: question
- *        description: The qustion to create.
+ *        name: users
+ *        description: The user to create.
  *        schema:
  *          type: object
- *          required: true
- *          description: The text of the question to create.
- *            - question
- *
+ *          required:
+ *            - full_name
+ *            - firebase_token
  *          properties:
- *            question:
+ *           full_name:
  *              type: string
- *
+ *           firebase_token:
+ *              type: string
  *    responses:
  *      201:
- *        description: Qustion created
+ *        description: user created
  *      5XX:
  *        description: Unexpected error.
  */
 router.post('/', (req, res) => {
-  questionsController
-    .createQuestion(req.body)
+  usersController
+    .createUser(req.body)
     .then((result) => res.json(result))
-    .catch(() => {
+    .catch((error) => {
+      console.log(error);
+
       res.status(400).send('Bad request').end();
     });
 });

@@ -3,17 +3,17 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 
 // controllers
-const questionsController = require('../controllers/questions.controller');
+const answersController = require('../controllers/answers.controller');
 
 /**
  * @swagger
- * /questions:
+ * /answers:
  *  get:
  *    tags:
- *    - Questions
- *    summary: Get all questions
+ *    - answers
+ *    summary: Get all answers
  *    description:
- *      Will return all questions.
+ *      Will return all answers.
  *    produces: application/json
  *    responses:
  *      200:
@@ -22,21 +22,21 @@ const questionsController = require('../controllers/questions.controller');
  *        description: Unexpected error.
  */
 router.get('/', (req, res, next) => {
-  questionsController
-    .getQuestions()
+  answersController
+    .getAnswers()
     .then((result) => res.json(result))
     .catch(next);
 });
 
 /**
  * @swagger
- * /questions/{ID}:
+ * /answers/{ID}:
  *  get:
  *    tags:
- *    - Questions
- *    summary: Get question by ID
+ *    - answers
+ *    summary: Get answer by ID
  *    description:
- *      Will return single question with a matching ID.
+ *      Will return single answer with a matching ID.
  *    produces: application/json
  *    parameters:
  *     - in: path
@@ -44,7 +44,7 @@ router.get('/', (req, res, next) => {
  *       schema:
  *         type: integer
  *         required: true
- *         description: The ID of the question to get
+ *         description: The ID of the answer to get
  *
  *    responses:
  *      200:
@@ -53,46 +53,56 @@ router.get('/', (req, res, next) => {
  *        description: Unexpected error.
  */
 router.get('/:id', (req, res, next) => {
-  questionsController
-    .getQuestionById(req.params.id)
+  answersController
+    .getAnswerById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
+
 /**
  * @swagger
- * /questions:
+ * /answers:
  *  post:
  *    tags:
- *    - Questions
- *    summary: Create a question
+ *    - answers
+ *    summary: Create an answer
  *    description:
- *      Will create a question.
+ *      Will create an answer.
  *    produces: application/json
  *    parameters:
  *      - in: body
- *        name: question
- *        description: The qustion to create.
+ *        name: answer
+ *        description: The answer to create.
  *        schema:
  *          type: object
- *          required: true
- *          description: The text of the question to create.
- *            - question
- *
+ *          required:
+ *            - title
+ *            - startDate
+ *            - endDate
+ *             - classId
  *          properties:
- *            question:
+ *            title:
  *              type: string
- *
+ *            startDate:
+ *              type: string
+ *              format: date-time
+ *            endDate:
+ *              type: string
+ *              format: date-time
+ *            classId:
+ *              type: string
  *    responses:
  *      201:
- *        description: Qustion created
+ *        description: Answer created
  *      5XX:
  *        description: Unexpected error.
  */
 router.post('/', (req, res) => {
-  questionsController
-    .createQuestion(req.body)
+  answersController
+    .createAnswer(req.body)
     .then((result) => res.json(result))
-    .catch(() => {
+    .catch((error) => {
+      res.send(error.message);
       res.status(400).send('Bad request').end();
     });
 });

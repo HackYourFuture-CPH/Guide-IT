@@ -15,15 +15,20 @@
 }
 
 .sidebar {
-  width: 5%;
-  height: 250px;
+  min-width: 5%;
+  min-height: 20%;
   margin-left: 0;
   position: fixed;
 }
 
 .side_menu_div {
   margin-left: 0;
-  width: 100%;
+  width: 90%;
+  background-color: #5088a8;
+}
+
+.side_menu_ul li span {
+  margin-bottom: 5px;
 }
 
 .noresults_container {
@@ -37,7 +42,7 @@
 .noresults_text {
   position: absolute;
   min-width: 100px;
-  top: 2%;
+  top: 3%;
   left: 50%;
   margin-left: -50px;
   text-align: center;
@@ -58,19 +63,19 @@
 
 .robo_container {
   position: absolute;
+  top: 50%;
   right: 5px;
-  top: 25%;
-  width: 180px;
-  height: 180px;
+  transform: translate(0%, -50%);
+  width: 11em;
+  height: 11em;
   background-color: #d9e4e3;
   border-radius: 50%;
 }
 
 .robo_container .sadrobo {
-  width: 100px;
-  height: 100px;
-  margin-top: 15px;
-  margin-left: 40px;
+  width: 55%;
+  height: 50%;
+  margin: 15px auto 2px auto;
 }
 
 .sadrobo img {
@@ -79,13 +84,8 @@
 }
 
 .sadrobo_text {
-  width: 75%;
-  height: 60px;
+  width: 70%;
   margin: 0 auto;
-}
-
-.sadrobo_text p {
-  margin-top: 0;
   text-align: center;
   font-weight: 700;
   font-size: 12px;
@@ -96,11 +96,13 @@
 
 .noresults_container .buttons {
   position: absolute;
-  bottom: 10%;
-  left: 38%;
-  width: 35%;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
   padding: 10px;
   font-size: 20px;
   text-align: center;
   border: none;
+  cursor: pointer;
 }
