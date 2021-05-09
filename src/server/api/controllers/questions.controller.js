@@ -1,9 +1,7 @@
 const knex = require('../../config/db');
 
-const createQuestion = async (body) => {
-  await knex('questions').insert({
-    question: body.question,
-  });
+const createQuestion = async ({ question }) => {
+  await knex('questions').insert({ question });
 
   return {
     successful: true,
