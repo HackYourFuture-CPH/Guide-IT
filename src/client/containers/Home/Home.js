@@ -4,7 +4,7 @@ import Header from '../../components/HomepageHeader/Header';
 import HomeDescription from '../../components/HomeDescription/HomeDescription';
 import { Description } from '../../components/DecriptionHome/DescriptionCareer';
 import Buttons from '../../components/Buttons/Buttons';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Home.css';
 
 const arr = [
@@ -25,6 +25,11 @@ const arr = [
 ];
 
 export const Home = () => {
+  const history = useHistory();
+
+  function handleClick(url) {
+    history.push(url);
+  }
   return (
     <div className="home-container">
       <div className="home-side">
@@ -42,25 +47,23 @@ export const Home = () => {
         </div>
         <div className="home-button">
           <div className="home-button-right">
-            <Link to="/CareerPage">
-              <Buttons
-                label="Take the career quiz"
-                size="big"
-                isMono={true}
-                color="orange"
-              />
-            </Link>
+            <Buttons
+              label="Take the career quiz"
+              size="big"
+              isMono={true}
+              color="orange"
+              onClick={() => handleClick('/CarrerPage')}
+            />
           </div>
 
           <div className="home-button-left">
-            <Link to="/ElevatorPitchPage">
-              <Buttons
-                label="Visit the elevator"
-                size="big"
-                isMono={true}
-                color="orange"
-              />
-            </Link>
+            <Buttons
+              label="Visit the elevator"
+              size="big"
+              isMono={true}
+              color="orange"
+              onClick={() => handleClick('/ElevatorPitchPage')}
+            />
           </div>
         </div>
       </div>
