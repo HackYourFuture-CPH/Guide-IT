@@ -8,7 +8,7 @@ import SignUp from './containers/SignUp';
 import ResetPassword from './containers/ResetPassword';
 import AuthenticatedRoute from './components/Auth/AuthenticatedRoute';
 import { useAuthentication } from './hooks/useAuthentication';
-import Header from './components/Navigation/Header';
+
 import Profile from './containers/Profile';
 import Loader from './components/Loader';
 
@@ -21,9 +21,7 @@ function App() {
 
   return (
     <Router>
-      <Header />
       <Switch>
-        {/* Home page */}
         <Route exact path="/">
           <Home />
         </Route>

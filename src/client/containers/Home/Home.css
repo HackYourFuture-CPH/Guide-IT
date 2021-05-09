@@ -1,16 +1,26 @@
 .home-container {
   display: flex;
   background-image: url('../../../client/assets/images/Vector.svg');
+  overflow: hidden;
+  height: 100vh;
 }
 
 .home-description {
   margin-bottom: 10px;
+  font-size: 1.5rem;
+  height: 20%;
 }
 
 .home-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.home-main:nth-child(1n) {
+  width: 100%;
 }
 
 .home-button {
@@ -33,28 +43,35 @@
 
 /** Description career **/
 
+.exams-description {
+  height: 45%;
+}
+
 .descriptioncareer {
   padding: 5px;
   padding-left: 20px;
   margin: 5px;
   min-height: 330px;
+  height: 100%;
 }
 
 .innerDiv {
-  margin: 0 60px;
+  margin: 0 35px;
+  height: 95%;
+}
+
+.home-description p {
+  margin: 0 0 4% 0;
 }
 
 .descriptioncareer .title {
   font-size: 24px;
+  margin: 7px 0 -18px 0;
 }
 
-.descriptioncareer .content {
-  font-size: 22px;
-  height: 90px;
-}
-
+.descriptioncareer .content,
 .descriptioncareer .content2 {
-  font-size: 22px;
+  font-size: 1.3rem;
 }
 
 .descriptioncareer .time {
@@ -64,16 +81,69 @@
 /** Sidebar Menu component */
 
 .sidebar-menu {
-  height: 720px;
+  overflow: hidden;
+  max-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-side {
+  height: 100vh;
 }
 
 .sidebar-footer {
-  padding-top: 250px;
+  padding-top: 0;
 }
 
 /* homepage header */
 
+.homepage-header {
+  margin-top: 1.5rem;
+}
+
 .robot-image {
-  width: 150px;
-  height: 150px;
+  width: 35%;
+  padding: 0;
+  margin: -0.7rem 0;
+  margin-bottom: -2rem;
+}
+
+@media screen and (min-height: 500px) and (min-width: 1300px) {
+  .robot-image {
+    width: 32%;
+  }
+
+  .home-description {
+    font-size: 1.2rem;
+  }
+
+  .descriptioncareer {
+    min-height: 0;
+  }
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  .robot-image {
+    width: 46%;
+  }
+
+  .home-description {
+    font-size: 1.8rem;
+  }
+
+  .descriptioncareer .title {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+
+  .descriptioncareer .content,
+  .descriptioncareer .content2 {
+    font-size: 1.5rem;
+  }
+
+  .descriptioncareer .time {
+    font-size: 24px;
+  }
 }
