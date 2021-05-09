@@ -11,13 +11,13 @@ const getAnswerById = async (id) => {
   }
 
   try {
-    const answers = await knex('answers')
+    const answer = await knex('answers')
       .select('answers.id as id', 'answer')
       .where({ id });
-    if (answers.length === 0) {
+    if (answer.length === 0) {
       throw new Error(`incorrect entry with the id of ${id}`, 404);
     }
-    return answers;
+    return answer;
   } catch (error) {
     return error.message;
   }

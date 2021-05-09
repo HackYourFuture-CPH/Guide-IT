@@ -102,8 +102,7 @@ router.post('/', (req, res) => {
     .createAnswer(req.body)
     .then((result) => res.json(result))
     .catch((error) => {
-      console.log(error);
-
+      res.send(error.message);
       res.status(400).send('Bad request').end();
     });
 });
