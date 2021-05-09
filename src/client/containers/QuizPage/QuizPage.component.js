@@ -5,6 +5,7 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.components';
 import SideMenu from '../../components/sideMenubar/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.components';
+import { useHistory } from 'react-router-dom';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
 import image2 from '../../assets/images/questionBackgrounds/question2background.png';
 import image3 from '../../assets/images/questionBackgrounds/question3background.png';
@@ -64,6 +65,11 @@ export const QuizPage = () => {
   const goToPrevious = () => {
     setCurrentOn((prev) => prev - 1);
   };
+  const history = useHistory();
+
+  function handleClick() {
+    history.push('/resultPage');
+  }
   return (
     <div>
       <div className="main">
@@ -117,7 +123,7 @@ export const QuizPage = () => {
                 label="See My Results"
                 size="big"
                 isMono={false}
-                onClick="resultPage"
+                onClick={handleClick}
               />
             </span>
           )}
