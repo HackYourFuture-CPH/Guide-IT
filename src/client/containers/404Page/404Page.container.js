@@ -3,9 +3,15 @@ import './404Page.styles.css';
 import cable from '../../assets/images/cable.png';
 import sadrobot from '../../assets/images/sadrobot.png';
 import Buttons from '../../components/Buttons/Buttons.component';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function Error404Page() {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push('/');
+  }
+
   return (
     <div className="body-background-image">
       <div className="center-container">
@@ -22,9 +28,12 @@ function Error404Page() {
         </div>
 
         <div>
-          <Link to="/">
-            <Buttons label="Go Home" size="big" isMono={true} />
-          </Link>
+          <Buttons
+            label="Go Home"
+            size="big"
+            isMono={true}
+            onClick={handleClick}
+          />
         </div>
       </div>
     </div>
