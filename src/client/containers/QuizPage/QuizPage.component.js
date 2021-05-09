@@ -114,9 +114,12 @@ export const QuizPage = () => {
             </span>
           ) : (
             <span className="results">
-              <Link to="resultPage">
-                <Buttons label="See My Results" size="big" isMono={false} />
-              </Link>
+              <Buttons
+                label="See My Results"
+                size="big"
+                isMono={false}
+                onClick="resultPage"
+              />
             </span>
           )}
         </div>
