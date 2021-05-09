@@ -17,7 +17,7 @@ const getAnswerById = async (id) => {
     if (answer.length === 0) {
       throw new Error(`incorrect entry with the id of ${id}`, 404);
     }
-    return answer;
+    return answer[0];
   } catch (error) {
     return error.message;
   }
