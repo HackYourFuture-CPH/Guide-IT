@@ -27,7 +27,7 @@ li:first-of-type {
   border-right-color: white;
 }
 
-.side_menu_whiteborder[data-highlighted='true'] {
+.side_menu_selected li {
   border-right-color: white;
 }
 

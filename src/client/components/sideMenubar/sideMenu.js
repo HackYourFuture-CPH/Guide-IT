@@ -1,42 +1,32 @@
 import React from 'react';
 import './sideMenu.styles.css';
-import PropTypes from 'prop-types';
 import homeImg from '../../assets/images/home_sidemenu.png';
 import nextImg from '../../assets/images/nextsteps_sidemenu.png';
 import elevatorImg from '../../assets/images/elevator_sidemenu.png';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-function SideMenu({ highLightItem }) {
+function SideMenu() {
   return (
     <div className="side_menu_div">
       <nav className="side_menu_spacebetween">
         <ul className="side_menu_ul">
-          <li
-            className="side_menu_whiteborder"
-            data-highlighted={highLightItem === 0}
-          >
-            <Link to="/" href={highLightItem}>
+          <NavLink to="/">
+            <li className="side_menu_whiteborder">
               <img src={homeImg} alt="homeImg" />
-            </Link>
-          </li>
+            </li>
+          </NavLink>
           <span>Home</span>
-          <li
-            className="side_menu_whiteborder"
-            data-highlighted={highLightItem === 1}
-          >
-            <Link to="/nextsteps" href={highLightItem}>
+          <NavLink to="/nextsteps" activeClassName="side_menu_selected">
+            <li className="side_menu_whiteborder">
               <img src={nextImg} alt="nextImg" />
-            </Link>
-          </li>
+            </li>
+          </NavLink>
           <span>Next steps</span>
-          <li
-            className="side_menu_whiteborder"
-            data-highlighted={highLightItem === 2}
-          >
-            <Link to="/elevatorpitch" href={highLightItem}>
+          <NavLink to="/elevatorpitch" activeClassName="side_menu_selected">
+            <li className="side_menu_whiteborder">
               <img src={elevatorImg} alt="nextImg" />
-            </Link>
-          </li>
+            </li>
+          </NavLink>
           <span>Elevator pitch</span>
         </ul>
       </nav>
@@ -44,6 +34,3 @@ function SideMenu({ highLightItem }) {
   );
 }
 export default SideMenu;
-SideMenu.propTypes = {
-  highLightItem: PropTypes.number.isRequired,
-};
