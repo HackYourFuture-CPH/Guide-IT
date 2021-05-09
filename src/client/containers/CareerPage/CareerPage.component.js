@@ -5,8 +5,8 @@ import JobCard from '../../components/JobCard/JobCard';
 import ResultJobFeatures from '../../components/ResultJobFeatures/ResultJobFeatures';
 import RobotLogo from '../../assets/images/robot_logo.png';
 import ArrowImage from '../../assets/images/arrow_next.png';
-import { Link } from 'react-router-dom';
 import Button from '../../components/Buttons/Buttons';
+import { useHistory } from 'react-router-dom';
 import './CareerPage.styles.css';
 
 const alternateCareerArray = [
@@ -25,11 +25,16 @@ const alternateCareerArray = [
 ];
 
 const CareerPage = ({ jobTitle }) => {
+  const history = useHistory();
   // onclick
-
   const handleClick = () => {
-    console.log('clicked');
+    history.push('/quiz');
   };
+  // onclick for elevator
+  const onClickElevator = () => {
+    history.push('/elevatorpitch');
+  };
+
   return (
     <div className="career-page">
       <PageHeader />
@@ -75,19 +80,20 @@ const CareerPage = ({ jobTitle }) => {
             </div>
           </div>
           <div className="buttons-result-page">
-            <Link to="/quiz">
-              <Button
-                className="first-button"
-                label="Retake quiz"
-                size="big"
-                color="grey"
-                isMono={true}
-                onClick={handleClick}
-              />
-            </Link>
-            <Link to="/elevatorpitch">
-              <Button label="Elevator pitch" size="big" isMono={true} />
-            </Link>
+            <Button
+              label="Retake quiz"
+              size="big"
+              color="grey"
+              isMono={true}
+              onClick={handleClick}
+            />
+
+            <Button
+              label="Elevator pitch"
+              size="big"
+              isMono={true}
+              onClick={onClickElevator}
+            />
           </div>
         </div>
         <div>
