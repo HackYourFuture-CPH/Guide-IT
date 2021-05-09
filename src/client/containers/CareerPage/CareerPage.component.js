@@ -25,7 +25,7 @@ const alternateCareerArray = [
 ];
 
 const CareerPage = ({ jobTitle }) => {
-  //onclick
+  // onclick
 
   const handleClick = () => {
     console.log('clicked');
@@ -101,7 +101,7 @@ const CareerPage = ({ jobTitle }) => {
 export default CareerPage;
 
 CareerPage.propTypes = {
-  jobTitle: PropTypes.string.isRequired,
+  jobTitle: PropTypes.string,
 };
 CareerPage.defaultProps = {
   jobTitle: 'Full stack developer',
