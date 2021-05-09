@@ -15,10 +15,8 @@ function SideMenu({ highLightItem }) {
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 0}
           >
-            <Link to="/">
-              <a href={highLightItem}>
-                <img src={homeImg} alt="homeImg" />
-              </a>
+            <Link to="/" href={highLightItem}>
+              <img src={homeImg} alt="homeImg" />
             </Link>
           </li>
           <span>Home</span>
@@ -26,10 +24,8 @@ function SideMenu({ highLightItem }) {
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 1}
           >
-            <Link to="/nextsteps">
-              <a href={highLightItem}>
-                <img src={nextImg} alt="nextImg" />
-              </a>
+            <Link to="/nextsteps" href={highLightItem}>
+              <img src={nextImg} alt="nextImg" />
             </Link>
           </li>
           <span>Next steps</span>
@@ -37,10 +33,8 @@ function SideMenu({ highLightItem }) {
             className="side_menu_whiteborder"
             data-highlighted={highLightItem === 2}
           >
-            <Link to="/elevatorpitch">
-              <a href={highLightItem}>
-                <img src={elevatorImg} alt="nextImg" />
-              </a>
+            <Link to="/elevatorpitch" href={highLightItem}>
+              <img src={elevatorImg} alt="nextImg" />
             </Link>
           </li>
           <span>Elevator pitch</span>

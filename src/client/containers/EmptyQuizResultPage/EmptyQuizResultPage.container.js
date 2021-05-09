@@ -3,14 +3,17 @@ import SideMenu from '../../components/SideMenubar/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import girlImg from '../../assets/images/girl.png';
 import sadrobot from '../../assets/images/sadrobot.png';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './EmptyQuizResultPage.styles.css';
 
 export const EmptyQuizResultPage = () => {
+  const history = useHistory();
+
   // onclick function for button
-  const onClick = () => {
-    return null;
-  };
+  function handleClick() {
+    history.push('/');
+  }
+
   return (
     <section>
       <div className="noresults_page">
@@ -26,14 +29,12 @@ export const EmptyQuizResultPage = () => {
             </div>
             <p className="sadrobo_text">You`ve skipped too many questions</p>
           </div>
-          <Link to="/">
-            <Buttons
-              label="Go Home"
-              size="big"
-              isMono={true}
-              onClick={onClick}
-            />
-          </Link>
+          <Buttons
+            label="Go Home"
+            size="big"
+            isMono={true}
+            onClick={handleClick}
+          />
         </div>
       </div>
     </section>
