@@ -19,7 +19,7 @@ const getQuestionById = async (id) => {
     if (questions.length === 0) {
       throw new Error(`incorrect entry with the id of ${id}`, 404);
     }
-    return questions;
+    return questions[0];
   } catch (error) {
     return error.message;
   }
