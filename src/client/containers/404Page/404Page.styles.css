@@ -7,18 +7,20 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center-container {
   width: 45%;
   height: 65%;
-  margin: 9% auto;
   background: rgba(179, 64, 74, 0.73);
   position: relative;
   font-family: 'Roboto Mono', monospace;
 }
 
-.center-container img {
+.cable {
   margin: 1rem 1rem;
   width: 7rem;
   height: 7rem;
@@ -26,8 +28,9 @@
 
 .main-text {
   position: absolute;
-  top: 25%;
-  left: 33%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-text h1 {
@@ -56,28 +59,31 @@
   height: 13rem;
   width: 13rem;
   position: absolute;
-  left: 80%;
-  top: 20%;
+  right: -90px;
+  top: 50%;
+  transform: translate(0%, -50%);
 }
 
 .circle-container img {
   margin-top: 1.5rem;
   margin-left: 3rem;
+  width: 7rem;
+  height: 7rem;
 }
 
 .circle-container p {
   text-transform: uppercase;
   text-align: center;
   width: 80%;
-  margin-top: -1.3rem;
-  margin-left: 1.3rem;
   color: #323334;
+  margin: auto;
 }
 
 .center-container .buttons {
-  padding: 12px 50px;
   position: absolute;
   bottom: -5%;
   left: 35%;
-  font-size: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 30%;
 }
