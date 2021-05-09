@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import PageHeader from '../../components/PageHeaderComponent/PageHeader';
 import JobCard from '../../components/JobCard/JobCard';
 import ResultJobFeatures from '../../components/ResultJobFeatures/ResultJobFeatures';
-import Button from '../../components/Buttons/Buttons';
-import CircuitBoardBackgroundImage from '../../assets/images/circuit_board_background_image.png';
 import RobotLogo from '../../assets/images/robot_logo.png';
 import ArrowImage from '../../assets/images/arrow_next.png';
+import { Link } from 'react-router-dom';
+import Button from '../../components/Buttons/Buttons';
 import './CareerPage.styles.css';
 
 const alternateCareerArray = [
@@ -25,8 +25,13 @@ const alternateCareerArray = [
 ];
 
 const CareerPage = ({ jobTitle }) => {
+  //onclick
+
+  const handleClick = () => {
+    console.log('clicked');
+  };
   return (
-    <div style={{ backgroundImage: `url(${CircuitBoardBackgroundImage})` }}>
+    <div className="career-page">
       <PageHeader />
       <div className="sections">
         <div className="background-added-section">
@@ -70,8 +75,19 @@ const CareerPage = ({ jobTitle }) => {
             </div>
           </div>
           <div className="buttons-result-page">
-            <Button label="Retake quiz" size="big" color="grey" />
-            <Button label="Elevator pitch" size="big" />
+            <Link to="/quiz">
+              <Button
+                className="first-button"
+                label="Retake quiz"
+                size="big"
+                color="grey"
+                isMono={true}
+                onClick={handleClick}
+              />
+            </Link>
+            <Link to="/elevatorpitch">
+              <Button label="Elevator pitch" size="big" isMono={true} />
+            </Link>
           </div>
         </div>
         <div>
@@ -86,4 +102,7 @@ export default CareerPage;
 
 CareerPage.propTypes = {
   jobTitle: PropTypes.string.isRequired,
+};
+CareerPage.defaultProps = {
+  jobTitle: 'Full stack developer',
 };
