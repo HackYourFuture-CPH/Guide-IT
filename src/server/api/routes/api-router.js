@@ -4,6 +4,7 @@ const router = express.Router();
 
 // Router imports
 const modulesRouter = require('./modules.router');
+const answersRouter = require('./answers.router');
 const usersRouter = require('./users.router');
 const quizResultsRouter = require('./quiz_results.router');
 
@@ -37,6 +38,8 @@ router.use('/documentation', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Application routes
 router.use('/modules', modulesRouter);
+router.use('/answers', answersRouter);
+
 router.use('/users', usersRouter);
 router.use('/quiz-results', quizResultsRouter);
 
