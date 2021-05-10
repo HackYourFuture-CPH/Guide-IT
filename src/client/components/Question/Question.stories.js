@@ -2,7 +2,7 @@ import { text } from '@storybook/addon-knobs';
 import React from 'react';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
 
-import QuestionComponent from './QuestionComponent';
+import QuestionComponent from './Question.component';
 
 export default {
   title: 'Components / Question Component',

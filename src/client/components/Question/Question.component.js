@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './QuestionComponent.styles.css';
+import './Question.styles.css';
 
 export default function QuestionComponent({ question, imageSrc }) {
   return (

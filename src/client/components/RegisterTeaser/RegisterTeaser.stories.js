@@ -1,6 +1,6 @@
 import React from 'react';
 
-import RegisterTeaser from './RegisterTeaser';
+import RegisterTeaser from './RegisterTeaser.component';
 
 export default {
   title: 'Components/Register Teaser',

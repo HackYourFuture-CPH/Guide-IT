@@ -5,7 +5,7 @@ import Robot from '../../assets/images/robot_logo.png';
 import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResult.component.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
-import PageHeader from '../../components/PageHeaderComponent/PageHeader.component';
+import PageHeader from '../../components/PageHeader/PageHeader.component';
 
 export const QuizResultPage = () => {
   const result = [

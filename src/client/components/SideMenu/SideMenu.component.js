@@ -1,5 +1,5 @@
 import React from 'react';
-import './sideMenu.styles.css';
+import './SideMenu.styles.css';
 import homeImg from '../../assets/images/home_sidemenu.png';
 import nextImg from '../../assets/images/nextsteps_sidemenu.png';
 import elevatorImg from '../../assets/images/elevator_sidemenu.png';

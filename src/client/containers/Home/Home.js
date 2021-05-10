@@ -3,7 +3,7 @@ import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
 import Header from '../../components/HomepageHeader/Header';
 import HomeDescription from '../../components/HomeDescription/HomeDescription';
 import { Description } from '../../components/DecriptionHome/DescriptionCareer';
-import Buttons from '../../components/Buttons/Buttons';
+import Buttons from '../../components/Buttons/Buttons.component';
 import { useHistory } from 'react-router-dom';
 import './Home.css';
 
