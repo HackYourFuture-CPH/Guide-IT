@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 
-import RobotLogo from './RobotLogo';
+import RobotLogo from './RobotLogo.component';
 
 export default {
   title: 'Components / Robot Component',

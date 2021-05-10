@@ -6,7 +6,7 @@ import { Home } from './containers/Home/Home';
 import SignIn from './containers/SignIn';
 import SignUp from './containers/SignUp';
 import ResetPassword from './containers/ResetPassword';
-import AuthenticatedRoute from './components/Auth/AuthenticatedRoute';
+import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
 import { useAuthentication } from './hooks/useAuthentication';
 
 import Profile from './containers/Profile';

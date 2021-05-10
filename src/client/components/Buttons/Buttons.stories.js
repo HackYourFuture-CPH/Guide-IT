@@ -1,5 +1,5 @@
 import React from 'react';
-import Buttons from './Buttons';
+import Buttons from './Buttons.component';
 
 // The code starts
 
