@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ProgressBar from './ProgressBar';
+import ProgressBar from './ProgressBar.component';
 
 export default {
   title: 'ProgressBar',

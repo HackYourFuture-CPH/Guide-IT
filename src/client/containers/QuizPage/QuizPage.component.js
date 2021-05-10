@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import PageHeader from '../../components/PageHeader/PageHeader.components';
+import PageHeader from '../../components/PageHeader/PageHeader.component';
 import QuestionComponent from '../../components/Question/Question.component';
-import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.components';
-import SideMenu from '../../components/sideMenubar/SideMenu.component';
+import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
+import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
-import ProgressBar from '../../components/ProgressBar/ProgressBar.components';
+import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
 import { useHistory } from 'react-router-dom';
 import image1 from '../../assets/images/questionBackgrounds/question1background.png';
 import image2 from '../../assets/images/questionBackgrounds/question2background.png';

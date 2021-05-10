@@ -1,5 +1,5 @@
 import React from 'react';
-import './RegisterTeaser.css';
+import './RegisterTeaser.styles.css';
 import PropTypes from 'prop-types';
 import robotLogo from '../../assets/images/robot_logo.png';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CardProfileResultComponent.styles.css';
+import './CardProfileResult.styles.css';
 
 export default function CardProfileResultComponent({ title, results }) {
   return (

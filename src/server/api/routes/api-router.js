@@ -10,6 +10,8 @@ const quizResultsRouter = require('./quiz-results.router');
 
 const questionsRouter = require('./questions.router');
 
+const questionsRouter = require('./questions.router');
+
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
@@ -41,6 +43,8 @@ router.use('/users', usersRouter);
 router.use('/quiz-results', quizResultsRouter);
 
 router.use('/quiz-results', quizResultsRouter);
+
+router.use('/questions', questionsRouter);
 
 router.use('/questions', questionsRouter);
 

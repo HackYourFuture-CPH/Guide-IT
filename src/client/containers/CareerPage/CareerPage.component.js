@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PageHeader from '../../components/PageHeaderComponent/PageHeader';
+import PageHeader from '../../components/PageHeader/PageHeader.component';
 import JobCard from '../../components/JobCard/JobCard';
 import ResultJobFeatures from '../../components/ResultJobFeatures/ResultJobFeatures';
 import RobotLogo from '../../assets/images/robot_logo.png';
 import ArrowImage from '../../assets/images/arrow_next.png';
-import Button from '../../components/Buttons/Buttons';
+import Button from '../../components/Buttons/Buttons.component';
 import { useHistory } from 'react-router-dom';
 import './CareerPage.styles.css';
 

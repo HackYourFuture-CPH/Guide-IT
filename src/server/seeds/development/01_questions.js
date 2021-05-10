@@ -1,7 +1,10 @@
 // This is seeding for the questions table.
 exports.seed = function (knex) {
-  return knex('questions')
+  return knex('answers')
     .del()
+    .then(() => {
+      return knex('questions').del();
+    })
     .then(function () {
       return knex('questions').insert([
         {

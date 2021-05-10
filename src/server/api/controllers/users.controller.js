@@ -40,6 +40,6 @@ const createUser = async (body) => {
 
 module.exports = {
   createUser,
-   getUsers,
+  getUsers,
   getUserById,
 };

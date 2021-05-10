@@ -1,5 +1,5 @@
 import React from 'react';
-import QuizAnswers from './QuizAnswers';
+import QuizAnswers from './QuizAnswers.component';
 import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
 export default { title: 'QuizAnswers', decorators: [withKnobs] };

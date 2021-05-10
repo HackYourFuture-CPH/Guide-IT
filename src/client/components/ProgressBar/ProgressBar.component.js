@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ProgressBar.css';
+import './ProgressBar.styles.css';
 
 const ProgressBar = ({ level, backgroundColor, alphaLevel }) => {
   return (

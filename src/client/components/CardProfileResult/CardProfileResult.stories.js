@@ -1,6 +1,6 @@
 import { array, text } from '@storybook/addon-knobs';
 import React from 'react';
-import CardProfileResultComponent from './CardProfileResultComponent';
+import CardProfileResultComponent from './CardProfileResult.component';
 
 export default {
   title: 'Components / Card Profile Result Component',
