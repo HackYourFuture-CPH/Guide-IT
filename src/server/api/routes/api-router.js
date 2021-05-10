@@ -10,8 +10,6 @@ const quizResultsRouter = require('./quiz-results.router');
 
 const questionsRouter = require('./questions.router');
 
-const questionsRouter = require('./questions.router');
-
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
