@@ -16,12 +16,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  // remove fk in quiz_results table
-  return knex.schema
-    .alterTable('quiz_results', function (table) {
-      table.dropForeign('fk_answer_id');
-    })
-    .then(() => {
-      return knex.schema.dropTable('answers');
-    });
+  return knex.schema.dropTable('answers');
 };

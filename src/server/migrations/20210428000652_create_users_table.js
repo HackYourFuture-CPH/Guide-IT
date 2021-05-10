@@ -8,12 +8,5 @@ exports.up = function (knex) {
 };
 
 exports.down = function (knex) {
-  // Remove fk in quiz_results table
-  return knex.schema
-    .alterTable('quiz_results', function (table) {
-      table.dropForeign('fk_user_id');
-    })
-    .then(() => {
-      return knex.schema.dropTable('users');
-    });
+  return knex.schema.dropTable('users');
 };
