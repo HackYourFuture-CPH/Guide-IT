@@ -1,5 +1,5 @@
 import React from 'react';
-import GoogleLoginButton from './GoogleLoginButton';
+import GoogleLoginButton from './GoogleLoginButton.component';
 
 export default {
   title: 'GoogleLoginButton',

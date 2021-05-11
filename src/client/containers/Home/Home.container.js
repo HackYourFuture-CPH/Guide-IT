@@ -1,11 +1,11 @@
 import React from 'react';
-import SidebarMenu from '../../components/SidebarMenu/SidebarMenu';
-import Header from '../../components/HomepageHeader/Header';
-import HomeDescription from '../../components/HomeDescription/HomeDescription';
-import { Description } from '../../components/DecriptionHome/DescriptionCareer';
+import SidebarMenu from '../../components/LeftBlueBar/LeftBlueBar.component';
+import Header from '../../components/HomepageHeader/Header.component';
+import HomeDescription from '../../components/HomeDescription/HomeDescription.component';
+import { Description } from '../../components/DecriptionHome/DescriptionCareer.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import { useHistory } from 'react-router-dom';
-import './Home.css';
+import './Home.styles.css';
 
 const arr = [
   {

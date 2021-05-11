@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import './Modal.css';
+import './Modal.styles.css';
 
 export default function Modal({
   id, // id of element that will be hvoer to show Modal

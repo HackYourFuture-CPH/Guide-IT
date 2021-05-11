@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import EmailForm from './EmailForm';
+import EmailForm from './EmailForm.component';
 
 export default {
   title: 'EmailRegistration Form',
