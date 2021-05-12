@@ -19,7 +19,6 @@ import { EmptyQuizResultPage } from './containers/EmptyQuizResultPage/EmptyQuizR
 import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchPage.component';
 import { LoginPage } from './containers/LoginPage/LoginPage.component';
 import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.component';
-import { ProfilePage } from './containers/ProfilePage/ProfilePage.component';
 import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
 
 function App() {
@@ -41,34 +40,31 @@ function App() {
         <SignIn exact path="/sign-in" />
         <SignUp exact path="/sign-up" />
         <ResetPassword exact path="/reset-password" />
-        <Route exact path="/error">
+        <Route exact path="/404-page-not-found">
           <Error404Page />
         </Route>
-        <Route exact path="/careerpage">
+        <Route exact path="/career">
           <CareerPage />
         </Route>
-        <Route exact path="/elevatorpitch">
+        <Route exact path="/elevator-pitch">
           <ElevatorPitchPage />
         </Route>
-        <Route exact path="/emptyquizresults">
+        <Route exact path="/empty-quiz-results">
           <EmptyQuizResultPage />
         </Route>
         <Route exact path="/login">
           <LoginPage />
         </Route>
-        <Route exact path="/nextsteps">
+        <Route exact path="/next-steps">
           <NextStepsPage />
-        </Route>
-        <Route exact path="/profilepage">
-          <ProfilePage />
         </Route>
         <Route exact path="/quiz">
           <QuizPage />
         </Route>
-        <Route exact path="/quizresults">
+        <Route exact path="/quiz-results">
           <QuizResultPage />
         </Route>
-        <Route exact path="/registrationpage">
+        <Route exact path="/registration">
           <RegistrationPage />
         </Route>
 
