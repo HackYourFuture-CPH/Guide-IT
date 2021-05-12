@@ -52,7 +52,7 @@ export const Home = () => {
               size="big"
               isMono={true}
               color="orange"
-              onClick={() => handleClick('/CarrerPage')}
+              onClick={() => handleClick('/career')}
             />
           </div>
 
@@ -62,7 +62,7 @@ export const Home = () => {
               size="big"
               isMono={true}
               color="orange"
-              onClick={() => handleClick('/ElevatorPitchPage')}
+              onClick={() => handleClick('/elevator-pitch')}
             />
           </div>
         </div>
