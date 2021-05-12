@@ -30,7 +30,7 @@ export default function EmailRegistration({ formWidth }) {
     <form
       className="email_form"
       style={{
-        width: `${formWidth}px`,
+        width: `${formWidth}%`,
       }}
     >
       <label htmlFor="email">Email address</label>

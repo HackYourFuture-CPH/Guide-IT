@@ -7,7 +7,7 @@ export default {
   component: EmailForm,
   argTypes: {
     formWidth: {
-      control: { type: 'range', min: 300, max: 1000, step: 50 },
+      control: { type: 'range', min: 30, max: 100, step: 2 },
     },
   },
 };
@@ -17,7 +17,7 @@ const EmailFormTemplate = ({ formWidth }) => {
 };
 export const EmailRegistrationForm = EmailFormTemplate.bind({});
 EmailRegistrationForm.args = {
-  formWidth: 400,
+  formWidth: 40,
 };
 
 EmailFormTemplate.propTypes = {

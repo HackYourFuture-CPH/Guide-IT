@@ -1,6 +1,9 @@
 .email_form {
+  /* width: 80%; */
   padding: 10px 5px;
   font-family: 'Roboto Mono', 'Roboto', monospace;
+
+  /* border: 2px solid black; */
 }
 
 .email_form label {
