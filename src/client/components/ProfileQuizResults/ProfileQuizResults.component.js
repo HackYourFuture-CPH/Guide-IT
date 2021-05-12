@@ -1,7 +1,6 @@
 import React from 'react';
 import background from '../../assets/images/Vector.svg';
 import Robot from '../../assets/images/robot_logo.png';
-import PropTypes from 'prop-types';
 import './ProfileQuizResults.styles.css';
 import CardProfileResultComponent from '../CardProfileResult/CardProfileResult.component';
 
@@ -35,7 +34,6 @@ function ProfileQuizResults() {
           <CardProfileResultComponent
             title="Your Professional Profile"
             results={result}
-            style={{ backgroundColor: '#e9f4f4' }}
           />
         </div>
       </div>
