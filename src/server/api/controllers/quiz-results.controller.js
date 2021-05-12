@@ -24,9 +24,12 @@ const getQuizResults = async (answerId, userId) => {
         .where('fk_answer_id', '=', answerId)
         .select('id', 'fk_answer_id', 'fk_user_id', 'created_date');
     } else if (userId !== undefined) {
+      const max = (await knex('questions').count())[0]['count(*)'];
+
       filteredResults = await knex('quiz_results')
         .where('fk_user_id', '=', userId)
-        .select('id', 'fk_answer_id', 'fk_user_id', 'created_date');
+        .orderBy('created_date', 'desc')
+        .limit(Number(max));
     } else {
       filteredResults = await knex('quiz_results').select(
         'id',
