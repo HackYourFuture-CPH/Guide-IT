@@ -110,17 +110,72 @@
   margin-bottom: -2rem;
 }
 
-@media screen and (min-height: 500px) and (min-width: 1300px) {
+@media screen and (min-height: 500px) {
   .robot-image {
-    width: 32%;
+    width: 25%;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .descriptioncareer .content,
+  .descriptioncareer .content2 {
+    font-size: 1rem;
+  }
+
+  .descriptioncareer {
+    min-height: 0;
+  }
+
+  .descriptioncareer .time {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-height: 620px) {
+  .robot-image {
+    width: 28%;
   }
 
   .home-description {
     font-size: 1.2rem;
   }
 
+  .descriptioncareer .content,
+  .descriptioncareer .content2 {
+    font-size: 1.2rem;
+  }
+
   .descriptioncareer {
     min-height: 0;
+  }
+
+  .descriptioncareer .time {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-height: 800px) and (min-width: 1300px) {
+  .robot-image {
+    width: 32%;
+  }
+
+  .home-description {
+    font-size: 1.4rem;
+  }
+
+  .descriptioncareer {
+    min-height: 0;
+  }
+
+  .descriptioncareer .content,
+  .descriptioncareer .content2 {
+    font-size: 1.5rem;
+  }
+
+  .descriptioncareer .time {
+    font-size: 21px;
   }
 }
 

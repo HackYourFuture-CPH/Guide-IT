@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/fonts/fonts.css';
 
-import { Home } from './containers/Home/Home';
+import { Home } from './containers/Home/Home.container';
 import SignIn from './containers/SignIn';
 import SignUp from './containers/SignUp';
 import ResetPassword from './containers/ResetPassword';

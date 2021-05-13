@@ -1,5 +1,5 @@
 import React from 'react';
-import Avatar from './ProfileFormComponent';
+import Avatar from './ProfileForm.component';
 import avatarImage from '../../assets/images/avatar.png';
 import PropTypes from 'prop-types';
 

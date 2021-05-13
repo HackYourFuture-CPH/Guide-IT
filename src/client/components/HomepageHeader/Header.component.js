@@ -1,6 +1,6 @@
 import React from 'react';
 import robot from '../../assets/images/robot.png';
-import './header.css';
+import './header.styles.css';
 import PropTypes from 'prop-types';
 
 function Header({ color, fontSize }) {

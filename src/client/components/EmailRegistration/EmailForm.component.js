@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './EmailForm.css';
+import './EmailForm.styles.css';
 
 export default function EmailRegistration({ formWidth }) {
   const [email, setEmail] = useState('');
