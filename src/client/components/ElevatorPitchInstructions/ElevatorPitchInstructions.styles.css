@@ -1,0 +1,107 @@
+.body-background-image {
+  background-image: url(../../assets/images/Vector.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.header h1 {
+  margin-left: 3.4em;
+  letter-spacing: 9px;
+}
+
+.page-content {
+  display: flex;
+}
+
+.sidebar {
+  border: 2px solid yellow;
+  margin: 17rem 0 0 0;
+  min-width: 5%;
+  height: 20%;
+}
+
+.side_menu_div {
+  margin-left: 0;
+  background-color: #5088a8;
+  width: 80%;
+}
+
+.main-content {
+  border: 3px solid green;
+  width: 70%;
+  margin: 5rem auto;
+}
+
+.top-text-content {
+  border: 2px solid yellow;
+  font-size: 1.6rem;
+  line-height: normal;
+  text-align: center;
+}
+
+.main-text-content-and-image {
+  display: flex;
+  border: 3px solid red;
+  margin-top: 4.5rem;
+}
+
+.left-text-content {
+  width: 61%;
+  border: 2px solid yellow;
+  margin-left: 1.2rem;
+}
+
+.right-image-content {
+  width: 39%;
+  border: 2px solid purple;
+}
+
+.left-text-content p,
+ul.elevator-pitch-list li {
+  font-size: 1.15rem;
+}
+
+ul.elevator-pitch-list li {
+  text-align: start;
+  margin-top: 0;
+  padding: 0;
+}
+
+ul.elevator-pitch-list {
+  list-style-type: none;
+  color: #298f8a;
+  padding: 0;
+}
+
+ul.elevator-pitch-list > li::before {
+  content: '- ';
+}
+
+.btn-elevator-pitch {
+  text-align: center;
+}
+
+ul.elevator-pitch-list li:first-of-type {
+  margin-top: 0;
+}
+
+.btn-elevator-pitch .buttons {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 25%;
+  margin: 0.5rem 0;
+}
+
+.top-text-content p:first-of-type {
+  margin: 0;
+
+  /* font-weight: 550; */
+}
+
+.top-text-content p:last-of-type {
+  margin: 0;
+  color: #298f8a;
+  font-weight: 600;
+}
