@@ -7,7 +7,7 @@ export default {
   component: EmailForm,
   argTypes: {
     formWidth: {
-      control: { type: 'range', min: 30, max: 100, step: 2 },
+      control: { type: 'range', min: 30, max: 100, step: 1 },
     },
   },
 };
