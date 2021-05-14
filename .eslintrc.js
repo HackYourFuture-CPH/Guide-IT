@@ -10,7 +10,7 @@ module.exports = {
     'react/prefer-stateless-function': 'warn',
     'react/prop-types': 'warn',
     'import/prefer-default-export': 'off',
-    '@typescript-eslint/camelcase': 'warn',
+
     'func-names': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     'no-restricted-globals': 'off',

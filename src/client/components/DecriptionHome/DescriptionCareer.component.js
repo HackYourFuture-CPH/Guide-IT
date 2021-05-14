@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './DescriptionCareer.css';
+import './DescriptionCareer.styles.css';
 
 function DescriptionCareer({ title, content, content2, time }) {
   return (

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './GoogleLoginButton.css';
+import React from 'react';
+import './GoogleLoginButton.styles.css';
 import GoogleLogo from '../../assets/images/Google_logo.png';
 import { useFirebase } from '../../firebase/FirebaseContext';
 import Loader from '../Loader/index';

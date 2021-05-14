@@ -1,5 +1,5 @@
 import React from 'react';
-import { Description } from './DescriptionCareer';
+import { Description } from './DescriptionCareer.component';
 import { object } from '@storybook/addon-knobs';
 
 export default { title: 'DescriptionCareer' };
