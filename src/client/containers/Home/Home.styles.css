@@ -202,3 +202,58 @@
     font-size: 24px;
   }
 }
+
+@media (max-width: 1020px) {
+  .sidebar-menu .icon-burger {
+    display: block;
+    margin-top: 30%;
+    transform: translateY(0%);
+  }
+
+  .sidebar-menu .sidebar-header {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 10%;
+    width: 220px;
+    padding-left: 20px;
+    min-height: 30%;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .sidebar-menu .sidebar-footer {
+    display: none;
+  }
+
+  .redi-logo {
+    margin-left: 60px;
+  }
+
+  #nav-toggle:checked ~ .sidebar-header {
+    display: flex;
+  }
+
+  #nav-toggle:checked ~ .sidebar-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .sidebar-menu :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+    margin-left: 7px;
+  }
+
+  .sidebar-menu :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+
+  .sidebar-menu :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}

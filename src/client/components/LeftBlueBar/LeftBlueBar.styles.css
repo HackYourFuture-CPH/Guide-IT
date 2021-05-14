@@ -77,3 +77,25 @@
   width: 100px;
   height: 100px;
 }
+
+/* burger menu styling */
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+.sidebar-menu .icon-burger {
+  display: none;
+  margin-left: 4em;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.sidebar-menu .icon-burger .line {
+  width: 3.5em;
+  height: 0.4rem;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
