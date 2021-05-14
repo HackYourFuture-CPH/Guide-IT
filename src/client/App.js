@@ -8,6 +8,7 @@ import SignUp from './containers/SignUp';
 import ResetPassword from './containers/ResetPassword';
 import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
 import { useAuthentication } from './hooks/useAuthentication';
+import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
 
 import Profile from './containers/Profile';
 import Loader from './components/Loader';
@@ -24,6 +25,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route exact path="/register">
+          <RegistrationPage />
         </Route>
 
         {/* Anonymous pages */}
