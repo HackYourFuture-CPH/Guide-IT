@@ -4,10 +4,9 @@
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/roboto-v27-latin-regular.eot'); /* IE9 Compat Modes */
-  src:
-    local(''),
+  src: local(''),
     url('../fonts/roboto-v27-latin-regular.eot?#iefix')
-    format('embedded-opentype'),
+      format('embedded-opentype'),
     url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'),
     url('../fonts/roboto-v27-latin-regular.woff') format('woff'),
     url('../fonts/roboto-v27-latin-regular.ttf') format('truetype'),
@@ -20,10 +19,9 @@
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/roboto-mono-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src:
-    local(''),
+  src: local(''),
     url('../fonts/roboto-mono-v13-latin-regular.eot?#iefix')
-    format('embedded-opentype'),
+      format('embedded-opentype'),
     url('../fonts/roboto-mono-v13-latin-regular.woff2') format('woff2'),
     url('../fonts/roboto-mono-v13-latin-regular.woff') format('woff'),
     url('../fonts/roboto-mono-v13-latin-regular.ttf') format('truetype'),
@@ -36,10 +34,9 @@
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/chakra-petch-v4-latin-regular.eot'); /* IE9 Compat Modes */
-  src:
-    local(''),
+  src: local(''),
     url('../fonts/chakra-petch-v4-latin-regular.eot?#iefix')
-    format('embedded-opentype'),
+      format('embedded-opentype'),
     url('../fonts/chakra-petch-v4-latin-regular.woff2') format('woff2'),
     url('../fonts/chakra-petch-v4-latin-regular.woff') format('woff'),
     url('../fonts/chakra-petch-v4-latin-regular.ttf') format('truetype'),
@@ -52,16 +49,15 @@
   font-style: normal;
   font-weight: 400;
   src: url('../fonts/wellfleet-v10-latin-regular.eot'); /* IE9 Compat Modes */
-  src:
-    local(''),
+  src: local(''),
     url('../fonts/wellfleet-v10-latin-regular.eot?#iefix')
-    format('embedded-opentype'),
-     url('../fonts/wellfleet-v10-latin-regular.woff2')
-      format(    '),
-     url('../fonts/wellfleet-v10-latin-regular.woff')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../fonts/wellfleet-v10-latin-regular.woff2')
+      format('woff2'),
+    /* Super Modern Browsers */ url('../fonts/wellfleet-v10-latin-regular.woff')
       format('woff'),
-     url('../fonts    leet-v10-latin-regular.ttf')
+    /* Modern Browsers */ url('../fonts/wellfleet-v10-latin-regular.ttf')
       format('truetype'),
-    
-      url('../fonts/wellfleet-    tin-regular.svg#Wellfleet') format('svg')    ; /* Legacy iOS */
+    /* Safari, Android, iOS */
+      url('../fonts/wellfleet-v10-latin-regular.svg#Wellfleet') format('svg'); /* Legacy iOS */
 }
