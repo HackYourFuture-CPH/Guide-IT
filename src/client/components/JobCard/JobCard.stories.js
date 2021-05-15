@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import JobCard from './JobCard';
+import JobCard from './JobCard.component';
 
 export default {
   title: 'Components /Job Card',

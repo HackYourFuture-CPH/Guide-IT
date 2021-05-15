@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './SampleComponent.styles.css';
+import './Sample.styles.css';
 
 export default function SampleComponent({ title, onClick, children }) {
   return (

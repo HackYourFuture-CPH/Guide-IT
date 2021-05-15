@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './EmailForm.css';
+import './EmailForm.styles.css';
 
 export default function EmailRegistration({ formWidth }) {
   const [email, setEmail] = useState('');
@@ -30,7 +30,7 @@ export default function EmailRegistration({ formWidth }) {
     <form
       className="email_form"
       style={{
-        width: `${formWidth}px`,
+        width: `${formWidth}%`,
       }}
     >
       <label htmlFor="email">Email address</label>

@@ -1,7 +1,7 @@
 import React from 'react';
 import robotLogo from '../../assets/images/robot_logo.png';
-import GoogleLoginButton from '../../components/Google_login_button.components/GoogleLoginButton.js';
-import EmailRegistration from '../../components/EmailRegistration/EmailForm.js';
+import GoogleLoginButton from '../../components/GoogleLoginButton/GoogleLoginButton.component.js';
+import EmailRegistration from '../../components/EmailRegistration/EmailForm.component.js';
 import vector from '../../assets/images/Vector.svg';
 import './RegistrationPage.styles.css';
 import arrowBack from '../../assets/images/arrow_back.png';
