@@ -2,25 +2,27 @@ import React from 'react';
 import './LeftBlueBar.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 function SidebarMenu() {
   return (
     <div className="sidebar-menu">
       <div className="sidebar-header">
         <div className="sidebar-title">GuideIT</div>
-        <div className="create-account">
-          <div>
-            <a href="/registration">Create account</a>
+        <Router>
+          <div className="create-account">
+            <div>
+              <Link to="/registration">Create account</Link>
+            </div>
+            <div className="triangle" />
           </div>
-          <div className="triangle" />
-        </div>
-
-        <div className="login">
-          <div>
-            <a href="/login">Login</a>
+          <div className="login">
+            <div>
+              <Link to="/login">Login</Link>
+            </div>
+            <div className="triangle" />
           </div>
-          <div className="triangle" />
-        </div>
+        </Router>
       </div>
       <div className="sidebar-footer">
         <img src={hyfLogo} alt="HYF-logo" className="hyf-logo" />
