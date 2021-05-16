@@ -38,7 +38,7 @@ const RegistrationPage = () => {
                 </tr>
               </table>
             </div>
-            <EmailRegistration formWidth={350} />
+            <EmailRegistration formWidth={80} />
             <div className="back-button">
               <img src={arrowBack} alt="back arrow" />
               <span>Back</span>
