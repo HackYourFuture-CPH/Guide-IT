@@ -6,7 +6,7 @@ import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResult.component.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
 import PageHeader from '../../components/PageHeader/PageHeader.component';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { quizResultGetCareer } from './quizResultGetCareer.apiRequest';
 
 export const QuizResultPage = ({ match }) => {
@@ -68,7 +68,7 @@ export const QuizResultPage = ({ match }) => {
         }}
       >
         <PageHeader />
-        {career == '' && <div>Loading...</div>}
+        {career === '' && <div>Loading...</div>}
         {career !== '' && (
           <>
             <div className="main-div">

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Robot from '../../assets/images/robot_logo.png';
 
 import './RobotLogo.styles.css';
@@ -21,10 +20,3 @@ export default function RobotLogo() {
     </div>
   );
 }
-RobotLogo.propTypes = {
-  onClick: PropTypes.func,
-};
-
-RobotLogo.defaultProps = {
-  onClick: null,
-};
