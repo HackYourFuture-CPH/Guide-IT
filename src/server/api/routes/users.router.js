@@ -74,9 +74,6 @@ router.get('/:id', (req, res, next) => {
  *        description: The user to create.
  *        schema:
  *          type: object
- *          required:
- *            - full_name
- *            - firebase_token
  *          properties:
  *           full_name:
  *              type: string
@@ -88,15 +85,11 @@ router.get('/:id', (req, res, next) => {
  *      5XX:
  *        description: Unexpected error.
  */
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   usersController
     .createUser(req.body)
     .then((result) => res.json(result))
-    .catch((error) => {
-      console.log(error);
-
-      res.status(400).send('Bad request').end();
-    });
+    .catch(next);
 });
 
 module.exports = router;
