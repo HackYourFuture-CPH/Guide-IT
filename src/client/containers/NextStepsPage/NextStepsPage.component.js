@@ -18,7 +18,7 @@ export const NextStepsPage = () => {
   const history = useHistory();
 
   function handleClick() {
-    history.push('/ElevatorPage');
+    history.push('/elevator-pitch');
   }
   return (
     <div className="main-part-next-page">
