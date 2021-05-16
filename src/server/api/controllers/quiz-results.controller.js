@@ -1,6 +1,17 @@
 const knex = require('../../config/db');
+const HttpError = require('../lib/utils/http-error');
 
-const createQuizResults = async (body) => {
+const createQuizResults = async (body, token) => {
+  const [user] = await knex('users').where('id', '=', body.fk_user_id);
+
+  if (!user) {
+    throw new HttpError('User does not exit', 400);
+  }
+
+  if (token !== user.firebase_token && user.firebase_token !== 'anonymous') {
+    throw new HttpError('Forbidden', 403);
+  }
+
   await knex('quiz_results').insert({
     fk_answer_id: body.fk_answer_id,
     fk_user_id: body.fk_user_id,
