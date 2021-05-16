@@ -1,11 +1,11 @@
-.main_part_nextPage {
+.main-part-next-page {
   background-image: url(../../assets/images/Vector.svg);
   width: 100vw;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
 }
 
-.sidemenu_nextpage {
+.sidemenu-nextpage {
   top: 40%;
   position: absolute;
   z-index: 6;
@@ -16,7 +16,7 @@
   margin-left: 0%;
 }
 
-.orange_box {
+.orange-box {
   background: rgba(219, 100, 61, 0.6);
   margin-left: 100px;
   margin-top: 30px;
@@ -30,7 +30,7 @@
   z-index: 2;
 }
 
-.white_box {
+.white-box {
   background-color: #e5e5e5;
   margin-top: 30px;
   padding-left: 30px;
@@ -44,7 +44,7 @@
   z-index: 3;
 }
 
-.circleImage {
+.circle-image {
   margin-left: 290px;
   margin-top: 30px;
   position: absolute;
@@ -55,29 +55,29 @@
   z-index: 4;
 }
 
-.cImage {
+.c-image {
   width: 250px;
   height: 250px;
 }
 
-.white_box h1 {
+.white-box h1 {
   text-align: center;
   color: #298f8a;
   font-size: 1.4vw;
 }
 
-.middle_part {
+.middle-part {
   display: flex;
 }
 
-.mainImages {
+.main-images {
   display: flex;
   justify-content: center;
   margin: 0;
   padding: 0;
 }
 
-.footerImages {
+.footer-images {
   display: flex;
   justify-content: center;
   padding: 0;
@@ -86,12 +86,12 @@
   list-style-type: none;
 }
 
-.footerImages li {
+.footer-images li {
   margin-right: -8px;
 }
 
-.rediImage,
-.hyfImage {
+.redi-image-next-page,
+.hyf-image-next-page {
   display: flex;
   padding: 0;
   flex-direction: column;
@@ -99,18 +99,18 @@
   text-align: center;
 }
 
-.hyfLogo {
+.hyf-logo-next-page {
   background-color: #293a7d;
 }
 
-.imageName {
+.image-name {
   font-size: 10px;
   text-align: center;
   display: block;
   width: 90px;
 }
 
-.elevator_div {
+.elevator-div {
   position: absolute;
   margin-top: 258px;
   margin-left: 40px;

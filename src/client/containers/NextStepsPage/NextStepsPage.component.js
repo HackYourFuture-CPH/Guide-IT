@@ -21,23 +21,23 @@ export const NextStepsPage = () => {
     history.push('/ElevatorPage');
   }
   return (
-    <div className="main_part_nextPage">
+    <div className="main-part-next-page">
       <div>
         <PageHeader />
       </div>
-      <div className="middle_part">
-        <div className="sidemenu_nextpage">
+      <div className="middle-part">
+        <div className="sidemenu-nextpage">
           <SideMenu />
         </div>
-        <div className="orange_box" />
-        <div className="white_box">
+        <div className="orange-box" />
+        <div className="white-box">
           <h1>YOUR NEXT STEPS</h1>
           <p>
             <strong>Suggestions for Upgrading your Knowledge :</strong>
           </p>
           <p>Checkout our schools</p>
-          <div className="mainImages">
-            <div className="rediImage">
+          <div className="main-images">
+            <div className="redi-image-next-page">
               <NavLink to="https://www.redi-school.org">
                 <img
                   src={rediLogo}
@@ -46,20 +46,20 @@ export const NextStepsPage = () => {
                   height="50px"
                 />
               </NavLink>
-              <span className="imageName">Redi School</span>
+              <span className="image-name">Redi School</span>
             </div>
             &nbsp;
-            <div className="hyfImage">
+            <div className="hyf-image-next-page">
               <NavLink to="https://www.hackyourfuture.dk">
                 <img
-                  className="hyfLogo"
+                  className="hyf-logo-next-page"
                   src={hyfLogo}
                   alt="hyf-logo"
                   width="64px"
                   height="50px"
                 />
               </NavLink>
-              <span className="imageName">HackYourFuture School</span>
+              <span className="image-name">HackYourFuture School</span>
             </div>
           </div>
           <p>
@@ -69,7 +69,7 @@ export const NextStepsPage = () => {
             </strong>
           </p>
           <nav>
-            <ul className="footerImages">
+            <ul className="footer-images">
               <NavLink to="https://www.udacity.com/blog/category/free-courses">
                 <li>
                   <img
@@ -129,12 +129,11 @@ export const NextStepsPage = () => {
           </nav>
         </div>
       </div>
-      <div className="circleImage">
-        <img className="cImage" src={roundImg} alt="round-img" />
+      <div className="circle-image">
+        <img className="c-image" src={roundImg} alt="round-img" />
       </div>
-      <div className="elevator_div">
+      <div className="elevator-div">
         <Buttons
-          className="elevator_button"
           label="Visit the Elevator"
           size="big"
           isMono={true}
