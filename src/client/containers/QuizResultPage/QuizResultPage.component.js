@@ -6,9 +6,11 @@ import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResult.component.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
 import PageHeader from '../../components/PageHeader/PageHeader.component';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { quizResultGetCareer } from './quizResultGetCareer.apiRequest';
-export const QuizResultPage = ({ userId, updateCareer }) => {
+
+export const QuizResultPage = ({ match }) => {
+  const [userId, setuserId] = useState('');
   const [career, setCareer] = useState('');
   const [professional, setProfessional] = useState([]);
   const [personal, setPersonal] = useState([]);
@@ -29,36 +31,34 @@ export const QuizResultPage = ({ userId, updateCareer }) => {
     'creative',
     'problem solver',
   ];
+
+  useEffect(() => {
+    setuserId(match.params.userId);
+  }, []);
+
+  useEffect(() => {
+    quizResultGetCareer(userId).then((userCareer) => {
+      setCareer(userCareer);
+    });
+  }, [userId]);
+
   const dataAnalystPersonal = ['extrovert', 'detail oriented', 'patient'];
   async function careerSet() {
-    const userCareer = await quizResultGetCareer(userId);
-    if (userCareer === 'UX designer') {
+    if (career === 'UX designer') {
       setPersonal([...uxPersonal]);
       setProfessional([...uxProfessional]);
-      setCareer('UX designer');
-      updateCareer('UX designer');
-    } else if (userCareer === 'Full stack developer') {
+    } else if (career === 'Full stack developer') {
       setPersonal([...fullstackPersonal]);
       setProfessional([...fullstackProfessional]);
-      setCareer('Full stack developer');
-      updateCareer('Full stack developer');
-    } else if (userCareer === 'Data analyst') {
+    } else if (career === 'Data analyst') {
       setPersonal([...dataAnalystPersonal]);
       setProfessional([...DataAnalystProfessional]);
-      setCareer('Data analyst');
-      updateCareer('Data analyst');
     }
   }
   useEffect(() => {
     careerSet();
-  }, []);
-  const history = useHistory();
-  const clickHandlerCareer = () => {
-    history.push('/career');
-  };
-  const clickHandlerSignIn = () => {
-    history.push('/login');
-  };
+  }, [career]);
+
   return (
     <>
       <div
@@ -86,7 +86,6 @@ export const QuizResultPage = ({ userId, updateCareer }) => {
                       QUIZ <br />
                       RESULTS
                     </p>
-                    {/* <RobotLogo /> */}
                   </div>
                   <div className="left-div-card">
                     <CardProfileResultComponent
@@ -96,7 +95,7 @@ export const QuizResultPage = ({ userId, updateCareer }) => {
                   </div>
                 </div>
                 <div className="left-div-register">
-                  <RegisterTeaser onClick={clickHandlerSignIn} />
+                  <RegisterTeaser />
                 </div>
               </div>
               <div className="right-div">
@@ -107,7 +106,9 @@ export const QuizResultPage = ({ userId, updateCareer }) => {
                   />
                 </div>
                 <div className="rigt-div-logo">
-                  <RobotLogo onClick={clickHandlerCareer} />
+                  <Link to={`/career/${career}`}>
+                    <RobotLogo />
+                  </Link>
                 </div>
               </div>
             </div>

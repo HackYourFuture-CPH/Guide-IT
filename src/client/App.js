@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/fonts/fonts.css';
 
-
 import { Home } from './containers/Home/Home.container';
 
 import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
@@ -34,14 +33,11 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-
         {/* Anonymous pages */}
         <Route exact path="/404-page-not-found">
           <Error404Page />
         </Route>
-        <Route exact path="/career">
-          <CareerPage />
-        </Route>
+        <Route path="/career/:jobTitle" component={CareerPage} />
         <Route exact path="/elevator-pitch">
           <ElevatorPitchPage />
         </Route>
@@ -57,9 +53,8 @@ function App() {
         <Route exact path="/quiz">
           <QuizPage />
         </Route>
-        <Route exact path="/quiz-results">
-          <QuizResultPage />
-        </Route>
+        <Route path="/quiz-results/:userId" component={QuizResultPage} />
+
         <Route exact path="/registration">
           <RegistrationPage />
         </Route>
