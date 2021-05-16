@@ -72,14 +72,12 @@ router.get('/', (req, res, next) => {
  *        description: Unexpected error.
  */
 
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
+  const token = req.header('Authorization');
   quizResultsController
-    .createQuizResults(req.body)
+    .createQuizResults(req.body, token)
     .then((result) => res.json(result))
-    .catch((error) => {
-      console.log(error);
-      res.status(400).send('Bad request').end();
-    });
+    .catch(next);
 });
 
 module.exports = router;
