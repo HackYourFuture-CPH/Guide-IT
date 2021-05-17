@@ -63,7 +63,7 @@ export default function ProfileCareerResult({ jobTitle }) {
     <div className="frame">
       <div className="profile-career-header">
         <img src={Robot} alt="robot" />
-        <div className="robo-text">
+        <div className="robot-text">
           CAREER FOR YOU <div>IS</div>{' '}
         </div>
       </div>
