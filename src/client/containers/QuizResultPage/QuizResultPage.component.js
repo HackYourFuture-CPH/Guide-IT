@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { quizResultGetCareer } from './quizResultGetCareer.apiRequest';
 
 export const QuizResultPage = ({ match }) => {
-  const [userId, setuserId] = useState('');
+  const [userId, setUserId] = useState('');
   const [career, setCareer] = useState('');
   const [professional, setProfessional] = useState([]);
   const [personal, setPersonal] = useState([]);
