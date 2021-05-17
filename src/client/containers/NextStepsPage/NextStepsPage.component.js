@@ -41,12 +41,12 @@ export const NextStepsPage = () => {
               <NavLink to="https://www.redi-school.org">
                 <img
                   src={rediLogo}
-                  alt="Redischool"
+                  alt="ReDI School"
                   width="50px"
                   height="50px"
                 />
               </NavLink>
-              <span className="image-name">Redi School</span>
+              <span className="image-name">ReDI School</span>
             </div>
             &nbsp;
             <div className="hyf-image-next-page">
@@ -54,7 +54,7 @@ export const NextStepsPage = () => {
                 <img
                   className="hyf-logo-next-page"
                   src={hyfLogo}
-                  alt="HackYourFuture"
+                  alt="HackYourFuture Copenhagen"
                   width="64px"
                   height="50px"
                 />
@@ -94,7 +94,7 @@ export const NextStepsPage = () => {
                 <li>
                   <img
                     src={linkedinImg}
-                    alt="Linkedin"
+                    alt="LinkedIn"
                     width="165px"
                     height="25px"
                   />
