@@ -19,7 +19,7 @@ export const QuizResultPage = ({ match }) => {
   const fullstackProfessional = [
     'good with debugging',
     'knows fundamental database concepts',
-    'work well under pressure',
+    'works well under pressure',
   ];
   const fullstackPersonal = [
     'problem solver',
