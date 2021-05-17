@@ -1,6 +1,6 @@
 async function getAnswer(id) {
   const response = await fetch(`/api/answers/${id}`);
-  const answer = await respons.json();
+  const answer = await response.json();
   return answer;
 }
 async function careerSet(userId) {
