@@ -1,6 +1,5 @@
 import React from 'react';
 import Robot from '../../assets/images/robot_logo.png';
-import background from '../../assets/images/Vector.svg';
 import './ProfileCareerResult.styles.css';
 import PropTypes from 'prop-types';
 
@@ -60,29 +59,20 @@ export default function ProfileCareerResult({ jobTitle }) {
     [chosenJobDetail] = jobDetailsArray;
   }
 
-  const words = chosenJobDetail.title.split(' ');
-
   return (
-    <div
-      className="frame"
-      style={{ backgroundImage: `url(${background})`, width: '50%' }}
-    >
-      <div className="profile_career_header">
+    <div className="frame">
+      <div className="profile-career-header">
         <img src={Robot} alt="robot" />
-        <div className="robo_text">
+        <div className="robo-text">
           CAREER FOR YOU <div>IS</div>{' '}
         </div>
       </div>
 
-      <div className="profile_career_body">
-        <div className="profile_career_title">
-          {' '}
-          {`${words[0]} ${words[1]}`}
-          <p className="third_word">{words[2]}</p>
-        </div>
-        <div className=".profile_career_details">
+      <div className="profile-career-body">
+        <div className="profile-career-title">{chosenJobDetail.title}</div>
+        <div className=".profile-career-details">
           {chosenJobDetail.contents.map((content) => (
-            <p>
+            <p key={content.contentHead}>
               <strong>{content.contentHead}</strong>
               <span>{content.content}</span>
             </p>
