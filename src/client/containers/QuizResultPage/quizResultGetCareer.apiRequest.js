@@ -23,8 +23,10 @@ async function careerSet(userId) {
     career = 'UX designer';
   } else if (fullstackPoints > dataAnalystPoints) {
     career = 'Full stack developer';
-  } else {
+  } else if (dataAnalystPoints > 0) {
     career = 'Data analyst';
+  } else {
+    career = 'Error';
   }
   return career;
 }
