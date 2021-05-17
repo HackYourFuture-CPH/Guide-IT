@@ -21,7 +21,7 @@ function ProfileQuizResults() {
     <div style={{ backgroundImage: `url(${background})`, width: '100%' }}>
       <div className="quiz_results_header">
         <img src={Robot} alt="robot" />
-        <span className="robo_text">QUIZ RESULTS</span>
+        <span className="robot_text">QUIZ RESULTS</span>
       </div>
       <div className="results_container">
         <div className="personal_profile">
