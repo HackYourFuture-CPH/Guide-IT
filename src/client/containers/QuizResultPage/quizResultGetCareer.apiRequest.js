@@ -1,5 +1,5 @@
 async function getAnswer(id) {
-  const respons = await fetch(`/api/answers/${id}`);
+  const response = await fetch(`/api/answers/${id}`);
   const answer = await respons.json();
   return answer;
 }
