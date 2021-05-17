@@ -46,7 +46,7 @@ export function FirebaseProvider({ children, initialAuth }) {
       signInGoogle: () => signInGoogle(),
       signOutGoogle: () => signOutGoogle(),
     }),
-    [auth],
+    [],
   );
 
   return (
