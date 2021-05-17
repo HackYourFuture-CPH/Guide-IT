@@ -7,10 +7,9 @@ import { useHistory } from 'react-router-dom';
 
 const GoogleLoginButton = () => {
   const [isLoading, setIsLoading] = useState(false);
-  // const [userName, setUserName] = useState('');
   const history = useHistory();
 
-  const { signInGoogle, googleSignOut } = useFirebase();
+  const { signInGoogle } = useFirebase();
 
   const onClick = async () => {
     setIsLoading(true);
@@ -27,7 +26,7 @@ const GoogleLoginButton = () => {
       const user = users.find((userInfo) => {
         return userInfo.firebase_token === firebase_token;
       });
-      console.log(users, user);
+
       if (user === undefined) {
         await fetch('/api/users', {
           method: 'POST',
@@ -41,14 +40,8 @@ const GoogleLoginButton = () => {
         });
       }
       setIsLoading(false);
-      // history.push('/');
+      history.push(`profile/${firebase_token}`);
     }
-  };
-  const google = () => {
-    setUserName('');
-    const abc = googleSignOut();
-
-    console.log('sign out button', abc);
   };
 
   if (isLoading) {
@@ -59,9 +52,6 @@ const GoogleLoginButton = () => {
       <button className="google_login_button" type="submit" onClick={onClick}>
         <img className="google_logo_img" alt="Google logo" src={GoogleLogo} />
         <span>Sign up with Google</span>
-      </button>
-      <button type="button" onClick={google}>
-        Sign out
       </button>
     </>
   );

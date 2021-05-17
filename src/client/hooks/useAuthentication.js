@@ -5,8 +5,7 @@ import { useFirebase } from '../firebase/FirebaseContext';
 function authRedirect() {
   if (
     window.location.pathname === '/sign-in' ||
-    window.location.pathname === '/' ||
-    window.location.pathname === '/register'
+    window.location.pathname === '/'
   ) {
     window.location.href = '/profile';
   }
@@ -34,10 +33,6 @@ export function useAuthentication() {
       if (user) {
         setIsAuthenticated(true);
         setIsLoading(false);
-
-        // const uid = user.uid;
-        console.log(uid);
-
         authRedirect();
       } else {
         setIsAuthenticated(false);

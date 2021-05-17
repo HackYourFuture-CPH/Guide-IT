@@ -17,6 +17,6 @@ export async function signInGoogle() {
   }
 }
 
-export function googleSignOut() {
+export function signOutGoogle() {
   firebase.auth().signOut();
 }

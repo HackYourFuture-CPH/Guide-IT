@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 
 import { resetPassword, signIn, signOut, signUp } from './auth';
-import { signInGoogle, googleSignOut } from './GoogleAuth';
+import { signInGoogle, signOutGoogle } from './GoogleAuth';
 import { initFirebase } from './configure';
 
 const FirebaseContext = createContext();
@@ -44,9 +44,9 @@ export function FirebaseProvider({ children, initialAuth }) {
       signOut: () => signOut(auth),
       resetPassword: (data) => resetPassword(auth, data),
       signInGoogle: () => signInGoogle(),
-      googleSignOut: () => googleSignOut(),
+      signOutGoogle: () => signOutGoogle(),
     }),
-    [],
+    [auth],
   );
 
   return (

@@ -77,3 +77,11 @@
   width: 100px;
   height: 100px;
 }
+
+.user-name {
+  color: white;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 5px auto;
+  padding-left: 20px;
+}

@@ -2,12 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/fonts/fonts.css';
 
-
 import { Home } from './containers/Home/Home.container';
 
 import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
 import { useAuthentication } from './hooks/useAuthentication';
-import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
 
 import Profile from './containers/Profile';
 import Loader from './components/Loader';
@@ -33,6 +31,9 @@ function App() {
       <Switch>
         {/* Home page */}
         <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/profile/:firebase_id">
           <Home />
         </Route>
         <Route exact path="/register">
