@@ -1,4 +1,4 @@
-function handleAuthErrors({ code, message }) {
+export function handleAuthErrors({ code, message }) {
   switch (code) {
     case FIREBASE_ERROR_CODES.WRONG_PASSWORD:
       return alert('Wrong password.');

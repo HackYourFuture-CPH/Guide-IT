@@ -35,7 +35,7 @@ export function useAuthentication() {
         setIsAuthenticated(true);
         setIsLoading(false);
 
-        const uid = user.uid;
+        // const uid = user.uid;
         console.log(uid);
 
         authRedirect();
