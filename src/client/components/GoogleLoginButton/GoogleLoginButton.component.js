@@ -26,6 +26,7 @@ const GoogleLoginButton = () => {
       const user = users.find((userInfo) => {
         return userInfo.firebase_token === firebase_token;
       });
+      //  if the user is not signed up before, adding the user to database.
 
       if (user === undefined) {
         await fetch('/api/users', {
