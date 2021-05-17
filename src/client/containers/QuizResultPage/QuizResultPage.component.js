@@ -33,7 +33,7 @@ export const QuizResultPage = ({ match }) => {
   ];
 
   useEffect(() => {
-    setuserId(match.params.userId);
+    setUserId(match.params.userId);
   }, []);
 
   useEffect(() => {
