@@ -41,7 +41,7 @@ export const NextStepsPage = () => {
               <NavLink to="https://www.redi-school.org">
                 <img
                   src={rediLogo}
-                  alt="redi-logo"
+                  alt="Redischool"
                   width="50px"
                   height="50px"
                 />
@@ -54,7 +54,7 @@ export const NextStepsPage = () => {
                 <img
                   className="hyf-logo-next-page"
                   src={hyfLogo}
-                  alt="hyf-logo"
+                  alt="HackYourFuture"
                   width="64px"
                   height="50px"
                 />
@@ -74,7 +74,7 @@ export const NextStepsPage = () => {
                 <li>
                   <img
                     src={udacityImg}
-                    alt="udacity-img"
+                    alt="Udacity"
                     width="75px"
                     height="50px"
                   />
@@ -84,7 +84,7 @@ export const NextStepsPage = () => {
                 <li>
                   <img
                     src={courseraImg}
-                    alt="coursera-img"
+                    alt="Coursera"
                     width="50px"
                     height="50px"
                   />
@@ -94,7 +94,7 @@ export const NextStepsPage = () => {
                 <li>
                   <img
                     src={linkedinImg}
-                    alt="linkedin-img"
+                    alt="Linkedin"
                     width="165px"
                     height="25px"
                   />
@@ -102,27 +102,22 @@ export const NextStepsPage = () => {
               </NavLink>
               <NavLink to="https://www.lynda.com">
                 <li>
+                  <img src={lyndaImg} alt="Lynda" width="50px" height="50px" />
+                </li>
+              </NavLink>
+              <NavLink to="https://careerfoundry.com">
+                <li>
                   <img
-                    src={lyndaImg}
-                    alt="lynda-img"
+                    src={cfImg}
+                    alt="Career Foundry"
                     width="50px"
                     height="50px"
                   />
                 </li>
               </NavLink>
-              <NavLink to="https://careerfoundry.com">
-                <li>
-                  <img src={cfImg} alt="cf-img" width="50px" height="50px" />
-                </li>
-              </NavLink>
               <NavLink to="https://www.udemy.com">
                 <li>
-                  <img
-                    src={udemyImg}
-                    alt="udemy-img"
-                    width="111px"
-                    height="44px"
-                  />
+                  <img src={udemyImg} alt="Udemy" width="111px" height="44px" />
                 </li>
               </NavLink>
             </ul>
@@ -130,7 +125,7 @@ export const NextStepsPage = () => {
         </div>
       </div>
       <div className="circle-image">
-        <img className="c-image" src={roundImg} alt="round-img" />
+        <img className="c-image" src={roundImg} alt="Guide IT" />
       </div>
       <div className="elevator-div">
         <Buttons
