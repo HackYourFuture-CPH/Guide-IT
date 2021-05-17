@@ -4,7 +4,7 @@
   padding: 3%;
 }
 
-.robo_text {
+.robot_text {
   margin: auto 2%;
   font-size: 1.3em;
 }
@@ -14,21 +14,23 @@
   padding: 1%;
   display: flex;
   flex-direction: row;
-  background-color: #e9f4f4;
 }
 
 .personal_profile {
   flex: 0 0 50%;
+  background-color: #e9f4f4;
 }
 
 .professional_profile {
   flex: 0 0 50%;
+  background-color: #e9f4f4;
 }
 
 .card-profile-result-title {
-  font-size: 3.5em;
+  font-size: 3em;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
 }
 
 .card-profile-result-list-items {
@@ -38,4 +40,15 @@
 
 .card-profile-result-list-items li {
   text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-profile-result-title {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+
+  .card-profile-result-list-items {
+    font-size: 1em;
+  }
 }
