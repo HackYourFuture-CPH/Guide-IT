@@ -1,6 +1,6 @@
 async function getAnswer(id) {
-  const response = await fetch(`/api/answers/${id}`);
-  const answer = await response.json();
+  const responseFromAnswers = await fetch(`/api/answers/${id}`);
+  const answer = await responseFromAnswers.json();
   return answer;
 }
 async function careerSet(userId) {
@@ -9,8 +9,10 @@ async function careerSet(userId) {
   let dataAnalystPoints = 0;
   let career;
 
-  const response = await fetch(`/api/quiz-results?userId=${userId}`);
-  const results = await response.json();
+  const responseFromQuizRequest = await fetch(
+    `/api/quiz-results?userId=${userId}`,
+  );
+  const results = await responseFromQuizRequest.json();
   for (let i = 0; i < results.length; i++) {
     const answer = await getAnswer(results[i]['fk_answer_id']);
     uxPoints += Number(answer.ux_points);
