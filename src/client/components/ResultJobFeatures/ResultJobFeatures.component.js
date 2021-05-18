@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // import the 2 needed logos
 import hyfLogo from '../../assets/images/hyf-logo.png';
-import rediLogo from '../../assets/images/redi-logo.png';
+import rediLogo from '../../assets/images/REDI-logo.png';
 
 // Information of each job branch stored in this array
 const array = [
