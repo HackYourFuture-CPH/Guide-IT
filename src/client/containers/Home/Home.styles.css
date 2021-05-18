@@ -204,20 +204,21 @@
 }
 
 @media (max-width: 1020px) {
-  .sidebar-menu .icon-burger {
+  .burger-menu .icon-burger {
     display: block;
-    margin-top: 30%;
+    margin-top: 50%;
+    padding-top: 1%;
     transform: translateY(0%);
   }
 
-  .sidebar-menu .sidebar-header {
+  .burger-menu .sidebar-menu {
     display: none;
     position: fixed;
     z-index: 1;
     left: 0;
     right: 0;
-    top: 10%;
-    width: 220px;
+    top: 0;
+    width: 250px;
     padding-left: 20px;
     min-height: 30%;
     flex-direction: column;
@@ -226,34 +227,38 @@
     transition: all 0.5s ease-in-out;
   }
 
-  .sidebar-menu .sidebar-footer {
+  .burger-menu .sidebar-footer {
     display: none;
   }
 
-  .redi-logo {
-    margin-left: 60px;
+  .burger-menu .sidebar-title {
+    display: none;
   }
 
-  #nav-toggle:checked ~ .sidebar-header {
+  #nav-toggle:checked ~ .sidebar-menu {
     display: flex;
   }
 
-  #nav-toggle:checked ~ .sidebar-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .burger-menu :checked ~ .icon-burger {
+    margin-top: 3%;
+    position: absolute;
+    z-index: 1;
   }
 
-  .sidebar-menu :checked ~ .icon-burger .line:nth-child(1) {
+  .create-account {
+    margin-top: 40%;
+  }
+
+  .burger-menu :checked ~ .icon-burger .line:nth-child(1) {
     transform: translateY(10px) rotate(225deg);
-    margin-left: 7px;
+    margin-left: 6px;
   }
 
-  .sidebar-menu :checked ~ .icon-burger .line:nth-child(3) {
+  .burger-menu :checked ~ .icon-burger .line:nth-child(3) {
     transform: translateY(-10px) rotate(-225deg);
   }
 
-  .sidebar-menu :checked ~ .icon-burger .line:nth-child(2) {
+  .burger-menu :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
   }
 }

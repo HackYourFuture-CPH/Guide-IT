@@ -84,17 +84,18 @@
   top: -100px;
 }
 
-.sidebar-menu .icon-burger {
+.burger-menu .icon-burger {
   display: none;
   margin-left: 4em;
   cursor: pointer;
+  padding-top: 25%;
   transform: translateY(-50%);
 }
 
-.sidebar-menu .icon-burger .line {
-  width: 3.5em;
-  height: 0.4rem;
-  background-color: #fff;
+.burger-menu .icon-burger .line {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: black;
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
