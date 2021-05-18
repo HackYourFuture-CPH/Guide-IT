@@ -23,7 +23,7 @@ const Avatar = ({
     >
       <div className="avatar-image">
         <figure>
-          <img src={userImage} alt="avatar image" />
+          <img src={userImage} alt="avatarimage" />
           <figcaption>{userName}</figcaption>
         </figure>
       </div>
