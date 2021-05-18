@@ -73,14 +73,14 @@ export const QuizPage = () => {
   return (
     <div>
       <div className="main">
-        <div className="header_page">
+        <div className="header-page">
           <PageHeader />
         </div>
-        <div className="middle_page">
-          <div className="sidemenu_page">
+        <div className="middle-page">
+          <div className="sidemenu-page">
             <SideMenu highLightItem={3} />
           </div>
-          <div className="question_page">
+          <div className="question-page">
             <QuestionComponent
               imageSrc={QuizQuestions[currentOn].image}
               question={QuizQuestions[currentOn].question}
@@ -96,9 +96,9 @@ export const QuizPage = () => {
             </div>
           </div>
         </div>
-        <div className="button_page">
+        <div className="button-page">
           {currentOn !== 0 && currentOn !== QuizQuestions.length - 1 && (
-            <span className="back_button">
+            <span className="back-button">
               <Buttons
                 label="Back"
                 color="grey"
@@ -109,7 +109,7 @@ export const QuizPage = () => {
             </span>
           )}
           {currentOn !== QuizQuestions.length - 1 ? (
-            <span className="next_button">
+            <span className="next-button">
               <Buttons
                 label="Next"
                 size="big"
@@ -128,7 +128,7 @@ export const QuizPage = () => {
             </span>
           )}
         </div>
-        <div className="progressbar_page">
+        <div className="progressbar-page">
           <ProgressBar
             level={QuizQuestions[currentOn].level}
             backgroundColor="white"
