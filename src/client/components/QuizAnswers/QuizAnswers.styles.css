@@ -24,12 +24,12 @@
   margin: 0.3em;
 }
 
-.radio_label {
+.radio-label {
   line-height: 1;
 }
 
 /* We hide actual radio button, so we can create custom button */
-.radio_input input {
+.radio-input input {
   display: flex;
   opacity: 0;
   width: 0;
@@ -37,12 +37,12 @@
 }
 
 /* Neutral button doesn`t have label, so it needs extra margin to be centered */
-.margin_left {
+.margin-left {
   margin-left: 0.6em;
 }
 
 /* Custom radio button styles */
-input + .radio_control::before {
+input + .radio-control::before {
   content: '';
   width: 0.5em;
   height: 0.5em;
@@ -52,11 +52,11 @@ input + .radio_control::before {
   transform: scale(0);
 }
 
-input:checked + .radio_control::before {
+input:checked + .radio-control::before {
   transform: scale(1);
 }
 
-.radio_control {
+.radio-control {
   display: inline;
   width: 1em;
   height: 1em;
@@ -65,7 +65,7 @@ input:checked + .radio_control::before {
   transform: translateY(-0.05em);
 }
 
-.radio_before .radio_control {
+.radio-before .radio-control {
   display: grid;
   place-items: center;
 }
