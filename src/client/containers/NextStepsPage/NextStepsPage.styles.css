@@ -5,13 +5,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.sidemenu-nextpage {
+.side-menu-next-page {
   top: 40%;
   position: absolute;
   z-index: 6;
 }
 
-.side_menu_div {
+.side-menu-div {
   background-color: #5088a8;
   margin-left: 0%;
 }

@@ -14,14 +14,14 @@ const Avatar = ({
 }) => {
   return (
     <div
-      className="form-With-Avatar"
+      className="form-with-avatar"
       style={{
         color: `${color}`,
         width: `${width}px`,
         fontFamily: `${fontFamily}`,
       }}
     >
-      <div className="avatar-Image">
+      <div className="avatar-image">
         <figure>
           <img src={userImage} alt="avatarimage" />
           <figcaption>{userName}</figcaption>
@@ -29,7 +29,7 @@ const Avatar = ({
       </div>
       <div className="container">
         <form>
-          <div className="form-Group">
+          <div className="form-group">
             <label htmlFor="email">Email address</label>
             <input
               type="email"
@@ -38,7 +38,7 @@ const Avatar = ({
               onChange={(e) => onChange(e.target.value)}
             />
           </div>
-          <div className="form-Group">
+          <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
               type="password"
@@ -47,9 +47,9 @@ const Avatar = ({
               onChange={(e) => onChange(e.target.value)}
             />
           </div>
-          <div className="edit-Link">
+          <div className="edit-link">
             <a
-              href="#dummy-Component"
+              href="#dummy-component"
               style={{
                 color: `${color}`,
               }}
@@ -59,7 +59,7 @@ const Avatar = ({
           </div>
         </form>
       </div>
-      <div id="dummy-Component" />
+      <div id="dummy-component" />
     </div>
   );
 };

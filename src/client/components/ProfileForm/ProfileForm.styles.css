@@ -1,4 +1,4 @@
-.avatar-Image img {
+.avatar-image img {
   padding: 3% 20%;
   display: flex;
   margin: 10% auto;
@@ -13,7 +13,7 @@ figcaption {
   font-size: 1.5em;
 }
 
-.form-With-Avatar {
+.form-with-avatar {
   height: 100%;
   display: flex;
   margin: auto;
@@ -24,17 +24,17 @@ figcaption {
   font-size: 0.9em;
 }
 
-.form-Group {
+.form-group {
   width: 90%;
   margin-top: 5%;
   margin-left: 5%;
 }
 
-.form-Group label {
+.form-group label {
   display: block;
 }
 
-.form-Group input {
+.form-group input {
   width: 100%;
   padding: 15px;
   margin-top: 3%;
@@ -43,26 +43,26 @@ figcaption {
   padding-left: 12%;
 }
 
-.form-Group input[type='password'] {
+.form-group input[type='password'] {
   background-image: url('../../assets/images/lock.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
 }
 
-.form-Group input[type='email'] {
+.form-group input[type='email'] {
   background-image: url('../../assets/images/envelope.png');
   background-position: 10px 10px;
   background-repeat: no-repeat;
 }
 
-.container .edit-Link {
+.container .edit-link {
   margin-top: 40%;
   text-align: center;
   padding-bottom: 10%;
   align-items: center;
 }
 
-.container .edit-Link a {
+.container .edit-link a {
   text-decoration: none;
   font-size: 1.5em;
 }

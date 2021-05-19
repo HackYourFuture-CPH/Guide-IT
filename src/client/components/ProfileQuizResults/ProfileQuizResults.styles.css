@@ -1,27 +1,27 @@
-.quiz_results_header {
+.quiz-results-header {
   display: flex;
   flex-direction: row;
   padding: 3%;
 }
 
-.robot_text {
+.robot-text {
   margin: auto 2%;
   font-size: 1.3em;
 }
 
-.results_container {
+.results-container {
   margin: 1%;
   padding: 1%;
   display: flex;
   flex-direction: row;
 }
 
-.personal_profile {
+.personal-profile {
   flex: 0 0 50%;
   background-color: #e9f4f4;
 }
 
-.professional_profile {
+.professional-profile {
   flex: 0 0 50%;
   background-color: #e9f4f4;
 }

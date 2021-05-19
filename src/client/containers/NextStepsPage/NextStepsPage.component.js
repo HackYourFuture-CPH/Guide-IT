@@ -26,7 +26,7 @@ export const NextStepsPage = () => {
         <PageHeader />
       </div>
       <div className="middle-part">
-        <div className="sidemenu-nextpage">
+        <div className="side-menu-next-page">
           <SideMenu />
         </div>
         <div className="orange-box" />

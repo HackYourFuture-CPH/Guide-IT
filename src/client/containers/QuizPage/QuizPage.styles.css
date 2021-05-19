@@ -22,32 +22,32 @@
   margin-left: 3em;
 }
 
-.header_page {
+.header-page {
   padding: 0;
 }
 
-.sidemenu_page {
+.sidemenu-page {
   padding: 28% 0 0 0;
   width: 10%;
 }
 
-.question_page {
+.question-page {
   padding: 10% 0 0 0;
   width: 90%;
   display: flex;
   flex-direction: column;
 }
 
-.middle_page {
+.middle-page {
   display: flex;
 }
 
-.side_menu_div {
+.side-menu-div {
   margin-left: 0%;
   background-color: #5088a8;
 }
 
-.button_page {
+.button-page {
   width: 35%;
   margin: 5px auto;
   display: flex;
@@ -105,7 +105,7 @@
   padding: 3px 0 4px 4px;
 }
 
-.progressbar_page {
+.progressbar-page {
   margin-top: 8%;
   padding: 0;
   bottom: 0;
