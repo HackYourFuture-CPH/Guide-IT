@@ -2,30 +2,27 @@ import React, { useEffect, useState } from 'react';
 import './LeftBlueBar.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
-import { useParams } from 'react-router-dom';
 import { useFirebase } from '../../firebase/FirebaseContext';
 import Buttons from '../Buttons/Buttons.component';
 
 function SidebarMenu() {
   const [userName, setUserName] = useState('');
-  const params = useParams();
-  const { signOutGoogle } = useFirebase();
+  const { signOutGoogle, getCurrentUser } = useFirebase();
+
   useEffect(function () {
-    fetch('/api/users')
-      .then((users) => users.json())
-      .then((userInfo) => {
-        const currentUser = userInfo.find((user) => {
-          return user.firebase_token === params.firebase_id;
-        });
-        const fullName = currentUser.full_name;
-        const firstName = fullName.split(' ')[0];
-        setUserName(firstName);
-      });
+    const user = getCurrentUser();
+    if (user) {
+      const fullName = user[0].displayName;
+      const firstName = fullName.split(' ')[0];
+      setUserName(firstName);
+    }
   }, []);
 
   // sign out function
   const signOut = () => {
     signOutGoogle();
+    setUserName('');
+    history.push('/');
   };
 
   return (
@@ -54,7 +51,7 @@ function SidebarMenu() {
       </div>
       {userName ? (
         <Buttons label="Sign Out" color="black" size="big" onClick={signOut}>
-          Sign Out{' '}
+          Sign Out
         </Buttons>
       ) : (
         <div className="sidebar-footer">

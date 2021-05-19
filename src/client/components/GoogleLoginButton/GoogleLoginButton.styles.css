@@ -6,16 +6,17 @@
   background-color: #fff;
   border: 1px solid #eaf4f3;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .google_login_button span {
   font-family: 'Roboto', 'Roboto Mono', monospace;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: bolder;
 }
 
 .google_logo_img {
-  height: 1.2em;
-  width: 1rem;
+  height: 2.4em;
+  width: 2.2rem;
   margin-right: 0.5rem;
 }

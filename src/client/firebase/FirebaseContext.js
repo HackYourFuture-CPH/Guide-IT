@@ -8,7 +8,7 @@ import React, {
 } from 'react';
 
 import { resetPassword, signIn, signOut, signUp } from './auth';
-import { signInGoogle, signOutGoogle } from './GoogleAuth';
+import { signInGoogle, signOutGoogle, getCurrentUser } from './GoogleAuth';
 import { initFirebase } from './configure';
 
 const FirebaseContext = createContext();
@@ -45,10 +45,21 @@ export function FirebaseProvider({ children, initialAuth }) {
       resetPassword: (data) => resetPassword(auth, data),
       signInGoogle: () => signInGoogle(),
       signOutGoogle: () => signOutGoogle(),
+      getCurrentUser: () => getCurrentUser(),
     }),
-    [],
+    [auth],
   );
-
+  // const value = {
+  //   auth,
+  //   setAuth,
+  //   isInitialized: !!auth,
+  //   signIn: (data) => signIn(auth, data),
+  //   signUp: (data) => signUp(auth, data),
+  //   signOut: () => signOut(auth),
+  //   resetPassword: (data) => resetPassword(auth, data),
+  //   signInGoogle: () => signInGoogle(),
+  //   signOutGoogle: () => signOutGoogle(),
+  // }
   return (
     <FirebaseContext.Provider value={value}>
       {children}

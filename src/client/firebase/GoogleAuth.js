@@ -18,5 +18,23 @@ export async function signInGoogle() {
 }
 
 export function signOutGoogle() {
-  firebase.auth().signOut();
+  firebase
+    .auth()
+    .signOut()
+    .then(() => {
+      console.log('user signed out');
+    })
+    .catch((error) => {
+      handleAuthErrors(error);
+    });
+}
+export function getCurrentUser() {
+  let user = firebase.auth().currentUser;
+  if (user != null) {
+    user = user.providerData.map(function (profile) {
+      // console.log(profile)
+      return profile;
+    });
+  }
+  return user;
 }

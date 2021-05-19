@@ -10,21 +10,20 @@ const GoogleLoginButton = () => {
   const history = useHistory();
 
   const { signInGoogle } = useFirebase();
-
+  // login function for google button
   const onClick = async () => {
     setIsLoading(true);
 
     const result = await signInGoogle();
     // using the variable names same names as in the database
-    // eslint-disable-next-line
-    const full_name = result.user.displayName;
-    // eslint-disable-next-line
-    const firebase_token = result.user.uid;
+
+    const fullName = result.user.displayName;
+    const firebaseToken = result.user.uid;
     if (result) {
       const fetchUsers = await fetch('/api/users');
       const users = await fetchUsers.json();
       const user = users.find((userInfo) => {
-        return userInfo.firebase_token === firebase_token;
+        return userInfo.firebase_token === firebaseToken;
       });
       //  if the user is not signed up before, adding the user to database.
 
@@ -35,13 +34,16 @@ const GoogleLoginButton = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            full_name,
-            firebase_token,
+            // disabling camelcase eslint for data base variables
+            // eslint-disable-next-line
+            full_name: fullName,
+            // eslint-disable-next-line
+            firebase_token: firebaseToken,
           }),
         });
       }
       setIsLoading(false);
-      history.push(`profile/${firebase_token}`);
+      history.push('/profile-page');
     }
   };
 

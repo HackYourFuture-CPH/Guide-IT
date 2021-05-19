@@ -33,11 +33,8 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/profile/:firebase_id">
+        <Route exact path="/profile-page">
           <Home />
-        </Route>
-        <Route exact path="/register">
-          <RegistrationPage />
         </Route>
 
         {/* Anonymous pages */}
