@@ -29,7 +29,7 @@ export const Description = ({ exams }) => (
 );
 
 Description.propTypes = {
-  exams: PropTypes.arrayOf([PropTypes.object]),
+  exams: PropTypes.arrayOf(PropTypes.object),
 };
 
 Description.defaultProps = { exams: [] };

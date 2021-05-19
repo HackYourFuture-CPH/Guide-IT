@@ -37,7 +37,7 @@ export const Home = () => {
       </div>
       <div className="home-main">
         <div>
-          <Header color="#DB643D" fontSize="30" />
+          <Header color="#DB643D" fontSize={30} />
         </div>
         <div className="home-description">
           <HomeDescription />
