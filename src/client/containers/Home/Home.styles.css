@@ -247,6 +247,10 @@
     margin-top: 40%;
   }
 
+  .burger-menu :checked ~ .icon-burger .line {
+    background-color: white;
+  }
+
   .burger-menu :checked ~ .icon-burger .line:nth-child(1) {
     transform: translateY(10px) rotate(225deg);
     margin-left: 6px;
