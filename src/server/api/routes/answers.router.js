@@ -103,8 +103,6 @@ router.post('/', (req, res) => {
     .createNewAnswer(req.body)
     .then((result) => res.json(result))
     .catch((error) => {
-      console.log(error);
-
       res.status(400).send('Bad request').end();
     });
 });
@@ -139,7 +137,7 @@ router.delete('/:id', (req, res) => {
         res.json({ success: true });
       }
     })
-    .catch((error) => console.log(error));
+    .catch((error) => res.send(error.message));
 });
 
 module.exports = router;
