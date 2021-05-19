@@ -1,7 +1,7 @@
 import React from 'react';
 import './LeftBlueBar.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
-import rediLogo from '../../assets/images/REDI-logo.png';
+import rediLogo from '../../assets/images/redi-logo.png';
 
 function SidebarMenu() {
   return (

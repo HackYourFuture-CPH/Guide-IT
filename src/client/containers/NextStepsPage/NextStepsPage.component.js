@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from '../../components/PageHeader/PageHeader.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
-import rediLogo from '../../assets/images/REDI-logo.png';
+import rediLogo from '../../assets/images/redi-logo.png';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import udacityImg from '../../assets/images/Next_page_imgs/udacity.png';
 import courseraImg from '../../assets/images/Next_page_imgs/coursera.png';
