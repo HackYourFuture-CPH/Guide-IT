@@ -18,21 +18,12 @@ export async function signInGoogle() {
 }
 
 export function signOutGoogle() {
-  firebase
-    .auth()
-    .signOut()
-    .then(() => {
-      console.log('user signed out');
-    })
-    .catch((error) => {
-      handleAuthErrors(error);
-    });
+  firebase.auth().signOut();
 }
 export function getCurrentUser() {
   let user = firebase.auth().currentUser;
   if (user != null) {
     user = user.providerData.map(function (profile) {
-      // console.log(profile)
       return profile;
     });
   }
