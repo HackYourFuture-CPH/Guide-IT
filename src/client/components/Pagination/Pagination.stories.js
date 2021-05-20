@@ -15,11 +15,12 @@ export default {
   },
 };
 
-const Template = ({ floor }) => <Pagination num={floor} />;
+const Template = ({ floor }) => <Pagination floor={floor} />;
 
 Template.propTypes = {
-  floor: PropTypes.number.isRequired,
+  floor: PropTypes.number,
 };
+Template.defaultProps = { floor: 0 };
 export const Pagination1 = Template.bind({});
 Pagination1.args = {
   floor: 0,

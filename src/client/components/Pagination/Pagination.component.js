@@ -1,44 +1,39 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Pagination.styles.css';
 
-function Pagination({ num }) {
-  const [floor, setFloor] = useState(num);
-  const [elements, setElements] = useState();
-
+// Floor and setFloor states will be passed to us as props from the parent container
+function Pagination({ floor, setFloor }) {
+  // Floor array is an array that doesn't change or mutate and it will always has the same values, the number of floors.
   const floorArray = [0, 1, 2, 3, 4, 5];
-
-  const renderFloors = () => {
-    return floorArray.map((item) => {
-      return item === floor ? (
-        <button
-          type="button"
-          key={item}
-          className="chosen-floor"
-          onClick={() => setFloor(item)}
-        >
-          {item}
-        </button>
-      ) : (
-        <button
-          type="button"
-          key={item}
-          className="unchosen-floor"
-          onClick={() => setFloor(item)}
-        >
-          {item}
-        </button>
-      );
-    });
-  };
-
-  useEffect(() => {
-    setElements(renderFloors);
-    // eslint-disable-next-line
-  }, [floor]);
 
   return (
     <div className="pagination-box">
-      <div className="pagination-numbers">{elements}</div>
+      <div className="pagination-numbers">
+        {/* we loop through the items (floors) and for each one we check if it's the floor that we are in, ad if it is we give
+          it a className of the chosen floor and using css to give it a border and if it is not we give it a className of 
+         unchosen-floor and there will be no border to it. */}
+        {floorArray.map((item) => {
+          return item === floor ? (
+            <button
+              type="button"
+              key={item}
+              className="chosen-floor"
+              onClick={() => setFloor(item)}
+            >
+              {item}
+            </button>
+          ) : (
+            <button
+              type="button"
+              key={item}
+              className="unchosen-floor"
+              onClick={() => setFloor(item)}
+            >
+              {item}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
