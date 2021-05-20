@@ -15,70 +15,70 @@ function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
     <form>
       {isAgreementQuestion ? (
         <div className="inline">
-          <label className="radio radio_before">
-            <span className="radio_label">Disagree</span>
-            <span className="radio_input">
+          <label className="radio radio-before">
+            <span className="radio-label">Disagree</span>
+            <span className="radio-input">
               <input
                 type="radio"
                 value="disagree"
                 checked={selected === 'disagree'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control" />
+              <span className="radio-control" />
             </span>
           </label>
 
-          <label className="radio radio_before margin_left">
-            <span className="radio_input">
+          <label className="radio radio-before margin-left">
+            <span className="radio-input">
               <input
                 type="radio"
                 value="neutral"
                 checked={selected === 'neutral'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control small" />
+              <span className="radio-control small" />
             </span>
           </label>
 
-          <label className="radio radio_before">
-            <span className="radio_input">
+          <label className="radio radio-before">
+            <span className="radio-input">
               <input
                 type="radio"
                 value="agree"
                 checked={selected === 'agree'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control" />
+              <span className="radio-control" />
             </span>
-            <span className="radio_label">Agree</span>
+            <span className="radio-label">Agree</span>
           </label>
         </div>
       ) : (
         <div>
-          <label className="radio radio_before block">
-            <span className="radio_input">
+          <label className="radio radio-before block">
+            <span className="radio-input">
               <input
                 type="radio"
-                value="first_answer"
-                checked={selected === 'first_answer'}
+                value="first-answer"
+                checked={selected === 'first-answer'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control" />
+              <span className="radio-control" />
             </span>
-            <span className="radio_label">{firstAnswer}</span>
+            <span className="radio-label">{firstAnswer}</span>
           </label>
 
-          <label className="radio radio_before block">
-            <span className="radio_input">
+          <label className="radio radio-before block">
+            <span className="radio-input">
               <input
                 type="radio"
-                value="second_answer"
-                checked={selected === 'second_answer'}
+                value="second-answer"
+                checked={selected === 'second-answer'}
                 onChange={(event) => handleSelectChange(event)}
               />
-              <span className="radio_control" />
+              <span className="radio-control" />
             </span>
-            <span className="radio_label">{secondAnswer}</span>
+            <span className="radio-label">{secondAnswer}</span>
           </label>
         </div>
       )}
