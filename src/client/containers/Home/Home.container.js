@@ -52,7 +52,7 @@ export const Home = () => {
               size="big"
               isMono={true}
               color="orange"
-              onClick={() => handleClick('/career')}
+              onClick={() => handleClick('/quiz')}
             />
           </div>
 
