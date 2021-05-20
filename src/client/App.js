@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './assets/fonts/fonts.css';
 
-
 import { Home } from './containers/Home/Home.container';
 
 import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
@@ -19,6 +18,7 @@ import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchP
 import { LoginPage } from './containers/LoginPage/LoginPage.component';
 import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.component';
 import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
+import ProfileBlueBar from './components/ProfileBlueBar/ProfileBlueBar.component';
 
 function App() {
   const { isLoading } = useAuthentication();
@@ -62,6 +62,9 @@ function App() {
         </Route>
         <Route exact path="/registration">
           <RegistrationPage />
+        </Route>
+        <Route exact path="/profile-page">
+          <ProfileBlueBar />
         </Route>
 
         {/* All routes below are authenticated routes - a user must login first */}

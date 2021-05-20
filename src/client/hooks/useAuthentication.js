@@ -4,7 +4,7 @@ import { useFirebase } from '../firebase/FirebaseContext';
 
 function authRedirect() {
   if (
-    window.location.pathname === '/sign-in' ||
+    window.location.pathname === '/registration' ||
     window.location.pathname === '/'
   ) {
     window.location.href = '/profile';
@@ -19,6 +19,7 @@ export function useAuthentication() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   // default is loading
   const [isLoading, setIsLoading] = useState(true);
+
   const { auth } = useFirebase();
 
   useEffect(() => {
@@ -32,7 +33,7 @@ export function useAuthentication() {
       if (user) {
         setIsAuthenticated(true);
         setIsLoading(false);
-        authRedirect();
+        // authRedirect();
       } else {
         setIsAuthenticated(false);
         setIsLoading(false);
