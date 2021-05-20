@@ -1,7 +1,6 @@
 .sidebar-menu {
   background-color: #0b5681;
   width: 220px;
-  height: 1024px;
   padding-left: 10px;
 }
 
@@ -78,4 +77,27 @@
 .redi-logo {
   width: 100px;
   height: 100px;
+}
+
+/* burger menu styling */
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+.burger-menu .icon-burger {
+  display: none;
+  margin-left: 4em;
+  cursor: pointer;
+  padding-top: 25%;
+  transform: translateY(-50%);
+}
+
+.burger-menu .icon-burger .line {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: black;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
 }
