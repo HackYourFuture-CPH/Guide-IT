@@ -1,3 +1,4 @@
+// This is a migration for adding two new columns in questions table.
 exports.up = function (knex) {
   return knex.schema.alterTable('questions', (table) => {
     table.string('image_url');
