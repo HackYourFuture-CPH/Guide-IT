@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.increments();
     table.string('question').notNullable();
     table.string('image_url');
-    table.bool(' is_agreement_question');
+    table.bool('is_agreement_question');
     table.datetime('created_date').defaultTo(knex.fn.now()).notNullable();
   });
 };
