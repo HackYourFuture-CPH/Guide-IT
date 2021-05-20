@@ -100,7 +100,7 @@ router.get('/:id', (req, res, next) => {
  */
 router.post('/', (req, res) => {
   answersController
-    .createNewAnswer(req.body)
+    .createAnswer(req.body)
     .then((result) => res.json(result))
     .catch((error) => {
       res.status(400).send('Bad request').end();
@@ -113,9 +113,9 @@ router.post('/', (req, res) => {
  *  delete:
  *    tags:
  *    - answers
- *    summary: Delete a answer
+ *    summary: Delete an answer
  *    description:
- *      Will delete a answer with a given ID.
+ *      Will delete an answer with a given ID.
  *    produces: application/json
  *    parameters:
  *      - in: path

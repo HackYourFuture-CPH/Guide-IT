@@ -24,7 +24,7 @@ const getAnswerById = async (id) => {
 const deleteAnswer = async (answersId) => {
   return knex('answers').where({ id: answersId }).del();
 };
-const createNewAnswer = async (body) => {
+const createAnswer = async (body) => {
   await knex('answers').insert({
     answer: body.answer,
     ux_points: body.ux_points,
@@ -42,5 +42,5 @@ module.exports = {
   getAnswers,
   getAnswerById,
   deleteAnswer,
-  createNewAnswer,
+  createAnswer,
 };
