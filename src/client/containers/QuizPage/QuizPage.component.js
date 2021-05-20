@@ -6,64 +6,22 @@ import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
 import { useHistory } from 'react-router-dom';
-// import image1 from '../../assets/images/questionBackgrounds/question1background.png';
-// import image2 from '../../assets/images/questionBackgrounds/question2background.png';
-// import image3 from '../../assets/images/questionBackgrounds/question3background.png';
-// import image4 from '../../assets/images/questionBackgrounds/question4background.png';
-// import image5 from '../../assets/images/questionBackgrounds/question5background.png';
+
 import './QuizPage.styles.css';
 
-// const QuizQuestions = [
-//   {
-//     question: 'When visiting a website,what is that you are most intrested in?',
-//     image: image1,
-//     isAgreementQuestion: false,
-//     firstAnswer: 'How the website looks and how easy it is for the users',
-//     secondAnswer: 'Logic behind how the website is built',
-//     level: 20,
-//   },
-//   {
-//     question:
-//       'I can easily notice changes around me including people,culture,trends,etc.',
-//     image: image2,
-//     isAgreementQuestion: true,
-//     firstAnswer: '',
-//     secondAnswer: '',
-//     level: 40,
-//   },
-//   {
-//     question:
-//       'When I have a list of tasks to do,I prefer to multitask rather than focusing on singular tasks one at a time',
-//     image: image3,
-//     isAgreementQuestion: true,
-//     firstAnswer: '',
-//     secondAnswer: '',
-//     level: 60,
-//   },
-//   {
-//     question: 'I can easily understan what someone else is going through',
-//     image: image4,
-//     isAgreementQuestion: true,
-//     firstAnswer: '',
-//     secondAnswer: '',
-//     level: 80,
-//   },
-//   {
-//     question: 'I work well under pressure',
-//     image: image5,
-//     isAgreementQuestion: true,
-//     firstAnswer: '',
-//     secondAnswer: '',
-//     level: 100,
-//   },
-// ];
 export const QuizPage = () => {
   const [currentOn, setCurrentOn] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState(undefined);
   const [error, setError] = useState(undefined);
+  const [selectedAnswer, setSelectedAnswer] = useState('');
 
   const handleQuestions = () => {
+    fetch('/api/quiz-results', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ fk_answer_id: selectedAnswer, fk_user_id: 1 }),
+    });
     setCurrentOn((prev) => prev + 1);
   };
 
@@ -93,6 +51,8 @@ export const QuizPage = () => {
       });
   }, []);
 
+  const currentQuestion = questions && questions[currentOn];
+
   return (
     <div>
       <div className="main">
@@ -106,58 +66,71 @@ export const QuizPage = () => {
           <div className="question-page">
             {isLoading && <div>Loading...</div>}
             {error && <div>{error.message}</div>}
-            <QuestionComponent
-              imageSrc={questions[currentOn].image}
-              question={questions[currentOn].question}
-            />
-            <div>
-              <QuizAnswers
-                isAgreementQuestion={questions[currentOn].isAgreementQuestion}
-                firstAnswer={questions[currentOn].firstAnswer}
-                secondAnswer={questions[currentOn].secondAnswer}
-              />
-            </div>
+            {questions && (
+              <>
+                <QuestionComponent
+                  imageSrc={currentQuestion.image}
+                  question={currentQuestion.question}
+                />
+                <div>
+                  <QuizAnswers
+                    selectedAnswer={selectedAnswer}
+                    setSelectedAnswer={setSelectedAnswer}
+                    isAgreementQuestion={!currentQuestion.isAgreementQuestion}
+                    answers={currentQuestion.answers}
+                  />
+                </div>
+              </>
+            )}
           </div>
         </div>
-        <div className="button-page">
-          {currentOn !== 0 && currentOn !== questions.length - 1 && (
-            <span className="back-button">
-              <Buttons
-                label="Back"
-                color="grey"
-                size="big"
-                isMono={false}
-                onClick={goToPrevious}
+        {questions && (
+          <>
+            <div className="button-page">
+              {currentOn !== 0 && currentOn !== questions.length - 1 && (
+                <span className="back-button">
+                  <Buttons
+                    label="Back"
+                    color="grey"
+                    size="big"
+                    isMono={false}
+                    onClick={goToPrevious}
+                  />
+                </span>
+              )}
+              {currentOn !== questions.length - 1 ? (
+                <span className="next-button">
+                  <Buttons
+                    label="Next"
+                    size="big"
+                    isMono={false}
+                    onClick={handleQuestions}
+                  />
+                </span>
+              ) : (
+                <span className="results">
+                  <Buttons
+                    label="See My Results"
+                    size="big"
+                    isMono={false}
+                    onClick={handleClick}
+                  />
+                </span>
+              )}
+            </div>
+          </>
+        )}
+        {questions && (
+          <>
+            <div className="progressbar-page">
+              <ProgressBar
+                level={((currentOn + 1) / questions.length) * 100}
+                backgroundColor="white"
+                alphaLevel={0.5}
               />
-            </span>
-          )}
-          {currentOn !== questions.length - 1 ? (
-            <span className="next-button">
-              <Buttons
-                label="Next"
-                size="big"
-                isMono={false}
-                onClick={handleQuestions}
-              />
-            </span>
-          ) : (
-            <span className="results">
-              <Buttons
-                label="See My Results"
-                size="big"
-                isMono={false}
-                onClick={handleClick}
-              />
-            </span>
-          )}
-        </div>
-        <div className="progressbar-page">
-          <ProgressBar
-            level={(questions[currentOn] * 100) / questions.length}
-            backgroundColor="white"
-            alphaLevel={0.5}
-          />
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

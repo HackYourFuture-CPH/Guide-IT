@@ -2,99 +2,50 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './QuizAnswers.styles.css';
 
-function QuizAnswers({ isAgreementQuestion, firstAnswer, secondAnswer }) {
-  const [selected, setSelected] = useState('');
-  const handleSelectChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setSelected(value);
-  };
-
+function QuizAnswers({
+  selectedAnswer,
+  setSelectedAnswer,
+  isAgreementQuestion,
+  answers,
+}) {
   return (
     <form>
-      {isAgreementQuestion ? (
-        <div className="inline">
-          <label className="radio radio-before">
-            <span className="radio-label">Disagree</span>
-            <span className="radio-input">
-              <input
-                type="radio"
-                value="disagree"
-                checked={selected === 'disagree'}
-                onChange={(event) => handleSelectChange(event)}
-              />
-              <span className="radio-control" />
-            </span>
-          </label>
-
-          <label className="radio radio-before margin-left">
-            <span className="radio-input">
-              <input
-                type="radio"
-                value="neutral"
-                checked={selected === 'neutral'}
-                onChange={(event) => handleSelectChange(event)}
-              />
-              <span className="radio-control small" />
-            </span>
-          </label>
-
-          <label className="radio radio-before">
-            <span className="radio-input">
-              <input
-                type="radio"
-                value="agree"
-                checked={selected === 'agree'}
-                onChange={(event) => handleSelectChange(event)}
-              />
-              <span className="radio-control" />
-            </span>
-            <span className="radio-label">Agree</span>
-          </label>
-        </div>
-      ) : (
-        <div>
-          <label className="radio radio-before block">
-            <span className="radio-input">
-              <input
-                type="radio"
-                value="first-answer"
-                checked={selected === 'first-answer'}
-                onChange={(event) => handleSelectChange(event)}
-              />
-              <span className="radio-control" />
-            </span>
-            <span className="radio-label">{firstAnswer}</span>
-          </label>
-
-          <label className="radio radio-before block">
-            <span className="radio-input">
-              <input
-                type="radio"
-                value="second-answer"
-                checked={selected === 'second-answer'}
-                onChange={(event) => handleSelectChange(event)}
-              />
-              <span className="radio-control" />
-            </span>
-            <span className="radio-label">{secondAnswer}</span>
-          </label>
-        </div>
-      )}
+      <div className={isAgreementQuestion ? 'inline' : ''}>
+        {answers.map((answer, index) => {
+          const isMiddle = index !== 0 && index !== answers.length - 1;
+          return (
+            <label key={answer.id} className="radio radio-before">
+              <span className="radio-input">
+                <input
+                  type="radio"
+                  name="answer"
+                  checked={selectedAnswer === answer.id}
+                  onChange={() => setSelectedAnswer(answer.id)}
+                />
+                <span
+                  className={
+                    isAgreementQuestion && isMiddle
+                      ? 'radio-control small'
+                      : 'radio-control'
+                  }
+                />
+              </span>
+              {!(isAgreementQuestion && isMiddle) && (
+                <span className="radio-label">{answer.answer}</span>
+              )}
+            </label>
+          );
+        })}
+      </div>
     </form>
   );
 }
 
 QuizAnswers.propTypes = {
+  selectedAnswer: PropTypes.number.isRequired,
+  setSelectedAnswer: PropTypes.func.isRequired,
   isAgreementQuestion: PropTypes.bool.isRequired,
-  firstAnswer: PropTypes.string,
-  secondAnswer: PropTypes.string,
-};
-
-QuizAnswers.defaultProps = {
-  firstAnswer: '',
-  secondAnswer: '',
+  answers: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default QuizAnswers;
