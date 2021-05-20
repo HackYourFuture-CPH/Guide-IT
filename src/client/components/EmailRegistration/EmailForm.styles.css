@@ -1,31 +1,31 @@
-.email_form {
+.email-form {
   padding: 10px 5px;
   font-family: 'Roboto Mono', 'Roboto', monospace;
 }
 
-.email_form label {
+.email-form label {
   display: block;
   color: #535c75;
   margin-bottom: 7px;
 }
 
-.email_container {
+.email-container {
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
 }
 
-.email_container input {
+.email-container input {
   width: 100%;
   font-size: 14px;
   border-radius: 7px;
-  padding: 15px;
+  padding: 1.2rem;
   padding-left: 40px;
   padding-right: 30px;
 }
 
-.email_container .input-icon {
+.email-container .input-icon {
   background-image: url('../../assets/images/envelope.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -36,7 +36,7 @@
   left: 8px;
 }
 
-.warning_sign {
+.warning-sign {
   background-image: url('../../assets/images/warning-sign.png');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -47,14 +47,14 @@
   right: 4px;
 }
 
-.email_container input:focus {
+.email-container input:focus {
   outline: none;
   background-color: rgba(255, 59, 59, 0.15) !important;
   border: 2px solid #ff3b3b;
   color: black;
 }
 
-.error_message {
+.error-message {
   font-size: 12px;
   font-weight: 500;
   color: #de653f;

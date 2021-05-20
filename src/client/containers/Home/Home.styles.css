@@ -47,7 +47,7 @@
   height: 45%;
 }
 
-.descriptioncareer {
+.description-career {
   padding: 5px;
   padding-left: 20px;
   margin: 5px;
@@ -55,7 +55,7 @@
   height: 100%;
 }
 
-.innerDiv {
+.inner-div {
   margin: 0 35px;
   height: 95%;
 }
@@ -64,17 +64,17 @@
   margin: 0 0 4% 0;
 }
 
-.descriptioncareer .title {
+.description-career .title {
   font-size: 24px;
   margin: 7px 0 -18px 0;
 }
 
-.descriptioncareer .content,
-.descriptioncareer .content2 {
+.description-career .content,
+.description-career .content2 {
   font-size: 1.3rem;
 }
 
-.descriptioncareer .time {
+.description-career .time {
   font-size: 18px;
 }
 
@@ -119,16 +119,16 @@
     font-size: 1rem;
   }
 
-  .descriptioncareer .content,
-  .descriptioncareer .content2 {
+  .description-career .content,
+  .description-career .content2 {
     font-size: 1rem;
   }
 
-  .descriptioncareer {
+  .description-career {
     min-height: 0;
   }
 
-  .descriptioncareer .time {
+  .description-career .time {
     font-size: 18px;
   }
 }
@@ -142,16 +142,16 @@
     font-size: 1.2rem;
   }
 
-  .descriptioncareer .content,
-  .descriptioncareer .content2 {
+  .description-career .content,
+  .description-career .content2 {
     font-size: 1.2rem;
   }
 
-  .descriptioncareer {
+  .description-career {
     min-height: 0;
   }
 
-  .descriptioncareer .time {
+  .description-career .time {
     font-size: 20px;
   }
 }
@@ -165,16 +165,16 @@
     font-size: 1.4rem;
   }
 
-  .descriptioncareer {
+  .description-career {
     min-height: 0;
   }
 
-  .descriptioncareer .content,
-  .descriptioncareer .content2 {
+  .description-career .content,
+  .description-career .content2 {
     font-size: 1.5rem;
   }
 
-  .descriptioncareer .time {
+  .description-career .time {
     font-size: 21px;
   }
 }
@@ -188,17 +188,17 @@
     font-size: 1.8rem;
   }
 
-  .descriptioncareer .title {
+  .description-career .title {
     font-size: 30px;
     padding-top: 15px;
   }
 
-  .descriptioncareer .content,
-  .descriptioncareer .content2 {
+  .description-career .content,
+  .description-career .content2 {
     font-size: 1.5rem;
   }
 
-  .descriptioncareer .time {
+  .description-career .time {
     font-size: 24px;
   }
 }

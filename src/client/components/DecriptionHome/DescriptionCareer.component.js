@@ -4,7 +4,7 @@ import './DescriptionCareer.styles.css';
 
 function DescriptionCareer({ title, content, content2, time }) {
   return (
-    <div className="descriptioncareer">
+    <div className="description-career">
       <h3 className="title">{title}</h3>
       <h3 className="content">{content}</h3>
       <h3 className="content2">{content2}</h3>
@@ -14,7 +14,7 @@ function DescriptionCareer({ title, content, content2, time }) {
 }
 
 export const Description = ({ exams }) => (
-  <div className="innerDiv">
+  <div className="inner-div">
     {exams.map((item) => (
       <div key={item.duration}>
         <DescriptionCareer

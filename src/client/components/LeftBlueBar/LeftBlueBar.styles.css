@@ -27,6 +27,7 @@
   letter-spacing: 0.9px;
   font-size: 22px;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .create-account a {
@@ -54,6 +55,7 @@
   letter-spacing: 0.9px;
   font-size: 22px;
   font-weight: 500;
+  text-decoration: underline;
 }
 
 .login a {

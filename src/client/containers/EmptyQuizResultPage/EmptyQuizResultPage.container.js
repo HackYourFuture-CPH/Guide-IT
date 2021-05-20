@@ -16,18 +16,18 @@ export const EmptyQuizResultPage = () => {
 
   return (
     <section>
-      <div className="noresults_page">
+      <div className="noresults-page">
         <div className="sidebar">
           <SideMenu />
         </div>
-        <div className="noresults_container">
-          <h2 className="noresults_text">No results!</h2>
-          <img src={girlImg} className="girl_img" alt="girlplaying" />
-          <div className="robo_container">
+        <div className="noresults-container">
+          <h2 className="noresults-text">No results!</h2>
+          <img src={girlImg} className="girl-img" alt="girl playing" />
+          <div className="robo-container">
             <div className="sadrobo">
               <img src={sadrobot} alt="disappointed robo face" />
             </div>
-            <p className="sadrobo_text">You`ve skipped too many questions</p>
+            <p className="sadrobo-text">You`ve skipped too many questions</p>
           </div>
           <Buttons
             label="Go Home"

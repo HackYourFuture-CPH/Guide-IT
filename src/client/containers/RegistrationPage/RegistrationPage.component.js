@@ -10,14 +10,14 @@ const RegistrationPage = () => {
   return (
     <div>
       <img src={vector} className="registration-background" alt="background" />
-      <div className="registrationPage-container">
+      <div className="registration-page-container">
         <div className="registration-small-container">
           <div className="registration-page">
             <div>
               <h1 className="registration-page-title">Create New Account</h1>
               <h5 className="account">
                 Already have an account?{' '}
-                <a href="#login" className="signin-link">
+                <a href="#login" className="sign-in-link">
                   Sign In
                 </a>
               </h5>
@@ -26,7 +26,7 @@ const RegistrationPage = () => {
               <GoogleLoginButton />
             </div>
             <div className="rp-horizontal-line">
-              <table className="hrTable">
+              <table className="hr-table">
                 <tr>
                   <td>
                     <hr />
@@ -38,7 +38,7 @@ const RegistrationPage = () => {
                 </tr>
               </table>
             </div>
-            <EmailRegistration formWidth={350} />
+            <EmailRegistration formWidth={80} />
             <div className="back-button">
               <img src={arrowBack} alt="back arrow" />
               <span>Back</span>
@@ -46,7 +46,7 @@ const RegistrationPage = () => {
           </div>
           <div className="logo-div">
             <h1 className="rp-logo-name">GuideIT</h1>
-            <img src={robotLogo} className="robot_logo_img" alt="robot logo" />
+            <img src={robotLogo} className="robot-logo-img" alt="robot logo" />
           </div>
         </div>
       </div>

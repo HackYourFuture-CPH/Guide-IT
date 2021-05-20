@@ -1,36 +1,36 @@
-.descriptioncareer {
+.description-career {
   padding: 10px;
   padding-left: 20px;
   background-color: #e9f4f4;
   margin: 10px;
 }
 
-.innerDiv {
+.inner-div {
   display: grid;
   grid-template-columns: 50% 50%;
   justify-content: space-between;
 }
 
-.descriptioncareer .title {
+.description-career .title {
   color: #db643d;
   font-family: 'Roboto Mono', monospace;
   font-style: normal;
   font-size: 28px;
 }
 
-.descriptioncareer .content {
+.description-career .content {
   color: #db643d;
   font-size: 28px;
   font-family: 'Roboto Mono', monospace;
 }
 
-.descriptioncareer .content2 {
+.description-career .content2 {
   color: #535c75;
   font-size: 25px;
   font-family: 'Roboto Mono', monospace;
 }
 
-.descriptioncareer .time {
+.description-career .time {
   color: #535c75;
   font-size: 25px;
   font-family: 'Roboto Mono', monospace;

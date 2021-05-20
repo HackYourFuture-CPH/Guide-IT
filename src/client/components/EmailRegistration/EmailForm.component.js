@@ -28,13 +28,13 @@ export default function EmailRegistration({ formWidth }) {
 
   return (
     <form
-      className="email_form"
+      className="email-form"
       style={{
-        width: `${formWidth}px`,
+        width: `${formWidth}%`,
       }}
     >
       <label htmlFor="email">Email address</label>
-      <div className="email_container">
+      <div className="email-container">
         <span className="input-icon" />
         <input
           type="text"
@@ -45,9 +45,9 @@ export default function EmailRegistration({ formWidth }) {
           onChange={handleEmailInput}
           onKeyPress={handleSubmit}
         />
-        {error !== '' ? <span className="warning_sign" /> : ''}
+        {error !== '' ? <span className="warning-sign" /> : ''}
       </div>
-      <div className="error_message">{error}</div>
+      <div className="error-message">{error}</div>
     </form>
   );
 }

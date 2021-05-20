@@ -1,4 +1,4 @@
-.noresults_page {
+.noresults-page {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -21,17 +21,17 @@
   position: fixed;
 }
 
-.side_menu_div {
+.side-menu-div {
   margin-left: 0;
   width: 90%;
   background-color: #5088a8;
 }
 
-.side_menu_ul li span {
+.side-menu-ul li span {
   margin-bottom: 5px;
 }
 
-.noresults_container {
+.noresults-container {
   width: 45%;
   height: 65%;
   background-color: rgba(179, 64, 74, 0.73);
@@ -39,7 +39,7 @@
   position: relative;
 }
 
-.noresults_text {
+.noresults-text {
   position: absolute;
   min-width: 100px;
   top: 3%;
@@ -53,7 +53,7 @@
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.girl_img {
+.girl-img {
   position: absolute;
   width: 70%;
   height: 70%;
@@ -61,7 +61,7 @@
   top: 15%;
 }
 
-.robo_container {
+.robo-container {
   position: absolute;
   top: 50%;
   right: 5px;
@@ -72,7 +72,7 @@
   border-radius: 50%;
 }
 
-.robo_container .sadrobo {
+.robo-container .sadrobo {
   width: 55%;
   height: 50%;
   margin: 15px auto 2px auto;
@@ -83,7 +83,7 @@
   height: 100%;
 }
 
-.sadrobo_text {
+.sadrobo-text {
   width: 70%;
   margin: 0 auto;
   text-align: center;
@@ -94,7 +94,7 @@
   color: rgba(50, 51, 52, 0.87);
 }
 
-.noresults_container .buttons {
+.noresults-container .buttons {
   position: absolute;
   top: 85%;
   left: 50%;
