@@ -1,0 +1,49 @@
+.robot-text {
+  margin: auto 2%;
+  font-size: 1.3em;
+}
+
+.profile-career-header {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+}
+
+.profile-career-body {
+  margin: 1%;
+  padding: 1%;
+  background-color: #e9f4f4;
+  padding: 2rem;
+}
+
+.profile-career-details {
+  margin: 10% auto 12%;
+  background-color: #e9f4f4;
+  font-size: 1rem;
+}
+
+.profile-career-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 42px;
+  margin-bottom: 64px;
+  color: black;
+  line-height: 55px;
+  max-width: 400px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 16px solid rgb(230, 97, 20);
+  border-bottom: 8px solid transparent;
+  margin-left: 15px;
+}
+
+.frame {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+}

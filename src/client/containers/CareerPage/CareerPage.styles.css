@@ -1,0 +1,173 @@
+.career-page {
+  width: 100%;
+  background-image: url(../../assets/images/Vector.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.career-page::before {
+  content: '';
+  width: 54%;
+  background-color: #e9edec;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.background-added-section {
+  padding: 3%;
+}
+
+.sections {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  justify-content: space-around;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.career-div {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.bigger-robot-div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.bigger-robot-div img {
+  width: 4em;
+  margin: 1rem 0.5rem 0.5rem 1rem;
+}
+
+.bigger-robot-div p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.alternate-career-div {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  justify-content: space-around;
+  padding: 3%;
+}
+
+.smaller-robot-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0.8rem;
+}
+
+.smaller-robot-div img {
+  width: 3em;
+  margin: 1rem 0 0.5rem 1.6rem;
+}
+
+.smaller-robot-div p {
+  margin-right: 20%;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 0.1rem;
+  font-weight: bold;
+  padding: 0;
+}
+
+.options-div {
+  position: relative;
+  bottom: 2.8rem;
+  padding: 3%;
+}
+
+.single-option-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.single-option-div h2 {
+  padding: 0;
+  margin-right: -3rem;
+}
+
+.arrow-image {
+  font-size: 0.9rem;
+  position: relative;
+  top: 1.8em;
+  right: 0.4rem;
+}
+
+.buttons-result-page {
+  margin-left: 30%;
+}
+
+.buttons-result-page .buttons.grey {
+  background-color: #a09696 !important;
+}
+
+.buttons-result-page .buttons {
+  font-size: 0.9rem;
+  cursor: pointer;
+  height: 3em;
+}
+
+.buttons-result-page button:first-of-type {
+  margin-right: 10%;
+}
+
+.sections .job-features-container {
+  margin-top: 10%;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 1000px) {
+  .arrow-image {
+    left: 0.6rem;
+  }
+
+  .buttons-result-page {
+    margin-left: 30%;
+  }
+
+  .buttons-result-page button:first-of-type {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1300px) {
+  .arrow-image {
+    right: 3rem;
+  }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1500px) {
+  .sections .job-details-div {
+    width: 95%;
+    font-size: 1.5em;
+  }
+
+  .arrow-image {
+    left: 4rem;
+  }
+
+  .smaller-robot-div p {
+    margin-right: 43%;
+    font-size: 0.5rem;
+  }
+
+  .buttons-result-page {
+    margin-left: 25%;
+  }
+
+  .single-option-div {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

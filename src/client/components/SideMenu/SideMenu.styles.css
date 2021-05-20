@@ -1,0 +1,44 @@
+.side-menu-spacebetween {
+  text-align: center;
+}
+
+.side-menu-div {
+  width: 65px;
+  background-color: #298f8a;
+  margin-left: 50px;
+  padding: 0;
+  color: #fff;
+  font-size: x-small;
+  font-family: 'Chakra Petch', monospace;
+}
+
+li {
+  text-align: center;
+  margin-top: 28px;
+  padding: 0 0 5px 5px;
+  border-right: solid 5px transparent;
+}
+
+li:first-of-type {
+  margin-top: 12px;
+}
+
+.side-menu-whiteborder:hover {
+  border-right-color: white;
+}
+
+.side-menu-selected li {
+  border-right-color: white;
+}
+
+.side-menu-ul {
+  width: 100%;
+  list-style: none;
+  padding-left: 0;
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,54 @@
+.quiz-results-header {
+  display: flex;
+  flex-direction: row;
+  padding: 3%;
+}
+
+.robot-text {
+  margin: auto 2%;
+  font-size: 1.3em;
+}
+
+.results-container {
+  margin: 1%;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+}
+
+.personal-profile {
+  flex: 0 0 50%;
+  background-color: #e9f4f4;
+}
+
+.professional-profile {
+  flex: 0 0 50%;
+  background-color: #e9f4f4;
+}
+
+.card-profile-result-title {
+  font-size: 3em;
+  text-align: center;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+.card-profile-result-list-items {
+  background-color: #e9f4f4;
+  margin: auto;
+}
+
+.card-profile-result-list-items li {
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .card-profile-result-title {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+
+  .card-profile-result-list-items {
+    font-size: 1em;
+  }
+}

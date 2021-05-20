@@ -1,0 +1,266 @@
+.home-container {
+  display: flex;
+  background-image: url('../../../client/assets/images/Vector.svg');
+  overflow: hidden;
+  height: 100vh;
+}
+
+.home-description {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  height: 20%;
+}
+
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+}
+
+.home-main:nth-child(1n) {
+  width: 100%;
+}
+
+.home-button {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.home-button-right {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.home-button-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+/** Description career **/
+
+.exams-description {
+  height: 45%;
+}
+
+.description-career {
+  padding: 5px;
+  padding-left: 20px;
+  margin: 5px;
+  min-height: 330px;
+  height: 100%;
+}
+
+.inner-div {
+  margin: 0 35px;
+  height: 95%;
+}
+
+.home-description p {
+  margin: 0 0 4% 0;
+}
+
+.description-career .title {
+  font-size: 24px;
+  margin: 7px 0 -18px 0;
+}
+
+.description-career .content,
+.description-career .content2 {
+  font-size: 1.3rem;
+}
+
+.description-career .time {
+  font-size: 18px;
+}
+
+/** Sidebar Menu component */
+
+.sidebar-menu {
+  overflow: hidden;
+  max-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-side {
+  height: 100vh;
+}
+
+.sidebar-footer {
+  padding-top: 0;
+}
+
+/* homepage header */
+
+.homepage-header {
+  margin-top: 1.5rem;
+}
+
+.robot-image {
+  width: 35%;
+  padding: 0;
+  margin: -0.7rem 0;
+  margin-bottom: -2rem;
+}
+
+@media screen and (min-height: 500px) {
+  .robot-image {
+    width: 25%;
+  }
+
+  .home-description {
+    font-size: 1rem;
+  }
+
+  .description-career .content,
+  .description-career .content2 {
+    font-size: 1rem;
+  }
+
+  .description-career {
+    min-height: 0;
+  }
+
+  .description-career .time {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-height: 620px) {
+  .robot-image {
+    width: 28%;
+  }
+
+  .home-description {
+    font-size: 1.2rem;
+  }
+
+  .description-career .content,
+  .description-career .content2 {
+    font-size: 1.2rem;
+  }
+
+  .description-career {
+    min-height: 0;
+  }
+
+  .description-career .time {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-height: 800px) and (min-width: 1300px) {
+  .robot-image {
+    width: 32%;
+  }
+
+  .home-description {
+    font-size: 1.4rem;
+  }
+
+  .description-career {
+    min-height: 0;
+  }
+
+  .description-career .content,
+  .description-career .content2 {
+    font-size: 1.5rem;
+  }
+
+  .description-career .time {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-height: 900px) and (min-width: 1500px) {
+  .robot-image {
+    width: 46%;
+  }
+
+  .home-description {
+    font-size: 1.8rem;
+  }
+
+  .description-career .title {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+
+  .description-career .content,
+  .description-career .content2 {
+    font-size: 1.5rem;
+  }
+
+  .description-career .time {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .burger-menu .icon-burger {
+    display: block;
+    margin-top: 50%;
+    padding-top: 1%;
+    transform: translateY(0%);
+  }
+
+  .burger-menu .sidebar-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 250px;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .burger-menu .sidebar-footer {
+    display: none;
+  }
+
+  .burger-menu .sidebar-title {
+    display: none;
+  }
+
+  #nav-toggle:checked ~ .sidebar-menu {
+    display: flex;
+  }
+
+  .burger-menu :checked ~ .icon-burger {
+    margin-top: 3%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .create-account {
+    margin-top: 40%;
+  }
+
+  .burger-menu :checked ~ .icon-burger .line {
+    background-color: white;
+  }
+
+  .burger-menu :checked ~ .icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+    margin-left: 6px;
+  }
+
+  .burger-menu :checked ~ .icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+
+  .burger-menu :checked ~ .icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+}

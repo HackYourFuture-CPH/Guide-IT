@@ -1,0 +1,128 @@
+.main-part-next-page {
+  background-image: url(../../assets/images/Vector.svg);
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.side-menu-next-page {
+  top: 40%;
+  position: absolute;
+  z-index: 6;
+}
+
+.side-menu-div {
+  background-color: #5088a8;
+  margin-left: 0%;
+}
+
+.orange-box {
+  background: rgba(219, 100, 61, 0.6);
+  margin-left: 100px;
+  margin-top: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 545px;
+  height: 450px;
+  z-index: 2;
+}
+
+.white-box {
+  background-color: #e5e5e5;
+  margin-top: 30px;
+  padding-left: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 380px;
+  width: 545px;
+  z-index: 3;
+}
+
+.circle-image {
+  margin-left: 290px;
+  margin-top: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+
+.c-image {
+  width: 250px;
+  height: 250px;
+}
+
+.white-box h1 {
+  text-align: center;
+  color: #298f8a;
+  font-size: 1.4vw;
+}
+
+.middle-part {
+  display: flex;
+}
+
+.main-images {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-images {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 10px;
+  max-width: 480px;
+  list-style-type: none;
+}
+
+.footer-images li {
+  margin-right: -8px;
+}
+
+.redi-image-next-page,
+.hyf-image-next-page {
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.hyf-logo-next-page {
+  background-color: #293a7d;
+}
+
+.image-name {
+  font-size: 10px;
+  text-align: center;
+  display: block;
+  width: 90px;
+}
+
+.elevator-div {
+  position: absolute;
+  margin-top: 258px;
+  margin-left: 40px;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.buttons.big {
+  outline: none;
+  word-spacing: 5px;
+  width: 230px;
+}

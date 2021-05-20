@@ -1,0 +1,11 @@
+.header h1 {
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 7px;
+  color: #fff;
+  margin-left: 5em;
+}
+
+.header {
+  padding: 0.1em;
+  background-color: #5088a8;
+}

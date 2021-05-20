@@ -1,0 +1,77 @@
+.main-div {
+  display: flex;
+}
+
+.left-div {
+  display: flex;
+  padding-left: 50px;
+}
+
+.header-page {
+  width: 100%;
+}
+
+.left-div-robot {
+  padding-top: 38px;
+  padding-right: 20px;
+}
+
+.left-div-robot p {
+  font-size: 15px;
+  color: #323334;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.left-div-card {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left-div-register {
+  padding-left: 55px;
+  padding-top: 25px;
+}
+
+.right-div {
+  padding-left: 35px;
+}
+
+.rigt-div-logo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .main-div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-div {
+    display: flex;
+    padding-left: 30px;
+    flex-direction: column;
+  }
+
+  .left-div-robot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-div-robot img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .left-div-robot p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+  }
+}

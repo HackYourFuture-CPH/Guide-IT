@@ -11,7 +11,6 @@
     <img src="https://user-images.githubusercontent.com/6642037/112057889-250f2880-8b5a-11eb-85cc-1ec9ef42afbe.png" alt="Project Homepage"></a>
 </p>
 
-
 ## 📝 Table of Contents
 
 - [📝 Table of Contents](#-table-of-contents)
@@ -36,12 +35,12 @@
   - [🧱 Component styling](#-component-styling)
   - [📤 📥 Inline CSS vs Stylesheets](#--inline-css-vs-stylesheets)
   - [👍🏽 Code best practices](#-code-best-practices)
-  - [<img width=20px height=20px src="/git-logo.png" alt="GitHub logo"></a> Working with GIT](#a-working-with-git)
-  - [<img width=15px height=30px src="/heroku-logo.svg" alt="Heroku logo"></a> Working with Heroku and Deployment](#a-working-with-heroku-and-deployment)
-  - [<img width=59x height=20px src="/knex-logo.png"  alt="Knex logo"></a> Working with Knex and Migrations](#a-working-with-knex-and-migrations)
-  - [<img width=25px height=25x src="/swagger-logo.png"  alt="Swagger logo"></a> Working with API Documentation - Swagger](#a-working-with-api-documentation---swagger)
-  - [<img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook](#a-working-with-storybook)
-  - [<img width=30px height=30x src="/aws.svg"  alt="AWS S3 logo"></a><img width=30px height=30x src="/s3.png"  alt="AWS S3 logo"></a> Working with AWS - Amazon Services](#aa-working-with-aws---amazon-services)
+  - <img width=20px height=20px src="/git-logo.png" alt="GitHub logo"></img>[Working with GIT](#-working-with-git)
+  - <img width=15px height=30px src="/heroku-logo.svg" alt="Heroku logo"></img>[Working with Heroku and Deployment](#-working-with-heroku-and-deployment)
+  - <img width=59x height=20px src="/knex-logo.png"  alt="Knex logo"></img>[Working with Knex and Migrations](#-working-with-knex-and-migrations)
+  - <img width=25px height=25x src="/swagger-logo.png"  alt="Swagger logo"></img>[Working with API Documentation - Swagger](#-working-with-api-documentation---swagger)
+  - <img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></img>[Working with Storybook](#-working-with-storybook)
+  - <img width=30px height=30x src="/aws.svg"  alt="AWS S3 logo"></a><img width=30px height=30x src="/s3.png"  alt="AWS S3 logo"></img>[Working with AWS - Amazon Services](#-working-with-aws---amazon-services)
   - [Testing](#testing)
   - [Making authenticated requests through firebase (useFetch hook)](#making-authenticated-requests-through-firebase-usefetch-hook)
     - [What is it?](#what-is-it)
@@ -54,7 +53,6 @@
 - [👨🏾‍💻 Authors](#-authors)
 - [📝 License](#-license)
 
-
 ## 🧐 About <a name = "about"></a>
 
 This repository is for Class16 Final Project - Guide IT
@@ -62,7 +60,6 @@ This repository is for Class16 Final Project - Guide IT
 Production website: https://guide-it-production.herokuapp.com/
 
 Staging website: https://guide-it-staging.herokuapp.com/
-
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
@@ -77,7 +74,7 @@ Staging website: https://guide-it-staging.herokuapp.com/
 
 ## 📅 Project's Calendar
 
-The project will run between the 18/04 and the 30/05
+The project will run between the 18/04 and the 01/06
 
 ## 🕛 Class Daily Agenda 🕓
 
@@ -98,12 +95,14 @@ _Add here information about the Business Glossary_
 [Business Glossary](/BusinessGlossary.md)
 
 #### 🖼 Wirefames
-Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-18TH)
 
+Check the mockup [here](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-18TH)
 
 #### 🗄️ Database Model Diagram
 
-_Add here the DB Model Diagram_ - Use https://dbdiagram.io/
+https://dbdiagram.io/d/60769bb6b6aeb3052d90059f - Use https://dbdiagram.io/
+
+<img width="578" alt="Screenshot 2021-04-14 at 09 36 48" src="https://user-images.githubusercontent.com/6642037/114672045-02110800-9d05-11eb-8093-184ad7fb4ae1.png">
 
 - [How to make changes on the diagram](/diagram.md)
 
@@ -111,10 +110,17 @@ _Add here the DB Model Diagram_ - Use https://dbdiagram.io/
 
 ### 💻 Working with code
 
-- ALWAYS run code before a PR is made.
+- Take a story/task by assigning to you on the storyboard. Remember to update the status of your work when needed: in progress, blocked, waiting for review, etc.
+- Always create your branches from the develop branch. Do not interact with the master branch.
+- ALWAYS run code before a PR is made
+- Remember to go through the checklist for the PRs, and to make it easier for others, try to be as pedagogical as possible in your PRs by fx. adding pictures of your changes.
+- Test, test, test. Check the console before commiting, are there any errors/warnings?
 - No committing `console.log`
 - No committing merge conflicts!
 - Work in separate files! When you make a new feature, the first thing you do is create a new file for that (of course if it makes sense). Especially for components.
+- When working with components that are built using storybook, test them by adding them on a page. Do not commit those tests but there are errors that might not appear in storybook, but might show up outside of storybook.
+- [The mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) is very helpful to know the styles for the project, fonts, colors, typography, etc.
+- Remember to use each other and take advantage of the studyrooms (Zendesk and Elastic).
 
 ### 🧱 Guidelines for building components
 
@@ -247,6 +253,8 @@ For global styles (i.e. styles that shall affect all components) use `src/client
 
 For theming, use the file `src/client/theme.css`. Theming covers everything related to the visual presentation of the site that needs to be re-used often. That means colors, borders, paddings, shadows, etc.
 
+Remember to check [the mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) to extract the styles for the project.
+
 ### 🧱 Component styling
 
 Components should always have a unique CSS class to make it easy to apply styles and styles. For example the "label" component should have a class "label". To easily concatenate different classes or apply classes conditionally, use the `classnames` npm package. Example of a label component that has a class "label" and will receive additional classes as props:
@@ -260,6 +268,8 @@ Components should always have a unique CSS class to make it easy to apply styles
     ...
 
 Only put styling that is relevant to the individual component in the component CSS file. If it covers multiple components, put it in `theme.css` or `index.css`.
+
+Remember to check [the mockup](https://www.figma.com/file/s6re6vnutK1fK1iJIsH6fE/GUIDE-IT-MARCH-25TH?node-id=0%3A1) to extract the styles for the project.
 
 ### 📤 📥 Inline CSS vs Stylesheets
 
@@ -298,8 +308,8 @@ read the specifications for the API.
 You can use your api token to authorize in Swagger and you will be able to
 perform test calls against the API directly from Swagger.
 
-If you need to make changes to the specification, this can be done via the
-[Swagger.json](/src/server/config/swagger.json) file.
+Use this example for the modules endpoints [Modules](src/server/api/routes/modules.router.js) and add your endpoint documentation in the router file for your endpoint. And then add the route [here](src/server/api/routes/api-router.js) under // Application routes
+
 
 ### <img width=20px height=20x src="/storybook.svg"  alt="Storybook logo"></a> Working with Storybook
 
