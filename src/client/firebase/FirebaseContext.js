@@ -49,17 +49,6 @@ export function FirebaseProvider({ children, initialAuth }) {
     }),
     [auth],
   );
-  // const value = {
-  //   auth,
-  //   setAuth,
-  //   isInitialized: !!auth,
-  //   signIn: (data) => signIn(auth, data),
-  //   signUp: (data) => signUp(auth, data),
-  //   signOut: () => signOut(auth),
-  //   resetPassword: (data) => resetPassword(auth, data),
-  //   signInGoogle: () => signInGoogle(),
-  //   signOutGoogle: () => signOutGoogle(),
-  // }
   return (
     <FirebaseContext.Provider value={value}>
       {children}

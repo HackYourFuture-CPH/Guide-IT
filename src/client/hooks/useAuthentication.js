@@ -33,7 +33,6 @@ export function useAuthentication() {
       if (user) {
         setIsAuthenticated(true);
         setIsLoading(false);
-        // console.log(user)
         // authRedirect();
       } else {
         setIsAuthenticated(false);
