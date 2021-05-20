@@ -15,7 +15,7 @@ export default function ProfileBlueBar() {
         </button>
         <div className="profile-bar-footer-container">
           <img src={backArrow} alt="back arrow" />
-          <a href="/home" className="profile-bar-back">
+          <a href="/" className="profile-bar-back">
             Back
           </a>
         </div>

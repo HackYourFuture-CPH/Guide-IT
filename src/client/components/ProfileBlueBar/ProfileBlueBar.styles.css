@@ -3,7 +3,6 @@
   width: 14%;
   min-width: 10em;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
