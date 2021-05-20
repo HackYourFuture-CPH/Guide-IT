@@ -4,10 +4,12 @@ import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
 import { useFirebase } from '../../firebase/FirebaseContext';
 import Buttons from '../Buttons/Buttons.component';
+import { useHistory } from 'react-router-dom';
 
 function SidebarMenu() {
   const [userName, setUserName] = useState('');
   const { signOutGoogle, getCurrentUser } = useFirebase();
+  const history = useHistory();
 
   useEffect(function () {
     const user = getCurrentUser();

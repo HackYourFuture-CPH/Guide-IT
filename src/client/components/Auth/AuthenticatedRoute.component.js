@@ -17,7 +17,7 @@ function AuthenticatedRoute({ children, ...rest }) {
         ) : (
           <Redirect
             to={{
-              pathname: '/sign-in',
+              pathname: '/registration',
               state: { from: location },
             }}
           />
