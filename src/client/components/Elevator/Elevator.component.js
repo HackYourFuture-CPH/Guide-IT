@@ -52,22 +52,22 @@ const ElevatorLevel = ({
         className="elevator-content"
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      {floor > 0 && floor <= 5 ? (
+      {floor >= 0 && floor < 5 ? (
         <img
           src={UpArrow}
-          alt="go to previous"
-          onClick={onClickPrev}
+          alt="go to next"
+          onClick={onClickNext}
           aria-hidden="true"
           className="elevator-arrow elevator-up"
         />
       ) : (
         <div />
       )}
-      {floor >= 0 && floor < 5 ? (
+      {floor > 0 && floor <= 5 ? (
         <img
           src={DownArrow}
-          alt="go to next"
-          onClick={onClickNext}
+          alt="go to previous"
+          onClick={onClickPrev}
           aria-hidden="true"
           className="elevator-arrow elevator-down"
         />
