@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Elevator.styles.css';
 import UpArrow from '../../assets/images/up_arrow.png';
 import DownArrow from '../../assets/images/down_arrow.png';
-// import Pagination from '../Pagination/Pagination.component';
+import Pagination from '../Pagination/Pagination.component';
 
 const elevatorSpeechArray = [
   {
@@ -88,14 +88,12 @@ function Elevator({ level }) {
     e.preventDefault();
     setFloor((prev) => prev + 1);
   };
-  // will add this after pagination component is merged
-  // const handleClickPagination = (item) => {
-  //   setFloor(item);
-  // };
+  const handleClickPagination = (item) => {
+    setFloor(item);
+  };
   return (
     <div className="elevator-component">
-      {/* will add this after pagination component is merged */}
-      {/* <Pagination floor={floor} handleClickPagination={handleClickPagination} /> */}
+      <Pagination floor={floor} handleClickPagination={handleClickPagination} />
       {elevatorSpeechArray
         .filter((item, index) => {
           return index === floor;
