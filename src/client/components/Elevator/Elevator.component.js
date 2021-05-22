@@ -100,8 +100,9 @@ function Elevator({ level }) {
         .filter((item, index) => {
           return index === floor;
         })
-        .map((item) => (
+        .map((item, index) => (
           <ElevatorLevel
+            key={index}
             header={item.header}
             content={item.content}
             floor={floor}
