@@ -6,6 +6,7 @@ import vector from '../../assets/images/Vector.svg';
 import './ProfilePage.styles.css';
 import ProfileQuizResults from '../../components/ProfileQuizResults/ProfileQuizResults.component';
 import ProfileCareerResult from '../../components/ProfileCareerResult/ProfileCareerResult.component';
+
 const ProfilePage = () => {
   return (
     <div className="profile-page-container">
@@ -20,12 +21,12 @@ const ProfilePage = () => {
           </div>
           <div className="profile-page-avatar">
             <Avatar
-              color={'#535C75'}
-              width={300}
-              fontFamily={'Roboto Mono'}
-              userName={'Anne'}
-              userEmail={'anne@gmail.com'}
-              userPassword={'xxxxxxxxxxxx'}
+              color="#535C75"
+              width="300"
+              fontFamily="Roboto Mono"
+              userName="Anne"
+              userEmail="anne@gmail.com"
+              userPassword="xxxxxxxxxxxx"
               userImage={avatarImage}
             />
           </div>
