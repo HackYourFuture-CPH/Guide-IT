@@ -2,7 +2,7 @@ import React from 'react';
 import './Pagination.styles.css';
 
 // Floor and setFloor states will be passed to us as props from the parent container
-function Pagination({ floor, setFloor }) {
+function Pagination({ floor, handleClickPagination }) {
   // Floor array is an array that doesn't change or mutate and it will always has the same values, the number of floors.
   const floorArray = [0, 1, 2, 3, 4, 5];
 
@@ -10,7 +10,7 @@ function Pagination({ floor, setFloor }) {
     <div className="pagination-box">
       <div className="pagination-numbers">
         {/* we loop through the items (floors) and for each one we check if it's the floor that we are in, ad if it is we give
-          it a className of the chosen floor and using css to give it a border and if it is not we give it a className of 
+          it a className of the chosen floor and using css to give it a border and if it is not we give it a className of
          unchosen-floor and there will be no border to it. */}
         {floorArray.map((item) => {
           return item === floor ? (
@@ -18,7 +18,7 @@ function Pagination({ floor, setFloor }) {
               type="button"
               key={item}
               className="chosen-floor"
-              onClick={() => setFloor(item)}
+              onClick={() => handleClickPagination(item)}
             >
               {item}
             </button>
@@ -27,7 +27,7 @@ function Pagination({ floor, setFloor }) {
               type="button"
               key={item}
               className="unchosen-floor"
-              onClick={() => setFloor(item)}
+              onClick={() => handleClickPagination(item)}
             >
               {item}
             </button>
