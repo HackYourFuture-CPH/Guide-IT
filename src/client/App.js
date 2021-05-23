@@ -18,6 +18,7 @@ import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchP
 import { LoginPage } from './containers/LoginPage/LoginPage.component';
 import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.component';
 import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
+import ProfileBlueBar from './components/ProfileBlueBar/ProfileBlueBar.component';
 
 function App() {
   const { isLoading } = useAuthentication();
@@ -57,6 +58,9 @@ function App() {
 
         <Route exact path="/registration">
           <RegistrationPage />
+        </Route>
+        <Route exact path="/profile-page">
+          <ProfileBlueBar />
         </Route>
 
         {/* All routes below are authenticated routes - a user must login first */}
