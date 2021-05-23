@@ -20,6 +20,7 @@
   color: white;
   align-self: center;
   cursor: pointer;
+  outline: none;
 }
 
 .chosen-floor {
