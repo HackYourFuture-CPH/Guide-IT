@@ -14,15 +14,41 @@ export const QuizPage = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [questions, setQuestions] = useState(undefined);
   const [error, setError] = useState(undefined);
-  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const [selectedAnswer, setSelectedAnswer] = useState(undefined);
 
-  const handleQuestions = () => {
-    fetch('/api/quiz-results', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ fk_answer_id: selectedAnswer, fk_user_id: 1 }),
-    });
-    setCurrentOn((prev) => prev + 1);
+  const handleQuestions = async () => {
+    let userId = localStorage.getItem('anonymousUserId');
+    if (!userId) {
+      const response = await fetch('/api/users', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({}),
+      });
+      if (response.ok) {
+        const user = await response.json();
+
+        userId = user.userId;
+        localStorage.setItem('anonymousUserId', userId);
+      } else {
+        setError(await response.text());
+      }
+    }
+    if (selectedAnswer !== undefined) {
+      const response = await fetch('/api/quiz-results', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fk_answer_id: selectedAnswer,
+          fk_user_id: Number(userId),
+        }),
+      });
+      if (response.ok) {
+        setCurrentOn((prev) => prev + 1);
+        setSelectedAnswer(undefined);
+      } else {
+        const body = await response.text();
+      }
+    }
   };
 
   const goToPrevious = () => {

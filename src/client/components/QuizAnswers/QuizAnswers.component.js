@@ -42,10 +42,14 @@ function QuizAnswers({
 }
 
 QuizAnswers.propTypes = {
-  selectedAnswer: PropTypes.number.isRequired,
+  selectedAnswer: PropTypes.number,
   setSelectedAnswer: PropTypes.func.isRequired,
   isAgreementQuestion: PropTypes.bool.isRequired,
   answers: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+QuizAnswers.defaultProps = {
+  selectedAnswer: undefined,
 };
 
 export default QuizAnswers;

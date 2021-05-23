@@ -29,13 +29,11 @@ const getUserById = async (id) => {
 };
 
 const createUser = async (body) => {
-  await knex('users').insert({
+  const [userId] = await knex('users').insert({
     full_name: body.full_name || 'ANONYMOUS',
     firebase_token: body.firebase_token || 'anonymous',
   });
-  return {
-    successful: true,
-  };
+  return { userId };
 };
 
 module.exports = {
