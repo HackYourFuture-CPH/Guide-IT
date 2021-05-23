@@ -117,3 +117,11 @@ export default Elevator;
 Elevator.propTypes = {
   level: PropTypes.number.isRequired,
 };
+
+ElevatorLevel.propTypes = {
+  header: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  floor: PropTypes.number.isRequired,
+  onClickPrev: PropTypes.func.isRequired,
+  onClickNext: PropTypes.func.isRequired,
+};
