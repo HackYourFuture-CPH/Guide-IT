@@ -24,7 +24,8 @@ const alternateCareerArray = [
   },
 ];
 
-const CareerPage = ({ jobTitle }) => {
+const CareerPage = ({ match }) => {
+  const jobTitle = match.params.jobTitle;
   const history = useHistory();
   // onclick
   const handleClick = () => {
