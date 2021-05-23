@@ -9,14 +9,17 @@ export default function ProfileBlueBar() {
   const { signOutGoogle, getCurrentUser } = useFirebase();
   const history = useHistory();
 
-  useEffect(function () {
-    const user = getCurrentUser();
-    if (user) {
-      const fullName = user[0].displayName;
-      const firstName = fullName.split(' ')[0];
-      setUserName(firstName);
-    }
-  }, []);
+  useEffect(
+    function () {
+      const user = getCurrentUser();
+      if (user) {
+        const fullName = user[0].displayName;
+        const firstName = fullName.split(' ')[0];
+        setUserName(firstName);
+      }
+    },
+    [getCurrentUser],
+  );
 
   // sign out function
   const signOut = () => {
