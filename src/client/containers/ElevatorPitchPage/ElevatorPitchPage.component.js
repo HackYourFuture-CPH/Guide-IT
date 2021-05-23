@@ -1,3 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PageHeader from '../../components/PageHeader/PageHeader.component';
+import SideMenu from '../../components/SideMenu/SideMenu.component';
+import ElevatorPitchInstructions from '../../components/ElevatorPitchInstructions/ElevatorPitchInstructions.component';
+import Elevator from '../../components/Elevator/Elevator.component';
+import './ElevatorPitchPage.styles.css';
 
-export const ElevatorPitchPage = () => <section>Elevator PitchPage</section>;
+export const ElevatorPitchPage = () => {
+  const [instructions, setInstructions] = useState(true);
+
+  const handleOnClick = () => {
+    setInstructions(false);
+  };
+  return (
+    <div className="elevator-page">
+      <PageHeader />
+      <div className="elevator-container">
+        <div className="side-menu">
+          <SideMenu />
+        </div>
+        <div className="elevator-instructions">
+          {instructions ? (
+            <ElevatorPitchInstructions onClick={handleOnClick} />
+          ) : (
+            <div>
+              <Elevator level={0} />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -3,9 +3,10 @@ import Buttons from '../Buttons/Buttons.component';
 import elevatorMen from '../../assets/images/elevator_men.png';
 import downArrow from '../../assets/images/down_arrow.png';
 import upArrow from '../../assets/images/up_arrow.png';
+import PropTypes from 'prop-types';
 import './ElevatorPitchInstructions.styles.css';
 
-function ElevatorPitchInstructions() {
+function ElevatorPitchInstructions({ onClick }) {
   return (
     <>
       <div className="main-content">
@@ -47,7 +48,12 @@ function ElevatorPitchInstructions() {
         </div>
 
         <div className="btn-elevator-pitch">
-          <Buttons label="Elevator Pitch" size="big" isMono={true} />
+          <Buttons
+            label="Elevator Pitch"
+            size="big"
+            isMono={true}
+            onClick={onClick}
+          />
         </div>
       </div>
     </>
@@ -55,3 +61,6 @@ function ElevatorPitchInstructions() {
 }
 
 export default ElevatorPitchInstructions;
+ElevatorPitchInstructions.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};

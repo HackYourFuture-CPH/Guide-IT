@@ -4,6 +4,7 @@ import './Elevator.styles.css';
 import UpArrow from '../../assets/images/up_arrow.png';
 import DownArrow from '../../assets/images/down_arrow.png';
 import Pagination from '../Pagination/Pagination.component';
+import RoboModal from '../RoboModal/RoboModal.component';
 
 const elevatorSpeechArray = [
   {
@@ -91,24 +92,31 @@ function Elevator({ level }) {
   const handleClickPagination = (item) => {
     setFloor(item);
   };
+
   return (
-    <div className="elevator-component">
-      <Pagination floor={floor} handleClickPagination={handleClickPagination} />
-      {elevatorSpeechArray
-        .filter((item, index) => {
-          return index === floor;
-        })
-        .map((item, index) => (
-          <ElevatorLevel
-            key={index}
-            header={item.header}
-            content={item.content}
-            floor={floor}
-            onClickPrev={handleClickPrev}
-            onClickNext={handleClickNext}
-          />
-        ))}
-    </div>
+    <>
+      <div className="elevator-component">
+        <Pagination
+          floor={floor}
+          handleClickPagination={handleClickPagination}
+        />
+        {elevatorSpeechArray
+          .filter((item, index) => {
+            return index === floor;
+          })
+          .map((item) => (
+            <ElevatorLevel
+              key={item.content.slice(3, 15)}
+              header={item.header}
+              content={item.content}
+              floor={floor}
+              onClickPrev={handleClickPrev}
+              onClickNext={handleClickNext}
+            />
+          ))}
+      </div>
+      <RoboModal floor={floor} onClick={handleClickNext} />
+    </>
   );
 }
 
