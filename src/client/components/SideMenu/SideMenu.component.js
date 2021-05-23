@@ -16,13 +16,13 @@ function SideMenu() {
             </li>
           </NavLink>
           <span>Home</span>
-          <NavLink to="/nextsteps" activeClassName="side-menu-selected">
+          <NavLink to="/next-steps" activeClassName="side-menu-selected">
             <li className="side-menu-whiteborder">
               <img src={nextImg} alt="nextImg" />
             </li>
           </NavLink>
           <span>Next steps</span>
-          <NavLink to="/elevatorpitch" activeClassName="side-menu-selected">
+          <NavLink to="/elevator-pitch" activeClassName="side-menu-selected">
             <li className="side-menu-whiteborder">
               <img src={elevatorImg} alt="nextImg" />
             </li>
