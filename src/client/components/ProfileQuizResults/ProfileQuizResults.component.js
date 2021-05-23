@@ -19,18 +19,18 @@ function ProfileQuizResults() {
 
   return (
     <div style={{ backgroundImage: `url(${background})`, width: '100%' }}>
-      <div className="quiz_results_header">
+      <div className="quiz-results-header">
         <img src={Robot} alt="robot" />
-        <span className="robot_text">QUIZ RESULTS</span>
+        <span className="robot-text">QUIZ RESULTS</span>
       </div>
-      <div className="results_container">
-        <div className="personal_profile">
+      <div className="results-container">
+        <div className="personal-profile">
           <CardProfileResultComponent
             title="Your Personal Profile"
             results={resultpersonal}
           />
         </div>
-        <div className="professional_profile">
+        <div className="professional-profile">
           <CardProfileResultComponent
             title="Your Professional Profile"
             results={result}

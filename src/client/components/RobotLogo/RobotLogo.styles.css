@@ -8,6 +8,7 @@
   height: 164px;
   border-radius: 50%;
   border: 0;
+  cursor: pointer;
 }
 
 .robot-logo-div img {
@@ -31,4 +32,5 @@
 
 .arrow {
   padding-top: 105px;
+  cursor: pointer;
 }

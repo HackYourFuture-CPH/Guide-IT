@@ -47,6 +47,7 @@ export const QuizPage = () => {
         setSelectedAnswer(undefined);
       } else {
         const body = await response.text();
+        setError(body);
       }
     }
   };

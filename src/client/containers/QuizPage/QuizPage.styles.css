@@ -54,9 +54,6 @@
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-
-.buttons.big {
   min-width: 150px;
   padding: 0.2em 2em;
   margin-top: 120px;

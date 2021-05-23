@@ -1,0 +1,52 @@
+.elevator-page {
+  min-height: 100vh;
+  background-image: url(../../assets/images/Vector.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.elevator-container {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.elevator-container .side-menu {
+  width: 10%;
+
+  /* border: 1px solid blue; */
+}
+
+.elevator-container .side-menu .side-menu-div {
+  width: 50%;
+  margin: auto 0;
+}
+
+.elevator-instructions {
+  position: relative;
+  width: 90%;
+
+  /* border: 1px solid yellow; */
+}
+
+.elevator-instructions .main-content {
+  width: 75%;
+  margin: 5em auto;
+}
+
+.btn-elevator-pitch .buttons.big {
+  padding: 0.6em 1em;
+  cursor: pointer;
+  min-width: 25%;
+}
+
+.elevator-instructions .elevator-component {
+  margin-left: 17%;
+}
+
+@media screen and (max-width: 1200px) {
+  .elevator-instructions .elevator-component {
+    margin-left: 10%;
+  }
+}

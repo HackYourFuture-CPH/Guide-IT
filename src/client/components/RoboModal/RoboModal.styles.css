@@ -1,0 +1,92 @@
+.robot-circle-container {
+  background-color: #d0dddc;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  border: 6px solid #bc5a3a;
+  text-align: center;
+  position: absolute;
+  right: 5rem;
+  bottom: 4rem;
+}
+
+.robot-circle-container img {
+  margin-top: 1.2rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.robot-circle-container a {
+  text-decoration: none;
+  color: #323334;
+}
+
+.robot-circle-container p {
+  font-size: 0.7rem;
+  text-align: center;
+  width: 80%;
+  color: #323334;
+  margin: 0.5rem auto;
+}
+
+.modal-box-contents h6,
+.modal-box-contents p,
+.modal-box-contents ul li {
+  font-size: 0.8rem;
+}
+
+.modal-box-contents ul li {
+  text-align: start;
+  list-style-type: none;
+}
+
+.modal-box-contents ul li::before {
+  content: '- ';
+}
+
+.modal-box-contents h6 {
+  color: #298f8a;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.modal-box-contents ul {
+  padding-left: 0;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.modal-content {
+  margin-bottom: 8.5rem;
+  margin-right: 2rem;
+}
+
+.elevator-ride-text {
+  background-color: #d0dddc;
+  border-radius: 15px;
+  width: 17rem;
+  text-align: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 19rem;
+}
+
+.elevator-ride-text p {
+  padding: 0;
+  margin: 5px;
+}
+
+.elevator-ride-text p .up-arrow {
+  cursor: pointer;
+}
+
+.elevator-ride-text .vector-man {
+  width: 1.6rem;
+  height: 1.4rem;
+  margin-left: 0.5rem;
+  margin-bottom: -0.2rem;
+}

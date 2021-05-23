@@ -64,10 +64,10 @@ router.get('/:id', (req, res, next) => {
  * /answers:
  *  post:
  *    tags:
- *    - answers
- *    summary: Create an answer
+ *     - answers
+ *    summary: Create a answer
  *    description:
- *      Will create an answer.
+ *      Will create a answer.
  *    produces: application/json
  *    parameters:
  *      - in: body
@@ -76,24 +76,25 @@ router.get('/:id', (req, res, next) => {
  *        schema:
  *          type: object
  *          required:
- *            - title
- *            - startDate
- *            - endDate
- *             - classId
+ *            - answer
+ *            - ux_points
+ *            - fullstack_points
+ *            - dataanalyst_points
+ *            - fk_question_id
  *          properties:
- *            title:
+ *            answer:
  *              type: string
- *            startDate:
- *              type: string
- *              format: date-time
- *            endDate:
- *              type: string
- *              format: date-time
- *            classId:
- *              type: string
+ *            ux_points:
+ *              type: integer
+ *            fullstack_points:
+ *              type: integer
+ *            dataanalyst_points:
+ *              type: integer
+ *            fk_question_id:
+ *              type: integer
  *    responses:
  *      201:
- *        description: Answer created
+ *        description: answer created
  *      5XX:
  *        description: Unexpected error.
  */
@@ -102,9 +103,41 @@ router.post('/', (req, res) => {
     .createAnswer(req.body)
     .then((result) => res.json(result))
     .catch((error) => {
-      res.send(error.message);
       res.status(400).send('Bad request').end();
     });
+});
+
+/**
+ * @swagger
+ * /answers/{ID}:
+ *  delete:
+ *    tags:
+ *    - answers
+ *    summary: Delete an answer
+ *    description:
+ *      Will delete an answer with a given ID.
+ *    produces: application/json
+ *    parameters:
+ *      - in: path
+ *        name: ID
+ *        description: ID of the answer to delete.
+ *    responses:
+ *      200:
+ *        description: answer deleted
+ *      5XX:
+ *        description: Unexpected error.
+ */
+router.delete('/:id', (req, res) => {
+  answersController
+    .deleteAnswer(req.params.id, req)
+    .then((result) => {
+      if (result === 0) {
+        res.status(404).send('The answer ID you provided does not exist.');
+      } else {
+        res.json({ success: true });
+      }
+    })
+    .catch((error) => res.send(error.message));
 });
 
 module.exports = router;

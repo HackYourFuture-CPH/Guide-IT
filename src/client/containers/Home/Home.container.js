@@ -37,7 +37,7 @@ export const Home = () => {
       </div>
       <div className="home-main">
         <div>
-          <Header color="#DB643D" fontSize="30" />
+          <Header color="#DB643D" fontSize={30} />
         </div>
         <div className="home-description">
           <HomeDescription />
@@ -52,7 +52,7 @@ export const Home = () => {
               size="big"
               isMono={true}
               color="orange"
-              onClick={() => handleClick('/career')}
+              onClick={() => handleClick('/quiz')}
             />
           </div>
 

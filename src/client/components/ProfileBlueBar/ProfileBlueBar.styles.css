@@ -1,0 +1,122 @@
+.profile-bar-container {
+  background-color: #0b5681;
+  width: 14%;
+  min-width: 10em;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-bar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.profile-bar-title {
+  padding: 60px 0 10px;
+  font-size: 1.8rem;
+  letter-spacing: 0.4em;
+  font-weight: bold;
+  line-height: 43px;
+  margin: 0;
+  margin-inline-start: 0.5em;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.profile-bar-name {
+  font-family: 'Chakra Petch', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+}
+
+/* footer buttons */
+.profile-bar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.profile-bar-log-out,
+.profile-bar-back {
+  font-family: 'Chakra Petch', sans-serif;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.profile-bar-footer-container {
+  display: flex;
+}
+
+.profile-bar-footer-container img {
+  height: 22px;
+  align-self: center;
+}
+
+.profile-bar-log-out {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 1400px) {
+  .profile-bar-container {
+    width: 13%;
+  }
+
+  .profile-bar-title {
+    font-size: 1.6rem;
+  }
+
+  .profile-bar-name {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .profile-bar-container {
+    width: 12%;
+  }
+
+  .profile-bar-title {
+    font-size: 1.4rem;
+  }
+
+  .profile-bar-name {
+    font-size: 1rem;
+  }
+
+  .profile-bar-back {
+    font-size: 1.4rem;
+  }
+
+  .profile-bar-footer-container img {
+    height: 18px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .profile-bar-container {
+    width: 11%;
+  }
+
+  .profile-bar-title {
+    font-size: 1.3rem;
+  }
+
+  .profile-bar-back {
+    font-size: 1rem;
+  }
+
+  .profile-bar-footer-container img {
+    height: 14px;
+  }
+}

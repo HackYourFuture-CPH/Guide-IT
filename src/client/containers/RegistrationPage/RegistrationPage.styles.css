@@ -1,4 +1,4 @@
-.registrationPage-container {
+.registration-page-container {
   margin: 0;
   overflow: hidden;
   display: flex;
@@ -42,7 +42,7 @@
   justify-content: center;
 }
 
-.robot_logo_img {
+.robot-logo-img {
   width: 8rem;
 }
 
@@ -50,7 +50,7 @@
   color: gray;
 }
 
-.signin-link {
+.sign-in-link {
   color: #db643d;
   text-decoration: none;
 }
@@ -73,11 +73,11 @@
   width: 80%;
 }
 
-.hrTable {
+.hr-table {
   width: 100%;
 }
 
-.hrTable td {
+.hr-table td {
   width: 50%;
   padding: 2px 10px;
 }
