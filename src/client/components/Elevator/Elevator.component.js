@@ -92,6 +92,7 @@ function Elevator({ level }) {
   const handleClickPagination = (item) => {
     setFloor(item);
   };
+
   return (
     <>
       <div className="elevator-component">
@@ -103,9 +104,9 @@ function Elevator({ level }) {
           .filter((item, index) => {
             return index === floor;
           })
-          .map((item, index) => (
+          .map((item) => (
             <ElevatorLevel
-              key={index}
+              key={item.content.slice(3, 15)}
               header={item.header}
               content={item.content}
               floor={floor}
