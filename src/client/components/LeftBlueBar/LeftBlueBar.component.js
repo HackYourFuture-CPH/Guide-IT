@@ -11,19 +11,21 @@ function SidebarMenu() {
       <div className="sidebar-menu">
         <div className="sidebar-header">
           <div className="sidebar-title">GuideIT</div>
-          <div className="create-account">
-            <div>
-              <a href="/">Create account</a>
+          <Router>
+            <div className="create-account">
+              <div>
+                <Link to="/registration">Create account</Link>
+              </div>
+              <div className="triangle" />
             </div>
-            <div className="triangle" />
-          </div>
 
-          <div className="login">
-            <div>
-              <a href="/">Login</a>
+            <div className="login">
+              <div>
+                <Link to="/login">Login</Link>
+              </div>
+              <div className="triangle" />
             </div>
-            <div className="triangle" />
-          </div>
+          </Router>
         </div>
         <div className="sidebar-footer">
           <img src={hyfLogo} alt="HYF-logo" className="hyf-logo" />
