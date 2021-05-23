@@ -10,8 +10,9 @@
   text-align: left;
 }
 
-.register-teaser-text p a {
+.sign-in {
   font-family: 'Roboto Mono', monospace;
   font-size: 15px;
   color: #db643d;
+  cursor: pointer;
 }
