@@ -33,7 +33,7 @@ const CareerPage = ({ match }) => {
   };
   // onclick for elevator
   const onClickElevator = () => {
-    history.push('/elevatorpitch');
+    history.push('/elevator-pitch');
   };
 
   return (

@@ -13,7 +13,7 @@ export default function RegisterTeaser() {
         <p>
           Do you want to save your results?
           <br />{' '}
-          <Link to="/login" className="sign-in">
+          <Link to="/registration" className="sign-in">
             Sign in{' '}
           </Link>{' '}
           and check your results any time.
