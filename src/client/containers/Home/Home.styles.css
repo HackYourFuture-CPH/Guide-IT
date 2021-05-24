@@ -208,6 +208,7 @@
     display: block;
     margin-top: 50%;
     padding-top: 1%;
+    padding-left: 2rem;
     transform: translateY(0%);
   }
 
@@ -235,6 +236,7 @@
 
   #nav-toggle:checked ~ .sidebar-menu {
     display: flex;
+    padding-top: 5rem;
   }
 
   .burger-menu :checked ~ .icon-burger {

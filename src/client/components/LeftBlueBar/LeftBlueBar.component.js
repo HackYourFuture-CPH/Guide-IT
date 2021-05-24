@@ -2,6 +2,7 @@ import React from 'react';
 import './LeftBlueBar.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
+import GoogleLogo from '../../assets/images/Google_logo.png';
 import { Link } from 'react-router-dom';
 
 function SidebarMenu() {
@@ -11,16 +12,17 @@ function SidebarMenu() {
       <div className="sidebar-menu">
         <div className="sidebar-header">
           <div className="sidebar-title">GuideIT</div>
-          <div className="create-account">
+          {/* <div className="create-account">
             <div>
               <Link to="/registration">Create account</Link>
             </div>
             <div className="triangle" />
-          </div>
+          </div> */}
 
           <div className="login">
+            <img className="google_logo" alt="Google logo" src={GoogleLogo} />
             <div>
-              <Link to="/login">Login</Link>
+              <Link to="/registration">Login</Link>
             </div>
             <div className="triangle" />
           </div>
