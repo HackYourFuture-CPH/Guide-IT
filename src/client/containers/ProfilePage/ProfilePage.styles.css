@@ -15,11 +15,11 @@
 }
 
 .container .edit-link {
-  margin-top: 40%;
+  margin-top: 38%;
 }
 
 .profile-page-avatar {
-  margin-top: 3em;
+  margin-top: 2.5em;
 }
 
 .profile-page-avatar .form-with-avatar .avatar-image {
@@ -38,7 +38,7 @@
 
 div.quiz-results-header {
   padding: 5% 0 0 3%;
-  height: 7em;
+  height: 6em;
 }
 
 .profile-quiz-container {
@@ -95,4 +95,39 @@ div.frame {
   font-weight: bold;
   margin: 10px 0 40px 10px;
   line-height: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-page-avatar .form-with-avatar .avatar-image {
+    margin-bottom: 6em;
+  }
+
+  .profile-page-avatar {
+    margin-top: 3em;
+  }
+
+  .container .edit-link {
+    margin-top: 94%;
+    padding-bottom: 36%;
+  }
+
+  h2.card-profile-result-title {
+    padding: 7px;
+    line-height: 25px;
+  }
+
+  .profile-quiz-container .results-container {
+    width: 90%;
+    padding-top: 5%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .profile-page-avatar {
+    margin-top: 2em;
+  }
+
+  .container .edit-link {
+    margin-top: 63%;
+  }
 }

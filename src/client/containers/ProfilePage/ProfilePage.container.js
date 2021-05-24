@@ -22,7 +22,7 @@ const ProfilePage = () => {
           <div className="profile-page-avatar">
             <Avatar
               color="#535C75"
-              width="300"
+              width={300}
               fontFamily="Roboto Mono"
               userName="Anne"
               userEmail="anne@gmail.com"
