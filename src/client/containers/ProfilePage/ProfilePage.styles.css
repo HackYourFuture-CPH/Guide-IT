@@ -57,11 +57,11 @@ div.quiz-results-header {
 }
 
 li.card-profile-result-list-item {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 h2.card-profile-result-title {
-  font-size: 25px;
+  font-size: 1.5625rem;
   margin-bottom: 0;
   padding: 0 3em 0 0;
   line-height: 30px;
@@ -91,7 +91,7 @@ div.frame {
 }
 
 .profile-career-container .profile-career-title {
-  font-size: 25px;
+  font-size: 1.5625rem;
   font-weight: bold;
   margin: 10px 0 40px 10px;
   line-height: 10px;
@@ -112,7 +112,7 @@ div.frame {
   }
 
   h2.card-profile-result-title {
-    font-size: 20px;
+    font-size: 1.25rem;
     padding: 7px;
     line-height: 25px;
   }
@@ -129,7 +129,7 @@ div.frame {
   }
 
   h2.card-profile-result-title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .container .edit-link {
