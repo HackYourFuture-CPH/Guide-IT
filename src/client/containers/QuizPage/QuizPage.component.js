@@ -96,7 +96,7 @@ export const QuizPage = () => {
             {questions && (
               <>
                 <QuestionComponent
-                  imageSrc={currentQuestion.image}
+                  imageSrc={currentQuestion.image_url}
                   question={currentQuestion.question}
                 />
                 <div>
