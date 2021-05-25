@@ -57,7 +57,6 @@ export const QuizPage = () => {
   };
 
 
-  function handleClick() {
     history.push('/resultPage');
   }
 
