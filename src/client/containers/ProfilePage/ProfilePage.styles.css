@@ -15,7 +15,7 @@
 }
 
 .container .edit-link {
-  margin-top: 38%;
+  margin-top: 50%;
 }
 
 .profile-page-avatar {
@@ -61,7 +61,7 @@ li.card-profile-result-list-item {
 }
 
 h2.card-profile-result-title {
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 0;
   padding: 0 3em 0 0;
   line-height: 30px;
@@ -91,7 +91,7 @@ div.frame {
 }
 
 .profile-career-container .profile-career-title {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   margin: 10px 0 40px 10px;
   line-height: 10px;
@@ -112,6 +112,7 @@ div.frame {
   }
 
   h2.card-profile-result-title {
+    font-size: 20px;
     padding: 7px;
     line-height: 25px;
   }
@@ -125,6 +126,10 @@ div.frame {
 @media screen and (max-width: 1200px) {
   .profile-page-avatar {
     margin-top: 2em;
+  }
+
+  h2.card-profile-result-title {
+    font-size: 20px;
   }
 
   .container .edit-link {
