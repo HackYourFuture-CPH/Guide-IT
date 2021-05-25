@@ -1,5 +1,5 @@
 import React from 'react';
-import { ElevatorPitchPage } from './ElevatorPitchPage.component';
+import { ElevatorPitchPage } from './ElevatorPitchPage.container';
 
 export default {
   title: 'containers / ElevatorPitchPage ',

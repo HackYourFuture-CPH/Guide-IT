@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CareerPage from './CareerPage.component';
+import CareerPage from './CareerPage.container';
 
 export default {
   title: 'CareerPage',
