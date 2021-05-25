@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NextStepsPage } from './NextStepsPage.component';
+import { NextStepsPage } from './NextStepsPage.container';
 
 export default {
   title: 'containers / NextStepsPage ',

@@ -10,14 +10,15 @@ import { useAuthentication } from './hooks/useAuthentication';
 import Profile from './containers/Profile';
 import Loader from './components/Loader';
 import Error404Page from './containers/404Page/404Page.container';
-import CareerPage from './containers/CareerPage/CareerPage.component';
-import { QuizPage } from './containers/QuizPage/QuizPage.component';
-import { QuizResultPage } from './containers/QuizResultPage/QuizResultPage.component';
+import CareerPage from './containers/CareerPage/CareerPage.container';
+import { QuizPage } from './containers/QuizPage/QuizPage.container';
+import { QuizResultPage } from './containers/QuizResultPage/QuizResultPage.container';
 import { EmptyQuizResultPage } from './containers/EmptyQuizResultPage/EmptyQuizResultPage.container';
-import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchPage.component';
-import { LoginPage } from './containers/LoginPage/LoginPage.component';
-import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.component';
-import RegistrationPage from './containers/RegistrationPage/RegistrationPage.component';
+import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchPage.container';
+import { LoginPage } from './containers/LoginPage/LoginPage.container';
+import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.container';
+import RegistrationPage from './containers/RegistrationPage/RegistrationPage.container';
+import ProfileBlueBar from './components/ProfileBlueBar/ProfileBlueBar.component';
 
 function App() {
   const { isLoading } = useAuthentication();
@@ -34,9 +35,6 @@ function App() {
           <Home />
         </Route>
         {/* Anonymous pages */}
-        <Route exact path="/404-page-not-found">
-          <Error404Page />
-        </Route>
         <Route path="/career/:jobTitle" component={CareerPage} />
         <Route exact path="/elevator-pitch">
           <ElevatorPitchPage />
@@ -54,9 +52,14 @@ function App() {
           <QuizPage />
         </Route>
         <Route path="/quiz-results/:userId" component={QuizResultPage} />
-
         <Route exact path="/registration">
           <RegistrationPage />
+        </Route>
+        <Route exact path="/profile-page">
+          <ProfileBlueBar />
+        </Route>
+        <Route>
+          <Error404Page />
         </Route>
 
         {/* All routes below are authenticated routes - a user must login first */}
