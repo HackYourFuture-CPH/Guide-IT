@@ -1,5 +1,4 @@
 import React from 'react';
-import background from '../../assets/images/Vector.svg';
 import Robot from '../../assets/images/robot_logo.png';
 import './ProfileQuizResults.styles.css';
 import CardProfileResultComponent from '../CardProfileResult/CardProfileResult.component';
@@ -18,7 +17,7 @@ function ProfileQuizResults() {
   ];
 
   return (
-    <div style={{ backgroundImage: `url(${background})`, width: '100%' }}>
+    <div>
       <div className="quiz-results-header">
         <img src={Robot} alt="robot" />
         <span className="robot-text">QUIZ RESULTS</span>
