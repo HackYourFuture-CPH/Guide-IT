@@ -133,6 +133,11 @@ export const QuizPage = () => {
                 </span>
               ) : (
                 <span className="results">
+<Link
+                    to={`/quiz-results/${localStorage.getItem(
+                      'anonymousUserId',
+                    )}`}
+                  >
                   <Buttons
                     label="See My Results"
                     size="big"
