@@ -35,9 +35,6 @@ function App() {
           <Home />
         </Route>
         {/* Anonymous pages */}
-        <Route exact path="/404-page-not-found">
-          <Error404Page />
-        </Route>
         <Route path="/career/:jobTitle" component={CareerPage} />
         <Route exact path="/elevator-pitch">
           <ElevatorPitchPage />
@@ -55,12 +52,14 @@ function App() {
           <QuizPage />
         </Route>
         <Route path="/quiz-results/:userId" component={QuizResultPage} />
-
         <Route exact path="/registration">
           <RegistrationPage />
         </Route>
         <Route exact path="/profile-page">
           <ProfileBlueBar />
+        </Route>
+        <Route>
+          <Error404Page />
         </Route>
 
         {/* All routes below are authenticated routes - a user must login first */}
