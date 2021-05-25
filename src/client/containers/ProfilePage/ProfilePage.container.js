@@ -62,7 +62,7 @@ const ProfilePage = () => {
         const firstName = fullName.split(' ')[0];
         setUserName(firstName);
         setUserEmail(user[0].email);
-        setPhotoUrl(user[0].photoURL);
+        setPhotoUrl(user[0].photoURL ? user[0].photoURL : avatarImage);
         //  fetching all the users, and filtering the current user to get userId  from users
         fetch('/api/users')
           .then((res) => res.json())
@@ -124,7 +124,7 @@ const ProfilePage = () => {
                   userName={userName}
                   userEmail={userEmail}
                   userPassword="xxxxxxxxxxxx"
-                  userImage={photoUrl ? photoUrl : avatarImage}
+                  userImage={photoUrl}
                 />
               </div>
             </div>
