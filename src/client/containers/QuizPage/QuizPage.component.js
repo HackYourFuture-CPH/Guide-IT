@@ -5,7 +5,7 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
-import { useHistory } from 'react-router-dom';
+import {  Link} from 'react-router-dom';
 
 import './QuizPage.styles.css';
 
