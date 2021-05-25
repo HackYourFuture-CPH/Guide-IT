@@ -56,7 +56,6 @@ export const QuizPage = () => {
     setCurrentOn((prev) => prev - 1);
   };
 
-  const history = useHistory();
 
   function handleClick() {
     history.push('/resultPage');
