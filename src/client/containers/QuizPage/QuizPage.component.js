@@ -144,6 +144,7 @@ export const QuizPage = () => {
                     isMono={false}
                   
                   />
+                  </Link>
                 </span>
               )}
             </div>
