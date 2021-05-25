@@ -109,7 +109,7 @@ export default CareerPage;
 
 CareerPage.propTypes = {
   jobTitle: PropTypes.string,
-  match: PropTypes.object,
+  match: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 CareerPage.defaultProps = {
   jobTitle: 'Full stack developer',
