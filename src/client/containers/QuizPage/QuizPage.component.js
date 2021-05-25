@@ -57,7 +57,7 @@ export const QuizPage = () => {
   };
 
 
-  }
+  
 
   useEffect(() => {
     setIsLoading(true);
