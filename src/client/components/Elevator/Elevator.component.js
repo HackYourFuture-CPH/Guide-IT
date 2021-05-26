@@ -201,15 +201,19 @@ function Elevator({ level }) {
           floor={floor}
           handleClickPagination={handleClickPagination}
         />
-        {elevatorSpeechArray.map((item) => (
-          <ElevatorLevel
-            key={item.header.slice(3, 10)}
-            header={item.header}
-            floor={floor}
-            onClickPrev={handleClickPrev}
-            onClickNext={handleClickNext}
-          />
-        ))}
+        {elevatorSpeechArray
+          .filter((index) => {
+            return index === floor;
+          })
+          .map((item) => (
+            <ElevatorLevel
+              key={item.header.slice(3, 10)}
+              header={item.header}
+              floor={floor}
+              onClickPrev={handleClickPrev}
+              onClickNext={handleClickNext}
+            />
+          ))}
       </div>
       <RoboModal floor={floor} onClick={handleClickNext} />
     </>
