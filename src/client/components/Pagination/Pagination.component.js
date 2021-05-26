@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Pagination.styles.css';
 
 // Floor and setFloor states will be passed to us as props from the parent container
@@ -39,3 +40,8 @@ function Pagination({ floor, handleClickPagination }) {
 }
 
 export default Pagination;
+
+Pagination.propTypes = {
+  floor: PropTypes.number.isRequired,
+  handleClickPagination: PropTypes.func.isRequired,
+};
