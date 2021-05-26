@@ -5,7 +5,7 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
-import {  Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './QuizPage.styles.css';
 
@@ -55,9 +55,6 @@ export const QuizPage = () => {
   const goToPrevious = () => {
     setCurrentOn((prev) => prev - 1);
   };
-
-
-  
 
   useEffect(() => {
     setIsLoading(true);
@@ -133,17 +130,12 @@ export const QuizPage = () => {
                 </span>
               ) : (
                 <span className="results">
-<Link
+                  <Link
                     to={`/quiz-results/${localStorage.getItem(
                       'anonymousUserId',
                     )}`}
                   >
-                  <Buttons
-                    label="See My Results"
-                    size="big"
-                    isMono={false}
-                  
-                  />
+                    <Buttons label="See My Results" size="big" isMono={false} />
                   </Link>
                 </span>
               )}
