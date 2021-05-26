@@ -58,7 +58,7 @@ const ElevatorContent = ({ floor }) => {
           <li>This is your chance to brag a bit(but not too much!).</li>
           <li>Be positive and flexible.</li>
           <li>
-            Don`&apos`t start with the stuff you`&apos`d rather not be doing.
+            Don&apos;t start with the stuff you&apos;d rather not be doing.
           </li>
         </ul>
       </>
@@ -201,19 +201,15 @@ function Elevator({ level }) {
           floor={floor}
           handleClickPagination={handleClickPagination}
         />
-        {elevatorSpeechArray
-          .filter((item, index) => {
-            return index === floor;
-          })
-          .map((item) => (
-            <ElevatorLevel
-              key={item.header.slice(3, 10)}
-              header={item.header}
-              floor={floor}
-              onClickPrev={handleClickPrev}
-              onClickNext={handleClickNext}
-            />
-          ))}
+        {elevatorSpeechArray.map((item) => (
+          <ElevatorLevel
+            key={item.header.slice(3, 10)}
+            header={item.header}
+            floor={floor}
+            onClickPrev={handleClickPrev}
+            onClickNext={handleClickNext}
+          />
+        ))}
       </div>
       <RoboModal floor={floor} onClick={handleClickNext} />
     </>
