@@ -123,7 +123,6 @@ const ProfilePage = () => {
                   fontFamily="Roboto Mono"
                   userName={userName}
                   userEmail={userEmail}
-                  userPassword="xxxxxxxxxxxx"
                   userImage={photoUrl}
                 />
               </div>
