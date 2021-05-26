@@ -6,36 +6,87 @@ import vectorMan from '../../assets/images/elevator_man.png';
 import PropTypes from 'prop-types';
 import './RoboModal.styles.css';
 
-const modalDetails = [
-  {
-    rcontent: 'HOVER OVER FOR MORE TIPS',
-    modalcontent:
-      '<h6>When to use it</h6><ul><li>At job fairs, career expos or job interviews</li><li>To present yourself at networking events and online as your LinkedIn summary!</li></ul>',
-  },
-  {
-    rcontent: 'HOVER OVER FOR MORE TIPS',
-    modalcontent:
-      '<p>Mention your goals.Remember to say what you`re looking for. For instance, you might say: "a role in designing" or "an opportunity to apply my sales skills to a new market".</p><p>Have your CV ready.A copy of your resume will demonstrate your enthusiasm and preparedness.</p>',
-  },
-  {
-    rcontent: 'HOVER OVER FOR MORE TIPS',
-    modalcontent:
-      '<p>Practice giving your speech to a friend or recording it. This will help you know whether you`re keeping within the time limit and giving a coherent message.</p>',
-  },
-  {
-    rcontent: 'HOVER OVER FOR MORE TIPS',
-    modalcontent:
-      '<p>Modulate your voice to keep listeners interested, keep your facial expression friendly, and smile.</p>',
-  },
-  {
-    rcontent: 'HOVER OVER FOR MORE EXAMPLES',
-    modalcontent:
-      "<p>'I'm an R& D Scientist who helps companies use their existing patents and technologies to develop new skincare products.Right now at Johnson & Johnson I'm finishing a successful project for an antibacterial cream and I'm looking for my next challenge.Do you know any companies that are involved in discovering and developing new skincare products ? '</p>",
-  },
-  {
-    rcontent: '<a href="/next-steps">CLICK FOR NEXT STEPS</a>',
-  },
-];
+const RoboContent = ({ floor }) => {
+  if (floor === 5) {
+    return (
+      <p>
+        <a href="/next-steps">CLICK FOR NEXT STEPS</a>
+      </p>
+    );
+  }
+  if (floor === 4) {
+    return <p>HOVER OVER FOR MORE EXAMPLES</p>;
+  }
+  return <p>HOVER OVER FOR MORE TIPS</p>;
+};
+
+const RoboModalContent = ({ floor }) => {
+  if (floor === 0) {
+    return (
+      <>
+        <h6>When to use it</h6>
+        <ul>
+          <li>At job fairs, career expos or job interviews</li>
+          <li>
+            To present yourself at networking events and online as your LinkedIn
+            summary!
+          </li>
+        </ul>
+      </>
+    );
+  }
+  if (floor === 1) {
+    return (
+      <>
+        <p>
+          Mention your goals.Remember to say what you`re looking for. For
+          instance, you might say: &quot;a role in designing&quot; or &quot;an
+          opportunity to apply my sales skills to a new market&quot;.
+        </p>
+        <p>
+          Have your CV ready.A copy of your resume will demonstrate your
+          enthusiasm and preparedness.
+        </p>
+      </>
+    );
+  }
+  if (floor === 2) {
+    return (
+      <>
+        <p>
+          Practice giving your speech to a friend or recording it. This will
+          help you know whether you&apos;re keeping within the time limit and
+          giving a coherent message.
+        </p>
+      </>
+    );
+  }
+  if (floor === 3) {
+    return (
+      <>
+        <p>
+          Modulate your voice to keep listeners interested, keep your facial
+          expression friendly, and smile.
+        </p>
+      </>
+    );
+  }
+  if (floor === 4) {
+    return (
+      <>
+        <p>
+          &ldquo;I&lsquo;m an R&D Scientist who helps companies use their
+          existing patents and technologies to develop new skincare
+          products.Right now at Johnson & Johnson I&lsquo;m finishing a
+          successful project for an antibacterial cream and I&lsquo;m looking
+          for my next challenge.Do you know any companies that are involved in
+          discovering and developing new skincare products?&rdquo;
+        </p>
+      </>
+    );
+  }
+  return <> </>;
+};
 
 function RoboModal({ floor, onClick }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -71,8 +122,7 @@ function RoboModal({ floor, onClick }) {
         className="robot-circle-container"
       >
         <img src={robot} alt="Robot" />
-        {/* eslint-disable-next-line  */}
-        <p dangerouslySetInnerHTML={{ __html: modalDetails[floor].rcontent }} />
+        <RoboContent floor={floor} />
       </div>
       {floor !== 5 && (
         <Modal
@@ -81,13 +131,9 @@ function RoboModal({ floor, onClick }) {
           closeModal={closeModal}
           backgroundColor="#FBFF4A"
         >
-          {/* eslint-disable-next-line  */}
-          <div
-            dangerouslySetInnerHTML={{
-              __html: modalDetails[floor].modalcontent,
-            }}
-            className="modal-box-contents"
-          />
+          <div className="modal-box-contents">
+            <RoboModalContent floor={floor} />
+          </div>
         </Modal>
       )}
     </>
@@ -97,4 +143,10 @@ export default RoboModal;
 RoboModal.propTypes = {
   floor: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
+};
+RoboContent.propTypes = {
+  floor: PropTypes.number.isRequired,
+};
+RoboModalContent.propTypes = {
+  floor: PropTypes.number.isRequired,
 };
