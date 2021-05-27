@@ -6,6 +6,7 @@ import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
 import { Link } from 'react-router-dom';
+import { useFirebase } from '../../firebase/FirebaseContext';
 
 import './QuizPage.styles.css';
 
@@ -16,7 +17,13 @@ export const QuizPage = () => {
   const [error, setError] = useState(undefined);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
 
-  const handleQuestions = async () => {
+  const { auth } = useFirebase();
+
+  const getUserId = async () => {
+    if (auth.currentUser) {
+      return auth.currentUser.uid;
+    }
+
     let userId = localStorage.getItem('anonymousUserId');
     if (!userId) {
       const response = await fetch('/api/users', {
@@ -33,6 +40,11 @@ export const QuizPage = () => {
         setError(await response.text());
       }
     }
+    return userId;
+  };
+
+  const handleQuestions = async () => {
+    const userId = await getUserId();
     if (selectedAnswer !== undefined) {
       const response = await fetch('/api/quiz-results', {
         method: 'POST',
