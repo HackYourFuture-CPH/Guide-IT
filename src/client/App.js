@@ -14,11 +14,11 @@ import CareerPage from './containers/CareerPage/CareerPage.container';
 import { QuizPage } from './containers/QuizPage/QuizPage.container';
 import { QuizResultPage } from './containers/QuizResultPage/QuizResultPage.container';
 import { EmptyQuizResultPage } from './containers/EmptyQuizResultPage/EmptyQuizResultPage.container';
+import ProfilePage from './containers/ProfilePage/ProfilePage.container';
 import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchPage.container';
 import { LoginPage } from './containers/LoginPage/LoginPage.container';
 import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.container';
 import RegistrationPage from './containers/RegistrationPage/RegistrationPage.container';
-import ProfileBlueBar from './components/ProfileBlueBar/ProfileBlueBar.component';
 
 function App() {
   const { isLoading } = useAuthentication();
@@ -56,7 +56,7 @@ function App() {
           <RegistrationPage />
         </Route>
         <Route exact path="/profile-page">
-          <ProfileBlueBar />
+          <ProfilePage />
         </Route>
         <Route>
           <Error404Page />
