@@ -75,13 +75,14 @@ export default function ProfileCareerResult({ jobTitle }) {
             <p key={content.contentHead}>
               <strong>{content.contentHead}</strong>
               <span>{content.content}</span>
+              <a href={`/career/${jobTitle}`}>
+                <button type="button" className="triangle">
+                  {' '}
+                </button>
+              </a>
             </p>
           ))}
         </div>
-
-        <a href="/career">
-          <p className="triangle"> </p>
-        </a>
       </div>
     </div>
   );
