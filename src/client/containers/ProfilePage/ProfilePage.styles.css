@@ -64,7 +64,7 @@ h2.card-profile-result-title {
   font-size: 1.5625rem;
   margin-bottom: 0;
   padding: 0 3em 0 0;
-  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 ul.card-profile-result-list-items {
@@ -94,7 +94,7 @@ div.frame {
   font-size: 1.5625rem;
   font-weight: bold;
   margin: 10px 0 40px 10px;
-  line-height: 10px;
+  line-height: 0.625rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -114,7 +114,7 @@ div.frame {
   h2.card-profile-result-title {
     font-size: 1.25rem;
     padding: 7px;
-    line-height: 25px;
+    line-height: 1.5625rem;
   }
 
   .profile-quiz-container .results-container {
