@@ -49,7 +49,6 @@ const jobDetailsArray = [
 ];
 
 export default function ProfileCareerResult({ jobTitle }) {
-  //const [jobtitleoption, setJobTitleOption] = useState(jobTitle);
   let chosenJobDetail = [];
   const chosenJob = jobDetailsArray.filter(
     (job) => job.jobTitle.toLowerCase() === jobTitle.toLowerCase(),
