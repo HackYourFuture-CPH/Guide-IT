@@ -5,7 +5,8 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
-import { Link } from 'react-router-dom';
+import { useFirebase } from '../../firebase/FirebaseContext';
+import { useHistory } from 'react-router-dom';
 
 import './QuizPage.styles.css';
 
@@ -16,7 +17,13 @@ export const QuizPage = () => {
   const [error, setError] = useState(undefined);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
 
-  const handleQuestions = async () => {
+  const { auth } = useFirebase();
+  const history = useHistory();
+
+  const getUserId = async () => {
+    if (auth.currentUser) {
+      return auth.currentUser.uid;
+    }
     let userId = localStorage.getItem('anonymousUserId');
     if (!userId) {
       const response = await fetch('/api/users', {
@@ -33,6 +40,11 @@ export const QuizPage = () => {
         setError(await response.text());
       }
     }
+    return userId;
+  };
+
+  const handleQuestions = async () => {
+    const userId = await getUserId();
     if (selectedAnswer !== undefined) {
       const response = await fetch('/api/quiz-results', {
         method: 'POST',
@@ -42,12 +54,32 @@ export const QuizPage = () => {
           fk_user_id: Number(userId),
         }),
       });
-      if (response.ok) {
-        setCurrentOn((prev) => prev + 1);
-        setSelectedAnswer(undefined);
-      } else {
-        const body = await response.text();
-        setError(body);
+
+      if (currentOn !== questions.length - 1) {
+        if (response.ok) {
+          setCurrentOn((prev) => prev + 1);
+          setSelectedAnswer(undefined);
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
+      }
+
+      if (currentOn === questions.length - 1) {
+        if (response.ok) {
+          // go to results page
+
+          if (auth.currentUser) {
+            history.push(`/quiz-results/${auth.currentUser.uid}`);
+          } else {
+            history.push(
+              `/quiz-results/${localStorage.getItem('anonymousUserId')}`,
+            );
+          }
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
       }
     }
   };
@@ -130,13 +162,12 @@ export const QuizPage = () => {
                 </span>
               ) : (
                 <span className="results">
-                  <Link
-                    to={`/quiz-results/${localStorage.getItem(
-                      'anonymousUserId',
-                    )}`}
-                  >
-                    <Buttons label="See My Results" size="big" isMono={false} />
-                  </Link>
+                  <Buttons
+                    label="See My Results"
+                    size="big"
+                    isMono={false}
+                    onClick={handleQuestions}
+                  />
                 </span>
               )}
             </div>
