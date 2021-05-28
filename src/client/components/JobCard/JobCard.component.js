@@ -80,7 +80,7 @@ export default function JobCard({ jobTitle }) {
         <h1>{chosenJobDetail.title}</h1>
         <div className="job-details-div">
           {chosenJobDetail.contents.map((content) => (
-            <p>
+            <p key={content.contentHead}>
               <strong>{content.contentHead}</strong>
               <span>{content.content}</span>
             </p>

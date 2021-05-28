@@ -77,7 +77,6 @@ const ProfilePage = () => {
     },
     [user, userName, userId],
   );
-
   useEffect(() => {
     // user career result
     if (userId) {
@@ -86,19 +85,16 @@ const ProfilePage = () => {
       });
     }
   }, [userId, career]);
-
   useEffect(() => {
     // users quiz results
     careerSet();
   }, [career]);
-
   // users sign out function
   const handleSignOut = () => {
     signOutGoogle();
     setUserName('');
     history.push('/');
   };
-
   return (
     <>
       {user && (
