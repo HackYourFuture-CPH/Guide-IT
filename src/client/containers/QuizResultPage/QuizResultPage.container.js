@@ -6,16 +6,17 @@ import RobotLogo from '../../components/RobotLogo/RobotLogo.component';
 import CardProfileResultComponent from '../../components/CardProfileResult/CardProfileResult.component.js';
 import RegisterTeaser from '../../components/RegisterTeaser/RegisterTeaser.component';
 import PageHeader from '../../components/PageHeader/PageHeader.component';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { quizResultGetCareer } from './quizResultGetCareer.apiRequest';
 
 export const QuizResultPage = ({ match }) => {
+  const history = useHistory();
   const [userId, setUserId] = useState('');
   const [career, setCareer] = useState('');
   const [professional, setProfessional] = useState([]);
   const [personal, setPersonal] = useState([]);
-  const uxProfessional = ['detailed orineted', 'proactive', 'problem solver'];
-  const uxPersonal = ['communicative', 'critical thinking', 'patient'];
+  const uxProfessional = ['design-oriented', 'creative', 'problem solver'];
+  const uxPersonal = ['extrovert', 'detail oriented', 'patient'];
   const fullstackProfessional = [
     'good with debugging',
     'knows fundamental database concepts',
@@ -26,23 +27,25 @@ export const QuizResultPage = ({ match }) => {
     'super-planner(able to handle whole project development)',
     'patient',
   ];
-  const DataAnalystProfessional = [
-    'design-oriented',
-    'creative',
+  const dataAnalystProfessional = [
+    'detail oriented',
+    'proactive',
     'problem solver',
   ];
+  const dataAnalystPersonal = ['communicative', 'critical thinking', 'patient'];
 
   useEffect(() => {
     setUserId(match.params.userId);
   }, []);
 
   useEffect(() => {
-    quizResultGetCareer(userId).then((userCareer) => {
-      setCareer(userCareer);
-    });
+    if (userId !== '') {
+      quizResultGetCareer(userId).then((userCareer) => {
+        setCareer(userCareer);
+      });
+    }
   }, [userId]);
 
-  const dataAnalystPersonal = ['extrovert', 'detail oriented', 'patient'];
   async function careerSet() {
     if (career === 'UX designer') {
       setPersonal([...uxPersonal]);
@@ -52,7 +55,9 @@ export const QuizResultPage = ({ match }) => {
       setProfessional([...fullstackProfessional]);
     } else if (career === 'Data analyst') {
       setPersonal([...dataAnalystPersonal]);
-      setProfessional([...DataAnalystProfessional]);
+      setProfessional([...dataAnalystProfessional]);
+    } else if (career === 'Error') {
+      history.push('/empty-quiz-results');
     }
   }
   useEffect(() => {

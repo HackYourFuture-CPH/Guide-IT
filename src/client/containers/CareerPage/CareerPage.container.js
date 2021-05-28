@@ -25,7 +25,7 @@ const alternateCareerArray = [
 ];
 
 const CareerPage = ({ match }) => {
-  const jobTitle = match.params.jobTitle;
+  const { jobTitle } = match.params;
   const history = useHistory();
   // onclick
   const handleClick = () => {
@@ -33,7 +33,7 @@ const CareerPage = ({ match }) => {
   };
   // onclick for elevator
   const onClickElevator = () => {
-    history.push('/elevatorpitch');
+    history.push('/elevator-pitch');
   };
 
   return (
@@ -109,6 +109,7 @@ export default CareerPage;
 
 CareerPage.propTypes = {
   jobTitle: PropTypes.string,
+  match: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 CareerPage.defaultProps = {
   jobTitle: 'Full stack developer',
