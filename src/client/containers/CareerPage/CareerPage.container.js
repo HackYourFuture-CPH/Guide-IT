@@ -67,7 +67,7 @@ const CareerPage = ({ match }) => {
                 : alternateCareerArray
                     .find((option) => option.title === jobTitle)
                     .alternate.map((careerOption) => (
-                      <div className="single-option-div">
+                      <div className="single-option-div" key={careerOption}>
                         <h2>{careerOption}</h2>{' '}
                         <span>
                           <img
