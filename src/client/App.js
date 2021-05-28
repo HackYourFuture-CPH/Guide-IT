@@ -4,10 +4,8 @@ import './assets/fonts/fonts.css';
 
 import { Home } from './containers/Home/Home.container';
 
-import AuthenticatedRoute from './components/Auth/AuthenticatedRoute.component';
 import { useAuthentication } from './hooks/useAuthentication';
 
-import Profile from './containers/Profile';
 import Loader from './components/Loader';
 import Error404Page from './containers/404Page/404Page.container';
 import CareerPage from './containers/CareerPage/CareerPage.container';
@@ -16,7 +14,7 @@ import { QuizResultPage } from './containers/QuizResultPage/QuizResultPage.conta
 import { EmptyQuizResultPage } from './containers/EmptyQuizResultPage/EmptyQuizResultPage.container';
 import ProfilePage from './containers/ProfilePage/ProfilePage.container';
 import { ElevatorPitchPage } from './containers/ElevatorPitchPage/ElevatorPitchPage.container';
-import { LoginPage } from './containers/LoginPage/LoginPage.container';
+
 import { NextStepsPage } from './containers/NextStepsPage/NextStepsPage.container';
 import RegistrationPage from './containers/RegistrationPage/RegistrationPage.container';
 
@@ -42,9 +40,6 @@ function App() {
         <Route exact path="/empty-quiz-results">
           <EmptyQuizResultPage />
         </Route>
-        <Route exact path="/login">
-          <LoginPage />
-        </Route>
         <Route exact path="/next-steps">
           <NextStepsPage />
         </Route>
@@ -61,11 +56,6 @@ function App() {
         <Route>
           <Error404Page />
         </Route>
-
-        {/* All routes below are authenticated routes - a user must login first */}
-        <AuthenticatedRoute exact path="/profile">
-          <Profile />
-        </AuthenticatedRoute>
       </Switch>
     </Router>
   );
