@@ -87,13 +87,13 @@
 }
 
 /* taking resolution into consideration only for 1024x768 to 1920x1080 screens */
-@media (min-width: 1024px) and (max-width: 1150px) {
+@media (min-width: 1000px) and (max-width: 1151px) {
   .elevator-component {
-    height: 45rem;
+    height: 47rem;
   }
 
   .elevator-level {
-    height: 39rem;
+    height: 41rem;
   }
 
   .elevator-arrow {
@@ -103,11 +103,11 @@
 
 @media (min-width: 1151px) and (max-width: 1300px) {
   .elevator-component {
-    height: 42rem;
+    height: 43rem;
   }
 
   .elevator-level {
-    height: 36rem;
+    height: 37rem;
   }
 
   .elevator-arrow {

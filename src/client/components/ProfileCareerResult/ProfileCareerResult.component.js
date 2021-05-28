@@ -78,8 +78,7 @@ export default function ProfileCareerResult({ jobTitle }) {
             </p>
           ))}
         </div>
-
-        <a href="/career">
+        <a href={`/career/${jobTitle}`}>
           <p className="triangle"> </p>
         </a>
       </div>

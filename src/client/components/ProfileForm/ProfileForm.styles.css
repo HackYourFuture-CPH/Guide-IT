@@ -17,6 +17,7 @@ figcaption {
   height: 100%;
   display: flex;
   margin: auto;
+  padding-bottom: 23rem;
   justify-content: center;
   flex-direction: column;
   background-color: #e9f4f4;
@@ -24,45 +25,6 @@ figcaption {
   font-size: 0.9em;
 }
 
-.form-group {
-  width: 90%;
-  margin-top: 5%;
-  margin-left: 5%;
-}
-
-.form-group label {
-  display: block;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 15px;
-  margin-top: 3%;
-  border: none;
-  border-radius: 5px;
-  padding-left: 12%;
-}
-
-.form-group input[type='password'] {
-  background-image: url('../../assets/images/lock.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-}
-
-.form-group input[type='email'] {
-  background-image: url('../../assets/images/envelope.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-}
-
-.container .edit-link {
-  margin-top: 40%;
+.container .email {
   text-align: center;
-  padding-bottom: 10%;
-  align-items: center;
-}
-
-.container .edit-link a {
-  text-decoration: none;
-  font-size: 1.5em;
 }
