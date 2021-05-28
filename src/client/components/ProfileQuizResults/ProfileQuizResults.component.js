@@ -2,20 +2,9 @@ import React from 'react';
 import Robot from '../../assets/images/robot_logo.png';
 import './ProfileQuizResults.styles.css';
 import CardProfileResultComponent from '../CardProfileResult/CardProfileResult.component';
+import PropTypes from 'prop-types';
 
-function ProfileQuizResults() {
-  const result = [
-    'creative',
-    'knows fundamental database concepts',
-    'works well under pressure',
-  ];
-
-  const resultpersonal = [
-    'extrovert',
-    'detail-oriented',
-    'super-planner (able to handle whole project development)',
-  ];
-
+function ProfileQuizResults({ personal, professional }) {
   return (
     <div>
       <div className="quiz-results-header">
@@ -26,13 +15,13 @@ function ProfileQuizResults() {
         <div className="personal-profile">
           <CardProfileResultComponent
             title="Your Personal Profile"
-            results={resultpersonal}
+            results={personal}
           />
         </div>
         <div className="professional-profile">
           <CardProfileResultComponent
             title="Your Professional Profile"
-            results={result}
+            results={professional}
           />
         </div>
       </div>
@@ -40,4 +29,8 @@ function ProfileQuizResults() {
   );
 }
 
+ProfileQuizResults.propTypes = {
+  personal: PropTypes.PropTypes.arrayOf(PropTypes.string).isRequired,
+  professional: PropTypes.PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 export default ProfileQuizResults;
