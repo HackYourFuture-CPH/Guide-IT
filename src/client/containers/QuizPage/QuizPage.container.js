@@ -134,7 +134,7 @@ export const QuizPage = () => {
                   <QuizAnswers
                     selectedAnswer={selectedAnswer}
                     setSelectedAnswer={setSelectedAnswer}
-                    isAgreementQuestion={!currentQuestion.is_agreement_question}
+                    isAgreementQuestion={currentQuestion.is_agreement_question}
                     answers={currentQuestion.answers}
                   />
                 </div>
