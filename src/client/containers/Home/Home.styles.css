@@ -25,6 +25,7 @@
 
 .home-button {
   display: flex;
+  justify-content: center;
   width: 100%;
   margin-top: 20px;
 }
@@ -42,22 +43,30 @@
 }
 
 /** Description career **/
+.home-path-container {
+  display: flex;
+  margin: 0 3% 30px;
+}
+
+.home-button-left,
+.home-button-right {
+  width: 200px;
+}
 
 .exams-description {
-  height: 45%;
+  width: 100%;
 }
 
 .description-career {
   padding: 5px;
   padding-left: 20px;
   margin: 5px;
-  min-height: 330px;
+  min-height: 300px;
   height: 100%;
 }
 
 .inner-div {
-  margin: 0 35px;
-  height: 95%;
+  height: auto;
 }
 
 .home-description p {
@@ -87,6 +96,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 15vw;
+  min-width: 220px;
 }
 
 .home-side {
@@ -95,6 +106,23 @@
 
 .sidebar-footer {
   padding-top: 0;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hyf-logo {
+  width: 15vw;
+  height: auto;
+  margin-left: 0;
+  max-width: 260px;
+}
+
+.redi-logo {
+  height: 7.5vw;
+  width: auto;
+  max-height: 160px;
 }
 
 /* homepage header */
@@ -124,31 +152,28 @@
     font-size: 1rem;
   }
 
-  .description-career {
-    min-height: 0;
-  }
-
   .description-career .time {
     font-size: 18px;
   }
 }
 
+.buttons.big {
+  margin-bottom: 3%;
+}
+
 @media screen and (min-height: 620px) {
   .robot-image {
     width: 28%;
+    min-width: 120px;
   }
 
   .home-description {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .description-career .content,
   .description-career .content2 {
     font-size: 1.2rem;
-  }
-
-  .description-career {
-    min-height: 0;
   }
 
   .description-career .time {
@@ -163,10 +188,6 @@
 
   .home-description {
     font-size: 1.4rem;
-  }
-
-  .description-career {
-    min-height: 0;
   }
 
   .description-career .content,
@@ -204,11 +225,31 @@
 }
 
 @media (max-width: 1020px) {
+  header.homepage-header h2 {
+    font-size: 1.5rem !important;
+    margin: 0 -20px 0 20px;
+  }
+
+  .homepage-header {
+    margin-top: 3rem;
+  }
+
+  .home-description {
+    width: auto;
+    font-size: 1.2rem;
+    margin: 0 2%;
+  }
+
   .burger-menu .icon-burger {
     display: block;
-    margin-top: 50%;
-    padding-top: 1%;
+    padding-top: 6%;
     transform: translateY(0%);
+    position: absolute;
+    margin-left: 3%;
+  }
+
+  .home-container {
+    height: auto;
   }
 
   .burger-menu .sidebar-menu {
@@ -262,5 +303,29 @@
 
   .burger-menu :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .description-career {
+    min-height: 340px;
+  }
+
+  .buttons {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-path-container {
+    flex-direction: column;
+  }
+
+  .exams-description {
+    margin-bottom: 30px;
+  }
+
+  .description-career {
+    min-height: 300px;
   }
 }
