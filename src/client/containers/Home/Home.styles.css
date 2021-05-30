@@ -224,6 +224,13 @@
   }
 }
 
+@media (max-height: 860px) {
+  .home-main {
+    overflow: scroll;
+    height: 100%;
+  }
+}
+
 @media (max-width: 1020px) {
   header.homepage-header h2 {
     font-size: 1.5rem !important;
