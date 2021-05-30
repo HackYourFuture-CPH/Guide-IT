@@ -51,10 +51,6 @@
   justify-content: center;
   align-items: center;
   padding-top: 57px;
-  margin: 0 auto;
-  width: 61px;
-  height: 45px;
-  line-height: 29px;
   letter-spacing: 0.9px;
   font-size: 22px;
   font-weight: 500;
@@ -68,7 +64,6 @@
 
 .google_logo {
   width: 1.3rem;
-  height: 1.3rem;
   margin-right: 4px;
   margin-top: 2px;
 }

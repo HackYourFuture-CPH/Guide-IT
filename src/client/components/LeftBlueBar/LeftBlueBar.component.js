@@ -12,13 +12,6 @@ function SidebarMenu() {
       <div className="sidebar-menu">
         <div className="sidebar-header">
           <div className="sidebar-title">GuideIT</div>
-          {/* <div className="create-account">
-            <div>
-              <Link to="/registration">Create account</Link>
-            </div>
-            <div className="triangle" />
-          </div> */}
-
           <div className="login">
             <img className="google_logo" alt="Google logo" src={GoogleLogo} />
             <div>
