@@ -6,6 +6,7 @@ import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
 import { Link } from 'react-router-dom';
+import { useFirebase } from '../../firebase/FirebaseContext';
 
 import './QuizPage.styles.css';
 
@@ -16,27 +17,63 @@ export const QuizPage = () => {
   const [error, setError] = useState(undefined);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
 
-  const handleQuestions = async () => {
-    let userId = localStorage.getItem('anonymousUserId');
-    if (!userId) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({}),
+  const { auth } = useFirebase();
+
+  const getAuthenticatedUser = async (firebaseToken) => {
+    try {
+      const response = await fetch('/api/users/current', {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: firebaseToken,
+        },
       });
       if (response.ok) {
-        const user = await response.json();
+        return response.json();
+      }
+      setError(await response.message());
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
-        userId = user.userId;
-        localStorage.setItem('anonymousUserId', userId);
+  const getUserId = async () => {
+    let userId = sessionStorage.getItem('quizUserId');
+    if (!userId) {
+      if (auth.currentUser) {
+        const authenticatedUser = await getAuthenticatedUser(
+          auth.currentUser.uid,
+        );
+        if (authenticatedUser) {
+          userId = authenticatedUser.id;
+          sessionStorage.setItem('quizUserId', userId);
+        }
       } else {
-        setError(await response.text());
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({}),
+        });
+        if (response.ok) {
+          const anonymousUser = await response.json();
+          userId = anonymousUser.userId;
+          sessionStorage.setItem('quizUserId', userId);
+        } else {
+          setError(await response.text());
+        }
       }
     }
+    return userId;
+  };
+
+  const handleQuestions = async () => {
+    const userId = await getUserId();
     if (selectedAnswer !== undefined) {
       const response = await fetch('/api/quiz-results', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: auth.currentUser.uid,
+        },
         body: JSON.stringify({
           fk_answer_id: selectedAnswer,
           fk_user_id: Number(userId),
@@ -97,7 +134,7 @@ export const QuizPage = () => {
                   <QuizAnswers
                     selectedAnswer={selectedAnswer}
                     setSelectedAnswer={setSelectedAnswer}
-                    isAgreementQuestion={!currentQuestion.is_agreement_question}
+                    isAgreementQuestion={currentQuestion.is_agreement_question}
                     answers={currentQuestion.answers}
                   />
                 </div>
