@@ -249,9 +249,7 @@
 
   .burger-menu .icon-burger {
     display: block;
-    margin-top: 50%;
-    padding-top: 1%;
-    padding-left: 2rem;
+    padding-top: 5%;
     transform: translateY(0%);
     position: absolute;
     margin-left: 3%;
