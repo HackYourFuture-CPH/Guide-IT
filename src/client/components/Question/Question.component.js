@@ -6,7 +6,11 @@ export default function QuestionComponent({ question, imageSrc }) {
   return (
     <div
       className="question-box"
-      style={{ backgroundImage: `url(${imageSrc})` }}
+      style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        minHeight: 400,
+        backgroundImage: `url(${imageSrc})`,
+      }}
     >
       <p className="question">{question}</p>
     </div>

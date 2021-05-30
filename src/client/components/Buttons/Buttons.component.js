@@ -11,7 +11,7 @@ export default function Buttons({
 }) {
   return (
     <button
-      type="submit"
+      type="button"
       className={`buttons ${color} ${size} ${isMono ? `mono` : ``}`}
       onClick={onClick}
     >

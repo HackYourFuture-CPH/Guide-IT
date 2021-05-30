@@ -1,19 +1,22 @@
-@import '../../assets/fonts/fonts.css';
-
 /* General styling for the radio buttons and labels */
 .radio {
   color: #298f8a;
-  display: grid;
-  grid-template-columns: min-content auto;
-  grid-gap: 0.6em;
+  display: flex;
+  gap: 0.6em;
   font-size: 2em;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.inline .radio:first-child {
+  flex-direction: row-reverse;
 }
 
 /* Agreement type questions are aligned inline */
 .inline {
   display: flex;
+  gap: 0.6em;
 }
 
 /* Neutral radio button is smaller then Agree/Disagree buttons */
