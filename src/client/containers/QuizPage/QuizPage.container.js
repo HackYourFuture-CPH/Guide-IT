@@ -167,10 +167,12 @@ export const QuizPage = () => {
         </div>
         {questions && (
           <>
+            {answerPrompt && (
+              <div className="prompt">
+                Please select an answer before you can continue
+              </div>
+            )}
             <div className="button-page">
-              {answerPrompt && (
-                <div>Please select an answer before you can continue</div>
-              )}
               {currentOn !== 0 && currentOn !== questions.length - 1 && (
                 <span className="back-button">
                   <Buttons
