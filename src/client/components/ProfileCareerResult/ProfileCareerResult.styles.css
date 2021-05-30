@@ -41,6 +41,8 @@
   border-top: 8px solid transparent;
   border-left: 16px solid rgb(230, 97, 20);
   border-bottom: 8px solid transparent;
+  position: relative;
+  bottom: 5px;
 }
 
 .frame {
