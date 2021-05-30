@@ -249,7 +249,9 @@
 
   .burger-menu .icon-burger {
     display: block;
-    padding-top: 6%;
+    margin-top: 50%;
+    padding-top: 1%;
+    padding-left: 2rem;
     transform: translateY(0%);
     position: absolute;
     margin-left: 3%;
@@ -283,6 +285,7 @@
 
   #nav-toggle:checked ~ .sidebar-menu {
     display: flex;
+    padding-top: 5rem;
   }
 
   .burger-menu :checked ~ .icon-burger {

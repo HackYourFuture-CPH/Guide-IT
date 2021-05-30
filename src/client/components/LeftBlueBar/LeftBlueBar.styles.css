@@ -43,19 +43,18 @@
   border-left: 16px solid rgb(230, 97, 20);
   border-bottom: 8px solid transparent;
   margin-left: 15px;
+  margin-top: 6px;
 }
 
 .login {
   display: flex;
+  justify-content: center;
   align-items: center;
   padding-top: 57px;
-  width: 61px;
-  height: 45px;
-  line-height: 29px;
   letter-spacing: 0.9px;
   font-size: 22px;
   font-weight: 500;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .login a {
@@ -63,9 +62,16 @@
   font-family: 'Chakra Petch', sans-serif;
 }
 
+.google_logo {
+  width: 1.3rem;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+
 .sidebar-footer {
   padding-top: 540px;
   text-align: center;
+  padding-bottom: 2.5rem;
 }
 
 .hyf-logo {
