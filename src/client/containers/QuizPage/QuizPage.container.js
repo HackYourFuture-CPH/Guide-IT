@@ -5,8 +5,8 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
-import { Link } from 'react-router-dom';
 import { useFirebase } from '../../firebase/FirebaseContext';
+import { useHistory } from 'react-router-dom';
 
 import './QuizPage.styles.css';
 
@@ -18,6 +18,7 @@ export const QuizPage = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
 
   const { auth } = useFirebase();
+  const history = useHistory();
 
   const getAuthenticatedUser = async (firebaseToken) => {
     try {
@@ -79,12 +80,26 @@ export const QuizPage = () => {
           fk_user_id: Number(userId),
         }),
       });
-      if (response.ok) {
-        setCurrentOn((prev) => prev + 1);
-        setSelectedAnswer(undefined);
-      } else {
-        const body = await response.text();
-        setError(body);
+
+      if (currentOn !== questions.length - 1) {
+        if (response.ok) {
+          setCurrentOn((prev) => prev + 1);
+          setSelectedAnswer(undefined);
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
+      }
+
+      if (currentOn === questions.length - 1) {
+        if (response.ok) {
+          // go to results page
+
+          history.push(`/quiz-results/${userId}`);
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
       }
     }
   };
@@ -167,13 +182,12 @@ export const QuizPage = () => {
                 </span>
               ) : (
                 <span className="results">
-                  <Link
-                    to={`/quiz-results/${localStorage.getItem(
-                      'anonymousUserId',
-                    )}`}
-                  >
-                    <Buttons label="See My Results" size="big" isMono={false} />
-                  </Link>
+                  <Buttons
+                    label="See My Results"
+                    size="big"
+                    isMono={false}
+                    onClick={handleQuestions}
+                  />
                 </span>
               )}
             </div>
