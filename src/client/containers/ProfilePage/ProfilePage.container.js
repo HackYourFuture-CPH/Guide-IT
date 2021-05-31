@@ -20,7 +20,7 @@ const ProfilePage = () => {
   const [professional, setProfessional] = useState([]);
   const [personal, setPersonal] = useState([]);
   //  personal, professional array's for different careers
-  const uxProfessional = ['detailed orineted', 'proactive', 'problem solver'];
+  const uxProfessional = ['detailed oriented', 'proactive', 'problem solver'];
   const uxPersonal = ['communicative', 'critical thinking', 'patient'];
   const fullstackProfessional = [
     'good with debugging',
