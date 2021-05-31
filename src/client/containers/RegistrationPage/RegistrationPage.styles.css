@@ -16,11 +16,10 @@
 .registration-page {
   display: flex;
   flex-direction: column;
-  position: relative;
   width: 50%;
   background-color: #e9f4f3;
-  justify-content: space-around;
-  padding-left: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .registration-small-container {
@@ -44,6 +43,10 @@
 
 .robot-logo-img {
   width: 8rem;
+}
+
+.rp-google-login-button {
+  margin-top: 2rem;
 }
 
 .account {

@@ -9,6 +9,27 @@ const getUsers = async () => {
   );
 };
 
+const getCurrentUser = async (firebaseToken) => {
+  if (!firebaseToken) {
+    throw new HttpError('No firebase token matches', 400);
+  }
+
+  try {
+    const currentUser = await knex('users')
+      .select('users.id', 'users.full_name', 'users.firebase_token')
+      .where({ firebase_token: firebaseToken });
+    if (currentUser.length === 0) {
+      throw new Error(
+        `incorrect entry with the firebase token of ${firebaseToken}`,
+        404,
+      );
+    }
+    return currentUser[0];
+  } catch (error) {
+    return error.message;
+  }
+};
+
 const getUserById = async (id) => {
   if (!id) {
     throw new HttpError('Id should be a number', 400);
@@ -39,5 +60,6 @@ const createUser = async (body) => {
 module.exports = {
   createUser,
   getUsers,
+  getCurrentUser,
   getUserById,
 };

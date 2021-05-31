@@ -31,6 +31,30 @@ router.get('/', (req, res, next) => {
 
 /**
  * @swagger
+ * /users/current:
+ *  get:
+ *    tags:
+ *    - users
+ *    summary: Get user by firebase token
+ *    description:
+ *      Will return single user with a matching firebase token.
+ *    produces: application/json
+ *    responses:
+ *      200:
+ *        description: Successful request
+ *      5XX:
+ *        description: Unexpected error.
+ */
+
+router.get('/current', (req, res, next) => {
+  usersController
+    .getCurrentUser(req.header('Authorization'))
+    .then((result) => res.json(result))
+    .catch(next);
+});
+
+/**
+ * @swagger
  * /users/{ID}:
  *  get:
  *    tags:
@@ -53,12 +77,14 @@ router.get('/', (req, res, next) => {
  *      5XX:
  *        description: Unexpected error.
  */
+
 router.get('/:id', (req, res, next) => {
   usersController
     .getUserById(req.params.id)
     .then((result) => res.json(result))
     .catch(next);
 });
+
 /**
  * @swagger
  *  post:

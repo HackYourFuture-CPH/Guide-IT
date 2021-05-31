@@ -5,7 +5,8 @@ import QuizAnswers from '../../components/QuizAnswers/QuizAnswers.component';
 import SideMenu from '../../components/SideMenu/SideMenu.component';
 import Buttons from '../../components/Buttons/Buttons.component';
 import ProgressBar from '../../components/ProgressBar/ProgressBar.component';
-import { Link } from 'react-router-dom';
+import { useFirebase } from '../../firebase/FirebaseContext';
+import { useHistory } from 'react-router-dom';
 
 import './QuizPage.styles.css';
 
@@ -15,39 +16,97 @@ export const QuizPage = () => {
   const [questions, setQuestions] = useState(undefined);
   const [error, setError] = useState(undefined);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
+  const [answerPrompt, setAnswerPrompt] = useState(false);
 
-  const handleQuestions = async () => {
-    let userId = localStorage.getItem('anonymousUserId');
-    if (!userId) {
-      const response = await fetch('/api/users', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({}),
+  const { auth } = useFirebase();
+  const history = useHistory();
+
+  const getAuthenticatedUser = async (firebaseToken) => {
+    try {
+      const response = await fetch('/api/users/current', {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: firebaseToken,
+        },
       });
       if (response.ok) {
-        const user = await response.json();
+        return response.json();
+      }
+      setError(await response.message());
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
-        userId = user.userId;
-        localStorage.setItem('anonymousUserId', userId);
+  const getUserId = async () => {
+    let userId = sessionStorage.getItem('quizUserId');
+    if (!userId) {
+      if (auth.currentUser) {
+        const authenticatedUser = await getAuthenticatedUser(
+          auth.currentUser.uid,
+        );
+        if (authenticatedUser) {
+          userId = authenticatedUser.id;
+          sessionStorage.setItem('quizUserId', userId);
+        }
       } else {
-        setError(await response.text());
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({}),
+        });
+        if (response.ok) {
+          const anonymousUser = await response.json();
+          userId = anonymousUser.userId;
+          sessionStorage.setItem('quizUserId', userId);
+        } else {
+          setError(await response.text());
+        }
       }
     }
+    return userId;
+  };
+
+  const handleQuestions = async () => {
+    const userId = await getUserId();
+
+    if (selectedAnswer === undefined) {
+      setAnswerPrompt(true);
+    }
+
     if (selectedAnswer !== undefined) {
+      setAnswerPrompt(false);
       const response = await fetch('/api/quiz-results', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: auth.currentUser.uid,
+        },
         body: JSON.stringify({
           fk_answer_id: selectedAnswer,
           fk_user_id: Number(userId),
         }),
       });
-      if (response.ok) {
-        setCurrentOn((prev) => prev + 1);
-        setSelectedAnswer(undefined);
-      } else {
-        const body = await response.text();
-        setError(body);
+
+      if (currentOn !== questions.length - 1) {
+        if (response.ok) {
+          setCurrentOn((prev) => prev + 1);
+          setSelectedAnswer(undefined);
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
+      }
+
+      if (currentOn === questions.length - 1) {
+        if (response.ok) {
+          // go to results page
+
+          history.push(`/quiz-results/${userId}`);
+        } else {
+          const body = await response.text();
+          setError(body);
+        }
       }
     }
   };
@@ -86,6 +145,7 @@ export const QuizPage = () => {
           </div>
           <div className="question-page">
             {isLoading && <div>Loading...</div>}
+
             {error && <div>{error.message}</div>}
             {questions && (
               <>
@@ -97,7 +157,7 @@ export const QuizPage = () => {
                   <QuizAnswers
                     selectedAnswer={selectedAnswer}
                     setSelectedAnswer={setSelectedAnswer}
-                    isAgreementQuestion={!currentQuestion.is_agreement_question}
+                    isAgreementQuestion={currentQuestion.is_agreement_question}
                     answers={currentQuestion.answers}
                   />
                 </div>
@@ -107,6 +167,11 @@ export const QuizPage = () => {
         </div>
         {questions && (
           <>
+            {answerPrompt && (
+              <div className="prompt">
+                Please select an answer before you can continue
+              </div>
+            )}
             <div className="button-page">
               {currentOn !== 0 && currentOn !== questions.length - 1 && (
                 <span className="back-button">
@@ -130,13 +195,12 @@ export const QuizPage = () => {
                 </span>
               ) : (
                 <span className="results">
-                  <Link
-                    to={`/quiz-results/${localStorage.getItem(
-                      'anonymousUserId',
-                    )}`}
-                  >
-                    <Buttons label="See My Results" size="big" isMono={false} />
-                  </Link>
+                  <Buttons
+                    label="See My Results"
+                    size="big"
+                    isMono={false}
+                    onClick={handleQuestions}
+                  />
                 </span>
               )}
             </div>
