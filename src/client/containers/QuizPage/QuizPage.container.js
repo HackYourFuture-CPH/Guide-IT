@@ -16,6 +16,7 @@ export const QuizPage = () => {
   const [questions, setQuestions] = useState(undefined);
   const [error, setError] = useState(undefined);
   const [selectedAnswer, setSelectedAnswer] = useState(undefined);
+  const [answerPrompt, setAnswerPrompt] = useState(false);
 
   const { auth } = useFirebase();
   const history = useHistory();
@@ -68,7 +69,13 @@ export const QuizPage = () => {
 
   const handleQuestions = async () => {
     const userId = await getUserId();
+
+    if (selectedAnswer === undefined) {
+      setAnswerPrompt(true);
+    }
+
     if (selectedAnswer !== undefined) {
+      setAnswerPrompt(false);
       const response = await fetch('/api/quiz-results', {
         method: 'POST',
         headers: {
@@ -138,6 +145,7 @@ export const QuizPage = () => {
           </div>
           <div className="question-page">
             {isLoading && <div>Loading...</div>}
+
             {error && <div>{error.message}</div>}
             {questions && (
               <>
@@ -159,6 +167,11 @@ export const QuizPage = () => {
         </div>
         {questions && (
           <>
+            {answerPrompt && (
+              <div className="prompt">
+                Please select an answer before you can continue
+              </div>
+            )}
             <div className="button-page">
               {currentOn !== 0 && currentOn !== questions.length - 1 && (
                 <span className="back-button">
