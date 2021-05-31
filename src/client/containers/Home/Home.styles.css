@@ -3,24 +3,21 @@
   background-image: url('../../../client/assets/images/Vector.svg');
   overflow: hidden;
   height: 100vh;
+  max-height: 100%;
 }
 
-.home-description {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  height: 20%;
+.home-header-container {
+  margin-top: 0;
 }
 
 .home-main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 38% 72%;
   align-items: center;
   overflow: hidden;
-  height: 100%;
-}
-
-.home-main:nth-child(1n) {
-  width: 100%;
+  min-height: 100vh;
+  max-height: 100%;
+  justify-content: space-around;
 }
 
 .home-button {
@@ -45,46 +42,32 @@
 /** Description career **/
 .home-path-container {
   display: flex;
-  margin: 0 3% 30px;
+  margin: 0 5% 7%;
 }
 
-.home-button-left,
-.home-button-right {
-  width: 200px;
+.home-button-right .buttons,
+.home-button-left .buttons {
+  font-size: 95%;
+  padding: 1% auto;
+  box-shadow: 0 0.2rem lightgray;
 }
 
 .exams-description {
   width: 100%;
 }
 
-.description-career {
-  padding: 5px;
-  padding-left: 20px;
-  margin: 5px;
-  min-height: 300px;
-  height: 100%;
-}
-
-.inner-div {
-  height: auto;
-}
-
-.home-description p {
-  margin: 0 0 4% 0;
-}
-
 .description-career .title {
-  font-size: 24px;
+  font-size: 125%;
   margin: 7px 0 -18px 0;
 }
 
 .description-career .content,
 .description-career .content2 {
-  font-size: 1.3rem;
+  font-size: 100%;
 }
 
 .description-career .time {
-  font-size: 18px;
+  font-size: 100%;
 }
 
 /** Sidebar Menu component */
@@ -132,131 +115,18 @@
 }
 
 .robot-image {
-  width: 35%;
   padding: 0;
   margin: -0.7rem 0;
   margin-bottom: -2rem;
 }
 
-@media screen and (min-height: 500px) {
-  .robot-image {
-    width: 25%;
-  }
-
-  .home-description {
-    font-size: 1rem;
-  }
-
-  .description-career .content,
-  .description-career .content2 {
-    font-size: 1rem;
-  }
-
-  .description-career .time {
-    font-size: 18px;
-  }
-}
-
-.buttons.big {
-  margin-bottom: 3%;
-}
-
-@media screen and (min-height: 620px) {
-  .robot-image {
-    width: 28%;
-    min-width: 120px;
-  }
-
-  .home-description {
-    font-size: 1.4rem;
-  }
-
-  .description-career .content,
-  .description-career .content2 {
-    font-size: 1.2rem;
-  }
-
-  .description-career .time {
-    font-size: 20px;
-  }
-}
-
-@media screen and (min-height: 800px) and (min-width: 1300px) {
-  .robot-image {
-    width: 32%;
-  }
-
-  .home-description {
-    font-size: 1.4rem;
-  }
-
-  .description-career .content,
-  .description-career .content2 {
-    font-size: 1.5rem;
-  }
-
-  .description-career .time {
-    font-size: 21px;
-  }
-}
-
-@media screen and (min-height: 900px) and (min-width: 1500px) {
-  .robot-image {
-    width: 46%;
-  }
-
-  .home-description {
-    font-size: 1.8rem;
-  }
-
-  .description-career .title {
-    font-size: 30px;
-    padding-top: 15px;
-  }
-
-  .description-career .content,
-  .description-career .content2 {
-    font-size: 1.5rem;
-  }
-
-  .description-career .time {
-    font-size: 24px;
-  }
-}
-
-@media (max-height: 860px) {
-  .home-main {
-    overflow: scroll;
-    height: 100%;
-  }
-}
-
 @media (max-width: 1020px) {
-  header.homepage-header h2 {
-    font-size: 1.5rem !important;
-    margin: 0 -20px 0 20px;
-  }
-
-  .homepage-header {
-    margin-top: 3rem;
-  }
-
-  .home-description {
-    width: auto;
-    font-size: 1.2rem;
-    margin: 0 2%;
-  }
-
   .burger-menu .icon-burger {
     display: block;
     padding-top: 5%;
     transform: translateY(0%);
     position: absolute;
     margin-left: 3%;
-  }
-
-  .home-container {
-    height: auto;
   }
 
   .burger-menu .sidebar-menu {
@@ -281,19 +151,10 @@
     display: none;
   }
 
-  #nav-toggle:checked ~ .sidebar-menu {
-    display: flex;
-    padding-top: 5rem;
-  }
-
   .burger-menu :checked ~ .icon-burger {
     margin-top: 3%;
     position: absolute;
     z-index: 1;
-  }
-
-  .create-account {
-    margin-top: 40%;
   }
 
   .burger-menu :checked ~ .icon-burger .line {
@@ -311,29 +172,5 @@
 
   .burger-menu :checked ~ .icon-burger .line:nth-child(2) {
     opacity: 0;
-  }
-}
-
-@media (max-width: 780px) {
-  .description-career {
-    min-height: 340px;
-  }
-
-  .buttons {
-    font-size: 20px !important;
-  }
-}
-
-@media (max-width: 680px) {
-  .home-path-container {
-    flex-direction: column;
-  }
-
-  .exams-description {
-    margin-bottom: 30px;
-  }
-
-  .description-career {
-    min-height: 300px;
   }
 }

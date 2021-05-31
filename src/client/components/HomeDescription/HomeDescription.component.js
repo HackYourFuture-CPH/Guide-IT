@@ -6,8 +6,8 @@ export default function HomeDescription() {
     <div className="home-description">
       <p className="home-description-upper">
         <strong>GuideIT </strong>
-        is a tool created to help newcomers find their professional way in
-        Denmark.
+        is a tool created to help newcomers <br /> find their professional way
+        in Denmark.
       </p>
       <p className="home-description-lower">Are you looking for/to:</p>
     </div>

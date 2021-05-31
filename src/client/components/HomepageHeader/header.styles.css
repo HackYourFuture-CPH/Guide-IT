@@ -2,10 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Roboto Mono', monospace;
+}
+
+.homepage-header h2 {
+  text-shadow: 1px 1px yellow;
 }
 
 .robot-image {
-  width: 10%;
-  height: 10%;
+  width: 15%;
 }

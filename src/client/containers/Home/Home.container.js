@@ -38,12 +38,15 @@ export const Home = () => {
         <SidebarMenu />
       </div>
       <div className="home-main">
-        <div>
-          <Header color="#DB643D" fontSize={30} />
+        <div className="home-header-container">
+          <div>
+            <Header color="#DB643D" fontSize={30} />
+          </div>
+          <div>
+            <HomeDescription />
+          </div>
         </div>
-        <div className="home-description">
-          <HomeDescription />
-        </div>
+
         <div className="home-path-container">
           <div className="exams-description">
             <Description exams={arrayCareer} />

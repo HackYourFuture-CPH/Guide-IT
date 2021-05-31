@@ -1,20 +1,17 @@
 .home-description {
-  width: 793px;
-  height: 149px;
-  font-family: 'Robot Mono', 'Roboto', monospace;
-  font-size: 28px;
+  width: 85%;
+  font-size: 105%;
   font-weight: bold;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   text-align: center;
   padding: 5px;
   color: #535c75;
+  margin: auto;
 }
 
-.home-description p {
-  margin: 0 20px;
+.home-description-upper {
+  width: 85%;
+  margin: auto;
 }
 
 .home-description strong {
