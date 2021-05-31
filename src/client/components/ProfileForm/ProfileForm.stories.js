@@ -28,7 +28,6 @@ const Template = ({
   fontFamily,
   userName,
   userEmail,
-  userPassword,
   userImage,
 }) => (
   <Avatar
@@ -37,7 +36,6 @@ const Template = ({
     fontFamily={fontFamily}
     userName={userName}
     userEmail={userEmail}
-    userPassword={userPassword}
     userImage={userImage}
   />
 );
@@ -49,13 +47,11 @@ Template.propTypes = {
   userName: PropTypes.string.isRequired,
   userImage: PropTypes.string.isRequired,
   userEmail: PropTypes.string.isRequired,
-  userPassword: PropTypes.string.isRequired,
 };
 
 export const AnneForm = Template.bind({});
 AnneForm.args = {
   userName: 'Anne',
   userEmail: 'anne@gmail.com',
-  userPassword: 'xxxxxxxxxxxx',
   userImage: avatarImage,
 };

@@ -1,32 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import backArrow from '../../assets/images/profile_back_arrow.png';
-import { useFirebase } from '../../firebase/FirebaseContext';
-import { useHistory } from 'react-router-dom';
 import './ProfileBlueBar.styles.css';
+import PropTypes from 'prop-types';
 
-export default function ProfileBlueBar() {
-  const [userName, setUserName] = useState('');
-  const { signOutGoogle, getCurrentUser } = useFirebase();
-  const history = useHistory();
-
-  useEffect(
-    function () {
-      const user = getCurrentUser();
-      if (user) {
-        const fullName = user[0].displayName;
-        const firstName = fullName.split(' ')[0];
-        setUserName(firstName);
-      }
-    },
-    [getCurrentUser],
-  );
-
-  // sign out function
-  const signOut = () => {
-    signOutGoogle();
-    setUserName('');
-    history.push('/');
-  };
+export default function ProfileBlueBar({ userName, handleSignOut }) {
   return (
     <div className="profile-bar-container">
       <div className="profile-bar-content">
@@ -34,7 +11,11 @@ export default function ProfileBlueBar() {
         <h4 className="profile-bar-name">Hello, {userName}</h4>
       </div>
       <div className="profile-bar-footer">
-        <button type="button" className="profile-bar-log-out" onClick={signOut}>
+        <button
+          type="button"
+          className="profile-bar-log-out"
+          onClick={handleSignOut}
+        >
           Logout
         </button>
         <div className="profile-bar-footer-container">
@@ -47,3 +28,7 @@ export default function ProfileBlueBar() {
     </div>
   );
 }
+ProfileBlueBar.propTypes = {
+  userName: PropTypes.string.isRequired,
+  handleSignOut: PropTypes.func.isRequired,
+};
