@@ -8,19 +8,12 @@
 
 .elevator-container {
   display: flex;
-  align-items: center;
-  min-height: 90vh;
 }
 
 .elevator-container .side-menu {
   width: 10%;
-
-  /* border: 1px solid blue; */
-}
-
-.elevator-container .side-menu .side-menu-div {
-  width: 50%;
-  margin: auto 0;
+  align-items: center;
+  padding-top: 25vh;
 }
 
 .elevator-instructions {
