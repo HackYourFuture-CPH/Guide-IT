@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './LeftBlueBar.styles.css';
 import hyfLogo from '../../assets/images/hyf-logo.png';
 import rediLogo from '../../assets/images/redi-logo.png';
 import GoogleLogo from '../../assets/images/Google_logo.png';
+import { useFirebase } from '../../firebase/FirebaseContext';
 import { Link } from 'react-router-dom';
 
 function SidebarMenu() {
+  const [user, setUser] = useState(false);
+  const { auth } = useFirebase();
+
+  useEffect(() => {
+    if (auth.currentUser) {
+      setUser(true);
+    }
+  }, [auth.currentUser]);
   return (
     <div className="burger-menu">
       <input id="nav-toggle" type="checkbox" />
@@ -13,9 +22,19 @@ function SidebarMenu() {
         <div className="sidebar-header">
           <div className="sidebar-title">GuideIT</div>
           <div className="login">
-            <img className="google_logo" alt="Google logo" src={GoogleLogo} />
             <div>
-              <Link to="/registration">Login</Link>
+              {user ? (
+                <Link to="/profile-page">My Profile</Link>
+              ) : (
+                <>
+                  <img
+                    className="google_logo"
+                    alt="Google logo"
+                    src={GoogleLogo}
+                  />
+                  <Link to="/registration">Login</Link>
+                </>
+              )}
             </div>
             <div className="triangle" />
           </div>
