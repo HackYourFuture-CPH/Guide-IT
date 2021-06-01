@@ -19,7 +19,7 @@
 .orange-box {
   background: rgba(219, 100, 61, 0.6);
   margin-left: 100px;
-  margin-top: 20px;
+  margin-top: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,7 +33,7 @@
 
 .white-box {
   background-color: #e5e5e5;
-  margin-top: 20px;
+  margin-top: 25px;
   padding-left: 30px;
   position: absolute;
   top: 50%;
@@ -47,7 +47,7 @@
 
 .circle-image {
   margin-left: 290px;
-  margin-top: 20px;
+  margin-top: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -126,5 +126,5 @@
   outline: none;
   word-spacing: 5px;
   padding: 0.4rem 1.2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
