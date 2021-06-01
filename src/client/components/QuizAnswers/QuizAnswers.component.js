@@ -10,7 +10,7 @@ function QuizAnswers({
 }) {
   return (
     <form>
-      <div className={isAgreementQuestion ? 'inline' : ''}>
+      <div className={isAgreementQuestion === 1 ? 'inline' : ''}>
         {answers.map((answer, index) => {
           const isMiddle = index !== 0 && index !== answers.length - 1;
           return (
@@ -24,13 +24,13 @@ function QuizAnswers({
                 />
                 <span
                   className={
-                    isAgreementQuestion && isMiddle
+                    isAgreementQuestion === 1 && isMiddle
                       ? 'radio-control small'
                       : 'radio-control'
                   }
                 />
               </span>
-              {!(isAgreementQuestion && isMiddle) && (
+              {!(isAgreementQuestion === 1 && isMiddle) && (
                 <span className="radio-label">{answer.answer}</span>
               )}
             </label>
@@ -44,7 +44,7 @@ function QuizAnswers({
 QuizAnswers.propTypes = {
   selectedAnswer: PropTypes.number,
   setSelectedAnswer: PropTypes.func.isRequired,
-  isAgreementQuestion: PropTypes.bool.isRequired,
+  isAgreementQuestion: PropTypes.number.isRequired,
   answers: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
