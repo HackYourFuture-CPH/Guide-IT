@@ -8,7 +8,11 @@ export default function CardProfileResultComponent({ title, results }) {
       <h2 className="card-profile-result-title">{title}</h2>
       <ul className="card-profile-result-list-items">
         {results.map((result) => {
-          return <li className="card-profile-result-list-item">{result}</li>;
+          return (
+            <li className="card-profile-result-list-item" key={result}>
+              {result}
+            </li>
+          );
         })}
       </ul>
     </div>

@@ -24,7 +24,8 @@ const alternateCareerArray = [
   },
 ];
 
-const CareerPage = ({ jobTitle }) => {
+const CareerPage = ({ match }) => {
+  const { jobTitle } = match.params;
   const history = useHistory();
   // onclick
   const handleClick = () => {
@@ -32,7 +33,7 @@ const CareerPage = ({ jobTitle }) => {
   };
   // onclick for elevator
   const onClickElevator = () => {
-    history.push('/elevatorpitch');
+    history.push('/elevator-pitch');
   };
 
   return (
@@ -66,7 +67,7 @@ const CareerPage = ({ jobTitle }) => {
                 : alternateCareerArray
                     .find((option) => option.title === jobTitle)
                     .alternate.map((careerOption) => (
-                      <div className="single-option-div">
+                      <div className="single-option-div" key={careerOption}>
                         <h2>{careerOption}</h2>{' '}
                         <span>
                           <img
@@ -108,6 +109,7 @@ export default CareerPage;
 
 CareerPage.propTypes = {
   jobTitle: PropTypes.string,
+  match: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 CareerPage.defaultProps = {
   jobTitle: 'Full stack developer',

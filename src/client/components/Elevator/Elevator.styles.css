@@ -1,0 +1,144 @@
+.elevator-component {
+  width: 55%;
+  height: 42rem;
+  margin-left: 22%;
+  background-color: #d0dddc;
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  margin-top: 10%;
+  padding-top: 2.5%;
+  margin-bottom: 0;
+}
+
+.elevator-level {
+  width: 75%;
+  height: 35rem;
+  margin: auto;
+  margin-top: 3%;
+  background-color: #f0f0f0;
+  padding: 8%;
+}
+
+.elevator-heading {
+  text-align: center;
+  color: #4a9f9c;
+  margin-bottom: 8%;
+  text-transform: uppercase;
+}
+
+.elevator-content h3 {
+  color: #4a9f9c;
+  font-size: 1rem;
+}
+
+.elevator-content h4 {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: -3%;
+}
+
+.elevator-content h5 {
+  color: #4a9f9c;
+  font-size: 1rem;
+  margin-bottom: -3%;
+  text-transform: uppercase;
+}
+
+.elevator-content ol li {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.elevator-content ul {
+  list-style: none;
+  margin-top: 0;
+}
+
+.elevator-content ul li::before {
+  content: '-';
+  display: inline-block;
+}
+
+.elevator-content ul li {
+  text-align: left;
+  margin: 0 auto 3% -13%;
+}
+
+.elevator-content p span {
+  margin-left: 15%;
+}
+
+.elevator-arrow {
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  width: 4%;
+}
+
+.elevator-up {
+  top: 21rem;
+}
+
+.elevator-down {
+  top: 25rem;
+}
+
+/* taking resolution into consideration only for 1024x768 to 1920x1080 screens */
+@media (min-width: 1000px) and (max-width: 1151px) {
+  .elevator-component {
+    height: 47rem;
+  }
+
+  .elevator-level {
+    height: 41rem;
+  }
+
+  .elevator-arrow {
+    right: 1.3rem;
+  }
+}
+
+@media (min-width: 1151px) and (max-width: 1300px) {
+  .elevator-component {
+    height: 43rem;
+  }
+
+  .elevator-level {
+    height: 37rem;
+  }
+
+  .elevator-arrow {
+    right: 1.4rem;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1750px) {
+  .elevator-component {
+    height: 42rem;
+  }
+
+  .elevator-level {
+    height: 34.5rem;
+  }
+
+  .elevator-arrow {
+    right: 2.1rem;
+  }
+}
+
+@media (min-width: 1751px) and (max-width: 1920px) {
+  .elevator-component {
+    height: 42.5rem;
+  }
+
+  .elevator-level {
+    height: 34.5rem;
+  }
+
+  .elevator-arrow {
+    right: 2.7rem;
+  }
+}

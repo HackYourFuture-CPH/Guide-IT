@@ -71,17 +71,25 @@ export default function ProfileCareerResult({ jobTitle }) {
       <div className="profile-career-body">
         <div className="profile-career-title">{chosenJobDetail.title}</div>
         <div className=".profile-career-details">
-          {chosenJobDetail.contents.map((content) => (
-            <p key={content.contentHead}>
-              <strong>{content.contentHead}</strong>
-              <span>{content.content}</span>
-            </p>
-          ))}
+          {chosenJobDetail.contents.map((content, index) =>
+            index === chosenJobDetail.contents.length - 1 ? (
+              <p key={content.contentHead}>
+                <strong>{content.contentHead}</strong>
+                <span>{content.content}</span>
+                <a href={`/career/${jobTitle}`}>
+                  <button type="button" className="triangle">
+                    {' '}
+                  </button>
+                </a>
+              </p>
+            ) : (
+              <p key={content.contentHead}>
+                <strong>{content.contentHead}</strong>
+                <span>{content.content}</span>
+              </p>
+            ),
+          )}
         </div>
-
-        <a href="/career">
-          <p className="triangle"> </p>
-        </a>
       </div>
     </div>
   );

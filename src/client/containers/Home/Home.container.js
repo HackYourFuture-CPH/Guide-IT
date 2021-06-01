@@ -7,7 +7,7 @@ import Buttons from '../../components/Buttons/Buttons.component';
 import { useHistory } from 'react-router-dom';
 import './Home.styles.css';
 
-const arr = [
+const arrayCareer = [
   {
     title: 'CAREER PATH ',
     content:
@@ -15,6 +15,8 @@ const arr = [
     content2: 'Then try out the quiz and see the answers.',
     duration: 3,
   },
+];
+const arrayPresent = [
   {
     title: 'PRESENT YOURSELF',
     content:
@@ -37,33 +39,39 @@ export const Home = () => {
       </div>
       <div className="home-main">
         <div>
-          <Header color="#DB643D" fontSize="30" />
+          <Header color="#DB643D" fontSize={30} />
         </div>
         <div className="home-description">
           <HomeDescription />
         </div>
-        <div className="exams-description">
-          <Description exams={arr} />
-        </div>
-        <div className="home-button">
-          <div className="home-button-right">
-            <Buttons
-              label="Take the career quiz"
-              size="big"
-              isMono={true}
-              color="orange"
-              onClick={() => handleClick('/quiz')}
-            />
+        <div className="home-path-container">
+          <div className="exams-description">
+            <Description exams={arrayCareer} />
+            <div className="home-button">
+              <div className="home-button-right">
+                <Buttons
+                  label="Take the career quiz"
+                  size="big"
+                  isMono={true}
+                  color="orange"
+                  onClick={() => handleClick('/quiz')}
+                />
+              </div>
+            </div>
           </div>
-
-          <div className="home-button-left">
-            <Buttons
-              label="Visit the elevator"
-              size="big"
-              isMono={true}
-              color="orange"
-              onClick={() => handleClick('/elevator-pitch')}
-            />
+          <div className="exams-description">
+            <Description exams={arrayPresent} />
+            <div className="home-button">
+              <div className="home-button-left">
+                <Buttons
+                  label="Visit the elevator"
+                  size="big"
+                  isMono={true}
+                  color="orange"
+                  onClick={() => handleClick('/elevator-pitch')}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

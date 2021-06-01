@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { QuizResultPage } from './QuizResultPage.component';
+import { QuizResultPage } from './QuizResultPage.container';
 
 export default {
   title: 'containers / Quiz Result Page ',

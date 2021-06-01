@@ -45,3 +45,19 @@
     url('../fonts/chakra-petch-v4-latin-regular.ttf') format('truetype'),
     url('../fonts/chakra-petch-v4-latin-regular.svg#ChakraPetch') format('svg'); /* Legacy iOS */
 }
+
+/* wellfleet-regular - latin */
+@font-face {
+  font-family: 'Wellfleet';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/wellfleet-v10-latin-regular.eot'); /* IE9 Compat Modes */
+  src:
+    local(''),
+    url('../fonts/wellfleet-v10-latin-regular.eot?#iefix')
+    format('embedded-opentype'),
+    url('../fonts/wellfleet-v10-latin-regular.woff2') format('woff2'),
+    url('../fonts/wellfleet-v10-latin-regular.woff') format('woff'),
+    url('../fonts/wellfleet-v10-latin-regular.ttf') format('truetype'),
+    url('../fonts/wellfleet-v10-latin-regular.svg#Wellfleet') format('svg'); /* Legacy iOS */
+}
