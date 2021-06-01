@@ -53,6 +53,11 @@
   width: 200px;
 }
 
+.home-button-right .buttons,
+.home-button-left .buttons {
+  box-shadow: 0 5px 4px #bdbdbd;
+}
+
 .exams-description {
   width: 100%;
 }
