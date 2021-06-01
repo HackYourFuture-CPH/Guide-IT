@@ -1,8 +1,6 @@
 import React from 'react';
 import Buttons from '../Buttons/Buttons.component';
 import elevatorMen from '../../assets/images/elevator_men.png';
-import downArrow from '../../assets/images/down_arrow.png';
-import upArrow from '../../assets/images/up_arrow.png';
 import PropTypes from 'prop-types';
 import './ElevatorPitchInstructions.styles.css';
 
@@ -41,8 +39,8 @@ function ElevatorPitchInstructions({ onClick }) {
               <img src={elevatorMen} alt="Elevator men" />
             </div>
             <div className="arrows">
-              <img src={upArrow} alt="Up arrow" />
-              <img src={downArrow} alt="Down arrow" />
+              <div className="elevator-instructions-arrow elevator-up" />
+              <div className="elevator-instructions-arrow elevator-down" />
             </div>
           </div>
         </div>
