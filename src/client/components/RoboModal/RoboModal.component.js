@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import robot from '../../assets/images/robot_logo.png';
 import Modal from '../Modal/Modal.component';
-import upArrow from '../../assets/images/up_arrow.png';
 import vectorMan from '../../assets/images/elevator_man.png';
 import PropTypes from 'prop-types';
 import './RoboModal.styles.css';
@@ -104,12 +103,10 @@ function RoboModal({ floor, onClick }) {
           <p>Elevator ride starts here</p>
           <p>
             Let`s go up (
-            <img
-              src={upArrow}
-              alt="up-arrow"
-              className="up-arrow"
+            <span
               onClick={onClick}
               aria-hidden="true"
+              className="robo-up-arrow elevator-up"
             />
             )
             <img src={vectorMan} className="vector-man" alt="vector-man" />
