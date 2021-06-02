@@ -27,8 +27,8 @@
 }
 
 .sidemenu-page {
-  padding: 28% 0 0 0;
   width: 10%;
+  align-self: center;
 }
 
 .question-page {
@@ -40,11 +40,6 @@
 
 .middle-page {
   display: flex;
-}
-
-.side-menu-div {
-  margin-left: 0%;
-  background-color: #5088a8;
 }
 
 .button-page {

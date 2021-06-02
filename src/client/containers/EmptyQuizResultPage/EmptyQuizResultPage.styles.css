@@ -21,12 +21,6 @@
   position: fixed;
 }
 
-.side-menu-div {
-  margin-left: 0;
-  width: 90%;
-  background-color: #5088a8;
-}
-
 .side-menu-ul li span {
   margin-bottom: 5px;
 }
