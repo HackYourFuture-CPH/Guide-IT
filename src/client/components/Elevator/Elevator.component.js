@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Elevator.styles.css';
-import UpArrow from '../../assets/images/up_arrow.png';
-import DownArrow from '../../assets/images/down_arrow.png';
 import Pagination from '../Pagination/Pagination.component';
 import RoboModal from '../RoboModal/RoboModal.component';
 
@@ -155,9 +153,7 @@ const ElevatorLevel = ({ header, floor, onClickPrev, onClickNext }) => {
         <ElevatorContent floor={floor} />
       </div>
       {floor >= 0 && floor < 5 ? (
-        <img
-          src={UpArrow}
-          alt="go to next"
+        <div
           onClick={onClickNext}
           aria-hidden="true"
           className="elevator-arrow elevator-up"
@@ -166,9 +162,7 @@ const ElevatorLevel = ({ header, floor, onClickPrev, onClickNext }) => {
         <div />
       )}
       {floor > 0 && floor <= 5 ? (
-        <img
-          src={DownArrow}
-          alt="go to previous"
+        <div
           onClick={onClickPrev}
           aria-hidden="true"
           className="elevator-arrow elevator-down"

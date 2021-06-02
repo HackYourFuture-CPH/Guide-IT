@@ -20,7 +20,7 @@ const ProfilePage = () => {
   const [professional, setProfessional] = useState([]);
   const [personal, setPersonal] = useState([]);
   //  personal, professional array's for different careers
-  const uxProfessional = ['detailed orineted', 'proactive', 'problem solver'];
+  const uxProfessional = ['detailed oriented', 'proactive', 'problem solver'];
   const uxPersonal = ['communicative', 'critical thinking', 'patient'];
   const fullstackProfessional = [
     'good with debugging',
@@ -52,7 +52,7 @@ const ProfilePage = () => {
     }
   }
   // users signout and getting current user function
-  const { signOutGoogle, getCurrentUser } = useFirebase();
+  const { signOutGoogle, getCurrentUser, auth } = useFirebase();
   const history = useHistory();
   const user = getCurrentUser();
   useEffect(
@@ -64,18 +64,22 @@ const ProfilePage = () => {
         setUserEmail(user[0].email);
         setPhotoUrl(user[0].photoURL ? user[0].photoURL : avatarImage);
         //  fetching all the users, and filtering the current user to get userId  from users
-        fetch('/api/users')
-          .then((res) => res.json())
-          .then((users) => {
-            const currentUser = users.filter(
-              (userObj) => userObj.full_name === fullName,
-            );
-            const currentUserId = currentUser[0].id;
-            setUserId(currentUserId);
-          });
+        if (auth.currentUser) {
+          const firebaseToken = auth.currentUser.uid;
+          fetch('/api/users/current', {
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: firebaseToken,
+            },
+          })
+            .then((res) => res.json())
+            .then((userInfo) => {
+              setUserId(userInfo.id);
+            });
+        }
       }
     },
-    [user, userName, userId],
+    [user, userId, auth.currentUser],
   );
   useEffect(() => {
     // user career result
@@ -89,6 +93,7 @@ const ProfilePage = () => {
     // users quiz results
     careerSet();
   }, [career]);
+
   // users sign out function
   const handleSignOut = () => {
     signOutGoogle();

@@ -5,60 +5,61 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.center-next-page-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+}
+
 .side-menu-next-page {
-  top: 40%;
-  position: absolute;
-  z-index: 6;
+  min-width: 5%;
+  min-height: 20%;
+  margin-left: 0;
+  position: fixed;
+}
+
+.side-menu-next-page .side-menu-div {
+  margin-left: 0;
+  width: 90%;
+  background-color: #5088a8;
 }
 
 .orange-box {
+  position: relative;
+  margin: 2.5rem auto;
   background: rgba(219, 100, 61, 0.6);
-  margin-left: 100px;
-  margin-top: 30px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 545px;
-  height: 450px;
+  width: 34rem;
+  height: 27rem;
   z-index: 2;
 }
 
 .white-box {
   background-color: #e5e5e5;
-  margin-top: 30px;
-  padding-left: 30px;
+  padding-left: 2rem;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  height: 380px;
-  width: 545px;
+  top: 7%;
+  left: -20%;
+  width: 35rem;
+  height: 23rem;
   z-index: 3;
 }
 
 .circle-image {
-  margin-left: 290px;
-  margin-top: 30px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  top: 22%;
+  left: 70%;
   z-index: 4;
 }
 
 .c-image {
-  width: 250px;
-  height: 250px;
+  width: 16rem;
 }
 
 .white-box h1 {
   text-align: center;
   color: #298f8a;
-  font-size: 1.4vw;
+  font-size: 1.2rem;
 }
 
 .middle-part {
@@ -76,13 +77,12 @@
   display: flex;
   justify-content: center;
   padding: 0;
-  margin-top: 10px;
-  max-width: 480px;
+  margin-left: -2rem;
   list-style-type: none;
 }
 
 .footer-images li {
-  margin-right: -8px;
+  margin-right: -0.6rem;
 }
 
 .redi-image-next-page,
@@ -99,25 +99,22 @@
 }
 
 .image-name {
-  font-size: 10px;
+  font-size: 0.7rem;
   text-align: center;
   display: block;
-  width: 90px;
+  width: 5.5rem;
 }
 
 .elevator-div {
   position: absolute;
-  margin-top: 258px;
-  margin-left: 40px;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  bottom: -8%;
+  left: 20%;
   z-index: 3;
 }
 
-.buttons.big {
+.elevator-div .buttons.big {
   outline: none;
-  word-spacing: 5px;
-  width: 230px;
+  word-spacing: 0.5rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 1.3rem;
 }
