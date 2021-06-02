@@ -50,7 +50,12 @@
 
 .home-button-left,
 .home-button-right {
-  width: 200px;
+  width: 50%;
+}
+
+.home-button-left .buttons,
+.home-button-right .buttons {
+  font-size: 1rem;
 }
 
 .exams-description {

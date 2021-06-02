@@ -36,6 +36,10 @@
   padding-right: 1px;
 }
 
+.login-text {
+  text-decoration: underline;
+}
+
 .triangle {
   width: 0;
   height: 0;
@@ -44,6 +48,12 @@
   border-bottom: 8px solid transparent;
   margin-left: 15px;
   margin-top: 6px;
+}
+
+.login .triangle {
+  position: relative;
+  top: -2px;
+  left: 4%;
 }
 
 .login {

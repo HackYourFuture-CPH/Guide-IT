@@ -22,7 +22,7 @@ function SidebarMenu() {
         <div className="sidebar-header">
           <div className="sidebar-title">GuideIT</div>
           <div className="login">
-            <div>
+            <div className="login-text">
               {user ? (
                 <Link to="/profile-page">My Profile</Link>
               ) : (
