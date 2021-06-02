@@ -13,10 +13,21 @@
   flex-direction: row-reverse;
 }
 
+.answers {
+  padding-top: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
 /* Agreement type questions are aligned inline */
 .inline {
-  display: flex;
-  gap: 0.6em;
+  margin-right: calc(10vw + 49px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
 }
 
 /* Neutral radio button is smaller then Agree/Disagree buttons */

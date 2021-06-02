@@ -25,115 +25,130 @@ export const NextStepsPage = () => {
       <div>
         <PageHeader />
       </div>
-      <div className="middle-part">
+
+      <div className="center-next-page-container">
         <div className="side-menu-next-page">
           <SideMenu />
         </div>
-        <div className="orange-box" />
-        <div className="white-box">
-          <h1>YOUR NEXT STEPS</h1>
-          <p>
-            <strong>Suggestions for Upgrading your Knowledge :</strong>
-          </p>
-          <p>Checkout our schools</p>
-          <div className="main-images">
-            <div className="redi-image-next-page">
-              <NavLink to="https://www.redi-school.org">
-                <img
-                  src={rediLogo}
-                  alt="ReDI School"
-                  width="50px"
-                  height="50px"
-                />
-              </NavLink>
-              <span className="image-name">ReDI School</span>
+
+        <div className="orange-box">
+          <div className="white-box">
+            <h1>YOUR NEXT STEPS</h1>
+            <p>
+              <strong>Suggestions for Upgrading your Knowledge :</strong>
+            </p>
+            <p>Checkout our schools such as</p>
+            <div className="main-images">
+              <div className="redi-image-next-page">
+                <NavLink to="https://www.redi-school.org">
+                  <img
+                    src={rediLogo}
+                    alt="ReDI School"
+                    width="50px"
+                    height="50px"
+                  />
+                </NavLink>
+                <span className="image-name">ReDI School</span>
+              </div>
+              &nbsp;
+              <div className="hyf-image-next-page">
+                <NavLink to="https://www.hackyourfuture.dk">
+                  <img
+                    className="hyf-logo-next-page"
+                    src={hyfLogo}
+                    alt="HackYourFuture Copenhagen"
+                    width="64px"
+                    height="50px"
+                  />
+                </NavLink>
+                <span className="image-name">HackYourFuture School</span>
+              </div>
             </div>
-            &nbsp;
-            <div className="hyf-image-next-page">
-              <NavLink to="https://www.hackyourfuture.dk">
-                <img
-                  className="hyf-logo-next-page"
-                  src={hyfLogo}
-                  alt="HackYourFuture Copenhagen"
-                  width="64px"
-                  height="50px"
-                />
-              </NavLink>
-              <span className="image-name">HackYourFuture School</span>
-            </div>
+            <p>
+              Or other website with some awsome{' '}
+              <strong>
+                Online <br /> courses like:
+              </strong>
+            </p>
+            <nav>
+              <ul className="footer-images">
+                <NavLink to="https://www.udacity.com/blog/category/free-courses">
+                  <li>
+                    <img
+                      src={udacityImg}
+                      alt="Udacity"
+                      width="75px"
+                      height="50px"
+                    />
+                  </li>
+                </NavLink>
+                <NavLink to="https://www.coursera.org">
+                  <li>
+                    <img
+                      src={courseraImg}
+                      alt="Coursera"
+                      width="50px"
+                      height="50px"
+                    />
+                  </li>
+                </NavLink>
+                <NavLink to="https://www.linkedin.com/">
+                  <li>
+                    <img
+                      src={linkedinImg}
+                      alt="LinkedIn"
+                      width="165px"
+                      height="25px"
+                    />
+                  </li>
+                </NavLink>
+                <NavLink to="https://www.lynda.com">
+                  <li>
+                    <img
+                      src={lyndaImg}
+                      alt="Lynda"
+                      width="50px"
+                      height="50px"
+                    />
+                  </li>
+                </NavLink>
+                <NavLink to="https://careerfoundry.com">
+                  <li>
+                    <img
+                      src={cfImg}
+                      alt="Career Foundry"
+                      width="50px"
+                      height="50px"
+                    />
+                  </li>
+                </NavLink>
+                <NavLink to="https://www.udemy.com">
+                  <li>
+                    <img
+                      src={udemyImg}
+                      alt="Udemy"
+                      width="111px"
+                      height="44px"
+                    />
+                  </li>
+                </NavLink>
+              </ul>
+            </nav>
           </div>
-          <p>
-            Or other website with some awsome{' '}
-            <strong>
-              Online <br /> courses like:
-            </strong>
-          </p>
-          <nav>
-            <ul className="footer-images">
-              <NavLink to="https://www.udacity.com/blog/category/free-courses">
-                <li>
-                  <img
-                    src={udacityImg}
-                    alt="Udacity"
-                    width="75px"
-                    height="50px"
-                  />
-                </li>
-              </NavLink>
-              <NavLink to="https://www.coursera.org">
-                <li>
-                  <img
-                    src={courseraImg}
-                    alt="Coursera"
-                    width="50px"
-                    height="50px"
-                  />
-                </li>
-              </NavLink>
-              <NavLink to="https://www.linkedin.com/">
-                <li>
-                  <img
-                    src={linkedinImg}
-                    alt="LinkedIn"
-                    width="165px"
-                    height="25px"
-                  />
-                </li>
-              </NavLink>
-              <NavLink to="https://www.lynda.com">
-                <li>
-                  <img src={lyndaImg} alt="Lynda" width="50px" height="50px" />
-                </li>
-              </NavLink>
-              <NavLink to="https://careerfoundry.com">
-                <li>
-                  <img
-                    src={cfImg}
-                    alt="Career Foundry"
-                    width="50px"
-                    height="50px"
-                  />
-                </li>
-              </NavLink>
-              <NavLink to="https://www.udemy.com">
-                <li>
-                  <img src={udemyImg} alt="Udemy" width="111px" height="44px" />
-                </li>
-              </NavLink>
-            </ul>
-          </nav>
+
+          <div className="circle-image">
+            <img className="c-image" src={roundImg} alt="Guide IT" />
+          </div>
+
+          <div className="elevator-div">
+            <Buttons
+              label="Visit the Elevator"
+              size="big"
+              isMono={true}
+              onClick={handleClick}
+            />
+          </div>
         </div>
-      </div>
-      <div className="circle-image">
-        <img className="c-image" src={roundImg} alt="Guide IT" />
-      </div>
-      <div className="elevator-div">
-        <Buttons
-          label="Visit the Elevator"
-          size="big"
-          isMono={true}
-          onClick={handleClick}
-        />
       </div>
     </div>
   );

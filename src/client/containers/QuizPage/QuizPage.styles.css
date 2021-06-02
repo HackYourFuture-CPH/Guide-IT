@@ -27,8 +27,8 @@
 }
 
 .sidemenu-page {
-  padding: 28% 0 0 0;
   width: 10%;
+  align-self: center;
 }
 
 .question-page {
@@ -40,11 +40,6 @@
 
 .middle-page {
   display: flex;
-}
-
-.side-menu-div {
-  margin-left: 0%;
-  background-color: #5088a8;
 }
 
 .button-page {
@@ -84,16 +79,6 @@
 
 .radio {
   font-size: 1.8em;
-}
-
-.inline {
-  padding-top: 20px;
-  width: 50%;
-  margin-top: 50px;
-  margin-left: 18%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .progress-status {

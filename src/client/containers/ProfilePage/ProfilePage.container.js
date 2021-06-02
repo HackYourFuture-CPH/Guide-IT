@@ -98,6 +98,7 @@ const ProfilePage = () => {
   const handleSignOut = () => {
     signOutGoogle();
     setUserName('');
+    sessionStorage.removeItem('quizUserId');
     history.push('/');
   };
   return (

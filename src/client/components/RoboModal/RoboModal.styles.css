@@ -80,8 +80,12 @@
   margin: 5px;
 }
 
-.elevator-ride-text p .up-arrow {
-  cursor: pointer;
+.robo-up-arrow.elevator-up {
+  border-bottom: 1rem solid #e95328;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  position: relative;
+  bottom: 1.1em;
 }
 
 .elevator-ride-text .vector-man {

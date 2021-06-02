@@ -50,7 +50,17 @@
 
 .home-button-left,
 .home-button-right {
-  width: 200px;
+  width: 50%;
+}
+
+.home-button-left .buttons,
+.home-button-right .buttons {
+  font-size: 1rem;
+}
+
+.home-button-right .buttons,
+.home-button-left .buttons {
+  box-shadow: 0 5px 4px #bdbdbd;
 }
 
 .exams-description {
@@ -97,7 +107,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 15vw;
-  min-width: 220px;
+  min-width: 180px;
 }
 
 .home-side {
@@ -228,6 +238,12 @@
   .home-main {
     overflow: scroll;
     height: 100%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .sidebar-title {
+    font-size: 28px;
   }
 }
 

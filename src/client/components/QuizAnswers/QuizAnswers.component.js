@@ -10,7 +10,7 @@ function QuizAnswers({
 }) {
   return (
     <form>
-      <div className={isAgreementQuestion === 1 ? 'inline' : ''}>
+      <div className={isAgreementQuestion === 1 ? 'inline answers' : 'answers'}>
         {answers.map((answer, index) => {
           const isMiddle = index !== 0 && index !== answers.length - 1;
           return (
