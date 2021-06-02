@@ -81,16 +81,6 @@
   font-size: 1.8em;
 }
 
-.inline {
-  padding-top: 20px;
-  width: 50%;
-  margin-top: 50px;
-  margin-left: 18%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .progress-status {
   background-color: #db643d;
   border: 1px solid #db643d;
