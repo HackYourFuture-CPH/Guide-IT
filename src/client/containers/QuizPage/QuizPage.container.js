@@ -80,7 +80,8 @@ export const QuizPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: auth.currentUser.uid,
+          Authorization:
+            auth.currentUser !== null ? auth.currentUser.uid : undefined,
         },
         body: JSON.stringify({
           fk_answer_id: selectedAnswer,
