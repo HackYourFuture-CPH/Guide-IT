@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: 180%!important;
+background-repeat: no-repeat!important;
+background-position: -3em -2em!important;
 }
 
 .question {
